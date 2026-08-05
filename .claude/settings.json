@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(python3 -c ' *)",
-      "Bash(gh repo *)"
+      "Bash(gh repo *)",
+      "PowerShell(code --list-extensions --show-versions 2>&1)",
+      "Read(//c/Users/Matteo/AppData/Roaming/Code/User/**)",
+      "Read(//c/Users/Matteo/AppData/Roaming/Code/**)",
+      "Bash(code --version)"
     ]
   }
 }
