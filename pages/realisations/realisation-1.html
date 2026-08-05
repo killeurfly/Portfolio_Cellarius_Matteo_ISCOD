@@ -18,6 +18,17 @@
         <div class="blob-center"></div>
         <h1>Intégration de l'API GLS</h1>
 
+        <nav class="page-toc" aria-label="Sommaire de la page">
+          <a href="#presentation">Présentation</a>
+          <a href="#objectifs">Objectifs &amp; risques</a>
+          <a href="#etapes">Étapes</a>
+          <a href="#acteurs">Acteurs</a>
+          <a href="#resultats">Résultats</a>
+          <a href="#lendemains">Lendemains</a>
+          <a href="#regard-critique">Regard critique</a>
+          <a href="#competences">Compétences</a>
+        </nav>
+
         <div class="illustration-panel">
           <svg
             viewBox="0 0 640 200"
@@ -255,16 +266,16 @@
         </div>
 
         <div class="detail-card">
-          <h2>Présentation de la réalisation</h2>
+          <h2 id="presentation">Présentation de la réalisation</h2>
 
           <p>
             Ce projet a été l'un des premiers sur lequel j'ai travaillé lors de
             mon alternance. Il s'inscrivait dans un contexte de remplacement du
             logiciel d'impression d'étiquettes GLS par une intégration directe
             de l'API REST de GLS à l'ERP Navision, afin de simplifier le
-            processus d'expédition pour les utilisateurs. A Romus nous utilisons
-            également Dex DataExchanger est un middleware qui combine plusieurs
-            fonctionnalités, dont la gestion des flux de données entre
+            processus d'expédition pour les utilisateurs. À Romus, nous utilisons
+            également Dex DataExchanger qui est un middleware qui combine
+            plusieurs fonctionnalités, dont la gestion des flux de données entre
             différents systèmes.
           </p>
 
@@ -306,7 +317,7 @@
             </li>
           </ul>
 
-          <h2>Objectifs, contexte, enjeu et risques</h2>
+          <h2 id="objectifs">Objectifs, contexte, enjeu et risques</h2>
 
           <p>
             L'objectif principal était d'intégrer l'API REST de GLS à Navision
@@ -318,7 +329,7 @@
             utilisateur.
           </p>
 
-          <p><strong>Contexte technique :</strong></p>
+          <p class="subsection-label">🔧 Contexte technique</p>
 
           <p>
             La principale contrainte technique associée à cette évolution des
@@ -336,77 +347,75 @@
             l'API GLS.
           </p>
 
-          <p><strong>Enjeu :</strong></p>
+          <p class="subsection-label">🎯 Enjeu</p>
 
           <p>
-            A l'amorce de ce projet, j'ai pu identifier 2 grands enjeux : l'un
+            À l'amorce de ce projet, j'ai pu identifier 2 grands enjeux : l'un
             technique et l'autre humain.
           </p>
 
           <p>
-            L'enjeu humain consistait a rendre le processus d'impression
+            L'enjeu humain consistait à rendre le processus d'impression
             d'étiquettes GLS aussi simple que celui de Schenker, pour que les
-            utilisateurs soient le moins pertubé par cette intégration.
+            utilisateurs soient le moins perturbés par cette intégration.
           </p>
 
           <p>
-            L'enjeu technique quand a lui consistait a mettre en place les
-            processus metiers d'impresion d'étiquettes GLS sans mettre en
-            péril le fonctionement de la partie Schenker déjà en place.
+            L'enjeu technique, quant à lui, consistait à mettre en place les
+            processus métiers d'impression d'étiquettes GLS sans mettre en péril
+            le fonctionnement de la partie Schenker déjà en place.
           </p>
 
           <p>
-            Egalement, l'importance de ce projets pour Romus était de réduire
-            le coût de l'utilisation du logiciel d'impression d'étiquettes GLS
-            et de réduire le nombre d'erreurs en maitrisant entierement le
+            Également, l'importance de ce projet pour Romus était de réduire le
+            coût de l'utilisation du logiciel d'impression d'étiquettes GLS et
+            de réduire le nombre d'erreurs en maîtrisant entièrement le
             processus d'impression d'étiquettes.
           </p>
 
-          <p><strong>Risques :</strong></p>
+          <p class="subsection-label">⚠️ Risques</p>
 
           <p>
             Dans le cadre de ce projet, j'ai pu identifier plusieurs types de
-            riques sur lesquelles j'ai pu intervenir.
+            risques sur lesquels j'ai pu intervenir.
           </p>
 
           <p>
-            Les risques humains étaient liés a la bonne utilisation des
-            nouveaux tags de transporteur GLS utilisés dans l'ERP Navision. Si
-            les utilisateurs ne respectaient pas les nouvelles procédures
-            alors il pourrait y avoir des erreurs dans le processus
-            d'impression d'étiquettes GLS.
-          </p>
-
-          <p>
-            Les risques financiers était liers au fonctionement de l'api, si
-            une erreur survenait lors du processus d'impression alors il
-            pourait il y avoir des pertes financières pour Romus, si par
-            exemple un colis était expédié mais que les informations de suivi
-            était transmis de facon partielle ou erronée a GLS. Egalement, si
-            l'api GLS tombait en panne alors il y aurait un risque de perte
-            financière pour Romus car les colis ne pourraient pas être
-            expédiés.
-          </p>
-
-          <p>
-            Les riques techniques était liés a la bonne implémentation de
-            l'api GLS dans l'ERP Navision et a nos base de données
-            transporteur. Si l'implémentation n'était pas correcte alors il
+            Les risques humains étaient liés à la bonne utilisation des nouveaux
+            tags de transporteur GLS utilisés dans l'ERP Navision. Si les
+            utilisateurs ne respectaient pas les nouvelles procédures, il
             pourrait y avoir des erreurs dans le processus d'impression
             d'étiquettes GLS.
           </p>
 
           <p>
-            Pour palier a tout ces riques, un cahier de tests a été mis en
-            place pour tester l'implémentation de l'api GLS dans l'ERP
-            Navision et pour s'assurer que les utilisateurs respectaient les
-            nouvelles procédures. Ce cahier de test contenait les étapes de
-            fonctionement nominales a suivre pour l'impression d'étiquettes
-            GLS. De plus un tableau de report des erreurs a été mis en place
-            pour suivre les erreurs rencontrées lors des tests et pour les
-            corriger rapidement. Enfin, un suivi des utilisateurs a été mis en
-            place pour s'assurer que les utilisateurs respectaient les
-            nouvelles procédures et pour les aider en cas de problème.
+            Les risques financiers étaient liés au fonctionnement de l'API : si
+            une erreur survenait lors du processus d'impression, il pourrait y
+            avoir des pertes financières pour Romus, si par exemple un colis
+            était expédié mais que les informations de suivi étaient transmises
+            de façon partielle ou erronée à GLS. Également, si l'API GLS tombait
+            en panne, il y aurait un risque de perte financière pour Romus car
+            les colis ne pourraient pas être expédiés.
+          </p>
+
+          <p>
+            Les risques techniques étaient liés à la bonne implémentation de
+            l'API GLS dans l'ERP Navision et à nos bases de données
+            transporteur. Si l'implémentation n'était pas correcte, il y aurait
+            un risque d'erreurs lors d'une impression d'étiquettes GLS.
+          </p>
+
+          <p>
+            Pour pallier tous ces risques, un cahier de tests a été mis en
+            place pour tester l'implémentation de l'API GLS dans l'ERP Navision
+            et pour s'assurer que les utilisateurs respectaient les nouvelles
+            procédures. Ce cahier de test contenait les étapes de fonctionnement
+            nominales à suivre pour l'impression d'étiquettes GLS. De plus, un
+            tableau de report des erreurs a été mis en place pour suivre les
+            erreurs rencontrées lors des tests et pour les corriger rapidement.
+            Enfin, un suivi des utilisateurs a été mis en place pour s'assurer
+            que les utilisateurs respectaient les nouvelles procédures et pour
+            les aider en cas de problème.
           </p>
 
           <div class="section-heading">
@@ -463,7 +472,7 @@
                 stroke-width="1.5"
               />
             </svg>
-            <h2>Les étapes</h2>
+            <h2 id="etapes">Les étapes</h2>
           </div>
 
           <p>
@@ -475,54 +484,52 @@
           <ol class="steps-list">
             <li>
               <strong>Étude de la documentation et accès à la Sandbox</strong>
-              — j'ai etudié la documentation de l'API GLS fournit par les
-              équipes technique de GLS. Cette documentation m'a permis de
+              — j'ai étudié la documentation de l'API GLS fournie par les
+              équipes techniques de GLS. Cette documentation m'a permis de
               comprendre les différentes fonctionnalités offertes par l'API,
               ainsi que les paramètres et les formats de données requis pour
-              interagir avec elle. GLS nous a également fournit des accès a un
-              environement de production de test "Sandbox" afin de pouvoir
-              tester l'implémentation de l'api dans un environement identique
-              a celui de production.
+              interagir avec elle. GLS nous a également fourni un accès à un
+              environnement de production de test "Sandbox" afin de pouvoir
+              tester l'implémentation de l'API dans un environnement identique
+              à celui de production.
             </li>
 
             <li>
               <strong>Mise en place d'un dispatcher</strong> — comme le
-              webservice de l'api GLS recevait aussi des requêtes pour
-              l'impression d'étiquettes Schenker, j'ai du mettre en place un
-              "dispatcher" pour rediriger les requetes a la bonne API en
-              fonction du transporteur associé a la commande. Les
-              transporteurs étant déja identifiés dans l'ERP Navision, j'ai pu
-              utiliser ces informations pour rediriger les requêtes vers l'API
-              GLS ou l'API Schenker en fonction du transporteur associé à la
-              commande.
+              webservice de l'API GLS recevait aussi des requêtes pour
+              l'impression d'étiquettes Schenker, j'ai dû mettre en place un
+              "dispatcher" pour rediriger les requêtes vers la bonne API en
+              fonction du transporteur associé à la commande. Les transporteurs
+              étant déjà identifiés dans l'ERP Navision, j'ai pu utiliser ces
+              informations pour rediriger les requêtes vers l'API GLS ou l'API
+              Schenker en fonction du transporteur associé à la commande.
             </li>
 
             <li>
               <strong>
-                Développement des fonctionnalités d'impression, réimpression
-                et annulation
+                Développement des fonctionnalités d'impression, réimpression et
+                annulation
               </strong>
-              — s'en est suivie le dévelopement de l'impressions,
-              réimpression, annulation d'étiquettes GLS qui serait relié aux
-              boutons dans l'ERP Navision. Il a fallu également préparé les
+              — s'en est suivi le développement de l'impression, de la
+              réimpression et de l'annulation d'étiquettes GLS, reliées aux
+              boutons dans l'ERP Navision. Il a également fallu préparer les
               retours d'erreurs vers l'ERP afin que les utilisateurs puissent
               comprendre les erreurs rencontrées lors de l'impression
-              d'étiquettes GLS. Pour ce qui est de l'erreurs d'adresse, celle
-              ci était envoyé vers une application interne de Romus appelé
-              GEDIM qui permet un suivi des transporteurs et des erreurs
+              d'étiquettes GLS. Pour ce qui est de l'erreur d'adresse, celle-ci
+              était envoyée vers une application interne de Romus appelée
+              GEDIM, qui permet un suivi des transporteurs et des erreurs
               d'adresse. Les utilisateurs pouvaient ainsi corriger les erreurs
-              d'adresse dans l'application GEDIM et ainsi relancer
-              l'impression d'étiquettes GLS sans toucher a l'ERP Navision.
+              d'adresse dans l'application GEDIM et relancer l'impression
+              d'étiquettes GLS sans toucher à l'ERP Navision.
             </li>
 
             <li>
               <strong>Mise en place des flux Dex</strong> — parallèlement, des
-              flux Dex on été mis en place pour la sauvegarde des donnée
-              envoyé a GLS et l'annulation d'étiquettes GLS ainsi qu'un flux
-              de dispatch pour les "fin de journée" qui permettent la sortie
-              d'un document recapitulatif des commandes expédiées dans un
-              camions au moment ou la "fin de journée" est generée par
-              l'utilisateur.
+              flux Dex ont été mis en place pour la sauvegarde des données
+              envoyées à GLS et l'annulation d'étiquettes GLS, ainsi qu'un flux
+              de dispatch pour les "fin de journée" qui permet la sortie d'un
+              document récapitulatif des commandes expédiées dans un camion au
+              moment où la "fin de journée" est générée par l'utilisateur.
             </li>
 
             <li>
@@ -530,21 +537,20 @@
               des tests, j'ai mis en place un cahier de tests pour tester
               l'implémentation de l'API GLS dans l'ERP Navision et pour
               s'assurer que les utilisateurs respectaient les nouvelles
-              procédures. Ce cahier de test etait consituer des étapes a
-              suivre pour l'impression d'étiquettes GLS, ainsi que des
-              scénarios de tests pour vérifier le bon fonctionnement de
-              l'implémentation. J'ai également mis en place un tableau de
-              report des erreurs pour suivre les erreurs rencontrées lors des
-              tests et pour les corriger rapidement. Les tests ont été
-              réalisés par les utilisateurs sur differents sites de
-              l'entreprise car ils possedents chacun un compte chez GLS. Il
-              s'en est suivi une correction des bugs remontés par les
-              utilisateurs lors de la phase de tests.
+              procédures. Ce cahier de test était constitué des étapes à suivre
+              pour l'impression d'étiquettes GLS, ainsi que des scénarios de
+              tests pour vérifier le bon fonctionnement de l'implémentation.
+              J'ai également mis en place un tableau de report des erreurs pour
+              suivre les erreurs rencontrées lors des tests et pour les corriger
+              rapidement. Les tests ont été réalisés par les utilisateurs sur
+              différents sites de l'entreprise, car ils possèdent chacun un
+              compte chez GLS. Il s'en est suivi une correction des bugs
+              remontés par les utilisateurs lors de la phase de tests.
             </li>
 
             <li>
-              <strong>Validation GLS et mise en production</strong> — suite a
-              cela étant pret pour la mise en production, nous avons enyoyé a
+              <strong>Validation GLS et mise en production</strong> — suite à
+              cela, étant prêt pour la mise en production, nous avons envoyé à
               GLS un mail pour demander la validation des étiquettes de
               production. Une fois la validation reçue, nous avons mis en
               production l'implémentation de l'API GLS dans l'ERP Navision.
@@ -554,60 +560,85 @@
               <strong>Hypercare</strong> — en dernière étape, une période
               d'hypercare a été mise en place pour suivre les utilisateurs et
               corriger les éventuelles erreurs rencontrées lors de la mise en
-              production. Cette période a permis de s'assurer que
-              l'intégration de l'API GLS fonctionnait correctement et que les
-              utilisateurs étaient à l'aise avec les nouvelles procédures
-              d'impression d'étiquettes.
+              production. Cette période a permis de s'assurer que l'intégration
+              de l'API GLS fonctionnait correctement et que les utilisateurs
+              étaient à l'aise avec les nouvelles procédures d'impression
+              d'étiquettes.
             </li>
           </ol>
 
-          <h2>Les acteurs</h2>
+          <h2 id="acteurs">Les acteurs</h2>
 
           <ul class="definition-list">
-            <li>Les équipes techniques de GLS</li>
+            <li>
+              Les équipes techniques de GLS, qui ont fourni les documentations
+              et les accès à la Sandbox, ainsi que les comptes de test et de
+              production
+            </li>
 
-            <li>Le responsable Transport de Romus</li>
+            <li>
+              Le responsable Transport de Romus, qui a permis d'avoir des
+              détails sur les besoins et les attentes des utilisateurs
+            </li>
 
-            <li>Les utilisateurs finaux de l'ERP Navision</li>
+            <li>
+              Les utilisateurs finaux de l'ERP Navision, qui ont participé aux
+              tests et à l'implémentation du projet
+            </li>
 
-            <li>Moi-même</li>
+            <li>
+              Le prestataire Navision, qui a permis des ajustements sur Navision
+            </li>
+
+            <li>
+              Mon maître d'apprentissage, qui m'a accompagné dans le
+              développement du projet
+            </li>
+
+            <li>Moi-même qui ai développé l'implémentation de l'API GLS</li>
           </ul>
 
-          <h2>Les résultats</h2>
+          <h2 id="resultats">Les résultats</h2>
 
           <p>
             Après mise en production et suivi des utilisateurs pour des
             éventuelles corrections, le projet a été un succès. L'intégration de
             l'API GLS a permis d'améliorer l'efficacité du processus
             d'expédition et de réduire les erreurs liées à la génération des
-            étiquettes.
+            étiquettes. GLS représente entre 150 et 200 commandes par jour.
+            Malgré des bugs réglés lors de l'hypercare, la stabilité du
+            processus a été atteinte et les utilisateurs ont pu s'adapter aux
+            nouvelles procédures d'impression d'étiquettes GLS.
           </p>
 
-          <h2>Les lendemains du projet</h2>
+          <h2 id="lendemains">Les lendemains du projet</h2>
 
           <p>
             Ce projet a servi de base pour l'intégration de l'API Géodis peu de
-            temps après. Le suivi du fonctionement de l'API GLS est effectué par
-            moi-même car j'ai été le principal développeur de ce projet.
+            temps après, spécifiquement pour la mise en place du "dispatcher".
+            Le suivi du fonctionnement de l'API GLS est effectué par moi-même
+            car j'ai été le principal développeur de ce projet. Les évolutions
+            futures de ce projet incluent un suivi, grâce à l'API GLS, de
+            l'avancement des commandes expédiées.
           </p>
 
-          <h2>Mon regard critique</h2>
+          <h2 id="regard-critique">Mon regard critique</h2>
 
           <p>
-            Ce projet ma permis de mettre en pratique mes compétences techniques
-            et de développer mes compétences en gestion de projet. J'ai appris à
-            travailler avec des API et a gerer les risque liées a
+            Ce projet m'a permis de mettre en pratique mes compétences
+            techniques et de développer mes compétences en gestion de projet.
+            J'ai appris à travailler avec des API et à gérer les risques liés à
             l'implémentation de nouvelles fonctionnalités dans un système
             existant. J'ai également appris à travailler en collaboration avec
             différentes équipes et à communiquer efficacement pour résoudre les
-            problèmes rencontrés lors du projet. Si je devais changez quelque
+            problèmes rencontrés lors du projet. Si je devais changer quelque
             chose dans la gestion de ce projet, je mettrais en place des
             échanges plus rigoureux avec les utilisateurs finaux pour mieux
             comprendre leurs besoins et leurs attentes. Cela aurait permis de
             mieux anticiper les problèmes potentiels.
           </p>
 
-          <h2>Compétences associées</h2>
+          <h2 id="competences">Compétences associées</h2>
 
           <p>
             Retrouvez le détail des compétences mobilisées sur ce projet dans
