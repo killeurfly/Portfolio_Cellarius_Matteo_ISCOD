@@ -2,11 +2,12 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Portfolio | Cellarius Matteo</title>
 
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
 
   <body>
@@ -14,56 +15,65 @@
 
     <main>
       <section class="hero">
-        <div class="hero-left">
+        <div class="hero-content">
+          <p class="hero-subtitle">Portfolio de</p>
+
           <h1>Cellarius Matteo</h1>
 
-          <h2>Mastère Expert en ingénierie du Logiciel</h2>
+          <h2>Mastère Expert en Ingénierie du Logiciel</h2>
 
-          <div class="hero-tech">
-            <span>Java</span>
-            <span>Spring Boot</span>
-            <span>Angular</span>
-            <span>JavaScript</span>
-            <span>SQL</span>
-            <span>Docker</span>
+          <p class="hero-description">
+            Étudiant passionné par le développement logiciel, la conception
+            d'applications web et les technologies modernes.
+          </p>
+
+          <div class="hero-sections">
+            <a href="/pages/presentation.html" class="section-card">
+              <div class="section-icon">👤</div>
+
+              <h3>Présentation</h3>
+
+              <p>
+                Découvrez mon profil, mon parcours et mes objectifs
+                professionnels.
+              </p>
+            </a>
+
+            <a href="/pages/projects.html" class="section-card">
+              <div class="section-icon">💻</div>
+
+              <h3>Réalisations</h3>
+
+              <p>
+                Consultez les différents projets réalisés durant ma formation.
+              </p>
+            </a>
+
+            <a href="/pages/skills.html" class="section-card">
+              <div class="section-icon">⚙️</div>
+
+              <h3>Compétences</h3>
+
+              <p>Retrouvez mes compétences techniques et humaines.</p>
+            </a>
           </div>
 
           <div class="hero-buttons">
             <a
-              href="./assets/documents/cv.pdf"
-              class="btn primary"
+              href="/assets/documents/cv.pdf"
               target="_blank"
+              class="btn primary"
             >
               Télécharger mon CV
             </a>
 
-            <a href="./pages/projects.html" class="btn secondary">
-              Voir mes projets
-            </a>
-          </div>
-
-          <div class="hero-socials">
-            <a href="#"> GitHub </a>
-
-            <a href="#"> LinkedIn </a>
-
-            <a href="./pages/contact.html"> Contact </a>
-          </div>
-        </div>
-
-        <div class="hero-right">
-          <div class="profile-card">
-            <img src="./assets/images/profile.jpg" alt="Photo de profil" />
-
-            <h3>Développeur Full Stack</h3>
-
-            <p>Étudiant en informatique</p>
+            <a href="/pages/contact.html" class="btn secondary"> Contact </a>
           </div>
         </div>
       </section>
     </main>
 
-    <script src="./assets/js/navbar.js"></script>
-    <script src="./assets/js/background.js"></script>
+    <script src="/assets/js/navbar.js"></script>
+    <script src="/assets/js/background.js"></script>
   </body>
 </html>
