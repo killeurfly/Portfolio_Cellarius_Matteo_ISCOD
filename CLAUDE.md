@@ -43,6 +43,10 @@ Illustrations are hand-authored inline SVG (no external image files, no icon lib
 
 For narrative/professional content (project write-ups, "mon regard critique", personal reflections), the user writes the prose himself — provide guidance, guiding questions, and facts pulled from `Source/` material rather than finished paragraphs, unless he explicitly asks for drafted text. Spelling/grammar fixes are fine to apply directly when asked; sentence-level rewording ("syntaxe") should be confirmed with him first.
 
+## Git workflow
+
+After finishing a significant chunk of work (a new/rewritten page, a batch of related fixes, a structural change like a rename), proactively propose creating a commit for it — don't wait to be asked. Group related changes into logical commits (e.g. content vs. design vs. config) rather than one giant commit, French commit messages, and still ask for explicit confirmation before `git push`.
+
 ## Other tracking files (not part of the deployed site)
 
 - `TODO.md` — the user's own task checklist.
