@@ -1,0 +1,12 @@
+# Matériel de travail interne (journal d'alternance, exemples, guides) —
+# contient des informations internes à l'entreprise et des noms de personnes,
+# à ne pas publier sur le dépôt public.
+/Source/
+/CLAUDE_NOTES.md
+
+# Config Claude Code locale/personnelle (non partagée)
+.claude/settings.local.json
+
+# Fichiers système
+.DS_Store
+Thumbs.db
