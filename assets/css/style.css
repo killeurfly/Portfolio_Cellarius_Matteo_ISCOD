@@ -119,6 +119,12 @@ main {
 }
 
 .nav-links a {
+  display: flex;
+
+  align-items: center;
+
+  line-height: 1;
+
   color: white;
 
   text-decoration: none;
@@ -439,8 +445,6 @@ main {
   align-items: center;
 
   text-align: center;
-
-  overflow: hidden;
 }
 
 .page-section h1 {
@@ -560,6 +564,78 @@ main {
   color: #60a5fa;
 
   font-size: 1.4rem;
+
+  scroll-margin-top: 130px;
+}
+
+.subsection-label {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 0.95rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.03em;
+
+  text-transform: uppercase;
+
+  color: #93c5fd;
+
+  background: rgba(96, 165, 250, 0.1);
+
+  border: 1px solid rgba(96, 165, 250, 0.3);
+
+  padding: 6px 16px;
+
+  border-radius: 999px;
+
+  margin-top: 8px;
+}
+
+.page-toc {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  width: 100%;
+
+  max-width: 960px;
+
+  margin: 0 auto 30px;
+}
+
+.page-toc a {
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  color: #93c5fd;
+
+  text-decoration: none;
+
+  padding: 8px 16px;
+
+  border: 1px solid rgba(96, 165, 250, 0.3);
+
+  border-radius: 999px;
+
+  background: rgba(96, 165, 250, 0.06);
+
+  transition: 0.3s;
+}
+
+.page-toc a:hover {
+  background: rgba(96, 165, 250, 0.18);
+
+  border-color: rgba(96, 165, 250, 0.5);
 }
 
 .detail-card p {
@@ -832,6 +908,16 @@ main {
   height: 34px;
 
   flex-shrink: 0;
+}
+
+.attention-panel {
+  width: 100%;
+
+  max-width: 960px;
+
+  margin: 0 auto 30px;
+
+  text-align: left;
 }
 
 .illustration-panel {
