@@ -28,14 +28,13 @@
 - [ ] Ajouter le Mastère
 - [ ] Ajouter les expériences professionnelles
 
-### Projets
+### Réalisations (ex-Projets — 5 requises par la structure ISCOD, voir Source/Guide Réalisations.png)
 
-- [x] Remplacer "Projet 1" (Intégration API GLS - Romus)
-- [ ] Remplacer "Projet 2"
-- [x] Ajouter une image pour chaque projet (Projet 1 : illustration SVG "schéma de flux" faite main, pas d'image bitmap nécessaire) — [ ] reste à faire pour Projet 2
-- [x] Ajouter les technologies utilisées (Projet 1)
-- [ ] Ajouter le lien GitHub
-- [ ] Vérifier la confidentialité des projets d'entreprise (Projet 1 rédigé avec niveau de détail "portfolio", à relire côté confidentialité Romus)
+- [x] Réalisation 1 — Intégration API GLS : contenu complet, structure ISCOD (présentation, objectifs/contexte/enjeu/risques, étapes, acteurs, résultats, lendemains, regard critique, compétences associées), illustration SVG, relecture orthographe faite
+- [x] Réalisation 2 — Reprise API Géodis : contenu complet, structure ISCOD, illustration SVG, relecture orthographe faite (projet toujours en pause côté Romus pour l'été — section Résultats/Lendemains à réviser si le statut change à la rentrée)
+- [ ] Réalisation 3, 4, 5 : pages pas encore créées — candidats possibles dans le journal (Gedim, Site IA RomusWorld, Swagger API), à confirmer avant de créer quoi que ce soit
+- [ ] Ajouter le lien GitHub sur les réalisations qui s'y prêtent
+- [ ] Vérifier la confidentialité des réalisations liées à Romus avant publication (repo GitHub public)
 
 ### Compétences
 
@@ -77,5 +76,5 @@
 - [ ] Ajouter favicon
 - [ ] Ajouter README
 - [ ] Faire une relecture complète
-- [ ] Vérifier l'orthographe, la grammaire et la syntaxe (toutes les pages)
+- [x] Vérifier l'orthographe, la grammaire et la syntaxe — fait pour Réalisation 1 (API GLS) et Réalisation 2 (API Géodis) — [ ] reste à faire pour les autres pages
 - [ ] Déployer le portfolio

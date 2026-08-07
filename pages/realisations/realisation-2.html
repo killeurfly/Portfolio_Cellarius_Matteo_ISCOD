@@ -5,7 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Projet 2 | Portfolio</title>
+    <title>Reprise API Géodis | Portfolio</title>
 
     <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
@@ -16,44 +16,585 @@
     <main>
       <section class="page-section project-detail">
         <div class="blob-center"></div>
-        <h1>Projet 2</h1>
+        <h1>Reprise de l'API Géodis</h1>
+
+        <nav class="page-toc" aria-label="Sommaire de la page">
+          <a href="#presentation">Présentation</a>
+          <a href="#objectifs">Objectifs &amp; risques</a>
+          <a href="#etapes">Étapes</a>
+          <a href="#acteurs">Acteurs</a>
+          <a href="#resultats">Résultats</a>
+          <a href="#lendemains">Lendemains</a>
+          <a href="#regard-critique">Regard critique</a>
+          <a href="#competences">Compétences</a>
+        </nav>
+
+        <div class="illustration-panel">
+          <svg
+            viewBox="0 0 640 200"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Schéma du flux : Navision vers API Géodis vers étiquette imprimée"
+          >
+            <defs>
+              <linearGradient
+                id="flowGradientGeodis"
+                gradientUnits="userSpaceOnUse"
+                x1="120"
+                y1="100"
+                x2="520"
+                y2="100"
+              >
+                <stop offset="0%" stop-color="#60a5fa" />
+                <stop offset="50%" stop-color="#a855f7" />
+                <stop offset="100%" stop-color="#22d3ee" />
+              </linearGradient>
+              <marker
+                id="arrowGeodis"
+                markerWidth="10"
+                markerHeight="10"
+                refX="7"
+                refY="5"
+                orient="auto"
+              >
+                <path d="M0,0 L10,5 L0,10 Z" fill="#94a3b8" />
+              </marker>
+            </defs>
+
+            <line
+              x1="140"
+              y1="100"
+              x2="261"
+              y2="100"
+              stroke="url(#flowGradientGeodis)"
+              stroke-width="2"
+              stroke-dasharray="6 8"
+              marker-end="url(#arrowGeodis)"
+            />
+            <line
+              x1="377"
+              y1="100"
+              x2="496"
+              y2="100"
+              stroke="url(#flowGradientGeodis)"
+              stroke-width="2"
+              stroke-dasharray="6 8"
+              marker-end="url(#arrowGeodis)"
+            />
+
+            <g transform="translate(30,55)">
+              <rect
+                width="110"
+                height="90"
+                rx="16"
+                fill="rgba(255,255,255,0.05)"
+                stroke="#60a5fa"
+                stroke-width="1.5"
+              />
+              <circle cx="20" cy="20" r="3" fill="#60a5fa" />
+              <circle cx="32" cy="20" r="3" fill="#60a5fa" />
+              <circle cx="44" cy="20" r="3" fill="#60a5fa" />
+              <line
+                x1="15"
+                y1="38"
+                x2="95"
+                y2="38"
+                stroke="#93c5fd"
+                stroke-width="2"
+              />
+              <line
+                x1="15"
+                y1="52"
+                x2="80"
+                y2="52"
+                stroke="#93c5fd"
+                stroke-width="2"
+              />
+              <line
+                x1="15"
+                y1="66"
+                x2="65"
+                y2="66"
+                stroke="#93c5fd"
+                stroke-width="2"
+              />
+              <text
+                x="55"
+                y="118"
+                text-anchor="middle"
+                fill="#cbd5e1"
+                font-size="13"
+                font-family="Segoe UI, sans-serif"
+              >
+                Navision
+              </text>
+            </g>
+
+            <g transform="translate(265,45)">
+              <circle
+                cx="55"
+                cy="55"
+                r="55"
+                fill="rgba(168,85,247,0.12)"
+                stroke="#a855f7"
+                stroke-width="1.5"
+              />
+              <text
+                x="55"
+                y="52"
+                text-anchor="middle"
+                fill="#e9d5ff"
+                font-size="16"
+                font-weight="bold"
+                font-family="Segoe UI, sans-serif"
+              >
+                API
+              </text>
+              <text
+                x="55"
+                y="72"
+                text-anchor="middle"
+                fill="#e9d5ff"
+                font-size="13"
+                font-family="Segoe UI, sans-serif"
+              >
+                GEODIS
+              </text>
+              <text
+                x="55"
+                y="128"
+                text-anchor="middle"
+                fill="#cbd5e1"
+                font-size="13"
+                font-family="Segoe UI, sans-serif"
+              >
+                Reprise
+              </text>
+            </g>
+
+            <g transform="translate(500,55)">
+              <rect
+                width="110"
+                height="90"
+                rx="12"
+                fill="rgba(255,255,255,0.05)"
+                stroke="#22d3ee"
+                stroke-width="1.5"
+              />
+              <path
+                d="M18 15 h74 v45 l-15 15 h-59 z"
+                fill="none"
+                stroke="#67e8f9"
+                stroke-width="1.5"
+              />
+              <line
+                x1="26"
+                y1="30"
+                x2="26"
+                y2="50"
+                stroke="#67e8f9"
+                stroke-width="2"
+              />
+              <line
+                x1="34"
+                y1="30"
+                x2="34"
+                y2="50"
+                stroke="#67e8f9"
+                stroke-width="1"
+              />
+              <line
+                x1="40"
+                y1="30"
+                x2="40"
+                y2="50"
+                stroke="#67e8f9"
+                stroke-width="3"
+              />
+              <line
+                x1="48"
+                y1="30"
+                x2="48"
+                y2="50"
+                stroke="#67e8f9"
+                stroke-width="1"
+              />
+              <line
+                x1="54"
+                y1="30"
+                x2="54"
+                y2="50"
+                stroke="#67e8f9"
+                stroke-width="2"
+              />
+              <line
+                x1="62"
+                y1="30"
+                x2="62"
+                y2="50"
+                stroke="#67e8f9"
+                stroke-width="1"
+              />
+              <line
+                x1="70"
+                y1="30"
+                x2="70"
+                y2="50"
+                stroke="#67e8f9"
+                stroke-width="2"
+              />
+              <line
+                x1="78"
+                y1="30"
+                x2="78"
+                y2="50"
+                stroke="#67e8f9"
+                stroke-width="1"
+              />
+              <text
+                x="55"
+                y="118"
+                text-anchor="middle"
+                fill="#cbd5e1"
+                font-size="13"
+                font-family="Segoe UI, sans-serif"
+              >
+                Étiquette
+              </text>
+            </g>
+          </svg>
+        </div>
 
         <div class="detail-card">
-          <h2>Présentation</h2>
+          <h2 id="presentation">Présentation de la réalisation</h2>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ce projet
-            présente une solution développée autour de technologies web
-            modernes.
+            Ce projet s'inscrit dans la suite de l'intégration de l'API GLS,
+            mais la spécificité de ce projet réside dans le fait qu'il
+            s'agissait de reprendre un code existant, développé par un autre
+            développeur, et de le finaliser pour permettre l'impression et
+            l'annulation des étiquettes ainsi que la génération de la feuille de
+            fin de journée (FDJ) pour le transporteur Géodis. La feuille de fin
+            de journée désigne un document listant toutes les expéditions
+            partant dans un camion.
           </p>
-
-          <h2>Rôle dans le projet</h2>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mon rôle a
-            consisté à participer à la conception, au développement et aux tests
-            de l'application.
+            Définition : EDI : L'échange de données informatisé est un procédé
+            d'échange de données ou de documents entre deux systèmes
+            informatiques, selon un format standardisé et structuré. Dans le cas
+            de l'API Géodis, les EDI sont utilisés pour envoyer les informations
+            nécessaires à la génération des étiquettes.
           </p>
 
-          <h2>Technologies utilisées</h2>
+          <h2 id="objectifs">Objectifs, contexte, enjeu et risques</h2>
 
-          <div class="project-tags">
-            <span>Angular</span>
+          <p>
+            L'objectif principal de ce projet était de vérifier l'état de
+            fonctionnement de l'API Géodis tout en reprenant contact avec le
+            support technique du transporteur pour résoudre les problèmes
+            rencontrés. Il s'agissait également pour l'entreprise de gérer
+            l'envoi par le transporteur Géodis en aussi grande quantité que GLS,
+            Géodis n'étant utilisé que pour un petit nombre de commandes web
+            avant l'intégration de l'API.
+          </p>
 
-            <span>JavaScript</span>
+          <p class="subsection-label">🔧 Contexte technique</p>
 
-            <span>HTML</span>
+          <p>
+            À l'instar de l'intégration de l'API GLS qui avait été réalisée de
+            zéro, il a fallu comprendre le code existant et reprendre les
+            fonctionnalités déjà développées pour soit les finaliser, soit les
+            corriger.
+          </p>
 
-            <span>CSS</span>
+          <p class="subsection-label">🎯 Enjeu</p>
+
+          <p>
+            L'enjeu pour Romus ici était de pouvoir utiliser un autre
+            transporteur que Schenker pour l'envoi dans certaines zones
+            géographiques moins bien desservies par Schenker, mais également de
+            terminer un développement qui avait été laissé en suspens depuis une
+            année.
+          </p>
+
+          <p class="subsection-label">⚠️ Risques</p>
+
+          <p>
+            Les risques principaux de ce projet étaient liés à la reprise d'un
+            code existant, car une mauvaise compréhension de l'existant pourrait
+            entraîner des problèmes de fonctionnement avec l'API de Géodis.
+            Également, il a fallu faire appel à notre prestataire
+            qui s'occupe de l'ERP Navision pour le développement de certaines
+            fonctionnalités, ce qui a entraîné des ralentissements dans le
+            projet, car nous dépendions de leur disponibilité pour avancer sur
+            certains points.
+          </p>
+
+          <p>
+            Il a également été nécessaire d'échanger avec Géodis pour
+            connaître les limites contractuelles de poids et de dimensions des
+            colis. Cela a permis de mettre en place des blocages du côté de
+            notre API afin de renvoyer des erreurs vers l'ERP Navision pour les
+            utilisateurs.
+          </p>
+
+          <div class="section-heading">
+            <svg
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Icône impression d'étiquette"
+            >
+              <rect
+                x="14"
+                y="6"
+                width="20"
+                height="16"
+                rx="2"
+                fill="none"
+                stroke="#93c5fd"
+                stroke-width="1.5"
+              />
+              <line
+                x1="18"
+                y1="11"
+                x2="30"
+                y2="11"
+                stroke="#93c5fd"
+                stroke-width="1.2"
+              />
+              <line
+                x1="18"
+                y1="15"
+                x2="26"
+                y2="15"
+                stroke="#93c5fd"
+                stroke-width="1.2"
+              />
+              <rect
+                x="8"
+                y="20"
+                width="32"
+                height="14"
+                rx="3"
+                fill="rgba(96,165,250,0.12)"
+                stroke="#60a5fa"
+                stroke-width="1.5"
+              />
+              <rect
+                x="12"
+                y="34"
+                width="24"
+                height="8"
+                rx="2"
+                fill="rgba(34,211,238,0.12)"
+                stroke="#22d3ee"
+                stroke-width="1.5"
+              />
+            </svg>
+            <h2 id="etapes">Les étapes</h2>
           </div>
 
-          <h2>Résultats</h2>
+          <p>
+            Le développement de l'intégration de l'API Géodis a été réalisé en
+            plusieurs étapes, ayant appris du développement de l'API GLS, mais
+            reprenant également un code existant, j'ai dû m'adapter à la
+            situation et aux contraintes de ce projet. Voici les principales
+            étapes de ce projet :
+          </p>
+
+          <ol class="steps-list">
+            <li>
+              <strong>Reprise et lecture de la documentation Géodis</strong>
+              — Tout d'abord, j'ai dû reprendre contact avec le support
+              technique de Géodis pour savoir où en était le projet et
+              comprendre là où s'étaient arrêtés les développements. J'ai
+              également dû relire la documentation de l'API Géodis pour
+              comprendre les spécificités des EDI envoyés vers l'API et les
+              éléments requis pour l'impression des étiquettes, ainsi que les
+              spécificités nécessaires au fonctionnement des envois National et
+              Export. Aussi, ayant déjà développé le "dispatcher" pour GLS et
+              Schenker dans l'API, je n'ai eu qu'à y rajouter Géodis.
+            </li>
+
+            <li>
+              <strong>Adaptation de l'impression mono et multi colis</strong>
+              — Durant les tests, des bugs ont été découverts sur l'impression
+              des étiquettes. L'un des bugs concernait une donnée non présente
+              dans Navision (le nom du contact), qui pouvait parfois être vide
+              et donc bloquait l'impression de l'étiquette, car l'API Géodis ne
+              pouvait pas générer l'étiquette sans cette information. J'ai donc
+              pu communiquer avec les commerciaux de Romus pour savoir si le nom
+              du contact pouvait être remplacé par le nom de la société, ce qui
+              a été validé. Le problème a donc été résolu. Il a fallu également
+              créer dans Navision des nouveaux codes transporteur pour Géodis,
+              car à l'instar de GLS, ces codes n'avaient pas été créés dans
+              Navision.
+            </li>
+
+            <li>
+              <strong>Gestion des spécificités Géodis</strong> — Pour les envois
+              de colis en Export, il m'a fallu communiquer avec Géodis et notre
+              expert Transport pour savoir comment gérer ces envois, car Géodis
+              différenciait les envois Export EU et Export hors EU, et les EDI
+              envoyés vers l'API Géodis devaient contenir des informations
+              supplémentaires pour ces envois, comme le numéro EORI de
+              l'entreprise destinataire. Certaines des données nécessaires
+              demandaient des modifications dans Navision, il a donc été décidé
+              de mettre de côté les envois Export hors EU pour le moment, car
+              ces envois n'étaient pas encore prévus pour Géodis. Une des
+              spécificités du transporteur Géodis est la possibilité de la
+              prise de rendez-vous pour les particuliers, mais pour notre
+              projet, il a été décidé de ne pas l'utiliser, car Géodis est
+              principalement utilisé pour le B to B.
+            </li>
+
+            <li>
+              <strong
+                >Développement de l'annulation et de rajout de colis</strong
+              >
+              — Durant la reprise du code, j'ai pu découvrir que l'API Géodis
+              bloquait les modifications sur une commande qui leur avait déjà
+              été envoyée, il a donc fallu réfléchir à des modifications pour
+              les utilisateurs. Après des échanges avec les différents acteurs,
+              il a été décidé de rajouter une fonctionnalité d'annulation
+              globale des colis d'une expédition et d'un bouton d'envoi global
+              des colis pour l'expédition, et pour pallier à l'envoi de colis en
+              différé pour une expédition, puis a été développé le rajout d'un
+              indicateur du type " - 1 ", à la fin d'un identifiant d'expédition
+              afin de permettre le rajout de colis associés à l'expédition sur
+              l'API Géodis.
+            </li>
+
+            <li>
+              <strong>Mise en place de la feuille de fin de journée</strong>
+              — Pour le document de fin de journée, comme j'avais déjà développé
+              un "dispatcher" pour Schenker et GLS, j'ai seulement eu à le
+              modifier et à y rajouter Géodis.
+            </li>
+
+            <li>
+              <strong>Kick-off Géodis</strong> — avant la mise en place du
+              cahier de recette, un kick-off a été organisé afin que toutes
+              les équipes impliquées dans le projet, ou qui travailleront avec
+              les expéditions Géodis, soient mises au courant de l'état
+              d'avancement et de la date de lancement des tests.
+            </li>
+
+            <li>
+              <strong>Cahier de recette et déploiement</strong> — Par la suite
+              j'ai pu reprendre le cahier de recette de GLS pour l'adapter aux
+              spécificités de Géodis et ainsi préparer la phase de tests.
+            </li>
+
+            <li>
+              <strong>Gestion des blocages et report</strong> — Au moment où
+              j'écris, la phase de tests n'a pas été finalisée, car elle a subi
+              des retards causés par les échanges avec le support technique de
+              Géodis, qui a été ralenti par les départs en vacances de la
+              période estivale. Le projet a donc été mis en pause durant cette
+              période pour être repris à la rentrée, ce qui nous permettra de
+              finaliser les tests côté entrepôt de l'entreprise pour les
+              différents sites utilisant Géodis comme transporteur.
+            </li>
+          </ol>
+
+          <h2 id="acteurs">Les acteurs</h2>
+
+          <ul class="definition-list">
+            <li>
+              Mon maître d'apprentissage, qui m'a aidé à la reprise du projet en
+              me donnant les contacts de Géodis ainsi que l'état d'avancement du projet.
+            </li>
+
+            <li>
+              Le prestataire Navision, qui a permis les modifications de
+              l'interface et du fonctionnement spécifique au transporteur
+              Géodis.
+            </li>
+
+            <li>
+              Les équipes techniques de Géodis, qui ont fourni les
+              documentations ainsi que les environnements de tests et des
+              réponses aux questions posées au fur et à mesure du
+              développement.
+            </li>
+
+            <li>
+              Les utilisateurs sur les différents sites, qui ont permis
+              l'avancement des tests et la découverte de certains bugs.
+            </li>
+
+            <li>
+              Moi-même, en charge de la reprise et du développement de
+              l'intégration et de la reprise du code.
+            </li>
+          </ul>
+
+          <h2 id="resultats">Les résultats</h2>
 
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Le projet a
-            permis de mettre en application les notions étudiées durant la
-            formation.
+            Les derniers points de blocage ont été réglés, notamment un qui
+            résidait sur la création d'un compte API Géodis destiné au site de
+            Bondoufle.
           </p>
+
+          <h2 id="lendemains">Les lendemains du projet</h2>
+
+          <p>
+            Malgré ces blocages résolus, le projet est toujours en cours,
+            seulement mis en pause pour une reprise à la rentrée, ce qui
+            laissera aux utilisateurs le temps de terminer les tests.
+          </p>
+
+          <h2 id="regard-critique">Mon regard critique</h2>
+
+          <p>
+            La reprise d'un code existant m'a permis de comprendre que
+            l'existant pouvait être autant une source de problème qu'un
+            développement de zéro, car il nécessite une analyse de l'existant
+            complète. Si je devais faire quelque chose différemment dans ce
+            projet, ce serait sûrement la reprise du code existant, en
+            testant plus en détail chacune des fonctionnalités de l'API afin
+            d'éviter les mauvaises surprises qui ont ralenti le
+            développement.
+          </p>
+
+          <h2 id="competences">Compétences associées</h2>
+
+          <p>
+            Retrouvez le détail des compétences mobilisées sur ce projet dans
+            mes pages dédiées :
+          </p>
+
+          <div class="related-skills">
+            <a href="/pages/skills/technical.html" class="related-skill-link">
+              <span class="related-skill-icon">⚙️</span>
+
+              <span class="related-skill-text">
+                <strong>Compétences techniques</strong>
+                <span class="related-skill-sub">
+                  Technologies, méthodes, outils
+                </span>
+              </span>
+
+              <span class="related-skill-arrow">→</span>
+            </a>
+
+            <a href="/pages/skills/human.html" class="related-skill-link">
+              <span class="related-skill-icon">🤝</span>
+
+              <span class="related-skill-text">
+                <strong>Compétences humaines</strong>
+                <span class="related-skill-sub">
+                  Communication, organisation, autonomie
+                </span>
+              </span>
+
+              <span class="related-skill-arrow">→</span>
+            </a>
+          </div>
         </div>
       </section>
     </main>
