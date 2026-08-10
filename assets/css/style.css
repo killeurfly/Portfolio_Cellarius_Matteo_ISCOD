@@ -478,7 +478,7 @@ main {
 .page-section::before {
   content: "";
 
-  position: absolute;
+  position: fixed;
 
   inset: -20%;
 
@@ -509,7 +509,7 @@ main {
 .page-section::after {
   content: "";
 
-  position: absolute;
+  position: fixed;
 
   inset: 0;
 
@@ -549,7 +549,7 @@ main {
 
   flex-direction: column;
 
-  gap: 18px;
+  gap: 16px;
 
   text-align: left;
 
@@ -565,7 +565,21 @@ main {
 
   font-size: 1.4rem;
 
+  margin-top: 34px;
+
   scroll-margin-top: 130px;
+}
+
+.detail-card h2:first-child {
+  margin-top: 0;
+}
+
+.detail-card .section-heading {
+  margin-top: 34px;
+}
+
+.detail-card .subsection-label {
+  margin-top: 10px;
 }
 
 .subsection-label {
