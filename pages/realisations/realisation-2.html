@@ -280,12 +280,40 @@
           </p>
 
           <p>
-            Définition : EDI : L'échange de données informatisé est un procédé
-            d'échange de données ou de documents entre deux systèmes
-            informatiques, selon un format standardisé et structuré. Dans le cas
-            de l'API Géodis, les EDI sont utilisés pour envoyer les informations
-            nécessaires à la génération des étiquettes.
+            Tout d'abord quelques définitions des termes qui vont être utilisés
+            dans ce projet :
           </p>
+
+          <ul class="definition-list">
+            <li>
+              <strong>Une API REST</strong> (Representational State Transfer)
+              est une interface de programmation qui permet à différentes
+              applications de communiquer entre elles en utilisant le protocole
+              HTTP. Elle est souvent utilisée pour accéder à des services web et
+              échanger des données au format JSON ou XML. L'API REST de Géodis
+              est utilisée pour générer et gérer les étiquettes de transport,
+              car Géodis est responsable de la livraison des colis et fournit
+              les services d'expédition.
+            </li>
+
+            <li>
+              <strong>Un ERP</strong> (Enterprise Resource Planning) est un
+              logiciel de gestion intégré aux processus de l'entreprise. Il
+              permet de centraliser et d'automatiser les différentes fonctions
+              de l'entreprise, telles que la gestion des stocks, la
+              comptabilité, les ressources humaines, la production, etc. Dans le
+              contexte de ce projet, l'ERP Navision est utilisé pour gérer les
+              processus d'expédition et de logistique.
+            </li>
+
+            <li>
+              <strong>Un EDI</strong> (Échange de Données Informatisé) est un
+              procédé d'échange de données ou de documents entre deux systèmes
+              informatiques, selon un format standardisé et structuré. Dans le
+              cas de l'API Géodis, les EDI sont utilisés pour envoyer les
+              informations nécessaires à la génération des étiquettes.
+            </li>
+          </ul>
 
           <h2 id="objectifs">Objectifs, contexte, enjeu et risques</h2>
 
@@ -324,19 +352,18 @@
             Les risques principaux de ce projet étaient liés à la reprise d'un
             code existant, car une mauvaise compréhension de l'existant pourrait
             entraîner des problèmes de fonctionnement avec l'API de Géodis.
-            Également, il a fallu faire appel à notre prestataire
-            qui s'occupe de l'ERP Navision pour le développement de certaines
+            Également, il a fallu faire appel à notre prestataire qui s'occupe
+            de l'ERP Navision pour le développement de certaines
             fonctionnalités, ce qui a entraîné des ralentissements dans le
             projet, car nous dépendions de leur disponibilité pour avancer sur
             certains points.
           </p>
 
           <p>
-            Il a également été nécessaire d'échanger avec Géodis pour
-            connaître les limites contractuelles de poids et de dimensions des
-            colis. Cela a permis de mettre en place des blocages du côté de
-            notre API afin de renvoyer des erreurs vers l'ERP Navision pour les
-            utilisateurs.
+            Il a également été nécessaire d'échanger avec Géodis pour connaître
+            les limites contractuelles de poids et de dimensions des colis. Cela
+            a permis de mettre en place des blocages du côté de notre API afin
+            de renvoyer des erreurs vers l'ERP Navision pour les utilisateurs.
           </p>
 
           <div class="section-heading">
@@ -439,15 +466,15 @@
               expert Transport pour savoir comment gérer ces envois, car Géodis
               différenciait les envois Export EU et Export hors EU, et les EDI
               envoyés vers l'API Géodis devaient contenir des informations
-              supplémentaires pour ces envois, comme le numéro EORI de
-              l'entreprise destinataire. Certaines des données nécessaires
+              supplémentaires pour ces envois, comme les identifiants douaniers
+              de l'entreprise destinataire. Certaines des données nécessaires
               demandaient des modifications dans Navision, il a donc été décidé
               de mettre de côté les envois Export hors EU pour le moment, car
               ces envois n'étaient pas encore prévus pour Géodis. Une des
-              spécificités du transporteur Géodis est la possibilité de la
-              prise de rendez-vous pour les particuliers, mais pour notre
-              projet, il a été décidé de ne pas l'utiliser, car Géodis est
-              principalement utilisé pour le B to B.
+              spécificités du transporteur Géodis est la possibilité de la prise
+              de rendez-vous pour les particuliers, mais pour notre projet, il a
+              été décidé de ne pas l'utiliser, car Géodis est principalement
+              utilisé pour le B to B.
             </li>
 
             <li>
@@ -476,10 +503,10 @@
 
             <li>
               <strong>Kick-off Géodis</strong> — avant la mise en place du
-              cahier de recette, un kick-off a été organisé afin que toutes
-              les équipes impliquées dans le projet, ou qui travailleront avec
-              les expéditions Géodis, soient mises au courant de l'état
-              d'avancement et de la date de lancement des tests.
+              cahier de recette, un kick-off a été organisé afin que toutes les
+              équipes impliquées dans le projet, ou qui travailleront avec les
+              expéditions Géodis, soient mises au courant de l'état d'avancement
+              et de la date de lancement des tests.
             </li>
 
             <li>
@@ -505,7 +532,8 @@
           <ul class="definition-list">
             <li>
               Mon maître d'apprentissage, qui m'a aidé à la reprise du projet en
-              me donnant les contacts de Géodis ainsi que l'état d'avancement du projet.
+              me donnant les contacts de Géodis ainsi que l'état d'avancement du
+              projet.
             </li>
 
             <li>
@@ -517,8 +545,7 @@
             <li>
               Les équipes techniques de Géodis, qui ont fourni les
               documentations ainsi que les environnements de tests et des
-              réponses aux questions posées au fur et à mesure du
-              développement.
+              réponses aux questions posées au fur et à mesure du développement.
             </li>
 
             <li>
@@ -555,10 +582,9 @@
             l'existant pouvait être autant une source de problème qu'un
             développement de zéro, car il nécessite une analyse de l'existant
             complète. Si je devais faire quelque chose différemment dans ce
-            projet, ce serait sûrement la reprise du code existant, en
-            testant plus en détail chacune des fonctionnalités de l'API afin
-            d'éviter les mauvaises surprises qui ont ralenti le
-            développement.
+            projet, ce serait sûrement la reprise du code existant, en testant
+            plus en détail chacune des fonctionnalités de l'API afin d'éviter
+            les mauvaises surprises qui ont ralenti le développement.
           </p>
 
           <h2 id="competences">Compétences associées</h2>

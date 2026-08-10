@@ -273,10 +273,7 @@
             mon alternance. Il s'inscrivait dans un contexte de remplacement du
             logiciel d'impression d'étiquettes GLS par une intégration directe
             de l'API REST de GLS à l'ERP Navision, afin de simplifier le
-            processus d'expédition pour les utilisateurs. À Romus, nous utilisons
-            également Dex DataExchanger qui est un middleware qui combine
-            plusieurs fonctionnalités, dont la gestion des flux de données entre
-            différents systèmes.
+            processus d'expédition pour les utilisateurs.
           </p>
 
           <p>
@@ -312,8 +309,8 @@
               facilite la communication et l'échange de données entre ces
               systèmes, en gérant les protocoles, les formats de données et les
               flux de communication. Dans le contexte de ce projet, Dex
-              DataExchanger est utilisé pour gérer les flux de données entre
-              l'API REST de GLS et GEDIM.
+              DataExchanger le middleware utilisé pour gérer les flux de données
+              entre l'API REST de GLS et GEDIM.
             </li>
           </ul>
 
@@ -406,9 +403,9 @@
           </p>
 
           <p>
-            Pour pallier tous ces risques, un cahier de tests a été mis en
-            place pour tester l'implémentation de l'API GLS dans l'ERP Navision
-            et pour s'assurer que les utilisateurs respectaient les nouvelles
+            Pour pallier tous ces risques, un cahier de tests a été mis en place
+            pour tester l'implémentation de l'API GLS dans l'ERP Navision et
+            pour s'assurer que les utilisateurs respectaient les nouvelles
             procédures. Ce cahier de test contenait les étapes de fonctionnement
             nominales à suivre pour l'impression d'étiquettes GLS. De plus, un
             tableau de report des erreurs a été mis en place pour suivre les
@@ -490,8 +487,8 @@
               ainsi que les paramètres et les formats de données requis pour
               interagir avec elle. GLS nous a également fourni un accès à un
               environnement de production de test "Sandbox" afin de pouvoir
-              tester l'implémentation de l'API dans un environnement identique
-              à celui de production.
+              tester l'implémentation de l'API dans un environnement identique à
+              celui de production.
             </li>
 
             <li>
@@ -516,11 +513,11 @@
               retours d'erreurs vers l'ERP afin que les utilisateurs puissent
               comprendre les erreurs rencontrées lors de l'impression
               d'étiquettes GLS. Pour ce qui est de l'erreur d'adresse, celle-ci
-              était envoyée vers une application interne de Romus appelée
-              GEDIM, qui permet un suivi des transporteurs et des erreurs
-              d'adresse. Les utilisateurs pouvaient ainsi corriger les erreurs
-              d'adresse dans l'application GEDIM et relancer l'impression
-              d'étiquettes GLS sans toucher à l'ERP Navision.
+              était envoyée vers une application interne de Romus appelée GEDIM,
+              qui permet un suivi des transporteurs et des erreurs d'adresse.
+              Les utilisateurs pouvaient ainsi corriger les erreurs d'adresse
+              dans l'application GEDIM et relancer l'impression d'étiquettes GLS
+              sans toucher à l'ERP Navision.
             </li>
 
             <li>
