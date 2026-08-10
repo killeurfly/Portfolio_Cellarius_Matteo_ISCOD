@@ -32,7 +32,8 @@
 
 - [x] Réalisation 1 — Intégration API GLS : contenu complet, structure ISCOD (présentation, objectifs/contexte/enjeu/risques, étapes, acteurs, résultats, lendemains, regard critique, compétences associées), illustration SVG, relecture orthographe faite
 - [x] Réalisation 2 — Reprise API Géodis : contenu complet, structure ISCOD, illustration SVG, relecture orthographe faite (projet toujours en pause côté Romus pour l'été — section Résultats/Lendemains à réviser si le statut change à la rentrée)
-- [ ] Réalisation 3, 4, 5 : pages pas encore créées — candidats possibles dans le journal (Gedim, Site IA RomusWorld, Swagger API), à confirmer avant de créer quoi que ce soit
+- [x] Réalisation 3 — Évolution de Gedim : contenu complet, structure ISCOD, illustration SVG, relecture orthographe faite
+- [ ] Réalisation 4, 5 : pages pas encore créées — cadrage proposé (Site IA RomusWorld, Swagger API), en attente de confirmation avant création
 - [ ] Ajouter le lien GitHub sur les réalisations qui s'y prêtent
 - [ ] Vérifier la confidentialité des réalisations liées à Romus avant publication (repo GitHub public)
 
@@ -74,7 +75,8 @@
 - [ ] Vérifier toutes les images
 - [ ] Optimiser les tailles d'images
 - [ ] Ajouter favicon
+- [ ] Ajouter les balises meta (description, Open Graph/réseaux sociaux) sur chaque page
 - [ ] Ajouter README
 - [ ] Faire une relecture complète
-- [x] Vérifier l'orthographe, la grammaire et la syntaxe — fait pour Réalisation 1 (API GLS) et Réalisation 2 (API Géodis) — [ ] reste à faire pour les autres pages
+- [x] Vérifier l'orthographe, la grammaire et la syntaxe — fait pour Réalisation 1 (API GLS), Réalisation 2 (API Géodis) et Réalisation 3 (Gedim) — [ ] reste à faire pour les autres pages
 - [ ] Déployer le portfolio

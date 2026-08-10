@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Évolution de Gedim | Portfolio</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+
+    <main>
+      <section class="page-section project-detail">
+        <div class="blob-center"></div>
+        <h1>Évolution de l'application Gedim</h1>
+
+        <nav class="page-toc" aria-label="Sommaire de la page">
+          <a href="#presentation">Présentation</a>
+          <a href="#objectifs">Objectifs &amp; risques</a>
+          <a href="#etapes">Étapes</a>
+          <a href="#acteurs">Acteurs</a>
+          <a href="#resultats">Résultats</a>
+          <a href="#lendemains">Lendemains</a>
+          <a href="#regard-critique">Regard critique</a>
+          <a href="#competences">Compétences</a>
+        </nav>
+
+        <div class="illustration-panel">
+          <svg
+            viewBox="0 0 640 200"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Schéma du flux : Abbyy vers Dex vers Gedim"
+          >
+            <defs>
+              <linearGradient
+                id="flowGradientGedim"
+                gradientUnits="userSpaceOnUse"
+                x1="120"
+                y1="100"
+                x2="520"
+                y2="100"
+              >
+                <stop offset="0%" stop-color="#60a5fa" />
+                <stop offset="50%" stop-color="#a855f7" />
+                <stop offset="100%" stop-color="#22d3ee" />
+              </linearGradient>
+              <marker
+                id="arrowGedim"
+                markerWidth="10"
+                markerHeight="10"
+                refX="7"
+                refY="5"
+                orient="auto"
+              >
+                <path d="M0,0 L10,5 L0,10 Z" fill="#94a3b8" />
+              </marker>
+            </defs>
+
+            <line
+              x1="140"
+              y1="100"
+              x2="261"
+              y2="100"
+              stroke="url(#flowGradientGedim)"
+              stroke-width="2"
+              stroke-dasharray="6 8"
+              marker-end="url(#arrowGedim)"
+            />
+            <line
+              x1="377"
+              y1="100"
+              x2="496"
+              y2="100"
+              stroke="url(#flowGradientGedim)"
+              stroke-width="2"
+              stroke-dasharray="6 8"
+              marker-end="url(#arrowGedim)"
+            />
+
+            <g transform="translate(30,55)">
+              <rect
+                width="110"
+                height="90"
+                rx="16"
+                fill="rgba(255,255,255,0.05)"
+                stroke="#60a5fa"
+                stroke-width="1.5"
+              />
+              <circle cx="20" cy="20" r="3" fill="#60a5fa" />
+              <circle cx="32" cy="20" r="3" fill="#60a5fa" />
+              <circle cx="44" cy="20" r="3" fill="#60a5fa" />
+              <line
+                x1="15"
+                y1="38"
+                x2="95"
+                y2="38"
+                stroke="#93c5fd"
+                stroke-width="2"
+              />
+              <line
+                x1="15"
+                y1="52"
+                x2="80"
+                y2="52"
+                stroke="#93c5fd"
+                stroke-width="2"
+              />
+              <line
+                x1="15"
+                y1="66"
+                x2="65"
+                y2="66"
+                stroke="#93c5fd"
+                stroke-width="2"
+              />
+              <text
+                x="55"
+                y="118"
+                text-anchor="middle"
+                fill="#cbd5e1"
+                font-size="13"
+                font-family="Segoe UI, sans-serif"
+              >
+                Abbyy
+              </text>
+            </g>
+
+            <g transform="translate(265,45)">
+              <circle
+                cx="55"
+                cy="55"
+                r="55"
+                fill="rgba(168,85,247,0.12)"
+                stroke="#a855f7"
+                stroke-width="1.5"
+              />
+              <text
+                x="55"
+                y="52"
+                text-anchor="middle"
+                fill="#e9d5ff"
+                font-size="16"
+                font-weight="bold"
+                font-family="Segoe UI, sans-serif"
+              >
+                DEX
+              </text>
+              <text
+                x="55"
+                y="72"
+                text-anchor="middle"
+                fill="#e9d5ff"
+                font-size="13"
+                font-family="Segoe UI, sans-serif"
+              >
+                Middleware
+              </text>
+              <text
+                x="55"
+                y="128"
+                text-anchor="middle"
+                fill="#cbd5e1"
+                font-size="13"
+                font-family="Segoe UI, sans-serif"
+              >
+                Échange
+              </text>
+            </g>
+
+            <g transform="translate(500,55)">
+              <rect
+                width="110"
+                height="90"
+                rx="12"
+                fill="rgba(255,255,255,0.05)"
+                stroke="#22d3ee"
+                stroke-width="1.5"
+              />
+              <rect
+                x="15"
+                y="15"
+                width="80"
+                height="60"
+                fill="none"
+                stroke="#67e8f9"
+                stroke-width="1.5"
+              />
+              <line
+                x1="42"
+                y1="15"
+                x2="42"
+                y2="75"
+                stroke="#67e8f9"
+                stroke-width="1.2"
+              />
+              <line
+                x1="68"
+                y1="15"
+                x2="68"
+                y2="75"
+                stroke="#67e8f9"
+                stroke-width="1.2"
+              />
+              <line
+                x1="15"
+                y1="35"
+                x2="95"
+                y2="35"
+                stroke="#67e8f9"
+                stroke-width="1.2"
+              />
+              <line
+                x1="15"
+                y1="55"
+                x2="95"
+                y2="55"
+                stroke="#67e8f9"
+                stroke-width="1.2"
+              />
+              <text
+                x="55"
+                y="118"
+                text-anchor="middle"
+                fill="#cbd5e1"
+                font-size="13"
+                font-family="Segoe UI, sans-serif"
+              >
+                Gedim
+              </text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="detail-card">
+          <h2 id="presentation">Présentation de la réalisation</h2>
+
+          <p>
+            Ce projet a également été l'un des tout premiers sur lesquels j'ai
+            travaillé à Romus. Gedim est l'application interne de
+            Romus dédiée au suivi de commande. Au fil de mon alternance, j'ai pu
+            y ajouter des fonctionnalités liées aux demandes d'évolution des
+            équipes, ou compléter des fonctionnalités existantes.
+          </p>
+
+          <p>
+            Tout d'abord quelques définitions des termes qui vont être utilisés
+            dans ce projet :
+          </p>
+
+          <ul class="definition-list">
+            <li>
+              <strong>Abbyy</strong> est un logiciel de capture et de
+              traitement de documents (OCR). Dans le cadre de Romus, il est
+              utilisé pour extraire automatiquement des données de documents
+              afin de les intégrer dans les diverses applications de
+              l'entreprise.
+            </li>
+
+            <li>
+              <strong>Dex</strong> (DataExchanger) est un middleware qui agit
+              comme intermédiaire entre différentes applications ou systèmes.
+              Il facilite la communication et l'échange de données entre ces
+              systèmes. Dans le contexte de ce projet, Dex est utilisé pour
+              échanger des données entre les autres systèmes de
+              l'entreprise.
+            </li>
+
+            <li>
+              <strong>Un EDI</strong> (Échange de Données Informatisé) est un
+              procédé d'échange de données ou de documents entre deux systèmes
+              informatiques, selon un format standardisé et structuré. Dans le
+              cas de Gedim, les EDI sont utilisés pour récupérer l'état des
+              commandes.
+            </li>
+
+            <li>
+              <strong>LDAP, LDAPS et Active Directory</strong> — LDAP
+              (Lightweight Directory Access Protocol) est un protocole utilisé
+              pour interroger un annuaire de ressources réseau (utilisateurs,
+              ordinateurs, permissions), notamment pour vérifier qu'un
+              utilisateur est bien autorisé à se connecter. LDAPS est la
+              version sécurisée de ce protocole, qui chiffre les échanges.
+              Active Directory est le service d'annuaire de Microsoft qui
+              stocke ces informations, et avec lequel Gedim communique via
+              LDAP/LDAPS pour authentifier les utilisateurs.
+            </li>
+          </ul>
+
+          <h2 id="objectifs">Objectifs, contexte, enjeu et risques</h2>
+
+          <p>
+            L'objectif principal de Gedim est de permettre un suivi simple sur
+            les expéditions des différents transporteurs, de savoir si les
+            expéditions ont bien été enregistrées et d'avoir la liste des colis
+            pour chaque expédition. Il permet également de régler les
+            éventuels problèmes d'adresse erronée des expéditions et
+            d'obtenir des rapports Excel des expéditions et des erreurs
+            d'adresse.
+          </p>
+
+          <p class="subsection-label">🔧 Contexte technique</p>
+
+          <p>
+            Pour Gedim, il a fallu faire évoluer une application web existante
+            en intégrant des fonctionnalités développées au fil des demandes
+            utilisateurs, et après l'ajout de nouvelles intégrations d'API.
+            Également, Gedim a été ma première interaction avec le contexte du
+            système d'information de Romus : j'ai donc dû, avant tout
+            développement, comprendre le fonctionnement de l'entreprise ainsi
+            que celui de l'application.
+          </p>
+
+          <p class="subsection-label">🎯 Enjeu</p>
+
+          <p>
+            Les enjeux liés à ces évolutions résidaient dans le fait de faire
+            évoluer les fonctionnalités qui nécessitaient des ajustements avec
+            un moindre impact sur les autres. Ces évolutions ont permis une
+            fiabilisation des processus de suivi, mais aussi de renforcer la
+            confiance des utilisateurs dans ces outils.
+          </p>
+
+          <p class="subsection-label">⚠️ Risques</p>
+
+          <p>
+            Les principaux risques résidaient dans la fiabilisation des
+            fonctionnalités déjà présentes : il y avait un risque de
+            régression des fonctionnalités, mais aussi un risque de
+            conformité aux attentes utilisateurs, car il fallait s'assurer que
+            les fonctionnalités qui allaient évoluer correspondaient à leurs
+            besoins.
+          </p>
+
+          <div class="section-heading">
+            <svg
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Icône liste d'étapes"
+            >
+              <rect
+                x="10"
+                y="6"
+                width="28"
+                height="36"
+                rx="3"
+                fill="rgba(96,165,250,0.08)"
+                stroke="#60a5fa"
+                stroke-width="1.5"
+              />
+              <line
+                x1="16"
+                y1="16"
+                x2="32"
+                y2="16"
+                stroke="#93c5fd"
+                stroke-width="2"
+              />
+              <line
+                x1="16"
+                y1="24"
+                x2="32"
+                y2="24"
+                stroke="#93c5fd"
+                stroke-width="2"
+              />
+              <line
+                x1="16"
+                y1="32"
+                x2="26"
+                y2="32"
+                stroke="#93c5fd"
+                stroke-width="2"
+              />
+            </svg>
+            <h2 id="etapes">Les étapes</h2>
+          </div>
+
+          <p>
+            Le développement s'est déroulé en plusieurs étapes, réparties sur
+            la période de mon alternance :
+          </p>
+
+          <ol class="steps-list">
+            <li>
+              <strong>Prise en main de l'application</strong> — Mon maître
+              d'apprentissage a pu me présenter le fonctionnement de
+              l'entreprise ainsi que celui de son système d'information, puis
+              j'ai pu prendre en main l'applicatif Gedim en analysant sa
+              structure et en posant des questions sur son fonctionnement.
+            </li>
+
+            <li>
+              <strong>Suivi des transactions par catégorie</strong> — Pour
+              commencer, j'ai pu développer un tableau de suivi qui reprenait
+              la structure des tableaux présents sur la page de suivi
+              transporteur de Schenker. J'ai dû adapter cette structure afin
+              de pouvoir récupérer depuis la base de données l'état des
+              commandes sous leur forme EDI. Pour cela, j'ai dû comprendre le
+              fonctionnement des scripts internes de l'application, ainsi que
+              la structure de la base de données, afin que les données
+              récupérées soient les plus adaptées au tableau demandé.
+            </li>
+
+            <li>
+              <strong>Fiabilisation des requêtes SQL</strong> — Dans le contexte
+              des commandes, j'ai dû récupérer des données dans des bases de
+              données différentes, et ce contexte particulier m'a demandé de
+              fusionner les résultats de ces requêtes SQL.
+            </li>
+
+            <li>
+              <strong>Téléchargement et visualisation de fichiers</strong> — Une
+              des fonctionnalités que j'ai dû développer a été une option
+              permettant la visualisation et le téléchargement des fichiers
+              associés aux commandes. La difficulté rencontrée a été de
+              permettre la visualisation de tous les types de fichiers dans le
+              navigateur, car nous pouvions retrouver des fichiers PDF, JSON et
+              HTML. Il a donc fallu que je développe un interpréteur pour le
+              JSON et le HTML, les rendant agréables à lire.
+            </li>
+
+            <li>
+              <strong>Gestion des collaborateurs</strong> — Une partie
+              d'administration des utilisateurs avait déjà été développée par
+              un autre alternant. J'ai dû la réattacher au site web et
+              développer la partie d'ajout et de modification des
+              utilisateurs.
+            </li>
+
+            <li>
+              <strong>Passage de connexion LDAP à LDAPS</strong> — Une des
+              modifications que j'ai dû effectuer sur Gedim concernait le
+              protocole de connexion, qui utilisait le protocole LDAP pour
+              vérifier si la personne qui se connecte est à la fois présente
+              sur le réseau de l'organisation et dans la liste des
+              utilisateurs autorisés à se connecter au site. J'ai donc dû
+              faire passer ce protocole de LDAP à LDAPS afin que la connexion
+              soit plus sécurisée.
+            </li>
+
+            <li>
+              <strong>Mise en production et intégration des API</strong> — Après
+              le développement des API, j'ai dû intégrer le suivi des erreurs
+              d'adresse pour ces transporteurs dans Gedim. Par la suite, après
+              chaque développement, j'ai procédé à un test avec des données de
+              test, puis à une mise en production en attendant les retours des
+              utilisateurs.
+            </li>
+          </ol>
+
+          <h2 id="acteurs">Les acteurs</h2>
+
+          <ul class="definition-list">
+            <li>
+              Mon maître d'apprentissage, qui m'a présenté le fonctionnement de
+              l'organisation et de Gedim.
+            </li>
+
+            <li>Les utilisateurs de Gedim pour le suivi des mises à jour.</li>
+
+            <li>
+              Moi-même, en charge du développement des nouvelles
+              fonctionnalités.
+            </li>
+          </ul>
+
+          <h2 id="resultats">Les résultats</h2>
+
+          <p>
+            Toutes les fonctionnalités développées ont été mises en production
+            avec succès. J'ai par la suite continué les modifications et les
+            mises à jour tout au long de mon alternance. Gedim est utilisé par
+            30 à 50 utilisateurs journaliers, pour un suivi d'à peu près 300 à
+            400 commandes journalières.
+          </p>
+
+          <h2 id="lendemains">Les lendemains du projet</h2>
+
+          <p>
+            La prise en main de ce projet a facilité la compréhension des
+            projets qui ont suivi, grâce à la place centrale en termes de
+            suivi que possède Gedim dans l'organisation des processus. Gedim
+            a continué à recevoir des évolutions par la suite, comme
+            l'affichage des erreurs Géodis ou la correction d'un bug de
+            navigation sur la page de visualisation des fichiers, qui ne
+            descendait pas correctement jusqu'à l'affichage du fichier.
+          </p>
+
+          <h2 id="regard-critique">Mon regard critique</h2>
+
+          <p>
+            Ce premier projet m'a appris la façon de travailler avec les
+            utilisateurs de Romus et son système d'information, ainsi que la
+            structure professionnelle d'une application web.
+          </p>
+
+          <p>
+            Si je devais faire quelque chose de différent sur ce projet, ce
+            serait l'analyse de l'existant : au début, j'ai sous-estimé la
+            complexité du projet, notamment la partie script.
+          </p>
+
+          <h2 id="competences">Compétences associées</h2>
+
+          <p>
+            Retrouvez le détail des compétences mobilisées sur ce projet dans
+            mes pages dédiées :
+          </p>
+
+          <div class="related-skills">
+            <a href="/pages/skills/technical.html" class="related-skill-link">
+              <span class="related-skill-icon">⚙️</span>
+
+              <span class="related-skill-text">
+                <strong>Compétences techniques</strong>
+                <span class="related-skill-sub">
+                  Technologies, méthodes, outils
+                </span>
+              </span>
+
+              <span class="related-skill-arrow">→</span>
+            </a>
+
+            <a href="/pages/skills/human.html" class="related-skill-link">
+              <span class="related-skill-icon">🤝</span>
+
+              <span class="related-skill-text">
+                <strong>Compétences humaines</strong>
+                <span class="related-skill-sub">
+                  Communication, organisation, autonomie
+                </span>
+              </span>
+
+              <span class="related-skill-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/assets/js/navbar.js"></script>
+  </body>
+</html>
