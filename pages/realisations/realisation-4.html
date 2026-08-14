@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Automatisation du suivi des Garanties d'Origine | Portfolio</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+
+    <main>
+      <section class="page-section project-detail">
+        <div class="blob-center"></div>
+        <h1>Automatisation du suivi des Garanties d'Origine</h1>
+
+        <nav class="page-toc" aria-label="Sommaire de la page">
+          <a href="#presentation">Présentation</a>
+          <a href="#objectifs">Objectifs &amp; risques</a>
+          <a href="#etapes">Étapes</a>
+          <a href="#acteurs">Acteurs</a>
+          <a href="#resultats">Résultats</a>
+          <a href="#lendemains">Lendemains</a>
+          <a href="#regard-critique">Regard critique</a>
+          <a href="#competences">Compétences</a>
+        </nav>
+
+        <div class="illustration-panel">
+          <img
+            src="/assets/images/svg/illustration-edf-garanties-origine.svg"
+            alt="Schéma du flux : Fichiers clients vers macro VBA vers suivi des Garanties d'Origine"
+          />
+        </div>
+
+        <div class="detail-card">
+          <h2 id="presentation">Présentation de la réalisation</h2>
+
+          <p>
+            Ce projet a été réalisé lors de ma précédente alternance, lorsque
+            j'étais en BUT informatique à EDF. Ce projet consistait à développer
+            une macro VBA (Visual Basic for Applications) dans Excel qui
+            permettait d'automatiser un traitement de données réalisé
+            manuellement par un collaborateur jusque-là.
+          </p>
+
+          <p>
+            Tout d'abord quelques définitions des termes qui vont être utilisés
+            dans ce projet :
+          </p>
+
+          <ul class="definition-list">
+            <li>
+              <strong>Une Garantie d'Origine</strong> (Go) est un certificat qui
+              prouve que l'électricité fournie à un client est issue d'énergies
+              renouvelables. Ici, ces garanties sont dites "spécifiques" et
+              traitées par trimestre pour chaque client. À noter que ce registre
+              de Go est public et disponible sur le
+              <a
+                href="https://www.eex.com/fr/markets/energy-certificates/registre-des-garanties-dorigine-delectricite"
+                target="_blank"
+                rel="noopener"
+                >site d'European Energy Exchange (EEX)</a
+              >.
+            </li>
+
+            <li>
+              <strong>VBA</strong> (Visual Basic for Applications) est un
+              langage de programmation propriétaire de Microsoft, intégré
+              nativement à la suite Office, qui permet d'automatiser des tâches
+              dans des outils comme Excel ou Outlook au moyen de macros.
+            </li>
+
+            <li>
+              <strong>Une macro</strong> est une série d'instructions écrites en
+              VBA, permettant d'automatiser une tâche répétitive dans Excel.
+            </li>
+          </ul>
+
+          <h2 id="objectifs">Objectifs, contexte, enjeu et risques</h2>
+
+          <p>
+            L'objectif de ce projet était d'automatiser la constitution d'un
+            fichier de suivi trimestriel des Garanties d'Origine pour chaque
+            client, afin de remplacer un processus manuel long et propice aux
+            erreurs.
+          </p>
+
+          <p class="subsection-label">🔧 Contexte technique</p>
+
+          <p>
+            Avant le développement de la macro de ce projet, mon collègue
+            constituait ce fichier à la main en copiant les données d'un fichier
+            très volumineux (ce fichier Excel était constitué de plusieurs
+            millions de lignes et d'une vingtaine de colonnes) et en les
+            regroupant avec d'autres données. Après plusieurs réunions avec le
+            collaborateur pour comprendre ses besoins, j'ai développé cette
+            macro afin d'automatiser tous les processus manuels. Cette macro
+            n'avait jamais été développée auparavant, car les macros VBA
+            existantes étaient faites par des commerciaux lorsqu'ils avaient du
+            temps, et qu'il n'y avait pas de développeur dédié à VBA dans le
+            service commercial où j'étais. Il est à noter qu'avant d'arriver à
+            EDF, je n'avais aucune compétence en VBA, et que j'ai tout appris
+            grâce aux macros déjà existantes et en travaillant sur les demandes
+            utilisateurs.
+          </p>
+
+          <p class="subsection-label">🎯 Enjeu</p>
+
+          <p>
+            L'enjeu principal était de faire gagner un temps important à mon
+            collègue, car cette tâche de report pouvait s'étaler sur plusieurs
+            jours chaque trimestre, mais il fallait aussi fiabiliser le
+            processus afin de limiter le risque d'erreur inhérent à la copie
+            manuelle des données.
+          </p>
+
+          <p class="subsection-label">⚠️ Risques</p>
+
+          <p>
+            Le risque résidait dans la mauvaise interprétation des règles de
+            répartition et d'attribution des Garanties d'Origine, car une erreur
+            pouvait fausser les données apportées aux clients et donc fausser
+            leur certificat. Une des erreurs qui pouvait avoir un impact
+            important était une répartition qui donnait à deux clients
+            différents la même Garantie d'Origine. C'est pour cela que les
+            réunions avec ce collaborateur tout au long du développement du
+            projet ont été importantes. La conformité de ma macro par rapport
+            aux attentes du collaborateur a pu être vérifiée grâce à des tests
+            basés sur des sources déjà utilisées par le collaborateur pour
+            réaliser un report, j'ai pu ensuite comparer ce report à celui
+            produit par ma macro afin de vérifier la correspondance des données.
+          </p>
+
+          <div class="section-heading">
+            <img
+              src="/assets/images/svg/icon-etapes-liste.svg"
+              alt="Icône liste d'étapes"
+            />
+            <h2 id="etapes">Les étapes</h2>
+          </div>
+
+          <ol class="steps-list">
+            <li>
+              <strong>Compréhension du besoin</strong> — J'ai pris part à
+              plusieurs réunions avec ce collaborateur afin de comprendre les
+              termes métier spécifiques aux Garanties d'Origine, cerner son
+              besoin et documenter les étapes manuelles qui étaient réalisées
+              lors de son travail.
+            </li>
+
+            <li>
+              <strong>Mise en place des paramètres de sélection</strong> — Le
+              collaborateur m'a fourni les fichiers source, ainsi qu'un exemple
+              de fichier de sortie réalisé afin que je puisse savoir ce qui
+              était attendu en sortie de la macro.
+            </li>
+
+            <li>
+              <strong>Résolution d'un problème de performance</strong> — Lors du
+              développement, j'ai pu rencontrer un problème de ralentissement,
+              la macro ne fermant pas les fichiers source après chaque
+              ouverture. Ce problème a pu être facilement réglé une fois sa
+              cause identifiée.
+            </li>
+
+            <li>
+              <strong>Répartition des données par mois</strong> — Chacun des
+              fichiers source contenait les données du mois traité et des mois
+              précédents, j'ai donc dû coordonner mes algorithmes de
+              récupération des données afin d'associer les bonnes données au bon
+              mois.
+            </li>
+
+            <li>
+              <strong>Fusion des lignes en doublon</strong> — Dans le fichier
+              source des Garanties d'Origine, il arrivait parfois que des lignes
+              partagent le même identifiant et le même mois, j'ai donc dû
+              développer une fonction permettant une fusion des lignes qui
+              additionnait les Go associés.
+            </li>
+
+            <li>
+              <strong>Attribution automatique des Go</strong> — Une fois les
+              données des Garanties d'Origine destinées aux clients récupérées
+              dans le futur fichier de sortie de la macro, il a fallu mettre en
+              place des règles de gestion permettant l'attribution de ces
+              Garanties aux bonnes données clients, selon des seuils définis
+              avec le collaborateur.
+            </li>
+
+            <li>
+              <strong>Ajout d'un tableau d'écart</strong> — Afin de répertorier
+              d'éventuelles données manquantes, j'ai ajouté un tableau de
+              reporting par mois qui compare les Garanties d'Origine attendues
+              et attribuées, ce qui permet à l'utilisateur d'ajuster les
+              résultats de la macro si, par exemple, il y avait des données
+              manquantes.
+            </li>
+
+            <li>
+              <strong>Maintenance et évolutions</strong> — Après la mise en
+              production, il y a eu d'autres évolutions qui ont pu être mises en
+              place, pour corriger les problèmes remontés par le collaborateur,
+              ces problèmes étant liés pour la plupart à des spécificités
+              clients.
+            </li>
+          </ol>
+
+          <h2 id="acteurs">Les acteurs</h2>
+
+          <ul class="definition-list">
+            <li>
+              Le collaborateur qui a énoncé la demande de macro, a participé aux
+              réunions de cadrage et aux tests de celle-ci. Étant la seule
+              personne à gérer les Garanties d'Origine, aucun autre
+              collaborateur ne peut être mentionné ici.
+            </li>
+
+            <li>
+              Mon maître d'apprentissage, qui m'a aidé pour la mise en relation
+              avec le collaborateur et pour certains sujets dont il avait la
+              compétence.
+            </li>
+
+            <li>
+              Moi-même, en charge du développement de la macro en autonomie.
+            </li>
+          </ul>
+
+          <h2 id="resultats">Les résultats</h2>
+
+          <p>
+            Le travail effectué par le collaborateur pour la constitution du
+            fichier trimestriel, qui lui prenait à l'origine plusieurs jours, a
+            été réduit à quelques clics. La macro a été testée avec succès sur
+            un vrai cas de report trimestriel, et le tableau de vérification des
+            écarts a été très utile pour l'ajuster afin qu'elle soit la plus
+            fonctionnelle possible (sans celui-ci, les écarts auraient été
+            difficiles à repérer, car le report final peut contenir jusqu'à 30
+            000 lignes). Le temps de traitement a ainsi pu passer d'une semaine
+            à quelques heures. Le collaborateur a été très satisfait de cette
+            macro ; il a ensuite demandé s'il était possible d'automatiser
+            d'autres parties récurrentes de son travail sur les Garanties
+            d'Origine, ce qui a pu être réalisé dans la suite de mon alternance.
+          </p>
+
+          <h2 id="lendemains">Les lendemains du projet</h2>
+
+          <p>
+            J'ai pu continuer tout au long de mon alternance la maintenance de
+            cette macro. Elle a par la suite été complétée par une autre macro,
+            permettant un enrichissement des résultats à partir des données déjà
+            constituées. Les connaissances acquises sur les Garanties d'Origine
+            et sur les divers processus métiers associés à ce projet m'ont
+            permis d'avoir une approche plus simple des projets complémentaires
+            à celui-ci. À la fin de mon alternance, j'ai pu produire une
+            documentation qui servira à la maintenance des macros sur les
+            Garanties d'Origine.
+          </p>
+
+          <h2 id="regard-critique">Mon regard critique</h2>
+
+          <p>
+            Ce projet a été mon premier gros projet de cette alternance. Il m'a
+            appris la teneur que pouvait avoir un projet VBA important, mais
+            aussi comment gérer le contact avec les utilisateurs pour le
+            développement du projet.
+          </p>
+
+          <p>
+            Avec le recul, s'il y avait quelque chose que je ferais
+            différemment, ce serait l'approche du projet VBA, car j'ai
+            sous-estimé l'ampleur que pouvait avoir le projet dans ce langage.
+            La partie que je changerais serait la structure, en rendant les
+            boucles de fonctionnement et le reste du code plus lisibles. Ce
+            projet m'a permis de changer mon approche des projets VBA durant
+            cette alternance, car il m'a fait évoluer sur la partie
+            communication avec les utilisateurs et sur la partie conception de
+            macros VBA.
+          </p>
+
+          <h2 id="competences">Compétences associées</h2>
+
+          <p>
+            Retrouvez le détail des compétences mobilisées sur ce projet dans
+            mes pages dédiées :
+          </p>
+
+          <div class="related-skills">
+            <a href="/pages/skills/technical.html" class="related-skill-link">
+              <span class="related-skill-icon">⚙️</span>
+
+              <span class="related-skill-text">
+                <strong>Compétences techniques</strong>
+                <span class="related-skill-sub">
+                  Technologies, méthodes, outils
+                </span>
+              </span>
+
+              <span class="related-skill-arrow">→</span>
+            </a>
+
+            <a href="/pages/skills/human.html" class="related-skill-link">
+              <span class="related-skill-icon">🤝</span>
+
+              <span class="related-skill-text">
+                <strong>Compétences humaines</strong>
+                <span class="related-skill-sub">
+                  Communication, organisation, autonomie
+                </span>
+              </span>
+
+              <span class="related-skill-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/assets/js/navbar.js"></script>
+  </body>
+</html>

@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Automatisation des prévisions de consommation | Portfolio</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+
+    <main>
+      <section class="page-section project-detail">
+        <div class="blob-center"></div>
+        <h1>Automatisation des prévisions de consommation client</h1>
+
+        <nav class="page-toc" aria-label="Sommaire de la page">
+          <a href="#presentation">Présentation</a>
+          <a href="#objectifs">Objectifs &amp; risques</a>
+          <a href="#etapes">Étapes</a>
+          <a href="#acteurs">Acteurs</a>
+          <a href="#resultats">Résultats</a>
+          <a href="#lendemains">Lendemains</a>
+          <a href="#regard-critique">Regard critique</a>
+          <a href="#competences">Compétences</a>
+        </nav>
+
+        <div class="illustration-panel">
+          <img
+            src="/assets/images/svg/illustration-edf-consommation.svg"
+            alt="Schéma du flux : Emails clients vers macro VBA (Outlook et Excel) vers fichier consolidé"
+          />
+        </div>
+
+        <div class="detail-card">
+          <h2 id="presentation">Présentation de la réalisation</h2>
+
+          <p>
+            La réalisation de ce projet a été effectuée lors de ma précédente
+            alternance chez EDF ; elle a été menée en parallèle de la macro de
+            suivi des Garanties d'Origine. L'objectif était d'automatiser la
+            récupération et la formation des documents de prévisions de
+            consommation clients à partir des documents envoyés quotidiennement
+            par ceux-ci. Ces informations permettaient de créer un fichier de
+            report mensuel des consommations clients prévues, à destination
+            de la facturation.
+          </p>
+
+          <p>
+            Tout d'abord quelques définitions des termes qui vont être utilisés
+            dans ce projet :
+          </p>
+
+          <ul class="definition-list">
+            <li>
+              <strong>VBA</strong> (Visual Basic for Applications) est un
+              langage de programmation propriétaire de Microsoft, intégré
+              nativement à la suite Office, qui permet d'automatiser des tâches
+              dans des outils comme Excel ou Outlook au moyen de macros.
+            </li>
+
+            <li>
+              <strong>Une macro</strong> est une série d'instructions écrites en
+              VBA, permettant d'automatiser une tâche répétitive.
+            </li>
+
+            <li>
+              <strong>Un dictionnaire</strong> est une structure de données
+              associant une valeur à une clé unique, permettant de retrouver
+              rapidement cette valeur à partir de sa clé. Dans ce projet, un
+              dictionnaire est utilisé pour associer chaque date de
+              consommation à sa prévision la plus récente.
+            </li>
+          </ul>
+
+          <h2 id="objectifs">Objectifs, contexte, enjeu et risques</h2>
+
+          <p>
+            L'objectif pour ce projet était l'automatisation de la récupération
+            de ces données de consommations quotidiennes et la formation des
+            documents associés, afin de simplifier un travail jusque-là manuel
+            et chronophage pour mes collègues.
+          </p>
+
+          <p class="subsection-label">🔧 Contexte technique</p>
+
+          <p>
+            Avant le développement de cette macro, mes collègues recevaient ces
+            prévisions quotidiennement par mail et devaient les regrouper dans
+            des fichiers mensuels. De plus, chaque client avait parfois un
+            format de fichier différent, ce qui complexifiait l'automatisation
+            de cette récupération de données. Après analyse du besoin auprès des
+            utilisateurs, j'ai décidé de réaliser cette macro en deux parties :
+            une partie réalisée en macro Outlook, afin de récupérer vers un
+            dossier choisi par l'utilisateur les documents fournis en pièces
+            jointes par les clients, dans un dossier qui serait utilisé plus
+            tard ; une partie en macro Excel pour former le fichier mensuel à
+            partir des documents récupérés précédemment. La difficulté technique
+            principale se situait dans la partie VBA Outlook, car ce VBA ne
+            partageait pas les mêmes fonctions natives que celui d'Excel : il
+            m'a donc fallu comprendre la différence entre ces deux versions de
+            VBA.
+          </p>
+
+          <p class="subsection-label">🎯 Enjeu</p>
+
+          <p>
+            L'enjeu principal du projet était la simplification du travail
+            répétitif et chronophage de mes collègues, qui devaient regrouper
+            manuellement toutes les données quotidiennes dans le fichier
+            mensuel, tout en s'assurant que les nouvelles prévisions écrasaient
+            les anciennes si les dates se superposaient.
+          </p>
+
+          <p class="subsection-label">⚠️ Risques</p>
+
+          <p>
+            L'un des risques principaux résidait dans la gestion de
+            l'obsolescence des prévisions : un document de prévisions clients
+            pouvait contenir une prévision pour une date déjà passée, il fallait
+            donc éviter d'écraser la donnée plus ancienne dans ce cas précis.
+            Une erreur à cette étape pouvait fausser le fichier entièrement.
+          </p>
+
+          <div class="section-heading">
+            <img
+              src="/assets/images/svg/icon-etapes-liste.svg"
+              alt="Icône liste d'étapes"
+            />
+            <h2 id="etapes">Les étapes</h2>
+          </div>
+
+          <ol class="steps-list">
+            <li>
+              <strong>Compréhension du besoin</strong> — Après une étude des
+              différents formats de fichier envoyés par les clients, qui m'a
+              permis de comprendre l'adaptabilité dont devait faire preuve la
+              macro.
+            </li>
+
+            <li>
+              <strong>Développement de la partie Outlook</strong> — Après m'être
+              rendu compte que tout ne pouvait être fait dans Excel, j'ai décidé
+              de m'intéresser à la macro Outlook. J'ai développé la récupération
+              des pièces jointes de mails clients depuis un répertoire Outlook,
+              vers un répertoire de l'ordinateur de l'utilisateur.
+            </li>
+
+            <li>
+              <strong>Développement de la partie Excel</strong> — Suite à ça,
+              ayant tous les fichiers de report quotidiens des clients dans des
+              répertoires différents, j'ai mis en place un tri sur ces fichiers,
+              puis un renommage par date de création de ceux-ci afin que la
+              concaténation qui suivra implémente les bonnes valeurs.
+            </li>
+
+            <li>
+              <strong>Gestion des dates de début et de fin</strong> — Afin de
+              générer la trame du fichier de report mensuel, j'ai d'abord
+              récupéré la première et la dernière date contenues dans les
+              fichiers, ce qui m'a permis également de déterminer si chaque
+              ligne correspondait à une heure ou une demi-heure.
+            </li>
+
+            <li>
+              <strong>Consolidation via dictionnaire</strong> — Par la suite,
+              dans un dictionnaire (liste de données associant une valeur à une
+              clé), j'ai associé chaque date de consommation à sa valeur ;
+              chaque nouvelle prévision de consommation remplaçait celle
+              associée à la même date, afin de ne conserver que les prévisions
+              les plus récentes.
+            </li>
+
+            <li>
+              <strong>Adaptation aux nouveaux formats clients</strong> — La
+              macro a pu évoluer au fur et à mesure des demandes utilisateurs
+              afin qu'elle fonctionne pour d'autres clients et gère de nouveaux
+              formats de données, ce qui a complexifié la structure du code à
+              chaque ajout.
+            </li>
+          </ol>
+
+          <h2 id="acteurs">Les acteurs</h2>
+
+          <ul class="definition-list">
+            <li>
+              Mes collègues qui ont fait la demande du besoin de la macro et qui
+              l'ont testée, puis utilisée par la suite de façon mensuelle.
+            </li>
+
+            <li>
+              Mon maître d'apprentissage, qui m'a mis en contact avec les
+              utilisateurs et m'a permis une approche accompagnée des problèmes
+              utilisateurs.
+            </li>
+
+            <li>
+              Moi-même, en charge du développement de la macro en autonomie.
+            </li>
+          </ul>
+
+          <h2 id="resultats">Les résultats</h2>
+
+          <p>
+            Les résultats qui ont pu être observés après l'utilisation de cette
+            macro sont exactement ceux qui étaient attendus : une automatisation
+            qui remplace un travail manuel et qui permettait la constitution du
+            fichier de report mensuel pour chaque client géré par la macro. Elle
+            a donc été adoptée par mes collègues dans leur processus et a
+            continué à évoluer au fur et à mesure que de nouveaux formats
+            clients étaient demandés. Le temps gagné par mois par rapport au
+            traitement manuel se situe dans les quelques heures, pour les 4
+            clients gérés par la macro, à raison d'un fichier reçu par jour et
+            par client.
+          </p>
+
+          <h2 id="lendemains">Les lendemains du projet</h2>
+
+          <p>
+            L'évolution de la macro s'est faite tout au long de mon alternance
+            afin de s'adapter aux nouveaux formats de fichiers clients. Un cas
+            particulier a par ailleurs nécessité la sélection manuelle de la
+            date de départ, car certains fichiers clients pouvaient avoir des
+            dates de consommation antérieures à leurs dates de fichiers. Cette
+            macro est toujours utilisée par les utilisateurs, mais pourrait
+            nécessiter des modifications à l'avenir si les clients modifient
+            leur format de fichier.
+          </p>
+
+          <h2 id="regard-critique">Mon regard critique</h2>
+
+          <p>
+            Ce projet m'a appris la différence qu'il pouvait y avoir entre
+            différentes versions de VBA, mais également sur les habitudes de
+            travail qu'il fallait avoir pour développer une macro qui devait
+            évoluer au fur et à mesure des demandes utilisateurs. Si je devais
+            changer quelque chose sur la gestion de ce projet, ce serait la
+            façon avec laquelle j'ai préparé les évolutions de l'application,
+            car elles se sont retrouvées plus difficiles à faire que prévu, à
+            cause de ma mauvaise préparation des évolutions possibles. Comme
+            exemple d'évolution qui s'est révélée plus difficile que prévu, il y
+            a celle du rajout de la gestion de fichiers d'un client qui avait un
+            fichier Excel où les valeurs de consommation et de date étaient
+            séparées entre plusieurs feuilles de données, ce qui a nécessité une
+            gestion spécifique des données.
+          </p>
+
+          <h2 id="competences">Compétences associées</h2>
+
+          <p>
+            Retrouvez le détail des compétences mobilisées sur ce projet dans
+            mes pages dédiées :
+          </p>
+
+          <div class="related-skills">
+            <a href="/pages/skills/technical.html" class="related-skill-link">
+              <span class="related-skill-icon">⚙️</span>
+
+              <span class="related-skill-text">
+                <strong>Compétences techniques</strong>
+                <span class="related-skill-sub">
+                  Technologies, méthodes, outils
+                </span>
+              </span>
+
+              <span class="related-skill-arrow">→</span>
+            </a>
+
+            <a href="/pages/skills/human.html" class="related-skill-link">
+              <span class="related-skill-icon">🤝</span>
+
+              <span class="related-skill-text">
+                <strong>Compétences humaines</strong>
+                <span class="related-skill-sub">
+                  Communication, organisation, autonomie
+                </span>
+              </span>
+
+              <span class="related-skill-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/assets/js/navbar.js"></script>
+  </body>
+</html>

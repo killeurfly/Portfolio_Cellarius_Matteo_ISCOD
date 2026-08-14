@@ -1,0 +1,39 @@
+<svg viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schéma du flux : Emails clients vers macro VBA (Outlook et Excel) vers fichier consolidé">
+  <defs>
+    <linearGradient id="flowGradientSpot" gradientUnits="userSpaceOnUse" x1="120" y1="100" x2="520" y2="100">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#22d3ee" />
+    </linearGradient>
+    <marker id="arrowSpot" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#94a3b8" />
+    </marker>
+  </defs>
+
+  <line x1="140" y1="100" x2="261" y2="100" stroke="url(#flowGradientSpot)" stroke-width="2" stroke-dasharray="6 8" marker-end="url(#arrowSpot)" />
+  <line x1="377" y1="100" x2="496" y2="100" stroke="url(#flowGradientSpot)" stroke-width="2" stroke-dasharray="6 8" marker-end="url(#arrowSpot)" />
+
+  <g transform="translate(30,55)">
+    <rect width="110" height="90" rx="16" fill="rgba(255,255,255,0.05)" stroke="#60a5fa" stroke-width="1.5" />
+    <rect x="15" y="20" width="80" height="55" rx="4" fill="none" stroke="#93c5fd" stroke-width="1.5" />
+    <path d="M15 20 L55 50 L95 20" fill="none" stroke="#93c5fd" stroke-width="1.5" />
+    <text x="55" y="118" text-anchor="middle" fill="#cbd5e1" font-size="13" font-family="Segoe UI, sans-serif">Emails clients</text>
+  </g>
+
+  <g transform="translate(265,45)">
+    <circle cx="55" cy="55" r="55" fill="rgba(168,85,247,0.12)" stroke="#a855f7" stroke-width="1.5" />
+    <text x="55" y="52" text-anchor="middle" fill="#e9d5ff" font-size="16" font-weight="bold" font-family="Segoe UI, sans-serif">Macro</text>
+    <text x="55" y="72" text-anchor="middle" fill="#e9d5ff" font-size="13" font-family="Segoe UI, sans-serif">VBA</text>
+    <text x="55" y="128" text-anchor="middle" fill="#cbd5e1" font-size="13" font-family="Segoe UI, sans-serif">Outlook + Excel</text>
+  </g>
+
+  <g transform="translate(500,55)">
+    <rect width="110" height="90" rx="12" fill="rgba(255,255,255,0.05)" stroke="#22d3ee" stroke-width="1.5" />
+    <rect x="15" y="15" width="80" height="60" fill="none" stroke="#67e8f9" stroke-width="1.5" />
+    <line x1="42" y1="15" x2="42" y2="75" stroke="#67e8f9" stroke-width="1.2" />
+    <line x1="68" y1="15" x2="68" y2="75" stroke="#67e8f9" stroke-width="1.2" />
+    <line x1="15" y1="35" x2="95" y2="35" stroke="#67e8f9" stroke-width="1.2" />
+    <line x1="15" y1="55" x2="95" y2="55" stroke="#67e8f9" stroke-width="1.2" />
+    <text x="55" y="118" text-anchor="middle" fill="#cbd5e1" font-size="13" font-family="Segoe UI, sans-serif">Fichier consolidé</text>
+  </g>
+</svg>
