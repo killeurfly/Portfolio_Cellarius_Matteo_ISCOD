@@ -1,0 +1,24 @@
+<svg viewBox="0 0 220 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Étiquette d'expédition GLS avec badge d'intégration API">
+  <rect x="30" y="30" width="160" height="105" rx="14" fill="rgba(255,255,255,0.05)" stroke="#60a5fa" stroke-width="2.5" />
+  <text x="110" y="82" text-anchor="middle" fill="#e9d5ff" font-size="34" font-weight="bold" font-family="Segoe UI, sans-serif">GLS</text>
+  <g stroke="#93c5fd">
+    <line x1="52" y1="100" x2="52" y2="120" stroke-width="3" />
+    <line x1="60" y1="100" x2="60" y2="120" stroke-width="1.5" />
+    <line x1="67" y1="100" x2="67" y2="120" stroke-width="2" />
+    <line x1="75" y1="100" x2="75" y2="120" stroke-width="1.5" />
+    <line x1="82" y1="100" x2="82" y2="120" stroke-width="3" />
+    <line x1="91" y1="100" x2="91" y2="120" stroke-width="1.5" />
+    <line x1="98" y1="100" x2="98" y2="120" stroke-width="2" />
+    <line x1="106" y1="100" x2="106" y2="120" stroke-width="1.5" />
+    <line x1="113" y1="100" x2="113" y2="120" stroke-width="3" />
+    <line x1="122" y1="100" x2="122" y2="120" stroke-width="1.5" />
+    <line x1="129" y1="100" x2="129" y2="120" stroke-width="2" />
+    <line x1="137" y1="100" x2="137" y2="120" stroke-width="1.5" />
+    <line x1="145" y1="100" x2="145" y2="120" stroke-width="2.5" />
+    <line x1="154" y1="100" x2="154" y2="120" stroke-width="1.5" />
+    <line x1="161" y1="100" x2="161" y2="120" stroke-width="2" />
+    <line x1="168" y1="100" x2="168" y2="120" stroke-width="1.5" />
+  </g>
+  <circle cx="182" cy="38" r="24" fill="rgba(168,85,247,0.18)" stroke="#a855f7" stroke-width="2" />
+  <text x="182" y="43" text-anchor="middle" fill="#e9d5ff" font-size="13" font-weight="bold" font-family="Segoe UI, sans-serif">API</text>
+</svg>

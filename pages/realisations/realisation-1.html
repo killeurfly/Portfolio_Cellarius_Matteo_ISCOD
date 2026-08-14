@@ -30,255 +30,26 @@
         </nav>
 
         <div class="illustration-panel">
-          <svg
-            viewBox="0 0 640 200"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Schéma du flux : Navision vers API GLS vers étiquette imprimée"
-          >
-            <defs>
-              <linearGradient
-                id="flowGradient"
-                gradientUnits="userSpaceOnUse"
-                x1="120"
-                y1="100"
-                x2="520"
-                y2="100"
-              >
-                <stop offset="0%" stop-color="#60a5fa" />
-                <stop offset="50%" stop-color="#a855f7" />
-                <stop offset="100%" stop-color="#22d3ee" />
-              </linearGradient>
-              <marker
-                id="arrowDetail"
-                markerWidth="10"
-                markerHeight="10"
-                refX="7"
-                refY="5"
-                orient="auto"
-              >
-                <path d="M0,0 L10,5 L0,10 Z" fill="#94a3b8" />
-              </marker>
-            </defs>
-
-            <line
-              x1="140"
-              y1="100"
-              x2="261"
-              y2="100"
-              stroke="url(#flowGradient)"
-              stroke-width="2"
-              stroke-dasharray="6 8"
-              marker-end="url(#arrowDetail)"
-            />
-            <line
-              x1="377"
-              y1="100"
-              x2="496"
-              y2="100"
-              stroke="url(#flowGradient)"
-              stroke-width="2"
-              stroke-dasharray="6 8"
-              marker-end="url(#arrowDetail)"
-            />
-
-            <g transform="translate(30,55)">
-              <rect
-                width="110"
-                height="90"
-                rx="16"
-                fill="rgba(255,255,255,0.05)"
-                stroke="#60a5fa"
-                stroke-width="1.5"
-              />
-              <circle cx="20" cy="20" r="3" fill="#60a5fa" />
-              <circle cx="32" cy="20" r="3" fill="#60a5fa" />
-              <circle cx="44" cy="20" r="3" fill="#60a5fa" />
-              <line
-                x1="15"
-                y1="38"
-                x2="95"
-                y2="38"
-                stroke="#93c5fd"
-                stroke-width="2"
-              />
-              <line
-                x1="15"
-                y1="52"
-                x2="80"
-                y2="52"
-                stroke="#93c5fd"
-                stroke-width="2"
-              />
-              <line
-                x1="15"
-                y1="66"
-                x2="65"
-                y2="66"
-                stroke="#93c5fd"
-                stroke-width="2"
-              />
-              <text
-                x="55"
-                y="118"
-                text-anchor="middle"
-                fill="#cbd5e1"
-                font-size="13"
-                font-family="Segoe UI, sans-serif"
-              >
-                Navision
-              </text>
-            </g>
-
-            <g transform="translate(265,45)">
-              <circle
-                cx="55"
-                cy="55"
-                r="55"
-                fill="rgba(168,85,247,0.12)"
-                stroke="#a855f7"
-                stroke-width="1.5"
-              />
-              <text
-                x="55"
-                y="52"
-                text-anchor="middle"
-                fill="#e9d5ff"
-                font-size="16"
-                font-weight="bold"
-                font-family="Segoe UI, sans-serif"
-              >
-                API
-              </text>
-              <text
-                x="55"
-                y="72"
-                text-anchor="middle"
-                fill="#e9d5ff"
-                font-size="13"
-                font-family="Segoe UI, sans-serif"
-              >
-                GLS
-              </text>
-              <text
-                x="55"
-                y="128"
-                text-anchor="middle"
-                fill="#cbd5e1"
-                font-size="13"
-                font-family="Segoe UI, sans-serif"
-              >
-                Intégration
-              </text>
-            </g>
-
-            <g transform="translate(500,55)">
-              <rect
-                width="110"
-                height="90"
-                rx="12"
-                fill="rgba(255,255,255,0.05)"
-                stroke="#22d3ee"
-                stroke-width="1.5"
-              />
-              <path
-                d="M18 15 h74 v45 l-15 15 h-59 z"
-                fill="none"
-                stroke="#67e8f9"
-                stroke-width="1.5"
-              />
-              <line
-                x1="26"
-                y1="30"
-                x2="26"
-                y2="50"
-                stroke="#67e8f9"
-                stroke-width="2"
-              />
-              <line
-                x1="34"
-                y1="30"
-                x2="34"
-                y2="50"
-                stroke="#67e8f9"
-                stroke-width="1"
-              />
-              <line
-                x1="40"
-                y1="30"
-                x2="40"
-                y2="50"
-                stroke="#67e8f9"
-                stroke-width="3"
-              />
-              <line
-                x1="48"
-                y1="30"
-                x2="48"
-                y2="50"
-                stroke="#67e8f9"
-                stroke-width="1"
-              />
-              <line
-                x1="54"
-                y1="30"
-                x2="54"
-                y2="50"
-                stroke="#67e8f9"
-                stroke-width="2"
-              />
-              <line
-                x1="62"
-                y1="30"
-                x2="62"
-                y2="50"
-                stroke="#67e8f9"
-                stroke-width="1"
-              />
-              <line
-                x1="70"
-                y1="30"
-                x2="70"
-                y2="50"
-                stroke="#67e8f9"
-                stroke-width="2"
-              />
-              <line
-                x1="78"
-                y1="30"
-                x2="78"
-                y2="50"
-                stroke="#67e8f9"
-                stroke-width="1"
-              />
-              <text
-                x="55"
-                y="118"
-                text-anchor="middle"
-                fill="#cbd5e1"
-                font-size="13"
-                font-family="Segoe UI, sans-serif"
-              >
-                Étiquette
-              </text>
-            </g>
-          </svg>
+          <img
+            src="/assets/images/svg/illustration-gls.svg"
+            alt="Schéma du flux : Navision vers API GLS vers étiquette imprimée"
+          />
         </div>
 
         <div class="detail-card">
           <h2 id="presentation">Présentation de la réalisation</h2>
 
           <p>
-            Ce projet a été l'un des premiers sur lequel j'ai travaillé lors de
-            mon alternance. Il s'inscrivait dans un contexte de remplacement du
-            logiciel d'impression d'étiquettes GLS par une intégration directe
-            de l'API REST de GLS à l'ERP Navision, afin de simplifier le
-            processus d'expédition pour les utilisateurs.
+            Ce projet est l'un des premiers sur lesquels j'ai pu travailler
+            durant mon alternance à Romus. Il a été mis en place afin de
+            remplacer le logiciel d'impression d'étiquettes GLS par une
+            intégration en API REST dans l'ERP Navision, le tout ayant pour
+            but de simplifier le processus d'expédition pour les utilisateurs.
           </p>
 
           <p>
-            Tout d'abord quelques définitions des termes qui vont être utilisés
-            dans ce projet :
+            Commençons par quelques définitions de certains termes qui seront
+            utilisés pour parler de ce projet :
           </p>
 
           <ul class="definition-list">
@@ -364,10 +135,11 @@
           </p>
 
           <p>
-            Également, l'importance de ce projet pour Romus était de réduire le
-            coût de l'utilisation du logiciel d'impression d'étiquettes GLS et
-            de réduire le nombre d'erreurs en maîtrisant entièrement le
-            processus d'impression d'étiquettes.
+            Il est aussi à noter que l'importance de ce projet pour
+            l'entreprise résidait dans la réduction du coût d'utilisation du
+            logiciel d'impression d'étiquettes GLS, mais aussi dans la
+            réduction du nombre d'erreurs, grâce à la maîtrise complète du
+            processus d'impression.
           </p>
 
           <p class="subsection-label">⚠️ Risques</p>
@@ -379,96 +151,41 @@
 
           <p>
             Les risques humains étaient liés à la bonne utilisation des nouveaux
-            tags de transporteur GLS utilisés dans l'ERP Navision. Si les
-            utilisateurs ne respectaient pas les nouvelles procédures, il
-            pourrait y avoir des erreurs dans le processus d'impression
-            d'étiquettes GLS.
-          </p>
-
-          <p>
-            Les risques financiers étaient liés au fonctionnement de l'API : si
-            une erreur survenait lors du processus d'impression, il pourrait y
-            avoir des pertes financières pour Romus, si par exemple un colis
-            était expédié mais que les informations de suivi étaient transmises
-            de façon partielle ou erronée à GLS. Également, si l'API GLS tombait
-            en panne, il y aurait un risque de perte financière pour Romus car
-            les colis ne pourraient pas être expédiés.
+            tags de transporteur GLS utilisés dans l'ERP Navision. Pour prendre
+            l'exemple d'un non-respect des nouvelles procédures dans l'ERP
+            Navision, le risque pouvait être des erreurs dans l'impression des
+            étiquettes GLS, mais aussi dans la communication des informations
+            vers l'API.
           </p>
 
           <p>
             Les risques techniques étaient liés à la bonne implémentation de
             l'API GLS dans l'ERP Navision et à nos bases de données
-            transporteur. Si l'implémentation n'était pas correcte, il y aurait
-            un risque d'erreurs lors d'une impression d'étiquettes GLS.
+            transporteur. Une mauvaise intégration pouvait créer des erreurs
+            d'impression ou une mauvaise sauvegarde de données dans les bases
+            de données.
           </p>
 
           <p>
-            Pour pallier tous ces risques, un cahier de tests a été mis en place
-            pour tester l'implémentation de l'API GLS dans l'ERP Navision et
-            pour s'assurer que les utilisateurs respectaient les nouvelles
-            procédures. Ce cahier de test contenait les étapes de fonctionnement
-            nominales à suivre pour l'impression d'étiquettes GLS. De plus, un
-            tableau de report des erreurs a été mis en place pour suivre les
-            erreurs rencontrées lors des tests et pour les corriger rapidement.
-            Enfin, un suivi des utilisateurs a été mis en place pour s'assurer
-            que les utilisateurs respectaient les nouvelles procédures et pour
-            les aider en cas de problème.
+            Afin de pallier ces risques, la réalisation d'un cahier de test a
+            été effectuée ; le but recherché était de tester l'implémentation
+            de l'API GLS dans l'ERP Navision, mais il fallait également
+            s'assurer que les utilisateurs respectaient les nouvelles
+            procédures. Ce cahier
+            de test contenait les étapes de fonctionnement nominales à suivre
+            pour l'impression d'étiquettes GLS. De plus, un tableau de report
+            des erreurs a été mis en place pour suivre les erreurs rencontrées
+            lors des tests et pour les corriger rapidement. Enfin, un suivi des
+            utilisateurs a été mis en place pour s'assurer que les utilisateurs
+            respectaient les nouvelles procédures et pour les aider en cas de
+            problème.
           </p>
 
           <div class="section-heading">
-            <svg
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              aria-label="Icône impression d'étiquette"
-            >
-              <rect
-                x="14"
-                y="6"
-                width="20"
-                height="16"
-                rx="2"
-                fill="none"
-                stroke="#93c5fd"
-                stroke-width="1.5"
-              />
-              <line
-                x1="18"
-                y1="11"
-                x2="30"
-                y2="11"
-                stroke="#93c5fd"
-                stroke-width="1.2"
-              />
-              <line
-                x1="18"
-                y1="15"
-                x2="26"
-                y2="15"
-                stroke="#93c5fd"
-                stroke-width="1.2"
-              />
-              <rect
-                x="8"
-                y="20"
-                width="32"
-                height="14"
-                rx="3"
-                fill="rgba(96,165,250,0.12)"
-                stroke="#60a5fa"
-                stroke-width="1.5"
-              />
-              <rect
-                x="12"
-                y="34"
-                width="24"
-                height="8"
-                rx="2"
-                fill="rgba(34,211,238,0.12)"
-                stroke="#22d3ee"
-                stroke-width="1.5"
-              />
-            </svg>
+            <img
+              src="/assets/images/svg/icon-etapes-impression.svg"
+              alt="Icône impression d'étiquette"
+            />
             <h2 id="etapes">Les étapes</h2>
           </div>
 
@@ -482,24 +199,27 @@
             <li>
               <strong>Étude de la documentation et accès à la Sandbox</strong>
               — j'ai étudié la documentation de l'API GLS fournie par les
-              équipes techniques de GLS. Cette documentation m'a permis de
-              comprendre les différentes fonctionnalités offertes par l'API,
-              ainsi que les paramètres et les formats de données requis pour
-              interagir avec elle. GLS nous a également fourni un accès à un
-              environnement de production de test "Sandbox" afin de pouvoir
-              tester l'implémentation de l'API dans un environnement identique à
-              celui de production.
+              équipes techniques de GLS. L'étude de cette documentation m'a
+              donné les informations nécessaires à la compréhension des
+              diverses fonctionnalités offertes par l'API, et j'ai pu
+              également comprendre les formats de données et les paramètres à
+              utiliser pour la communication avec celle-ci. Les équipes
+              techniques de GLS nous ont également fourni un accès à un
+              environnement de test appelé "Sandbox" afin de tester
+              l'implémentation de cette API dans un environnement ressemblant
+              fortement à celui de production.
             </li>
 
             <li>
-              <strong>Mise en place d'un dispatcher</strong> — comme le
-              webservice de l'API GLS recevait aussi des requêtes pour
-              l'impression d'étiquettes Schenker, j'ai dû mettre en place un
-              "dispatcher" pour rediriger les requêtes vers la bonne API en
-              fonction du transporteur associé à la commande. Les transporteurs
-              étant déjà identifiés dans l'ERP Navision, j'ai pu utiliser ces
-              informations pour rediriger les requêtes vers l'API GLS ou l'API
-              Schenker en fonction du transporteur associé à la commande.
+              <strong>Mise en place d'un dispatcher</strong> — Le webservice sur
+              lequel était disponible l'API REST était également utilisé pour
+              l'impression d'étiquettes Schenker ; j'ai donc dû réaliser un
+              "dispatcher" afin de rediriger les requêtes vers la bonne API en
+              fonction du transporteur associé à l'expédition. Grâce à
+              l'identification des transporteurs déjà présente dans l'ERP
+              Navision, j'ai pu facilement rediriger les requêtes des
+              transporteurs vers la bonne API en fonction du transporteur
+              associé à l'expédition.
             </li>
 
             <li>
@@ -530,19 +250,21 @@
             </li>
 
             <li>
-              <strong>Cahier de tests et corrections</strong> — pour la partie
-              des tests, j'ai mis en place un cahier de tests pour tester
-              l'implémentation de l'API GLS dans l'ERP Navision et pour
-              s'assurer que les utilisateurs respectaient les nouvelles
-              procédures. Ce cahier de test était constitué des étapes à suivre
-              pour l'impression d'étiquettes GLS, ainsi que des scénarios de
-              tests pour vérifier le bon fonctionnement de l'implémentation.
-              J'ai également mis en place un tableau de report des erreurs pour
-              suivre les erreurs rencontrées lors des tests et pour les corriger
-              rapidement. Les tests ont été réalisés par les utilisateurs sur
-              différents sites de l'entreprise, car ils possèdent chacun un
-              compte chez GLS. Il s'en est suivi une correction des bugs
-              remontés par les utilisateurs lors de la phase de tests.
+              <strong>Cahier de tests et corrections</strong> — Afin de réaliser
+              les tests, j'ai mis en place un cahier de test afin de pouvoir
+              faire tester l'implémentation de l'API GLS par les utilisateurs,
+              tout en vérifiant que les nouvelles procédures étaient
+              respectées. Le contenu du cahier était constitué d'étapes
+              nominales à suivre pour l'impression d'étiquettes GLS, mais aussi
+              de tests complémentaires sur les autres impressions afin de
+              vérifier que les nouveautés ne créent pas de bug ni de
+              régression. J'ai pu aussi mettre en place un tableau de report
+              des erreurs afin de les suivre et ainsi facilement résoudre
+              d'éventuels bugs découverts.
+              Les tests ont été réalisés par les utilisateurs sur différents
+              sites de l'entreprise, car ils possèdent chacun un compte chez
+              GLS. Il s'en est suivi une correction des bugs remontés par les
+              utilisateurs lors de la phase de tests.
             </li>
 
             <li>
@@ -554,12 +276,13 @@
             </li>
 
             <li>
-              <strong>Hypercare</strong> — en dernière étape, une période
-              d'hypercare a été mise en place pour suivre les utilisateurs et
-              corriger les éventuelles erreurs rencontrées lors de la mise en
-              production. Cette période a permis de s'assurer que l'intégration
-              de l'API GLS fonctionnait correctement et que les utilisateurs
-              étaient à l'aise avec les nouvelles procédures d'impression
+              <strong>Hypercare</strong> — Finalement, une période d'hypercare a
+              été mise en place afin de réaliser un suivi post mise en
+              production avec les utilisateurs, et ainsi corriger d'éventuels
+              bugs qui seraient découverts durant celle-ci. Cette période a
+              permis la pérennité d'utilisation et de fonctionnement de l'API,
+              mais aussi de vérifier si les utilisateurs rencontraient des
+              problèmes avec les nouvelles procédures d'impression
               d'étiquettes.
             </li>
           </ol>
@@ -622,17 +345,20 @@
           <h2 id="regard-critique">Mon regard critique</h2>
 
           <p>
-            Ce projet m'a permis de mettre en pratique mes compétences
-            techniques et de développer mes compétences en gestion de projet.
-            J'ai appris à travailler avec des API et à gérer les risques liés à
-            l'implémentation de nouvelles fonctionnalités dans un système
-            existant. J'ai également appris à travailler en collaboration avec
-            différentes équipes et à communiquer efficacement pour résoudre les
-            problèmes rencontrés lors du projet. Si je devais changer quelque
-            chose dans la gestion de ce projet, je mettrais en place des
-            échanges plus rigoureux avec les utilisateurs finaux pour mieux
-            comprendre leurs besoins et leurs attentes. Cela aurait permis de
-            mieux anticiper les problèmes potentiels.
+            La réalisation de ce projet m'a permis de mettre en pratique mes
+            compétences techniques, mais il m'a aussi donné les clés
+            nécessaires au développement de mes compétences en gestion de
+            projet. J'ai également pu apprendre à travailler avec les API,
+            mais aussi comment gérer les risques liés à l'implémentation de
+            nouvelles fonctionnalités dans l'existant. Ce projet m'a aussi
+            permis d'apprendre à travailler en collaboration avec différentes
+            équipes et à communiquer de manière efficace afin de résoudre les
+            problèmes rencontrés tout au long du projet. S'il y a quelque
+            chose que je devais changer sur ce projet, ce serait la partie
+            gestion, en mettant en place des échanges plus rigoureux avec les
+            utilisateurs afin de comprendre au mieux leurs besoins et
+            attentes. Cela m'aurait permis une meilleure anticipation des
+            problèmes potentiels.
           </p>
 
           <h2 id="competences">Compétences associées</h2>

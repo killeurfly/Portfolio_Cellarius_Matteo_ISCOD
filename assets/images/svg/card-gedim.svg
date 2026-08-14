@@ -1,0 +1,19 @@
+<svg viewBox="0 0 220 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tableau de suivi de l'application Gedim">
+  <rect x="25" y="25" width="170" height="130" rx="14" fill="rgba(255,255,255,0.05)" stroke="#60a5fa" stroke-width="2.5" />
+  <circle cx="42" cy="42" r="4" fill="#60a5fa" />
+  <circle cx="56" cy="42" r="4" fill="#60a5fa" />
+  <circle cx="70" cy="42" r="4" fill="#60a5fa" />
+  <line x1="38" y1="56" x2="182" y2="56" stroke="#60a5fa" stroke-width="1.5" opacity="0.4" />
+
+  <circle cx="50" cy="78" r="5" fill="#22d3ee" />
+  <line x1="64" y1="78" x2="170" y2="78" stroke="#93c5fd" stroke-width="4" stroke-linecap="round" />
+
+  <circle cx="50" cy="100" r="5" fill="#a855f7" />
+  <line x1="64" y1="100" x2="150" y2="100" stroke="#93c5fd" stroke-width="4" stroke-linecap="round" />
+
+  <circle cx="50" cy="122" r="5" fill="#22d3ee" />
+  <line x1="64" y1="122" x2="160" y2="122" stroke="#93c5fd" stroke-width="4" stroke-linecap="round" />
+
+  <circle cx="182" cy="38" r="24" fill="rgba(34,211,238,0.18)" stroke="#22d3ee" stroke-width="2" />
+  <path d="M172 38 l7 7 l12 -14" fill="none" stroke="#a7f3fa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
