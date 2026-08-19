@@ -1,0 +1,7 @@
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Icône adaptabilité">
+  <circle cx="24" cy="24" r="20" fill="rgba(168,85,247,0.15)" stroke="#a855f7" stroke-width="2" />
+  <path d="M16 18 a10 10 0 0 1 15 -2" fill="none" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round" />
+  <path d="M31 12 v5 h-5" fill="none" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M32 30 a10 10 0 0 1 -15 2" fill="none" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round" />
+  <path d="M17 36 v-5 h5" fill="none" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

@@ -1,0 +1,5 @@
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Icône automatisation VBA">
+  <circle cx="24" cy="24" r="20" fill="rgba(34,211,238,0.15)" stroke="#22d3ee" stroke-width="2" />
+  <circle cx="24" cy="24" r="6" fill="none" stroke="#a7f3fa" stroke-width="2" />
+  <path d="M24 12 v4 M24 32 v4 M12 24 h4 M32 24 h4 M16.2 16.2 l2.8 2.8 M29 29 l2.8 2.8 M31.8 16.2 l-2.8 2.8 M19 29 l-2.8 2.8" stroke="#a7f3fa" stroke-width="2" stroke-linecap="round" />
+</svg>

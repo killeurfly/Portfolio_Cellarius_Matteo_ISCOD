@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Développement web | Portfolio</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+
+    <main>
+      <section class="page-section project-detail">
+        <div class="blob-center"></div>
+        <h1>Développement web (PHP, SQL, JavaScript)</h1>
+
+        <nav class="page-toc" aria-label="Sommaire de la page">
+          <a href="#definition">Ma définition</a>
+          <a href="#preuves">Mes éléments de preuve</a>
+          <a href="#autocritique">Mon autocritique</a>
+          <a href="#evolution">Mon évolution</a>
+          <a href="#realisations">Réalisations liées</a>
+        </nav>
+
+        <div class="skill-hero-icon">
+          <img src="/assets/images/svg/skill-web.svg" alt="" />
+        </div>
+
+        <div class="detail-card">
+          <h2 id="definition">Ma définition</h2>
+
+          <p>
+            Le développement web consiste en la conception et l'évolution
+            d'applications accessibles via navigateur, ce qui est possible grâce
+            à la combinaison d'un langage serveur (ici PHP), d'une base de
+            données (SQL) et de scripts s'exécutant côté client (JavaScript)
+            afin de construire une interface web interactive.
+          </p>
+
+          <p>Le développement web se distingue par deux grands types :</p>
+
+          <ul class="definition-list">
+            <li>
+              <strong>Le développement via framework</strong> consiste à
+              utiliser une structure déjà mise en place par d'autres
+              développeurs — un framework est un ensemble d'outils et de
+              bibliothèques qui impose une organisation de code, pour
+              accélérer et standardiser le développement — et demande de
+              construire son site web avec ces outils.
+            </li>
+            <li>
+              <strong>Le développement à partir de rien</strong>, ou seulement
+              avec des bibliothèques (regroupements de fonctions).
+            </li>
+          </ul>
+
+          <p>
+            Dans mon contexte professionnel, j'ai pu mettre en application cette
+            compétence sur une application interne de Romus déjà existante,
+            Gedim, où j'ai dû commencer par comprendre son fonctionnement en
+            analysant le code écrit par un autre développeur avant de pouvoir
+            faire évoluer l'application, au lieu de partir de rien.
+          </p>
+
+          <p>
+            Dans un monde où la digitalisation des services est de plus en plus
+            présente, les sites web doivent être le plus accessibles possible,
+            leur importance est donc maintenant capitale. Dans l'actualité, le
+            site
+            <a
+              href="https://www.directmag.com/developpement-webmarketing-seo/info20041/accessibilite-numerique-sites-entreprises-sanctions.html"
+              target="_blank"
+              rel="noopener"
+              >DirectMag</a
+            >
+            nous apprend que les entreprises de plus de 10 salariés ou plus de 2
+            millions de CA sont dans l'obligation de respecter le European
+            Accessibility Act. Une décision du tribunal de Caen juge que les
+            entreprises ont une obligation de résultat de rendre leur site web
+            accessible. Les contrôles de la DGCCRF (Direction générale de la
+            Concurrence, de la Consommation et de la Répression des Fraudes) ont
+            pu amener à des amendes jusqu'à 50 000 € si cette loi n'était pas
+            respectée.
+          </p>
+
+          <h2 id="preuves">Mes éléments de preuve</h2>
+
+          <p>
+            Mon apprentissage du développement web a commencé lors de ma
+            formation de BTS SIO (Brevet de Technicien Supérieur, Services
+            Informatiques aux Organisations, Bac +2), durant laquelle j'ai pu
+            apprendre les bases du développement, dont celle du développement
+            web. J'ai eu la possibilité de développer cette compétence en la
+            mettant en pratique dans des projets d'entreprise, ce qui m'a
+            permis d'en apprendre plus sur les différences entre le
+            développement web que j'avais vu en cours et celui destiné aux
+            utilisateurs.
+          </p>
+
+          <p>
+            Je vais vous parler de quelques anecdotes en lien avec le
+            développement web durant mon alternance à Romus :
+          </p>
+
+          <p>
+            Le premier développement que j'ai dû réaliser sur Gedim a été
+            d'ajouter un tableau de suivi des commandes, sur le même modèle que
+            les tableaux de suivi transporteur de Schenker déjà présents sur
+            Gedim. Après avoir analysé le fonctionnement de Gedim, j'ai pu
+            commencer le développement de cette fonctionnalité ; la partie qui
+            m'a posé le plus de problème est le développement de l'algorithme
+            permettant la fusion du résultat de deux requêtes de bases de
+            données SQL, la difficulté de la mise en place de cette partie
+            résidait dans la fusion des résultats des deux requêtes venant de
+            deux bases de données différentes. Il a donc fallu être attentif à
+            ce que l'intégrité des données soit conservée par la fusion des
+            requêtes, afin que l'affichage dans le tableau de suivi soit un
+            reflet parfait de l'état des commandes. Ce tableau de suivi a été
+            très bien reçu par les utilisateurs car c'était une fonctionnalité
+            très attendue, actuellement cela permet aux utilisateurs de suivre
+            plusieurs centaines de commandes qui arrivent chaque jour.
+          </p>
+
+          <p>
+            Un autre développement de Gedim m'a donné du fil à retordre, je
+            parle du développement de l'affichage des fichiers liés à chaque
+            commande. Cette fonctionnalité se situe sur la même page que le
+            suivi de commande, la principale difficulté a été d'afficher les
+            fichiers mails en ".html" et les fichiers "JSON", car ces fichiers,
+            contrairement au PDF, ne possèdent pas de visionneuse intégrée dans
+            le HTML5. Il a donc fallu trouver une manière d'afficher le contenu
+            de ces fichiers de manière pertinente pour les utilisateurs. Cette
+            fonctionnalité était également très attendue par les utilisateurs et
+            a été très bien reçue, car chaque commande peut contenir jusqu'à une
+            dizaine de fichiers.
+          </p>
+
+          <p>
+            Lors d'une mise à jour apportée au téléchargement du report des
+            adresses ayant été en erreur sur les expéditions, une erreur a été
+            rapportée par un utilisateur, j'ai rapidement trouvé la source de
+            l'erreur qui résidait dans la requête que j'avais modifiée pour
+            réparer la fonctionnalité de téléchargement à l'origine. Après une
+            légère modification de la requête, la fonctionnalité a été réparée
+            et l'utilisateur a pu continuer son utilisation. Cette
+            fonctionnalité est très utile car elle permet de répertorier quelles
+            expéditions de quels clients ont eu des adresses erronées, ce qui
+            permet par la suite de corriger ces erreurs en amont. On note
+            jusqu'à une vingtaine d'expéditions quotidiennes possédant des
+            erreurs d'adresse.
+          </p>
+
+          <h2 id="autocritique">Mon autocritique</h2>
+
+          <p>
+            Avant mes développements web à Romus je n'avais jamais eu de mise en
+            pratique de cette compétence en entreprise, je ne peux pas me
+            considérer comme un expert en web, mais je devrais pouvoir atteindre
+            ce niveau dans la suite de mes expériences professionnelles à Romus
+            ou dans mes projets personnels. Je progresserai notamment sur la
+            partie PHP et bases de données SQL car la plupart des projets sur
+            lesquels j'ai travaillé à Romus possédaient ces deux parties du web.
+          </p>
+
+          <p>
+            J'ai encore des choses à apprendre pour ce qui est du développement
+            PHP car je n'ai pas pu mettre en place de framework PHP, mais cela
+            devrait arriver dans la suite de mes projets à Romus ; pour ce qui
+            est de la partie base de données, certains des derniers projets sur
+            lesquels j'ai travaillé m'ont demandé de concevoir des tables de
+            base de données, mais je dois encore apprendre à perfectionner cette
+            compétence.
+          </p>
+
+          <p>
+            Le développement web est au premier plan dans le domaine du
+            numérique, il est donc pour moi essentiel de maîtriser cette
+            compétence pour être un futur expert ingénieur.
+          </p>
+
+          <p>
+            J'ai pu progresser dans le développement web tout au long de mon
+            alternance chez Romus et je suis plus compétent dans ce domaine que
+            je ne l'étais avant de rejoindre cette entreprise. Ce que j'ai
+            appris sur le développement web de plus crucial c'est l'importance
+            de l'expérience utilisateur car les évolutions que j'ai développées
+            ont été rythmées par leurs demandes. Cette compétence s'exerce
+            pleinement à Romus car, comme je l'ai dit précédemment, la majorité
+            des projets sur lesquels j'ai pu travailler repose sur du
+            développement web et des bases de données.
+          </p>
+
+          <p>
+            Si je devais donner un conseil à un développeur qui commence dans ce
+            domaine, je lui dirais de s'intéresser au plus vite à l'utilisation
+            des frameworks car ils facilitent grandement le développement
+            d'applications modernes.
+          </p>
+
+          <h2 id="evolution">Mon évolution</h2>
+
+          <p>
+            J'ai pour objectif professionnel de savoir réaliser des projets web
+            et applicatifs de toutes sortes et ce genre de projets nécessite une
+            grande maîtrise du web. Je compte développer mes compétences en
+            réalisant d'autres projets web à Romus mais aussi en développant des
+            applicatifs web dans mes projets personnels, notamment pour le
+            développement d'applications domotiques liées à mon domicile.
+          </p>
+
+          <p>
+            Pour me perfectionner dans cette compétence je compte apprendre le
+            framework Symfony, ce qui me servira à Romus pour les futurs projets
+            utilisant ce framework mais aussi pour mes projets personnels de
+            domotique.
+          </p>
+
+          <h2 id="realisations">Réalisations liées</h2>
+
+          <div class="related-skills">
+            <a
+              href="/pages/realisations/realisation-3.html"
+              class="related-skill-link"
+            >
+              <span class="related-skill-icon">🗂️</span>
+
+              <span class="related-skill-text">
+                <strong>Évolution de Gedim</strong>
+                <span class="related-skill-sub"
+                  >Nouvelles fonctionnalités et fiabilisation SQL</span
+                >
+              </span>
+
+              <span class="related-skill-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/assets/js/navbar.js"></script>
+  </body>
+</html>

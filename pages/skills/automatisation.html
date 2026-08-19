@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Automatisation VBA | Portfolio</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+
+    <main>
+      <section class="page-section project-detail">
+        <div class="blob-center"></div>
+        <h1>Automatisation VBA (Excel &amp; Outlook)</h1>
+
+        <nav class="page-toc" aria-label="Sommaire de la page">
+          <a href="#definition">Ma définition</a>
+          <a href="#preuves">Mes éléments de preuve</a>
+          <a href="#autocritique">Mon autocritique</a>
+          <a href="#evolution">Mon évolution</a>
+          <a href="#realisations">Réalisations liées</a>
+        </nav>
+
+        <div class="skill-hero-icon">
+          <img src="/assets/images/svg/skill-automatisation.svg" alt="" />
+        </div>
+
+        <div class="detail-card">
+          <h2 id="definition">Ma définition</h2>
+
+          <ul class="definition-list">
+            <li>
+              <strong>Une macro</strong> est une série d'instructions écrites
+              en VBA, permettant d'automatiser une tâche répétitive dans
+              Excel.
+            </li>
+          </ul>
+
+          <p>
+            L'automatisation de processus métiers via macro VBA (Visual Basic
+            for Applications) consiste au développement de celle-ci afin
+            d'automatiser des processus répétitifs dans les applications
+            Microsoft, ici je ne parlerai que d'Outlook et Excel, car j'ai
+            développé des macros seulement pour ces deux applications.
+          </p>
+
+          <p>
+            J'ai pu utiliser cette compétence dans le domaine professionnel lors
+            de mon alternance chez EDF, j'ai pu faciliter le travail manuel de
+            mes collaborateurs, lors de leur traitement de fichiers et de
+            documents reçus par mail grâce à des scripts récupérant des données
+            et remplissant des fichiers de données en entrée de celle-ci sans
+            intervention humaine répétitive.
+          </p>
+
+          <p>
+            Lors de l'automatisation de processus sur des fichiers, il y a
+            plusieurs façons de le faire :
+          </p>
+
+          <ul class="definition-list">
+            <li>
+              <strong>VBA</strong>
+              <ul class="definition-list">
+                <li>
+                  Intégrable à toutes les applications de la suite Office.
+                </li>
+                <li>Langage ancien (1990).</li>
+                <li>Cloisonné à la suite Office.</li>
+                <li>
+                  Nécessite l'ouverture des fichiers, même cachée, des fichiers
+                  traités.
+                </li>
+                <li>
+                  Gratuit mais code stocké dans le fichier lui-même (mise à jour
+                  en remplaçant le fichier).
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Power Automate</strong>
+              <ul class="definition-list">
+                <li>Outil low-code/no-code de Microsoft.</li>
+                <li>
+                  Intégration totale avec la suite Office, entièrement cloud.
+                </li>
+                <li>
+                  Exécution automatique dans le cloud sans besoin d'utilisateur.
+                </li>
+                <li>
+                  Moins flexible pour de la logique personnalisée ou complexe.
+                </li>
+                <li>Base gratuite, fonctionnalités avancées payantes.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Python</strong>
+              <ul class="definition-list">
+                <li>
+                  Langage de programmation générale, bibliothèques riches.
+                </li>
+                <li>
+                  Plus puissant pour des traitements volumineux, et scalable.
+                </li>
+                <li>
+                  Nécessite un environnement d'installation, moins immédiat que
+                  VBA et Power Automate.
+                </li>
+                <li>Gratuit et open source.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <p>
+            En résumé, VBA est plus accessible car déjà utilisable dans la suite
+            Office mais est cloisonné et nécessite un ordinateur allumé, Power
+            Automate est plus simple grâce au no-code et à l'exécution dans le
+            cloud mais est moins flexible pour des logiques complexes, pour
+            finir Python est le plus puissant des trois mais demande un vrai
+            investissement technique.
+          </p>
+
+          <p>
+            Dans le contexte dans lequel j'étais, VBA était la meilleure
+            solution car VBA répondait à toutes les spécificités demandées
+            (complexité des algorithmes et accessibilité dans Office).
+          </p>
+
+          <p>
+            Un article de 2026 du site
+            <a
+              href="https://www.clearlysoftware.co.uk/blog/vba-still-matters-in-2026-when-macros-beat-low-code-for-everyday-business-automation/"
+              target="_blank"
+              rel="noopener"
+              >ClearlySoftware</a
+            >
+            nous apprend que le langage VBA, même si plutôt ancien, reste malgré
+            tout très utilisé quand les processus métier sont déjà existants.
+          </p>
+
+          <h2 id="preuves">Mes éléments de preuve</h2>
+
+          <p>
+            Tout d'abord, voici quelques définitions nécessaires à la
+            compréhension de la suite :
+          </p>
+
+          <ul class="definition-list">
+            <li>
+              <strong>Une Garantie d'Origine</strong> (Go) est un certificat
+              qui prouve que l'électricité fournie à un client est issue
+              d'énergies renouvelables. Ici, ces garanties sont dites
+              "spécifiques" et traitées par trimestre pour chaque client. À
+              noter que ce registre de Go est public et disponible sur le
+              <a
+                href="https://www.eex.com/fr/markets/energy-certificates/registre-des-garanties-dorigine-delectricite"
+                target="_blank"
+                rel="noopener"
+                >site d'European Energy Exchange (EEX)</a
+              >.
+            </li>
+            <li>
+              <strong>Un dictionnaire</strong> est une structure de données
+              associant une valeur à une clé unique, permettant de retrouver
+              rapidement cette valeur à partir de sa clé. Dans la macro
+              Prévisions de consommation, un dictionnaire est utilisé pour
+              associer chaque date de consommation à sa prévision la plus
+              récente.
+            </li>
+          </ul>
+
+          <p>
+            Avant de commencer mon alternance à EDF, je ne connaissais rien du
+            VBA ; j'ai donc dû apprendre grâce aux macros déjà existantes et
+            développées par certains utilisateurs pour simplifier leur travail.
+            J'ai pu donc développer cette compétence au fur et à mesure des
+            projets de macros que j'ai pu réaliser durant cette alternance.
+          </p>
+
+          <p>
+            Je vais maintenant vous parler de quelques anecdotes en lien avec
+            les macros VBA durant mon alternance à EDF :
+          </p>
+
+          <p>
+            Lors du développement de la macro de constitution du report des
+            Garanties d'Origine (depuis un fichier source public contenant
+            plusieurs millions de lignes), j'ai dû développer un algorithme
+            permettant de fusionner les lignes de consommations ayant la même
+            date et le même identifiant ; cette fonctionnalité a été très
+            importante car dans ces grands fichiers, cela pouvait jusqu'à
+            diviser par trois la quantité de lignes présente. Cette macro a été
+            très utile pour l'utilisateur car elle lui a permis de réduire sa
+            quantité de travail de plusieurs jours à quelques heures. Le fichier
+            final possède plusieurs milliers de lignes en fonction du périmètre
+            ainsi que du client traité.
+          </p>
+
+          <p>
+            Pour la macro constituant un fichier mensuel de prévisions de
+            consommation clients, j'ai dû réaliser la macro en 2 parties, une
+            macro Outlook pour récupérer les prévisions quotidiennes et une
+            autre macro dans Excel pour constituer le fichier. La partie qui a
+            représenté un défi a été celle utilisant un dictionnaire permettant
+            d'associer la prévision de consommation à la date la plus récente,
+            car il était nécessaire de garder seulement la nouvelle prévision
+            lorsque plusieurs prévisions étaient associées à la même date. Cette
+            macro a été très utile pour les utilisateurs car elle a permis de
+            simplifier un travail quotidien qui pouvait représenter 30 minutes à
+            une heure par jour de travail, en une utilisation de la macro qui
+            prenait 10 minutes à la fin du mois. À noter que chaque client
+            pouvant avoir son format de fichier, il a fallu adapter la macro à
+            chacun.
+          </p>
+
+          <h2 id="autocritique">Mon autocritique</h2>
+
+          <p>
+            Avant mes premiers développements en VBA, comme je ne connaissais
+            pas ce langage ni l'environnement Excel et Outlook dans lequel
+            j'allais les développer, j'étais inquiet de savoir si j'allais
+            réussir, mais mes inquiétudes ont été dissipées lors du
+            développement des premières macros Excel, qui m'ont permis de gagner
+            en compétence et en confiance dans ce domaine. À la fin de mon
+            alternance je me considérais comme un Expert VBA Excel car j'ai
+            passé un an entier à développer dans ce domaine. Le VBA dans
+            d'autres applications de la suite Office étant différent, je ne peux
+            me considérer comme expert en VBA en général.
+          </p>
+
+          <p>
+            Malgré le temps que j'ai passé à développer des macros VBA, je n'ai
+            pu développer en VBA que dans Outlook et Excel (une seule macro a
+            été développée dans Outlook) donc mon point d'évolution serait
+            d'apprendre les différences de VBA entre chaque application de la
+            suite Office.
+          </p>
+
+          <p>
+            La suite Office est très utilisée en entreprise donc connaître le
+            fonctionnement de VBA est essentiel afin de me considérer comme un
+            futur expert ingénieur.
+          </p>
+
+          <p>
+            J'ai pu progresser rapidement dans le développement de macros VBA,
+            grâce à tous les projets sur lesquels j'ai pu travailler durant mon
+            alternance à EDF, si je devrais retirer quelque chose de cette
+            expérience, c'est l'importance d'analyser l'existant avant de
+            s'essayer au développement car les documentations officielles ne
+            suffisent jamais à 100 %. Actuellement je n'exerce pas cette
+            compétence à Romus, mais l'apprentissage de VBA m'a permis de
+            m'améliorer dans la création d'algorithmes car VBA étant assez
+            ancien, il a parfois fallu que je sois imaginatif pour créer ce dont
+            j'avais besoin.
+          </p>
+
+          <p>
+            Si je devais conseiller un développeur qui compte se lancer dans le
+            VBA, je lui dirais d'être d'abord sûr qu'il n'y a pas une autre
+            façon de faire plus simple car VBA complexifie le traitement de
+            certains problèmes parfois plus simples en Python par exemple.
+          </p>
+
+          <h2 id="evolution">Mon évolution</h2>
+
+          <p>
+            Dans l'immédiat je ne me vois plus évoluer en VBA, mais je compte
+            continuer de développer la compétence d'automatisation des
+            processus, c'est-à-dire la réflexion de création d'algorithme suite
+            à une description utilisateur.
+          </p>
+
+          <p>
+            Cette manière de penser les solutions logicielles me sera utile lors
+            de mes projets personnels de domotique, car la domotique c'est avant
+            tout automatiser des processus du domicile faits par les êtres
+            humains. Pour cela j'utiliserais une bibliothèque Python facilitant
+            la domotique.
+          </p>
+
+          <h2 id="realisations">Réalisations liées</h2>
+
+          <div class="related-skills">
+            <a
+              href="/pages/realisations/realisation-4.html"
+              class="related-skill-link"
+            >
+              <span class="related-skill-icon">🔋</span>
+
+              <span class="related-skill-text">
+                <strong>Garanties d'Origine</strong>
+                <span class="related-skill-sub"
+                  >Macro de suivi automatisé de justificatifs</span
+                >
+              </span>
+
+              <span class="related-skill-arrow">→</span>
+            </a>
+
+            <a
+              href="/pages/realisations/realisation-5.html"
+              class="related-skill-link"
+            >
+              <span class="related-skill-icon">📊</span>
+
+              <span class="related-skill-text">
+                <strong>Prévisions de consommation</strong>
+                <span class="related-skill-sub"
+                  >Macro Outlook + Excel de consolidation</span
+                >
+              </span>
+
+              <span class="related-skill-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/assets/js/navbar.js"></script>
+  </body>
+</html>

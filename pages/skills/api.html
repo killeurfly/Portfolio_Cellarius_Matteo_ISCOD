@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Intégration d'API REST | Portfolio</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+
+    <main>
+      <section class="page-section project-detail">
+        <div class="blob-center"></div>
+        <h1>Intégration d'API REST</h1>
+
+        <nav class="page-toc" aria-label="Sommaire de la page">
+          <a href="#definition">Ma définition</a>
+          <a href="#preuves">Mes éléments de preuve</a>
+          <a href="#autocritique">Mon autocritique</a>
+          <a href="#evolution">Mon évolution</a>
+          <a href="#realisations">Réalisations liées</a>
+        </nav>
+
+        <div class="skill-hero-icon">
+          <img src="/assets/images/svg/skill-api.svg" alt="" />
+        </div>
+
+        <div class="detail-card">
+          <h2 id="definition">Ma définition</h2>
+
+          <p>
+            Une API (Application Programming Interface) est une passerelle qui
+            permet un échange entre deux programmes informatiques, un programme
+            envoie la requête, l'autre la reçoit, et cela est fait de manière
+            plus ou moins sécurisée en fonction du protocole utilisé.
+          </p>
+
+          <p>Les API se distinguent d'abord par leur type de protocole :</p>
+
+          <ul class="definition-list">
+            <li>
+              <strong>REST</strong> (Representational State Transfer) représente
+              un type d'architecture API qui permet une communication entre
+              plusieurs ordinateurs. Le but de cet échange pour une API REST est
+              la manipulation de données.
+            </li>
+            <li>
+              <strong>SOAP</strong> (Simple Object Access Protocol) permet
+              également un échange entre plusieurs ordinateurs, mais d'une
+              manière beaucoup plus sécurisée, car il se base sur des règles
+              bien plus strictes. Ce protocole est notamment utilisé dans le
+              domaine bancaire.
+            </li>
+            <li>
+              <strong>RPC</strong> (Remote Procedure Call) permet quant à lui
+              l'appel direct d'une action précise.
+            </li>
+          </ul>
+
+          <p>Elles peuvent aussi se différencier par leur disponibilité :</p>
+
+          <ul class="definition-list">
+            <li>
+              <strong>Les API publiques</strong>, aussi désignées par le terme
+              API ouvertes, correspondent généralement à des API accessibles
+              gratuitement aux développeurs, qui peuvent parfois nécessiter un
+              enregistrement ou une authentification par clé. Elles facilitent
+              l'accès aux données publiques d'une organisation, par exemple
+              l'API de Google Maps qui permet l'accès à ses services de
+              géolocalisation.
+            </li>
+            <li>
+              <strong>Les API partenaires</strong> possèdent un accès qui n'est
+              disponible qu'aux partenaires d'une organisation, qui doit leur
+              fournir une autorisation ainsi que des accès.
+            </li>
+            <li>
+              <strong>Les API internes</strong> sont destinées à une utilisation
+              dans une même entreprise. L'utilité de cette API va être la
+              réutilisation en interne par d'autres équipes ou pour d'autres
+              projets.
+            </li>
+            <li>
+              <strong>Les API composites</strong> quant à elles combinent
+              plusieurs API indépendantes pour pouvoir créer des groupes de
+              services; cette fonctionnalité est très utile dans les
+              architectures de microservices.
+            </li>
+          </ul>
+
+          <p>
+            Un point d'actualité sur les API : le site
+            <a
+              href="https://www.itforbusiness.fr/mieux-securiser-les-api-un-imperatif-confirme-par-la-fuite-de-lants-103661"
+              target="_blank"
+              rel="noopener"
+              >ITforBusiness</a
+            >
+            évoque l'attaque informatique qu'a subie l'ANTS en avril 2026 :
+            cette attaque a pu réussir car les accès API REST n'étaient pas
+            sécurisés. Le pirate a pu se connecter avec les identifiants d'un
+            autre utilisateur, ce qui a été permis par le simple changement d'un
+            chiffre dans l'URL. Cette attaque a causé l'exposition de données de
+            11,7 millions d'utilisateurs.
+          </p>
+
+          <h2 id="preuves">Mes éléments de preuve</h2>
+
+          <p>
+            Mon apprentissage des API REST s'est fait durant mon alternance chez
+            Romus. J'ai vu cette notion durant mes cours à l'ISCOD mais j'ai dû
+            l'acquérir en amont car les projets sur lesquels elle a été utilisée
+            ont été les premiers sur lesquels j'ai travaillé à Romus.
+          </p>
+
+          <p>
+            Afin de travailler sur les API REST à Romus, j'ai dû comprendre leur
+            fonctionnement dans les projets déjà mis en place, j'ai pu donc
+            analyser les relations API entre l'API Schenker et l'ERP Navision
+            qui servait à imprimer des étiquettes, cela m'a servi pour la suite
+            car j'ai dû développer également une API pour un autre transporteur
+            qui serait connecté à Navision.
+          </p>
+
+          <p>
+            Tout d'abord, voici quelques définitions des termes qui vont être utilisés :
+          </p>
+
+          <ul class="definition-list">
+            <li>
+              <strong>Un ERP</strong> (Enterprise Resource Planning) est un
+              logiciel de gestion intégré aux processus de l'entreprise,
+              centralisant des fonctions comme la logistique ou la
+              comptabilité. Dans mon contexte, l'ERP Navision était le
+              système consommant les API REST des transporteurs pour la
+              gestion de l'expédition.
+            </li>
+            <li>
+              <strong>Un endpoint</strong> est l'URL précise à laquelle une
+              application envoie une requête pour accéder à une
+              fonctionnalité spécifique d'une API. Un même endpoint peut être
+              partagé entre plusieurs cas d'usage, ce qui nécessite parfois
+              une logique pour distinguer les requêtes qui y arrivent.
+            </li>
+            <li>
+              <strong>Un dispatcher</strong> représente la logique que j'ai pu
+              développer pour la redirection des requêtes transporteur vers
+              la bonne API, grâce aux informations contenues dans la requête
+              (exemple : l'identifiant du transporteur) ; je l'ai mis en
+              place lors du développement de l'API GLS afin de différencier
+              les impressions GLS de Schenker, et il a également été
+              réutilisé pour Géodis.
+            </li>
+          </ul>
+
+          <p>
+            Je vais maintenant parler de quelques anecdotes en lien avec les API
+            durant mon alternance chez Romus :
+          </p>
+
+          <p>
+            Dans l'ERP Navision pour l'annulation d'étiquette Schenker et GLS
+            cela se faisait via le même bouton, donc l'endpoint API devait être
+            le même, j'ai donc dû réaliser une logique de "dispatch" afin
+            d'annuler vers le bon transporteur, mais sur cet envoi de requête
+            API je n'avais que l'identifiant de la commande, j'ai donc dû mettre
+            en place dans mon "dispatcher" une requête en base de données qui
+            permettait la récupération du transporteur associé à l'identifiant,
+            tout cela était nécessaire car on voulait modifier le moins possible
+            les process de Navision pour les utilisateurs. Ce "dispatch" a très
+            bien fonctionné dès son implémentation et a permis lors de
+            l'intégration de l'API Géodis une mise en place rapide car la
+            logique était déjà présente.
+          </p>
+
+          <p>
+            Pour Géodis certains champs nécessaires à l'obtention de l'étiquette
+            Géodis n'étaient pas mentionnés comme obligatoires dans la
+            documentation, j'ai donc dû tester lesquels étaient nécessaires pour
+            un envoi de requête API puis j'ai demandé aux équipes techniques de
+            Géodis lesquels étaient nécessaires contractuellement. Un des champs
+            obligatoires était le nom du contact de la société destinataire du
+            colis qui pouvait ne pas être présent, j'ai donc pu communiquer avec
+            nos équipes commerciales afin de savoir si l'on pouvait transmettre
+            le nom de la société à la place, cela a été accepté et le problème a
+            donc pu être réglé. L'étude des champs obligatoires pour l'API de
+            Géodis a permis une plus grande maîtrise de celle-ci et ainsi de
+            réagir plus rapidement lors du développement des différents envois
+            avec l'API (Envoi Europe ou National).
+          </p>
+
+          <h2 id="autocritique">Mon autocritique</h2>
+
+          <p>
+            Ayant réalisé plusieurs projets se reposant sur l'utilisation d'API
+            REST, je me considère apte à développer et mettre en place dans des
+            projets des API REST, mais n'ayant pas vu toutes les utilisations
+            possibles des API je ne peux pas me considérer comme un expert dans ce
+            domaine.
+          </p>
+
+          <p>
+            J'ai encore des choses à apprendre pour ce qui est de l'utilisation
+            plus avancée des API car je n'ai pas encore utilisé d'API SOAP ou
+            RPC, tout simplement car ces API ne convenaient pas au projet que j'ai
+            pu mettre en place. Je pense cependant que dans l'avenir il serait
+            intéressant de développer ce type d'API dans certains projets afin de
+            pouvoir faire évoluer mes compétences sur les API en général.
+          </p>
+
+          <p>
+            Dans le domaine du développement applicatif les API sont très
+            importantes et posséder des connaissances sur ce sujet en tant que futur expert ingénieur l'est tout autant.
+          </p>
+
+          <p>
+            Grâce aux projets sur lesquels j'ai travaillé à Romus j'ai
+            découvert et développé mes compétences sur les API de façon très rapide, les multiples projets liés à cette compétence m'y ont beaucoup aidé, cette progression dans la compétence m'a appris que la mise en place d'API est cruciale pour le fonctionnement efficace d'un "Backend" de projet (Script interagissant avec les interfaces) ; j'ai pu me rendre compte de ce point lors de l'étude des documentations d'API transporteurs qui comportaient beaucoup de paramètres, mettant en lumière toutes les possibilités des API.
+            Cette compétence me sera très utile car un grand nombre de projets sur lesquels j'ai travaillé et sur lesquels je travaillerai se basent sur les API pour leur fonctionnement interne, mais cela m'est moins utile lors du développement d'applications lourdes.
+          </p>
+
+          <p>
+            Avec les connaissances que j'ai acquises sur les API, je conseillerais
+            à n'importe quel développeur de s'y intéresser car elles ont une
+            place centrale dans le fonctionnement de beaucoup d'applications.
+          </p>
+
+          <h2 id="evolution">Mon évolution</h2>
+
+          <p>
+            J'ai pour objectif professionnel de devenir un développeur capable de réaliser des projets web et applicatifs et ce genre de projet nécessite des API efficaces, c'est pourquoi je compte en réaliser moi-même dans mes futurs projets personnels de domotique.
+            Les intégrations d'API GLS et Géodis m'ont donné l'expérience nécessaire dans les API, pour m'intéresser à la conception d'API dédiée à mon propre système d'informations personnelles.
+          </p>
+
+          <p>
+            Pour arriver à cet objectif, plusieurs étapes sont en cours. Tout d'abord la finalisation du parcours de tests et de la mise en production de Géodis, qui reprendra à la fin de l'été. Ensuite le développement de l'outil de suivi des commandes expédiées via l'API GLS, qui est une évolution déjà anticipée. Pour finir, lors de futures intégrations de transporteur, je ferai évoluer le dispatcher, devenu un point crucial à Romus.
+            Enfin, dans le cadre personnel, je compte développer ma propre API de domotique, dans le but de mettre en pratique la conception d'API et pas seulement son intégration.
+          </p>
+
+          <h2 id="realisations">Réalisations liées</h2>
+
+          <div class="related-skills">
+            <a
+              href="/pages/realisations/realisation-1.html"
+              class="related-skill-link"
+            >
+              <span class="related-skill-icon">🏷️</span>
+
+              <span class="related-skill-text">
+                <strong>Intégration de l'API GLS</strong>
+                <span class="related-skill-sub"
+                  >Connexion Navision ↔ webservice GLS</span
+                >
+              </span>
+
+              <span class="related-skill-arrow">→</span>
+            </a>
+
+            <a
+              href="/pages/realisations/realisation-2.html"
+              class="related-skill-link"
+            >
+              <span class="related-skill-icon">🚚</span>
+
+              <span class="related-skill-text">
+                <strong>Reprise de l'API Géodis</strong>
+                <span class="related-skill-sub"
+                  >Reprise et finalisation d'une intégration existante</span
+                >
+              </span>
+
+              <span class="related-skill-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/assets/js/navbar.js"></script>
+  </body>
+</html>

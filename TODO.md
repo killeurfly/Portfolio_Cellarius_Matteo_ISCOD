@@ -10,10 +10,10 @@ poste, du plus gros manque au moins gros :
   compétence doit être un article détaillé à part (définition contextualisée
   + reliée à une actualité, 1-3 anecdotes avec preuve/résultat/valeur
   ajoutée/lien vers la réalisation concernée, autocritique, évolution
-  souhaitée). **Structure créée** : les 10 pages existent
-  (`pages/skills/*.html`) avec définitions rédigées et pistes d'anecdotes
-  sourcées, mais anecdotes/autocritique/évolution restent des `.todo-list`
-  à rédiger par toi (voir détail dans la section Compétences plus bas).
+  souhaitée). **3 des 10 pages entièrement terminées** (api.html, web.html,
+  automatisation.html — plus aucun todo) ; les 7 autres ont leur structure
+  et leurs pistes d'anecdotes prêtes, contenu personnel à rédiger (voir
+  détail dans la section Compétences plus bas).
 - [ ] **Mes compétences — schéma comparatif (10 pts)** — la grille demande un
   schéma synthétique où on voit le niveau de chaque compétence *par rapport
   aux autres* (genre radar/barres), pas une grille de cartes. **Manquant.**
@@ -120,18 +120,23 @@ poste, du plus gros manque au moins gros :
   par la grille (Ma définition, Mes éléments de preuve, Mon autocritique,
   Mon évolution, Réalisations liées). Les cartes de `skills.html`,
   `technical.html` et `human.html` pointent maintenant vers ces pages.
-  **Reste à faire par toi** (rédaction personnelle, laissée en `.todo-list`
-  sur chaque page) :
-  - [ ] "Ma définition" — rédigée par Claude, mais chaque page a un todo
-    pour relier la compétence à une actualité du secteur (obligatoire côté
-    grille, nécessite ta veille perso)
-  - [ ] "Mes éléments de preuve" — pistes d'anecdotes factuelles proposées
-    par Claude (1-3 par page, sourcées dans les réalisations), mais les
-    paragraphes finaux (résultat + valeur ajoutée) sont à rédiger par toi
+- [x] **api.html** — entièrement rédigée, plus aucun todo.
+- [x] **web.html** — entièrement rédigée, plus aucun todo.
+- [x] **automatisation.html** — entièrement rédigée, plus aucun todo.
+- [ ] **Les 7 pages restantes** (`resolution-problemes.html`,
+  `fiabilisation.html`, `communication.html`, `autonomie.html`,
+  `adaptabilite.html`, `rigueur.html`, `gestion-projet.html`) — structure et
+  todos prêts, contenu personnel à rédiger sur chacune :
+  - [ ] "Ma définition" — todo pour relier la compétence à une actualité du
+    secteur (obligatoire côté grille, nécessite ta veille perso — ou demande
+    à Claude de proposer des pistes d'articles comme sur les 3 pages faites)
+  - [ ] "Mes éléments de preuve" — pistes d'anecdotes factuelles déjà
+    proposées (sourcées dans les réalisations), paragraphes finaux
+    (résultat + valeur ajoutée) à rédiger
   - [ ] "Mon autocritique" (niveau de maîtrise, priorité, vitesse
-    d'acquisition, recul) — 100% personnel, todo sur les 10 pages
+    d'acquisition, recul) — 100% personnel
   - [ ] "Mon évolution" (projet perso-pro, formations prévues) — 100%
-    personnel, todo sur les 10 pages
+    personnel
 - [ ] **Schéma comparatif des 10 compétences** (10 pts) — remplacer ou
   compléter la grille de cartes par une visualisation du niveau relatif de
   chaque compétence (ex. barres ou radar), accessible depuis le menu
