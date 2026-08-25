@@ -10,10 +10,11 @@ poste, du plus gros manque au moins gros :
   compétence doit être un article détaillé à part (définition contextualisée
   + reliée à une actualité, 1-3 anecdotes avec preuve/résultat/valeur
   ajoutée/lien vers la réalisation concernée, autocritique, évolution
-  souhaitée). **3 des 10 pages entièrement terminées** (api.html, web.html,
-  automatisation.html — plus aucun todo) ; les 7 autres ont leur structure
-  et leurs pistes d'anecdotes prêtes, contenu personnel à rédiger (voir
-  détail dans la section Compétences plus bas).
+  souhaitée). **5 des 10 pages entièrement terminées** (api.html, web.html,
+  automatisation.html, resolution-problemes.html, fiabilisation.html — plus
+  aucun todo) ; les 5 autres ont leur structure et leurs pistes d'anecdotes
+  prêtes, contenu personnel à rédiger (voir détail dans la section
+  Compétences plus bas).
 - [ ] **Mes compétences — schéma comparatif (10 pts)** — la grille demande un
   schéma synthétique où on voit le niveau de chaque compétence *par rapport
   aux autres* (genre radar/barres), pas une grille de cartes. **Manquant.**
@@ -106,6 +107,22 @@ poste, du plus gros manque au moins gros :
 - [ ] **Fin de chaque réalisation** : remplacer/compléter les 2 boutons génériques par des liens vers les compétences spécifiques mises en œuvre (dépend de la refonte des pages compétences ci-dessous)
 - [ ] Ajouter le lien GitHub sur les réalisations qui s'y prêtent
 - [ ] Vérifier la confidentialité des réalisations liées à Romus avant publication (repo GitHub public)
+- [x] **Anonymiser les mentions de "Romus"** dans le corps des pages — fait
+  (2026-08-25) sur `realisations.html`, `realisation-1/2/3.html`, `api.html`,
+  `automatisation.html`, `resolution-problemes.html`, `web.html` : remplacé
+  par des formulations génériques ("mon entreprise", "dans le milieu
+  professionnel"). **`pages/parcours.html`** (frise, lignes ~62-78) garde
+  volontairement le vrai nom "Romus", son logo et son lien vers
+  romusworld.com — décision confirmée par l'utilisateur le 2026-08-25 (la
+  frise de CV peut rester nominative, contrairement au reste du site).
+- [ ] **Anonymiser les mentions d'"EDF"**, sur le même principe que Romus —
+  présent dans `automatisation.html`, `realisations.html`, `realisation-4.html`,
+  `realisation-5.html`, `components/navbar.html`, et jusque dans les noms de
+  fichiers `assets/images/svg/card-edf-consommation.svg` et
+  `card-edf-garanties-origine.svg`. Périmètre plus large que Romus (titres de
+  réalisations "(EDF)", noms de fichiers SVG à renommer) — recoupe le point
+  "noms des réalisations à revoir" ci-dessus, à traiter ensemble plutôt qu'en
+  isolé.
 
 ### Compétences
 
@@ -123,8 +140,24 @@ poste, du plus gros manque au moins gros :
 - [x] **api.html** — entièrement rédigée, plus aucun todo.
 - [x] **web.html** — entièrement rédigée, plus aucun todo.
 - [x] **automatisation.html** — entièrement rédigée, plus aucun todo.
-- [ ] **Les 7 pages restantes** (`resolution-problemes.html`,
-  `fiabilisation.html`, `communication.html`, `autonomie.html`,
+- [x] **resolution-problemes.html** — entièrement rédigée, plus aucun todo.
+- [x] **fiabilisation.html** — entièrement rédigée, plus aucun todo (relue
+  section par section avec Claude : formation ajoutée dans "Mes éléments de
+  preuve", "Mon autocritique" et "Mon évolution" rédigés et corrigés, terme
+  "rétro-ingénierie" défini, projet perso domotique/Home Assistant utilisé
+  comme fil rouge pour l'évolution).
+- [ ] **Précision des 5 pages terminées, comparé aux exemples de la grille**
+  (`Source/Exemple skills technique*.txt`) — analyse faite le 2026-08-25 :
+  mes pages sont ~20 % plus courtes en moyenne que les exemples (1125 vs
+  1399 mots), l'écart se concentre sur "Mes éléments de preuve" (-24 %) et
+  surtout "Mon autocritique" (-26 %). Le vrai manque n'est pas la longueur
+  mais le niveau de **détail nommé** : les exemples citent systématiquement
+  des ressources précises (titre de livre + auteur, nom de certification,
+  fournisseur/techno exacte) dans l'autocritique et l'évolution, là où mes
+  pages restent plus génériques ("je compte apprendre Symfony" sans dire
+  comment/avec quelle ressource). À reprendre page par page quand j'ai les
+  vraies ressources/noms à citer (pas à inventer).
+- [ ] **Les 5 pages restantes** (`communication.html`, `autonomie.html`,
   `adaptabilite.html`, `rigueur.html`, `gestion-projet.html`) — structure et
   todos prêts, contenu personnel à rédiger sur chacune :
   - [ ] "Ma définition" — todo pour relier la compétence à une actualité du
