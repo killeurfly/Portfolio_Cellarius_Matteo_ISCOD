@@ -34,130 +34,175 @@
           <h2 id="definition">Ma définition</h2>
 
           <p>
-            Résoudre un problème technique consiste à identifier l'origine
-            d'un dysfonctionnement — bug, régression, blocage — à le
-            reproduire, puis à corriger sa cause plutôt que seulement son
-            symptôme.
+            La résolution de problèmes consiste en l'identification de l'origine
+            d'un dysfonctionnement (bug, régression, blocage), à sa
+            reproduction, puis à corriger ce qui l'a causé.
           </p>
 
           <p>
-            Cette compétence intervient à toutes les étapes d'un projet
-            informatique : pendant le développement, lors des phases de
-            test, et après la mise en production, quand des cas d'usage
-            imprévus remontent des utilisateurs.
+            Cette compétence peut intervenir à tout moment d'un projet
+            informatique : lors du développement, pendant les phases de test,
+            après la mise en production et lorsque les utilisateurs remontent
+            des cas d'usage imprévus.
           </p>
 
-          <p class="todo-label">À compléter</p>
+          <p>
+            Voici quelques exemples de types de bugs qui peuvent être rencontrés
+            lorsqu'un projet informatique est en cours de développement :
+          </p>
 
-          <ul class="todo-list">
+          <ul class="definition-list">
             <li>
-              Si pertinent, situe cette compétence dans ses grandes
-              variantes (types de bugs, méthodes de diagnostic) comme le
-              fait l'exemple de la grille avec les 3 modèles de Cloud — pas
-              obligatoire si ça n'apporte rien à cette page.
+              <strong>Les bugs fonctionnels ou d'interface</strong>, quand
+              l'observation du comportement de l'application ne correspond pas
+              aux attentes (ex : barre de défilement qui ne descend pas bien).
+              Le diagnostic est généralement direct car le problème est
+              rapidement identifiable et reproductible dans l'interface.
             </li>
             <li>
-              Relie cette compétence à une actualité du secteur, en citant
-              une source précise si possible (l'exemple de la grille cite un
-              article nommé du site "Les Numériques") — pas juste "il y a
-              une tendance", un article ou évènement identifiable, par
-              exemple sur les outils d'aide au diagnostic.
+              <strong>Les bugs de performance</strong>, c'est-à-dire que le
+              programme fonctionne, mais pas avec la rapidité attendue (des
+              boutons qui mettent du temps à effectuer la fonctionnalité
+              attendue). Le diagnostic est assez indirect : il va falloir
+              observer, à l'exécution du code, le fonctionnement de
+              l'application au lieu de vérifier le résultat final.
+            </li>
+            <li>
+              <strong>Les bugs remontés en production</strong>, un
+              dysfonctionnement découvert par les utilisateurs suite à la mise
+              en service de l'application. Le diagnostic est fait sous
+              contrainte : il va falloir reproduire un cas précis décrit par la
+              personne ayant découvert le bug, souvent avec l'urgence de la
+              demande du service.
             </li>
           </ul>
+
+          <p>
+            Un article de juillet 2025 du site
+            <a
+              href="https://capimedia.com/ia-frein-efficacite-developpeurs/"
+              target="_blank"
+              rel="noopener"
+              >Capi Media</a
+            >
+            nous apprend que l'IA freine l'efficacité des développeurs jusqu'à
+            19 % lors de la résolution de problèmes, cela veut dire que même si
+            l'IA donne l'impression d'être plus efficace, garder la main sur le
+            code sans son assistance doit toujours être un point essentiel de la
+            maîtrise de son système d'information.
+          </p>
 
           <h2 id="preuves">Mes éléments de preuve</h2>
 
-          <p>Voici les projets sur lesquels j'ai mobilisé cette compétence :</p>
+          <p>
+            Je pense que la compétence de résolution de problèmes techniques est
+            une compétence qui s'obtient via l'expérience, ce sont les
+            différents projets sur lesquels j'ai travaillé qui m'ont permis de
+            développer cette compétence.
+          </p>
 
-          <p class="todo-label">À rédiger — 1 à 3 anecdotes</p>
+          <p>
+            Voici quelques anecdotes de résolutions de problèmes techniques sur
+            les projets sur lesquels j'ai pu travailler :
+          </p>
 
-          <ul class="todo-list">
-            <li>
-              Si tu t'es formé spécifiquement au débogage (méthodes,
-              outils, veille), mentionne-le avant les anecdotes — l'exemple
-              de la grille commence par sa formation Google Cloud avant de
-              raconter ses anecdotes.
-            </li>
-            <li>
-              GLS — corrections de bugs remontés par les utilisateurs
-              pendant la période d'hypercare qui a suivi la mise en
-              production. Quel type de bug as-tu le plus souvent rencontré,
-              et comment l'as-tu résolu ?
-            </li>
-            <li>
-              Gedim — diagnostic et correction de régressions découvertes en
-              cours de développement sur une application déjà en
-              production. Comment as-tu identifié la cause de la
-              régression ?
-            </li>
-            <li>
-              Garanties d'Origine — corrections identifiées lors de la
-              fiabilisation d'un traitement de données sensibles. Quel a été
-              l'impact d'une correction en particulier ?
-            </li>
-            <li>
-              Pour chaque anecdote retenue (1 à 3 maximum), structure le
-              paragraphe comme dans l'exemple de la grille : contexte du
-              projet → ce que tu as concrètement fait → résultat obtenu (si
-              possible chiffré) → ta valeur ajoutée. Renvoie vers la
-              réalisation concernée.
-            </li>
-          </ul>
+          <p>
+            Lors de la mise en production de l'API GLS, des bugs ont été
+            remontés par les utilisateurs, la plupart de ces bugs étaient liés à
+            des situations qui n'avaient pas été prévues lors des tests. Il a
+            donc fallu rester au contact des équipes pour comprendre comment les
+            reproduire et les résoudre. Les utilisateurs ont grandement apprécié
+            mon implication lors de la mise en production, ce qui a permis une
+            plus grande efficacité de l'intégration de l'API GLS.
+          </p>
+
+          <p>
+            Sur l'application de suivi des commandes/expéditions Gedim, j'ai dû
+            créer une page de suivi des commandes et de leur état, mais à un
+            moment après la mise en production, la quantité de données s'est
+            révélée être trop importante et le tableau d'affichage n'arrivait
+            plus à charger cette quantité de données, j'ai donc dû changer le
+            fonctionnement de l'affichage pour que les requêtes de base de
+            données n'aillent chercher les données que petit à petit. Cette
+            évolution ne changeait pas grand-chose pour les utilisateurs mais
+            c'était nécessaire à cause de la grande quantité de données traitées
+            (à peu près 5000 commandes).
+          </p>
+
+          <p>
+            Également lors du développement d'une macro Excel, j'ai dû réaliser
+            le traitement de données présentes sur plusieurs fichiers, mais lors
+            de la mise en place de cette logique j'ai découvert que cela
+            ralentissait fortement les machines sur lesquelles la macro
+            tournait, j'ai donc dû chercher comment résoudre ce problème, c'est
+            là que j'ai découvert une manière d'ouvrir les fichiers de façon
+            cachée, ce qui a réduit la charge pour les machines des
+            utilisateurs. Cela a permis d'accélérer le traitement des fichiers
+            et a participé au temps gagné par l'utilisation des macros.
+          </p>
 
           <h2 id="autocritique">Mon autocritique</h2>
 
-          <p class="todo-label">À compléter</p>
+          <p>
+            Je ne pense pas pouvoir me considérer comme un expert dans la
+            résolution de problèmes, car tout simplement je n'ai pas rencontré
+            tous les problèmes techniques qui pouvaient se présenter dans un
+            système d'information.
+          </p>
 
-          <ul class="todo-list">
-            <li>
-              Quel est ton niveau actuel, avec nuance ? L'exemple de la
-              grille ne dit pas juste "avancé" : il explique pourquoi il ne
-              se considère pas "expert" malgré sa formation (connaissances
-              surtout théoriques, peu de pratique en conditions réelles) —
-              essaie la même nuance ici.
-            </li>
-            <li>
-              Qu'est-ce qu'il te reste à apprendre concrètement sur cette
-              compétence ?
-            </li>
-            <li>
-              En quoi cette compétence te rapproche du profil d'Expert en
-              Ingénierie du Logiciel visé par ton Mastère ?
-            </li>
-            <li>
-              As-tu progressé vite ou lentement ? Une leçon méthodologique à
-              en tirer ? (l'exemple de la grille regrette de ne pas avoir lu
-              la théorie avant de pratiquer)
-            </li>
-            <li>
-              Cette compétence s'exerce-t-elle pleinement dans ton poste
-              actuel ou visé, ou y a-t-il des limites ? (l'exemple de la
-              grille explique que son métier de DevOps en cybersécurité
-              française limite l'usage des Cloud publics américains)
-            </li>
-            <li>
-              Quel conseil donnerais-tu à un développeur qui démarre sur
-              cette compétence ?
-            </li>
-          </ul>
+          <p>
+            Malgré les différents projets sur lesquels j'ai travaillé, la
+            plupart des problèmes que j'ai rencontrés résidaient dans des
+            configurations d'API ou des problèmes de formation de fichiers, si
+            je devais donner un point d'évolution ce serait celui d'apprendre à
+            résoudre plus de types de problèmes, par exemple sur les flux Dex
+            (Dex est un middleware, c'est-à-dire un logiciel entre 2
+            logiciels, qui permet le suivi de flux informatique et de
+            traitements qui ont été réalisés dans son interface).
+          </p>
+
+          <p>
+            La résolution de problèmes dans un système d'information représente
+            le quotidien d'un développeur et un expert ingénieur se doit de
+            maîtriser cette compétence afin de pouvoir réaliser des projets
+            informatiques de façon efficace.
+          </p>
+
+          <p>
+            Lors de mes développements en API et en application web, j'ai pu
+            développer mes compétences de résolution de problèmes grâce aux
+            problèmes que j'ai rencontrés et aux multiples retours utilisateurs.
+            Toutes ces situations m'ont permis de développer rapidement cette
+            compétence sur les projets web et API. Avec du recul, si je devais
+            retirer quelque chose ce serait qu'on ne peut pas être efficace en
+            résolution de problèmes sans se confronter et analyser notre code.
+            Cette compétence est souvent sollicitée dans mon travail car les
+            projets sont souvent confrontés aux utilisateurs et donc à leurs
+            retours, mais aussi car un développeur est souvent confronté aux
+            bugs lors des développements.
+          </p>
+
+          <p>
+            Le conseil que je donnerais pour un développeur qui commence cette
+            compétence, ce serait de ne pas avoir peur d'échouer dans le
+            développement des fonctionnalités car c'est en comparant notre
+            travail et ce qui est attendu qu'on progresse le plus en résolution
+            de problèmes techniques.
+          </p>
 
           <h2 id="evolution">Mon évolution</h2>
 
-          <p class="todo-label">À compléter</p>
+          <p>
+            Mon objectif professionnel est de devenir plus efficace à la
+            résolution de problèmes techniques, en me confrontant à des
+            situations que je n'ai jamais rencontrées avant.
+          </p>
 
-          <ul class="todo-list">
-            <li>
-              Quel est ton objectif professionnel précis à moyen terme en
-              lien avec cette compétence ?
-            </li>
-            <li>
-              Quelles étapes concrètes comptes-tu suivre pour y arriver
-              (formation, technologie à tester, prochain projet) ? L'exemple
-              de la grille est très concret : un livre à terminer, un
-              parcours de certification précis, deux fournisseurs Cloud à
-              tester.
-            </li>
-          </ul>
+          <p>
+            Afin d'être meilleur dans cette compétence je vais développer ma
+            propre API de domotique et pour cela je rencontrerai obligatoirement
+            des problèmes car c'est un domaine inconnu pour moi.
+          </p>
 
           <h2 id="realisations">Réalisations liées</h2>
 

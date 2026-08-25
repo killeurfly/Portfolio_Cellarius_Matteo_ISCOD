@@ -34,124 +34,152 @@
           <h2 id="definition">Ma définition</h2>
 
           <p>
-            Reprendre du code existant consiste à comprendre un
-            développement commencé par quelqu'un d'autre — son
-            fonctionnement, ses choix techniques, ce qu'il reste à finir —
-            avant de pouvoir le faire évoluer ou le fiabiliser.
+            La reprise d'un code existant consiste à comprendre l'état de
+            développement dans lequel il est, en analysant les choix techniques
+            réalisés et le fonctionnement des fonctionnalités, et ce qu'il reste
+            à finir, tout ça avant de pouvoir procéder à son évolution ou à sa
+            fiabilisation. La fiabilisation quant à elle consiste à s'assurer
+            lors du développement que les choix techniques réalisés ne créeront
+            pas de dette technique par la suite.
           </p>
 
           <p>
-            C'est une compétence différente de partir d'une page blanche :
-            elle demande de la rétro-ingénierie et de la prudence, pour ne
-            pas casser un existant déjà en production en le modifiant.
+            Cette compétence est différente de partir de zéro : elle demande une
+            partie de rétro-ingénierie (analyser le fonctionnement d'une
+            chose déjà mise en place en la détaillant partie par partie) pour
+            comprendre un existant et ne pas casser de fonctionnalité en la
+            modifiant.
           </p>
 
-          <p class="todo-label">À compléter</p>
+          <p>
+            Lors de la fiabilisation du code, une des questions qui se pose est
+            quel choix technique faire en fonction des délais demandés, c'est là
+            que la dette technique peut arriver. La dette technique représente
+            le temps qui sera consacré après la mise en production pour régler
+            des problèmes qui auraient pu être évités si plus de temps avait été
+            consacré au développement.
+          </p>
 
-          <ul class="todo-list">
-            <li>
-              Si pertinent, situe cette compétence dans ses grandes
-              variantes (reprise partielle vs réécriture complète, dette
-              technique) comme le fait l'exemple de la grille avec les 3
-              modèles de Cloud — pas obligatoire si ça n'apporte rien à
-              cette page.
-            </li>
-            <li>
-              Relie cette compétence à une actualité du secteur, en citant
-              une source précise si possible (l'exemple de la grille cite un
-              article nommé du site "Les Numériques") — pas juste "il y a
-              une tendance", un article ou évènement identifiable, par
-              exemple sur la dette technique.
-            </li>
-          </ul>
+          <p>
+            La dette technique peut amener des coûts supplémentaires dans les
+            services informatiques, comme nous le dit
+            <a
+              href="https://www.journaldunet.com/solutions/dsi/1507947-dette-technique-des-entreprises-le-spleen-des-dsi-la-gangrene-de-l-agilite/"
+              target="_blank"
+              rel="noopener"
+              >cet article du Journal du Net</a
+            >, qui nous apprend que 20 % à 30 % du budget total est consacré à
+            la maintenance. Ces surcoûts sont dus à la maintenance évolutive et
+            corrective que crée la dette technique ; les professionnels
+            interrogés estiment à 60 % que la dette technique est souvent à
+            l'origine d'incidents qui ralentissent les développements.
+          </p>
 
           <h2 id="preuves">Mes éléments de preuve</h2>
 
-          <p>Voici les projets sur lesquels j'ai mobilisé cette compétence :</p>
+          <p>
+            La reprise d'un code existant et de sa fiabilisation est une
+            compétence qui ne peut s'obtenir qu'en travaillant sur des projets
+            déjà existants. Pour la fiabilisation de code il y a l'expérience
+            mais aussi les manières de travailler qui comptent, mes cours m'ont
+            permis de comprendre comment bien faire du code. Les projets sur
+            lesquels j'ai travaillé m'ont permis après analyse de leur code de
+            comprendre la manière de travailler de mon entreprise et des
+            développeurs ayant travaillé sur les projets.
+          </p>
 
-          <p class="todo-label">À rédiger — 1 à 3 anecdotes</p>
+          <p>
+            Ici je vous parlerai de quelques projets sur lesquels j'ai dû
+            mobiliser cette compétence :
+          </p>
 
-          <ul class="todo-list">
-            <li>
-              Si tu t'es formé spécifiquement à la reprise de code existant
-              (méthodes de rétro-ingénierie, veille), mentionne-le avant les
-              anecdotes — l'exemple de la grille commence par sa formation
-              Google Cloud avant de raconter ses anecdotes.
-            </li>
-            <li>
-              Géodis — reprise d'une intégration API REST laissée
-              inachevée par un développeur précédent, puis finalisation et
-              mise en production. Qu'as-tu dû comprendre en premier pour
-              pouvoir reprendre ce travail ?
-            </li>
-            <li>
-              Gedim — fiabilisation de requêtes SQL existantes et
-              correction de régressions sur une application déjà en
-              production. Quel a été le résultat de cette fiabilisation ?
-            </li>
-            <li>
-              Pour chaque anecdote retenue (1 à 3 maximum), structure le
-              paragraphe comme dans l'exemple de la grille : contexte du
-              projet → ce que tu as concrètement fait → résultat obtenu (si
-              possible chiffré) → ta valeur ajoutée. Renvoie vers la
-              réalisation concernée.
-            </li>
-          </ul>
+          <p>
+            Lors de la reprise du code de l'application de suivi de commandes
+            Gedim, j'ai dû y rajouter des fonctionnalités. Une de ces
+            fonctionnalités avait été en partie développée, mais était
+            incomplète : cette fonctionnalité était la page d'administration des
+            utilisateurs. J'ai dû rattacher cette page pour qu'elle soit
+            visible, puis ajouter des options supplémentaires afin de pouvoir
+            ajouter et gérer les utilisateurs avec toutes leurs
+            caractéristiques. Cette fonctionnalité n'est pas très utilisée car
+            la base d'utilisateurs (environ 50) ne bouge pas beaucoup, mais elle
+            était nécessaire pour éviter de modifier manuellement les
+            utilisateurs.
+          </p>
+
+          <p>
+            Un autre code que j'ai dû reprendre est celui de l'intégration de
+            l'API Géodis, qui avait été inachevée et demandait une reprise de
+            son code. J'ai donc dû voir où le développement s'était arrêté et si
+            les fonctionnalités étaient toujours opérationnelles. J'ai également
+            pu reprendre les échanges par mail avec les équipes techniques de
+            Géodis, ce qui m'a permis de faire évoluer le projet de façon
+            beaucoup plus efficace. Ce projet étant toujours en cours et en
+            phase de tests, il n'y a pas de résultats à annoncer, mais ces tests
+            sont réalisés et les problèmes rencontrés sont réglés au fur et à
+            mesure.
+          </p>
 
           <h2 id="autocritique">Mon autocritique</h2>
 
-          <p class="todo-label">À compléter</p>
+          <p>
+            Cette compétence je n'ai pu l'exercer que dans deux projets mais
+            cela m'a permis de comprendre les enjeux de la reprise de code et de
+            comment il était possible de bien le fiabiliser.
+          </p>
 
-          <ul class="todo-list">
-            <li>
-              Quel est ton niveau actuel, avec nuance ? L'exemple de la
-              grille ne dit pas juste "avancé" : il explique pourquoi il ne
-              se considère pas "expert" malgré sa formation (connaissances
-              surtout théoriques, peu de pratique en conditions réelles) —
-              essaie la même nuance ici.
-            </li>
-            <li>
-              Qu'est-ce qu'il te reste à apprendre concrètement sur cette
-              compétence ?
-            </li>
-            <li>
-              En quoi cette compétence te rapproche du profil d'Expert en
-              Ingénierie du Logiciel visé par ton Mastère ?
-            </li>
-            <li>
-              As-tu progressé vite ou lentement ? Une leçon méthodologique à
-              en tirer ? (l'exemple de la grille regrette de ne pas avoir lu
-              la théorie avant de pratiquer)
-            </li>
-            <li>
-              Cette compétence s'exerce-t-elle pleinement dans ton poste
-              actuel ou visé, ou y a-t-il des limites ? (l'exemple de la
-              grille explique que son métier de DevOps en cybersécurité
-              française limite l'usage des Cloud publics américains)
-            </li>
-            <li>
-              Quel conseil donnerais-tu à un développeur qui démarre sur
-              cette compétence ?
-            </li>
-          </ul>
+          <p>
+            Actuellement je ne peux pas me considérer comme un expert dans ce
+            domaine à cause du peu de projets que j'ai pu reprendre, mais j'ai
+            confiance en ma capacité de fiabiliser du code grâce à l'expérience
+            que j'ai obtenue sur les projets sur lesquels j'ai pu développer. La
+            partie reprise de code et/ou du projet qui va avec est parfois plus
+            difficile, car elle demande une compréhension de toutes les
+            fonctionnalités implémentées. Il me reste donc à développer la
+            compétence de reprise de code, car je n'ai repris que du code API et
+            web.
+          </p>
+
+          <p>
+            La compétence de reprise et fiabilisation est primordiale pour les
+            experts ingénieurs logiciel afin de limiter l'accumulation de dette
+            technique et ainsi permettre la pérennité des systèmes
+            informatiques.
+          </p>
+
+          <p>
+            J'ai progressé dans cette compétence au rythme des projets sur
+            lesquels j'ai travaillé car l'expérience obtenue m'a permis de me
+            rendre compte qu'un code bien réalisé est plus facile à reprendre.
+            Cette compétence s'exerce pleinement dans mon travail car en
+            travaillant sur des projets d'évolution de code et de reprise j'ai
+            pu apprendre la manière avec laquelle il était possible de reprendre
+            du code et ce qui permettait d'en faire un code facilement
+            fiabilisable.
+          </p>
+
+          <p>
+            Si je devais donner un conseil à un développeur qui commence dans ce
+            domaine je lui dirais que c'est une compétence difficile à obtenir
+            mais qu'une fois maîtrisée elle permet d'élargir le champ de
+            compétence de façon considérable.
+          </p>
 
           <h2 id="evolution">Mon évolution</h2>
 
-          <p class="todo-label">À compléter</p>
+          <p>
+            Afin d'atteindre mon objectif personnel, qui est de créer mon API de
+            domotique, je devrais trouver des projets similaires pour analyser
+            leur fonctionnement.
+          </p>
 
-          <ul class="todo-list">
-            <li>
-              Quel est ton objectif professionnel précis à moyen terme en
-              lien avec cette compétence ?
-            </li>
-            <li>
-              Quelles étapes concrètes comptes-tu suivre pour y arriver
-              (formation, technologie à tester, prochain projet) ? L'exemple
-              de la grille est très concret : un livre à terminer, un
-              parcours de certification précis, deux fournisseurs Cloud à
-              tester.
-            </li>
-          </ul>
+          <p>
+            Je pourrais également, afin de me diversifier dans les types de code
+            repris, regarder ce qu'il est possible de faire en domotique en
+            dehors des API, par exemple le fonctionnement d'un Home Assistant
+            (serveur central dans un système de domotique permettant le contrôle
+            et le paramétrage des appareils).
+          </p>
 
           <h2 id="realisations">Réalisations liées</h2>
 
