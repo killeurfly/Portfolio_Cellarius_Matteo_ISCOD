@@ -166,32 +166,41 @@
           <p>
             Dans l'ERP Navision pour l'annulation d'étiquette Schenker et GLS
             cela se faisait via le même bouton, donc l'endpoint API devait être
-            le même, j'ai donc dû réaliser une logique de "dispatch" afin
-            d'annuler vers le bon transporteur, mais sur cet envoi de requête
-            API je n'avais que l'identifiant de la commande, j'ai donc dû mettre
-            en place dans mon "dispatcher" une requête en base de données qui
-            permettait la récupération du transporteur associé à l'identifiant,
-            tout cela était nécessaire car on voulait modifier le moins possible
-            les process de Navision pour les utilisateurs. Ce "dispatch" a très
-            bien fonctionné dès son implémentation et a permis lors de
-            l'intégration de l'API Géodis une mise en place rapide car la
-            logique était déjà présente.
+            le même, j'ai donc dû réaliser avant le développement de
+            <a href="/pages/realisations/realisation-1.html">l'API GLS</a>
+            une logique de "dispatch" afin d'annuler vers le bon transporteur,
+            mais sur cet envoi de requête API je n'avais que l'identifiant de la
+            commande, j'ai donc dû mettre en place dans mon "dispatcher" une
+            requête en base de données qui permettait la récupération du
+            transporteur associé à l'identifiant, tout cela était nécessaire car
+            on voulait modifier le moins possible les process de Navision pour
+            les utilisateurs. Ce "dispatch" a très bien fonctionné dès son
+            implémentation et a permis lors de
+            <a href="/pages/realisations/realisation-2.html"
+              >l'intégration de l'API Géodis</a
+            >
+            une mise en place rapide car la logique était déjà présente.
           </p>
 
           <p>
-            Pour Géodis certains champs nécessaires à l'obtention de l'étiquette
-            Géodis n'étaient pas mentionnés comme obligatoires dans la
-            documentation, j'ai donc dû tester lesquels étaient nécessaires pour
-            un envoi de requête API puis j'ai demandé aux équipes techniques de
-            Géodis lesquels étaient nécessaires contractuellement. Un des champs
-            obligatoires était le nom du contact de la société destinataire du
-            colis qui pouvait ne pas être présent, j'ai donc pu communiquer avec
-            nos équipes commerciales afin de savoir si l'on pouvait transmettre
-            le nom de la société à la place, cela a été accepté et le problème a
-            donc pu être réglé. L'étude des champs obligatoires pour l'API de
-            Géodis a permis une plus grande maîtrise de celle-ci et ainsi de
-            réagir plus rapidement lors du développement des différents envois
-            avec l'API (Envoi Europe ou National).
+            Pour
+            <a href="/pages/realisations/realisation-2.html"
+              >l'intégration de l'API Géodis</a
+            >
+            certains champs nécessaires à
+            l'obtention de l'étiquette Géodis n'étaient pas mentionnés comme
+            obligatoires dans la documentation, j'ai donc dû tester lesquels
+            étaient nécessaires pour un envoi de requête API puis j'ai demandé
+            aux équipes techniques de Géodis lesquels étaient nécessaires
+            contractuellement. Un des champs obligatoires était le nom du
+            contact de la société destinataire du colis qui pouvait ne pas être
+            présent, j'ai donc pu communiquer avec nos équipes commerciales afin
+            de savoir si l'on pouvait transmettre le nom de la société à la
+            place, cela a été accepté et le problème a donc pu être réglé.
+            L'étude des champs obligatoires pour l'API de Géodis a permis une
+            plus grande maîtrise de celle-ci et ainsi de réagir plus rapidement
+            lors du développement des différents envois avec l'API (Envoi Europe
+            ou National).
           </p>
 
           <h2 id="autocritique">Mon autocritique</h2>
@@ -246,13 +255,13 @@
           <h2 id="evolution">Mon évolution</h2>
 
           <p>
-            J'ai pour objectif professionnel de devenir un développeur capable
-            de réaliser des projets web et applicatifs et ce genre de projet
-            nécessite des API efficaces, c'est pourquoi je compte en réaliser
-            moi-même dans mes futurs projets personnels de domotique. Les
-            intégrations d'API GLS et Géodis m'ont donné l'expérience nécessaire
-            dans les API, pour m'intéresser à la conception d'API dédiée à mon
-            propre système d'informations personnelles.
+            J'ai pour objectif professionnel de devenir un expert logiciel
+            capable de réaliser des projets web et applicatifs et ce genre de
+            projet nécessite des API efficaces, c'est pourquoi je compte en
+            réaliser moi-même dans mes futurs projets personnels de domotique.
+            Les intégrations d'API GLS et Géodis m'ont donné l'expérience
+            nécessaire dans les API, pour m'intéresser à la conception d'API
+            dédiée à mon propre système d'informations personnelles.
           </p>
 
           <p>
