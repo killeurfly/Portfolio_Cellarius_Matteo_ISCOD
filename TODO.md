@@ -157,9 +157,78 @@ poste, du plus gros manque au moins gros :
   pages restent plus génériques ("je compte apprendre Symfony" sans dire
   comment/avec quelle ressource). À reprendre page par page quand j'ai les
   vraies ressources/noms à citer (pas à inventer).
-- [ ] **Les 5 pages restantes** (`communication.html`, `autonomie.html`,
-  `adaptabilite.html`, `rigueur.html`, `gestion-projet.html`) — structure et
-  todos prêts, contenu personnel à rédiger sur chacune :
+- [ ] **Vrai point d'attention parmi les pages terminées** :
+  `resolution-problemes.html` (-29 %) et `fiabilisation.html` (-35 %)
+  restent les deux plus courtes du lot technique — cohérent avec l'analyse
+  du 25/08 (manque de détail nommé dans "Mes éléments de preuve" et "Mon
+  autocritique"), pas résolu depuis. À traiter en priorité si je reprends
+  les pages techniques.
+- [ ] **Liens inline vers la réalisation dans "Mes éléments de preuve"** —
+  la grille demande que chaque anecdote soit reliée à la réalisation dont
+  elle est tirée, pas seulement listée dans le bloc générique "Réalisations
+  liées" en bas de page. Fait sur `communication.html` (2026-08-26, lien
+  direct sur le nom du projet dans chacune des 3 anecdotes). **Manquant sur
+  les 9 autres pages** (`api.html`, `web.html`, `automatisation.html`,
+  `resolution-problemes.html`, `fiabilisation.html`, `autonomie.html`,
+  `adaptabilite.html`, `rigueur.html`, `gestion-projet.html`) — à appliquer
+  page par page.
+- [ ] **Checklist de conformité grille par page de compétence** — une fois
+  une page rédigée (ou avant de la considérer "terminée"), vérifier
+  explicitement les 5 exigences précises de la grille plutôt que seulement
+  comparer sa longueur/profondeur aux exemples : (1) définition
+  contextualisée **et** reliée à une actualité sourcée, (2) 1 à 3 anecdotes
+  complètes (contexte → action → résultat/valeur ajoutée → lien vers la
+  réalisation), (3) autocritique (niveau de maîtrise, priorité dans le
+  profil, vitesse d'acquisition, recul/conseil), (4) évolution avec
+  formation ou ressource nommée (pas une intention générique), (5) liens
+  vers les réalisations concernées en fin d'article. À appliquer aussi
+  rétroactivement sur les 5 pages déjà "terminées" (`api.html`, `web.html`,
+  `automatisation.html`, `resolution-problemes.html`, `fiabilisation.html`),
+  qui n'ont pour l'instant été vérifiées que par comparaison de longueur
+  avec les exemples (`Source/Exemple skills technique*.txt`), pas
+  ligne à ligne contre les 5 points de la grille ci-dessus.
+- [x] `communication.html` — **entièrement rédigée (2026-08-26), plus aucun
+  todo.** Todos approfondis le 26/08 sur le modèle de `Source/Exemple skills
+  Humain 3.txt`, puis contenu écrit en plusieurs allers-retours : "Ma
+  définition" (l'utilisateur, actualité Silkhom + déduction perso), "Mes
+  éléments de preuve" (l'utilisateur, 3 anecdotes GLS/Géodis/Gedim sourcées
+  dans les journaux d'alternance), "Mon autocritique" (l'utilisateur), "Mon
+  évolution" (rédigée par Claude à la demande explicite de l'utilisateur,
+  même dérogation que sur api.html : fil rouge projet domotique + 2
+  ressources nommées et vérifiées, OpenClassrooms "Communiquez en utilisant
+  les outils numériques" et la certification tekom "Technical Communicator
+  – Professional Level"). Fautes corrigées à chaque étape. **6 des 10 pages
+  de compétence sont maintenant terminées** (api, web, automatisation,
+  resolution-problemes, fiabilisation, communication).
+- [ ] `autonomie.html` — todos approfondis (2026-08-26) sur le modèle des
+  pages précédentes : 2 pistes d'actualité sourcées et vérifiées (Insee
+  Première n°1878 sur l'autonomie horaire des salariés, Michael Page
+  "Talent Trends France 2026"), 3 pistes d'anecdotes trouvées dans les
+  journaux d'alternance (hypercare GLS après MEP, reprise seule du code
+  Géodis, conception + passation d'une famille de macros EDF sur ~1 an),
+  autocritique et évolution poussées vers des faits/ressources nommés.
+  Contenu personnel toujours à rédiger par l'utilisateur.
+- [x] `adaptabilite.html` — **entièrement rédigée (2026-08-26), plus aucun
+  todo.** Actualité Futura-Sciences ("l'adaptabilité, compétence n°1 des
+  recruteurs en 2026"), 3 anecdotes journal (Géodis, macro Prévisions de
+  consommation, macro Garanties d'Origine), autocritique et évolution
+  complètes (ressource nommée : OpenClassrooms "Apprenez à apprendre").
+  Répétition du connecteur "car" repérée et corrigée (voir Finalisation).
+- [x] `rigueur.html` — **entièrement rédigée (2026-08-26), plus aucun todo.**
+  Actualité Developpez.com (l'étude "bugs 100x plus chers en prod" n'existe
+  pas — écho direct à "vérifier plutôt que supposer"), 2 anecdotes (Garanties
+  d'Origine, GLS), autocritique et évolution complètes (ressource nommée :
+  certification ISTQB Certified Tester Foundation Level). 3ᵉ piste
+  d'anecdote (Gedim) proposée mais non utilisée, restée optionnelle.
+- [ ] `gestion-projet.html` — todos approfondis (2026-08-26), dernière des
+  10 pages de compétence : 2 pistes d'actualité sourcées (Abraxio, tendances
+  gestion de projet 2026 — agilité généralisée, pilotage par la donnée ;
+  Skiller, sur le fait qu'être chef de projet reste 80 % relationnel/
+  managérial pour 20 % technique — piste à contraster avec sa propre
+  définition, puisqu'il a géré ses projets seul sans équipe à manager),
+  3 pistes d'anecdotes déjà présentes (GLS, Géodis, Gedim) précisées avec la
+  consigne du lien inline vers la réalisation, autocritique et évolution
+  poussées vers du nommé. Contenu personnel à rédiger.
   - [ ] "Ma définition" — todo pour relier la compétence à une actualité du
     secteur (obligatoire côté grille, nécessite ta veille perso — ou demande
     à Claude de proposer des pistes d'articles comme sur les 3 pages faites)
@@ -224,6 +293,23 @@ poste, du plus gros manque au moins gros :
 - [ ] Ajouter les balises meta (description, Open Graph/réseaux sociaux) sur chaque page
 - [ ] Ajouter README
 - [ ] Faire une relecture complète (Présentation et Parcours pas encore repassées avec la même rigueur que les réalisations)
+- [ ] **Vérifier les répétitions de mots/connecteurs** dans les pages déjà
+  rédigées — repéré le 2026-08-26 sur `adaptabilite.html` : usage répété de
+  "car" comme connecteur de cause (7+ fois dans une page), qui donne un
+  style mécanique. Corrigé sur cette page (varié avec "puisque", "dans la
+  mesure où", "parce que", "étant donné que") ; à vérifier aussi sur les
+  autres pages de compétence et les réalisations, qui n'ont pas eu cette
+  passe.
+- [ ] **Vérifier la cohérence logique/factuelle des informations données**,
+  pas seulement l'orthographe — repéré le 2026-08-26 sur `rigueur.html` :
+  la phrase d'actualité disait "la rigueur est importante car un bug coûte
+  100 fois plus cher en production", puis la phrase suivante expliquait que
+  ce chiffre n'était justement pas vérifié — un "car" qui s'appuyait sur
+  l'affirmation même qu'on démentait juste après. Corrigé sur cette page,
+  mais à vérifier sur les autres pages de compétence et les réalisations,
+  qui n'ont pas eu cette relecture-là (les enchaînements "car"/"donc" entre
+  deux phrases doivent rester logiquement valides, pas juste grammaticalement
+  corrects).
 - [ ] Relecture par réalisation, 3 points à chaque fois : (1) orthographe/grammaire/syntaxe, (2) mots-clés importants mis en gras dans les paragraphes (pas seulement les titres d'étapes et de définitions — convention encore à appliquer partout), (3) vérifier qu'aucune définition utile ne manque pour les termes techniques utilisés sur la page
   - [x] Réalisation 1 (API GLS) — orthographe faite, gras/définitions à vérifier
   - [x] Réalisation 2 (API Géodis) — orthographe faite, gras/définitions à vérifier
