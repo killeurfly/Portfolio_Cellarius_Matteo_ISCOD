@@ -196,7 +196,7 @@ main {
   transition: 0.3s;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover > .dropdown-menu {
   opacity: 1;
 
   visibility: visible;
@@ -216,6 +216,44 @@ main {
 
 .dropdown-menu a:hover {
   background: rgba(59, 130, 246, 0.2);
+}
+
+.dropdown-menu .dropdown {
+  position: relative;
+}
+
+.dropdown-menu .dropdown > a {
+  display: flex;
+
+  align-items: center;
+}
+
+.dropdown-menu .dropdown::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 100%;
+
+  width: 15px;
+  height: 100%;
+}
+
+.dropdown-submenu {
+  top: -10px;
+
+  left: 100%;
+
+  transform: translateX(-10px);
+}
+
+.dropdown-menu .dropdown:hover > .dropdown-submenu {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateX(0);
 }
 
 /* ================= BUTTONS GENERAUX ================= */
@@ -1611,7 +1649,15 @@ main {
     display: none;
   }
 
-  .dropdown:hover .dropdown-menu {
+  .dropdown:hover > .dropdown-menu {
+    display: flex;
+  }
+
+  .dropdown-submenu {
+    padding-left: 20px;
+  }
+
+  .dropdown-menu .dropdown:hover > .dropdown-submenu {
     display: flex;
   }
 
