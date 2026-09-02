@@ -10,33 +10,51 @@ poste, du plus gros manque au moins gros :
   compétence doit être un article détaillé à part (définition contextualisée
   + reliée à une actualité, 1-3 anecdotes avec preuve/résultat/valeur
   ajoutée/lien vers la réalisation concernée, autocritique, évolution
-  souhaitée). **5 des 10 pages entièrement terminées** (api.html, web.html,
-  automatisation.html, resolution-problemes.html, fiabilisation.html — plus
-  aucun todo) ; les 5 autres ont leur structure et leurs pistes d'anecdotes
-  prêtes, contenu personnel à rédiger (voir détail dans la section
-  Compétences plus bas).
+  souhaitée). **10/10 pages entièrement terminées** (api, web, automatisation,
+  resolution-problemes, fiabilisation, communication, adaptabilite, rigueur,
+  autonomie, gestion-projet — plus aucun todo, vérifié 2026-09-02). ⚠️ Aucune
+  n'a encore été vérifiée ligne à ligne contre les 5 critères exacts de la
+  grille — seulement comparées en longueur aux exemples fournis.
+  Correction 2026-09-02 : le lien inline vers la réalisation dans "Mes
+  éléments de preuve" est en fait présent sur les **10 pages** (vérifié par
+  grep) — l'item précédent affirmant qu'il manquait sur 5 pages était
+  obsolète/faux, supprimé.
 - [ ] **Mes compétences — schéma comparatif (10 pts)** — la grille demande un
   schéma synthétique où on voit le niveau de chaque compétence *par rapport
   aux autres* (genre radar/barres), pas une grille de cartes. **Manquant.**
 - [x] **Mes réalisations — page commune (5 pts)** — fait (`realisations.html`).
 - [x] **Chacune de mes réalisations (20 pts)** — les 7 notions demandées sont
-  là sur les 5 pages. ⚠️ Deux écarts : (1) la grille veut des noms
-  "évocateurs et indépendants du contexte de l'école ou de l'entreprise" —
+  là sur les 5 pages. ⚠️ Écart restant : la grille veut des noms "évocateurs
+  et indépendants du contexte de l'école ou de l'entreprise" —
   "API GLS"/"API Géodis"/"Gedim"/"EDF" sont au contraire nommés d'après le
-  transporteur/client/entreprise ; (2) la fin de chaque article doit lier
-  vers des **compétences spécifiques**, pas juste les 2 boutons génériques
-  vers les pages hub technique/humaine.
-- [ ] **Navigation circulaire compétences ↔ réalisations** (pas de points
-  séparés mais explicitement requis) — chaque compétence doit lister ses
-  réalisations liées (avec lien), chaque réalisation doit lister ses
-  compétences liées (avec lien). Dépend des deux points compétences
-  ci-dessus.
+  transporteur/client/entreprise (à rediscuter avant renommage). Le 2ᵉ écart
+  (liens de fin d'article) est réglé, voir point navigation circulaire
+  ci-dessous.
+- [x] **Navigation circulaire compétences ↔ réalisations** — fait 2026-09-02 :
+  les 10 pages compétence listent déjà leurs réalisations liées avec lien
+  (fait de longue date) ; les 5 pages réalisation ont maintenant, en fin
+  d'article, des liens vers les compétences spécifiques mobilisées (au lieu
+  des 2 boutons génériques technique/humaine) — mapping construit à partir
+  des "Réalisations liées" déjà déclarées côté compétences, sous-titres
+  réutilisés tels quels. Seul écart : `autonomie.html` liste dans son propre
+  bloc "Réalisations liées" les 5 réalisations alors que ses anecdotes
+  ("Mes éléments de preuve") ne couvrent que réalisation-1 et réalisation-2 —
+  du coup les liens ajoutés vers `autonomie.html` depuis les réalisations
+  3/4/5 n'ont pas été faits, seulement depuis 1 et 2. À trancher : soit
+  étoffer les anecdotes d'autonomie.html pour couvrir 3/4/5, soit réduire son
+  bloc "Réalisations liées" à 1/2 pour rester cohérent avec les autres pages.
 - [x] **Article de présentation générale (15 pts)** — largement fait
   (`presentation.html` a déjà les 4 notions : valeurs, projet pro, qualités
   humaines, centres d'intérêt). ⚠️ Fautes à corriger, et la rubrique "Mes
   valeurs" pourrait insister davantage sur le côté "expert en ingénierie
   humain, conscient, responsable" comme le formule la grille. Éviter une
-  accroche trop auto-centrée en ouverture.
+  accroche trop auto-centrée en ouverture. Revérifié le 2026-08-26 contre le
+  texte exact de la grille — 2 écarts supplémentaires trouvés : (1) la
+  notion "projet pro" est en fait "Mon projet **professionnel, personnel**"
+  — seul le volet professionnel est traité pour l'instant ; (2) la grille
+  demande explicitement des "caractères [gras]" comme critère de structure,
+  or la page n'a aucun mot en `<strong>`. Détail complet dans la section
+  Contenu > Présentation plus bas.
 - [x] **Page d'accueil (5 pts)** — déjà attrayante/structurée (hero, 3
   cartes, CTA). Le bouton "Télécharger mon CV" pointe vers un fichier
   absent (`assets/documents/cv.pdf`).
@@ -77,24 +95,73 @@ poste, du plus gros manque au moins gros :
 ### Présentation
 
 - [x] Remplacer le Lorem Ipsum — fait, les 4 notions de la grille ISCOD sont
-  présentes (valeurs, projet pro, qualités humaines, centres d'intérêt)
+  présentes (valeurs, projet pro, qualités humaines, centres d'intérêt).
+  ⚠️ Revérifié le 2026-08-26 texte exact de la grille (`Source/Portfolio
+  grille évaluation.pdf`) : la notion s'appelle précisément "Mon projet
+  **professionnel, personnel**" — la section "Projets professionnels"
+  actuelle ne couvre que le versant professionnel/technique (montée en
+  compétences, veille IA), pas de projet personnel évoqué. À enrichir d'un
+  volet perso (le projet domotique déjà utilisé comme fil rouge sur les
+  pages compétences serait cohérent ici aussi). Les sections "Mes qualités
+  Humaines" et "Centres d'intérêt" sont par ailleurs très courtes (1
+  paragraphe/1 phrase) — pas un manque formel selon la grille (qui ne fixe
+  pas de longueur), mais un point de vigilance si on veut un article
+  vraiment "détaillé" comme elle le demande.
+- [ ] **Article structuré avec caractères gras** — relu le 2026-08-26 :
+  la grille liste explicitement "paragraphes, sous-titres, caractères
+  [gras]" comme critère de structure (même formulation que pour les pages
+  compétence). `presentation.html` a bien des paragraphes et des
+  sous-titres (`<h2>`), mais **aucun mot en gras** (`<strong>`) nulle part
+  dans la page — contrairement aux pages compétence/réalisation qui
+  utilisent déjà cette convention. À appliquer sur les mots-clés
+  importants de chaque section (ex. "collaboration", "apprentissage
+  continu", "expert en ingénierie humain, conscient, responsable").
 - [ ] Relecture orthographe/grammaire (pas encore faite sur cette page —
   ex. "proser"→"proposer", "ma permis"→"m'a permis", "developer"→
-  "développer", "facon"→"façon")
+  "développer", "facon"→"façon". Repéré en plus le 2026-08-26 :
+  "enormément"→"énormément", deux espaces manquantes après un point
+  ("innovants.Tout", "besoins.Tant"), et un accord sujet/verbe à revoir :
+  "les nouvelles technologies... **car il permette**" → "car **elles
+  permettent**" (le sujet est pluriel, pas "il"))
 - [ ] Renforcer "Mes valeurs" sur l'angle "expert en ingénierie humain,
-  conscient, responsable" demandé par la grille d'évaluation
+  conscient, responsable" demandé par la grille d'évaluation — le texte
+  exact de la grille précise "focus sur l'expert en ingénierie humain,
+  conscient, responsable…", entre parenthèses comme piste de cadrage ; la
+  section actuelle ("collaboration, travail d'équipe, apprentissage
+  continu") reste générique et ne reprend pas cet angle précis
 - [ ] Revoir la phrase d'ouverture pour éviter une accroche auto-centrée
   ("Étant d'un naturel...") — la grille le déconseille explicitement
+  ("J'évite les expressions introductives auto-centristes", texte exact
+  relevé le 2026-08-26)
 - [ ] Ajouter une photo professionnelle dédiée à cette page (au-delà de la
-  photo navbar)
+  photo navbar) — voir aussi l'item consolidé dans la section Finalisation
+  (CV + photo)
 
 ### Parcours
 
 - [x] Bac, BTS, Mastère, expériences pro — tout est déjà en place, frise
   anti-chronologique
-- [ ] Ajouter le "2e niveau de lecture" par expérience (responsabilité,
-  statut, liens vers réalisations/compétences rattachées) — actuellement
-  seul un court paragraphe est visible, sans lien vers les réalisations
+- [x] **"2e niveau de lecture" par expérience — structure créée
+  (2026-08-26)** : 8 pages de détail créées dans `pages/parcours/`, une par
+  entrée de la frise (4 écoles : `iscod.html`, `paris-saclay.html`,
+  `vilgenis.html`, `prevert.html` ; 4 entreprises :
+  `romus.html`, `edf.html`, `digital-factory.html`,
+  `marie-lannelongue.html`), sur le modèle des fichiers
+  `Source/Exemple parcours détails école/entreprise.txt` fournis par
+  l'utilisateur (structure : écoles = "Présentation de l'établissement" +
+  "Ma vision de la pédagogie pratiquée" ; entreprises = + "Travail
+  effectué" + "Ma place dans l'entreprise"). Un lien "En savoir plus →" a
+  été ajouté sur chacune des 8 entrées de `pages/parcours.html`. Les pages
+  Romus et EDF ont en plus une section "Réalisations liées" déjà remplie
+  (liens vers les réalisations 1/2/3 pour Romus, 4/5 pour EDF) — ça répond
+  au manque de liens vers les réalisations demandé par la grille. Nouvelle
+  classe CSS `.parcours-hero-logo` (logo sur fond blanc, format hero) et
+  `.timeline-detail-link` (lien pilule en bas de chaque carte de la frise).
+  **Todos seulement, aucun contenu personnel rédigé** — même convention que
+  les pages de compétence : l'utilisateur écrit, Claude corrige ensuite.
+  Point de vigilance rappelé dans le todo de `edf.html` : rester générique
+  sur l'organisation interne (clause de confidentialité EDF), pas de nom
+  de collègue.
 
 ### Réalisations (5/5 requises par la structure ISCOD, voir Source/Guide Réalisations.png)
 
@@ -163,15 +230,15 @@ poste, du plus gros manque au moins gros :
   du 25/08 (manque de détail nommé dans "Mes éléments de preuve" et "Mon
   autocritique"), pas résolu depuis. À traiter en priorité si je reprends
   les pages techniques.
-- [ ] **Liens inline vers la réalisation dans "Mes éléments de preuve"** —
+- [x] **Liens inline vers la réalisation dans "Mes éléments de preuve"** —
   la grille demande que chaque anecdote soit reliée à la réalisation dont
   elle est tirée, pas seulement listée dans le bloc générique "Réalisations
-  liées" en bas de page. Fait sur `communication.html` (2026-08-26, lien
-  direct sur le nom du projet dans chacune des 3 anecdotes). **Manquant sur
-  les 9 autres pages** (`api.html`, `web.html`, `automatisation.html`,
-  `resolution-problemes.html`, `fiabilisation.html`, `autonomie.html`,
-  `adaptabilite.html`, `rigueur.html`, `gestion-projet.html`) — à appliquer
-  page par page.
+  liées" en bas de page. **Fait sur les 10 pages** (vérifié 2026-09-02 par
+  grep sur tout `pages/skills/` : chaque page a bien un lien vers la/les
+  réalisation(s) concernée(s) dans la section "Mes éléments de preuve", pas
+  seulement dans le bloc générique de fin). L'item précédent qui affirmait
+  qu'il manquait sur 5 pages était basé sur une note obsolète du 26/08, pas
+  sur l'état réel du code.
 - [ ] **Checklist de conformité grille par page de compétence** — une fois
   une page rédigée (ou avant de la considérer "terminée"), vérifier
   explicitement les 5 exigences précises de la grille plutôt que seulement
@@ -200,14 +267,21 @@ poste, du plus gros manque au moins gros :
   – Professional Level"). Fautes corrigées à chaque étape. **6 des 10 pages
   de compétence sont maintenant terminées** (api, web, automatisation,
   resolution-problemes, fiabilisation, communication).
-- [ ] `autonomie.html` — todos approfondis (2026-08-26) sur le modèle des
-  pages précédentes : 2 pistes d'actualité sourcées et vérifiées (Insee
-  Première n°1878 sur l'autonomie horaire des salariés, Michael Page
-  "Talent Trends France 2026"), 3 pistes d'anecdotes trouvées dans les
-  journaux d'alternance (hypercare GLS après MEP, reprise seule du code
-  Géodis, conception + passation d'une famille de macros EDF sur ~1 an),
-  autocritique et évolution poussées vers des faits/ressources nommés.
-  Contenu personnel toujours à rédiger par l'utilisateur.
+- [x] `autonomie.html` — **entièrement rédigée (vérifié 2026-09-02), plus
+  aucun todo.** Actualité Solal Digital (l'autonomie comme marqueur du
+  développeur senior), 2 anecdotes (hypercare GLS après MEP, reprise seule du
+  code Géodis), autocritique et évolution complètes (ressource nommée :
+  parcours OpenClassrooms "Architecte Logiciel"). ⚠️ Point de cohérence
+  repéré le 2026-09-02, pas corrigé : le bloc "Réalisations liées" en bas de
+  page liste les 5 réalisations alors que seules réalisation-1 et
+  réalisation-2 ont une anecdote dans "Mes éléments de preuve" — toutes les
+  autres pages de compétence limitent ce bloc aux réalisations réellement
+  couvertes par une anecdote. Aussi repéré : "le cahier de test" (singulier)
+  incohérent avec "cahier de tests" utilisé ailleurs sur le site, et un
+  enchaînement "car" en autocritique ("j'ai pu... prendre des décisions sur
+  la logique du code, car les décisions métier nécessitent des échanges avec
+  les utilisateurs") qui semble à contre-sens de l'argument d'autonomie
+  développé juste avant — à relire.
 - [x] `adaptabilite.html` — **entièrement rédigée (2026-08-26), plus aucun
   todo.** Actualité Futura-Sciences ("l'adaptabilité, compétence n°1 des
   recruteurs en 2026"), 3 anecdotes journal (Géodis, macro Prévisions de
@@ -220,41 +294,34 @@ poste, du plus gros manque au moins gros :
   d'Origine, GLS), autocritique et évolution complètes (ressource nommée :
   certification ISTQB Certified Tester Foundation Level). 3ᵉ piste
   d'anecdote (Gedim) proposée mais non utilisée, restée optionnelle.
-- [ ] `gestion-projet.html` — todos approfondis (2026-08-26), dernière des
-  10 pages de compétence : 2 pistes d'actualité sourcées (Abraxio, tendances
-  gestion de projet 2026 — agilité généralisée, pilotage par la donnée ;
-  Skiller, sur le fait qu'être chef de projet reste 80 % relationnel/
-  managérial pour 20 % technique — piste à contraster avec sa propre
-  définition, puisqu'il a géré ses projets seul sans équipe à manager),
-  3 pistes d'anecdotes déjà présentes (GLS, Géodis, Gedim) précisées avec la
-  consigne du lien inline vers la réalisation, autocritique et évolution
-  poussées vers du nommé. Contenu personnel à rédiger.
-  - [ ] "Ma définition" — todo pour relier la compétence à une actualité du
-    secteur (obligatoire côté grille, nécessite ta veille perso — ou demande
-    à Claude de proposer des pistes d'articles comme sur les 3 pages faites)
-  - [ ] "Mes éléments de preuve" — pistes d'anecdotes factuelles déjà
-    proposées (sourcées dans les réalisations), paragraphes finaux
-    (résultat + valeur ajoutée) à rédiger
-  - [ ] "Mon autocritique" (niveau de maîtrise, priorité, vitesse
-    d'acquisition, recul) — 100% personnel
-  - [ ] "Mon évolution" (projet perso-pro, formations prévues) — 100%
-    personnel
+- [x] `gestion-projet.html` — **entièrement rédigée (vérifié 2026-09-02),
+  plus aucun todo — la 10ᵉ et dernière page de compétence est terminée, les
+  10/10 sont maintenant faites.** Actualité EFE Management (la gestion de
+  projet comme travail surtout relationnel plutôt que technique, contrastée
+  avec son propre contexte en autonomie sans équipe à manager), 3 anecdotes
+  (GLS, Géodis, Garanties d'Origine), autocritique et évolution complètes
+  (ressource nommée : Google Project Management Professional Certificate,
+  Coursera).
 - [ ] **Schéma comparatif des 10 compétences** (10 pts) — remplacer ou
   compléter la grille de cartes par une visualisation du niveau relatif de
   chaque compétence (ex. barres ou radar), accessible depuis le menu
   principal.
-- [ ] Chaque compétence doit être accessible par un sous-menu (navbar ou
-  interne à la page) — actuellement le sous-menu navbar ne pointe que vers
-  les 2 pages hub ; les 10 pages individuelles ne sont accessibles que
-  depuis les cartes de `skills.html`/`technical.html`/`human.html`, pas
-  encore depuis la navbar elle-même
+- [x] **Chaque compétence accessible par un sous-menu navbar** — fait
+  2026-09-02 : le dropdown "Compétences" de la navbar a maintenant un
+  sous-menu imbriqué (flyout au survol) sous "Compétences techniques" et
+  "Compétences humaines", listant directement les 10 pages individuelles.
+  Nouvelles règles CSS `.dropdown-submenu` et `.dropdown-menu .dropdown`
+  dans `style.css` (flyout à droite, cascade `:hover > ` pour ne pas ouvrir
+  les deux sous-menus en même temps), gérées aussi en version mobile
+  (empilées avec indentation au lieu du flyout).
 - [x] Relire la formulation des 10 descriptions courtes (fait, corrigées
   avec toi sur `skills.html`)
-- [ ] **Navigation circulaire, sens réalisation → compétences** : les 5
-  pages de réalisation ont toujours leurs 2 boutons génériques
-  (technique/humaine) en fin d'article au lieu de liens vers les
-  compétences spécifiques mobilisées — maintenant que les 10 pages
-  existent, on peut les cibler précisément
+- [x] **Navigation circulaire, sens réalisation → compétences** — fait
+  2026-09-02 : les 5 pages de réalisation ont maintenant des liens vers les
+  compétences spécifiques mobilisées (au lieu des 2 boutons génériques
+  technique/humaine), construits à partir des "Réalisations liées" déjà
+  déclarées côté compétences. Détail dans l'entrée de la grille officielle en
+  haut du fichier.
 
 ### Contact
 
@@ -286,6 +353,13 @@ poste, du plus gros manque au moins gros :
 
 ## Finalisation
 
+- [ ] **Fournir le vrai CV (PDF) et une vraie photo pro** — deux assets
+  encore manquants, à ne pas inventer :
+  - [ ] CV réel à déposer dans `assets/documents/cv.pdf` (le bouton
+    "Télécharger mon CV" sur l'accueil pointe déjà vers ce chemin, il est
+    juste cassé faute de fichier)
+  - [ ] Photo professionnelle dédiée pour `pages/presentation.html`
+    (au-delà de la photo navbar déjà en place)
 - [ ] Vérifier tous les liens (dont le bouton "Télécharger mon CV" cassé sur l'accueil)
 - [ ] Vérifier toutes les images
 - [ ] Optimiser les tailles d'images
@@ -310,6 +384,12 @@ poste, du plus gros manque au moins gros :
   qui n'ont pas eu cette relecture-là (les enchaînements "car"/"donc" entre
   deux phrases doivent rester logiquement valides, pas juste grammaticalement
   corrects).
+  - [x] **Même défaut repéré le 2026-08-26 sur `gestion-projet.html`, "Ma
+    définition"** — corrigé : la conclusion faisait reposer l'importance du
+    chef de projet sur ses connaissances "techniques", contredisant la
+    prémisse ("surtout relationnel plutôt que technique"). Reformulée en
+    "connaissances d'organisation et de ses équipes", alignée avec la
+    prémisse relationnelle.
 - [ ] Relecture par réalisation, 3 points à chaque fois : (1) orthographe/grammaire/syntaxe, (2) mots-clés importants mis en gras dans les paragraphes (pas seulement les titres d'étapes et de définitions — convention encore à appliquer partout), (3) vérifier qu'aucune définition utile ne manque pour les termes techniques utilisés sur la page
   - [x] Réalisation 1 (API GLS) — orthographe faite, gras/définitions à vérifier
   - [x] Réalisation 2 (API Géodis) — orthographe faite, gras/définitions à vérifier
