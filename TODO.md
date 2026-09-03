@@ -43,6 +43,18 @@ poste, du plus gros manque au moins gros :
   3/4/5 n'ont pas été faits, seulement depuis 1 et 2. À trancher : soit
   étoffer les anecdotes d'autonomie.html pour couvrir 3/4/5, soit réduire son
   bloc "Réalisations liées" à 1/2 pour rester cohérent avec les autres pages.
+- [ ] **Vérifier que tous les liens inline compétences ↔ réalisations sont
+  bien circulaires (bidirectionnels)** — le mapping du 2026-09-02 a été
+  construit à sens unique (réalisation → compétences, déduit des blocs
+  "Réalisations liées" déjà déclarés côté compétences), sans revérifier
+  chaque paire dans l'autre sens. Repasser sur les 10 pages compétence × 5
+  pages réalisation et confirmer, pour chaque lien : (1) si la compétence X
+  liste la réalisation Y dans "Réalisations liées", Y liste bien X dans ses
+  "Compétences associées" (et inversement), (2) le lien existe aussi de
+  façon inline dans "Mes éléments de preuve"/le corps de la réalisation, pas
+  seulement dans le bloc générique de fin. L'écart déjà connu sur
+  `autonomie.html` (voir point ci-dessus) est un exemple de ce genre
+  d'incohérence — il peut y en avoir d'autres non détectées.
 - [x] **Article de présentation générale (15 pts)** — largement fait
   (`presentation.html` a déjà les 4 notions : valeurs, projet pro, qualités
   humaines, centres d'intérêt). ⚠️ Fautes à corriger, et la rubrique "Mes
@@ -63,10 +75,21 @@ poste, du plus gros manque au moins gros :
 - [x] **Mon parcours en frise (5 pts)** — fait, ordre anti-chronologique
   correct (2025 en haut → 2018 en bas).
 - [ ] **Chacune de mes expériences (5 pts)** — 1er niveau de lecture (période,
-  poste, lieu+logo) présent partout. 2e niveau incomplet : pas de
-  distinction claire responsabilité/statut, et surtout **pas de liens vers
-  les réalisations/compétences rattachées** depuis les entrées Romus/EDF de
-  la frise.
+  poste, lieu+logo) présent partout. 2e niveau incomplet, analysé en détail
+  le 2026-09-02 sur les 8 pages `pages/parcours/*.html` :
+  - Aucune des 8 pages ne lie vers une compétence (seul `romus.html`/
+    `edf.html` lient vers des réalisations, via leur bloc "Réalisations
+    liées" déjà pré-rempli). Todo ajouté sur ces deux pages pour demander
+    les compétences mobilisées.
+  - La question "statut/niveau de responsabilité" n'était posée que dans les
+    todos de `romus.html`/`edf.html`. Ajoutée aussi sur
+    `digital-factory.html` (todo, à répondre) et `marie-lannelongue.html`
+    (répondue le 2026-09-02 : observation des interventions du collègue puis
+    prise en charge autonome des tickets les plus simples — todo supprimé,
+    page maintenant entièrement rédigée).
+  - Rappel déjà connu : la frise elle-même (`parcours.html`) ne pointe
+    jamais directement vers une réalisation/compétence, il faut passer par
+    la page détail via "En savoir plus →".
 - [ ] **Espace contact (2 pts)** — toujours Lorem Ipsum + fausses coordonnées
   (`exemple@email.com`). Nécessite les vraies infos de l'utilisateur — ne
   pas inventer.
