@@ -386,7 +386,13 @@ poste, du plus gros manque au moins gros :
 - [ ] Vérifier tous les liens (dont le bouton "Télécharger mon CV" cassé sur l'accueil)
 - [ ] Vérifier toutes les images
 - [ ] Optimiser les tailles d'images
-- [ ] Ajouter favicon
+- [x] **Ajouter favicon** — fait 2026-09-02 : monogramme "CM" en SVG
+  (`assets/images/svg/favicon.svg`, dégradé bleu/violet/cyan), référencé sur
+  les 31 pages.
+- [x] **Sitemap/robots.txt/données structurées** (au-delà de la checklist
+  initiale) — `sitemap.xml` (31 URLs) et `robots.txt` à la racine, schéma
+  JSON-LD `Person` (schema.org) sur `index.html` pour un résultat enrichi
+  potentiel dans Google.
 - [x] **Ajouter les balises meta (description, Open Graph/réseaux sociaux) sur
   chaque page** — fait 2026-09-02 : les 31 pages ont maintenant une
   `meta description` propre, les balises Open Graph (`og:title`,
