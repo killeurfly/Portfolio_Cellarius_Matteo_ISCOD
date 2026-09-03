@@ -387,7 +387,15 @@ poste, du plus gros manque au moins gros :
 - [ ] Vérifier toutes les images
 - [ ] Optimiser les tailles d'images
 - [ ] Ajouter favicon
-- [ ] Ajouter les balises meta (description, Open Graph/réseaux sociaux) sur chaque page
+- [x] **Ajouter les balises meta (description, Open Graph/réseaux sociaux) sur
+  chaque page** — fait 2026-09-02 : les 31 pages ont maintenant une
+  `meta description` propre, les balises Open Graph (`og:title`,
+  `og:description`, `og:image`, `og:url`, `og:type`) et une Twitter Card
+  (`summary`). `og:image`/`twitter:image` pointent vers
+  `assets/images/profile.jpg`, `og:url` vers le déploiement Netlify. Les
+  descriptions des réalisations/compétences liées à EDF restent génériques
+  (pas de mention "EDF"), cohérent avec l'anonymisation déjà en place pour
+  Romus.
 - [ ] Ajouter README
 - [ ] Faire une relecture complète (Présentation et Parcours pas encore repassées avec la même rigueur que les réalisations)
 - [ ] **Vérifier les répétitions de mots/connecteurs** dans les pages déjà
