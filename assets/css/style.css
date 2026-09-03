@@ -290,19 +290,35 @@ main {
 }
 
 .primary {
-  background: #2563eb;
+  background: linear-gradient(135deg, #60a5fa, #a855f7);
 
   color: white;
+
+  box-shadow: 0 8px 20px rgba(96, 165, 250, 0.25);
 }
 
 .secondary {
-  border: 1px solid #2563eb;
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
 
   color: white;
 }
 
 .btn:hover {
   transform: translateY(-4px);
+}
+
+.primary:hover {
+  box-shadow: 0 12px 30px rgba(96, 165, 250, 0.4);
+}
+
+.secondary:hover {
+  background: rgba(96, 165, 250, 0.08);
+
+  border-color: rgba(96, 165, 250, 0.5);
 }
 
 /* ================= BOUTONS ACCUEIL ================= */
