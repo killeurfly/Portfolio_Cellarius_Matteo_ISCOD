@@ -370,7 +370,15 @@ poste, du plus gros manque au moins gros :
 - [ ] Harmoniser les espacements (fait pour `.detail-card` : titres colorés + espacement h2/paragraphes, impacte Présentation/Réalisations/Compétences ; reste à faire ailleurs)
 - [ ] Ajouter animations légères
 - [ ] Vérifier le responsive tablette
-- [ ] Vérifier le responsive mobile
+- [ ] **Vérifier la compatibilité mobile sur un vrai appareil (ou l'outil
+  responsive du navigateur)** — jamais testé en conditions réelles jusqu'ici,
+  tout a été vérifié via le rendu desktop. Points à surveiller en priorité,
+  ajoutés récemment sans test tactile :
+  - Le sous-menu imbriqué de la navbar (Compétences techniques/humaines →
+    flyout) repose sur `:hover`, qui n'existe pas au toucher — à vérifier
+    que le menu reste au moins accessible en tapant dessus.
+  - Les nouveaux boutons CV/Contact de l'accueil (dégradé + verre dépoli) et
+    le fond animé à particules (charge canvas sur mobile bas de gamme).
 
 ---
 
