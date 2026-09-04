@@ -83,7 +83,7 @@ poste, du plus gros manque au moins gros :
     les compétences mobilisées.
   - La question "statut/niveau de responsabilité" n'était posée que dans les
     todos de `romus.html`/`edf.html`. Ajoutée aussi sur
-    `digital-factory.html` (todo, à répondre) et `marie-lannelongue.html`
+    `phygital-factory.html` (todo, à répondre) et `marie-lannelongue.html`
     (répondue le 2026-09-02 : observation des interventions du collègue puis
     prise en charge autonome des tickets les plus simples — todo supprimé,
     page maintenant entièrement rédigée).
@@ -168,7 +168,7 @@ poste, du plus gros manque au moins gros :
   (2026-08-26)** : 8 pages de détail créées dans `pages/parcours/`, une par
   entrée de la frise (4 écoles : `iscod.html`, `paris-saclay.html`,
   `vilgenis.html`, `prevert.html` ; 4 entreprises :
-  `romus.html`, `edf.html`, `digital-factory.html`,
+  `romus.html`, `edf.html`, `phygital-factory.html`,
   `marie-lannelongue.html`), sur le modèle des fichiers
   `Source/Exemple parcours détails école/entreprise.txt` fournis par
   l'utilisateur (structure : écoles = "Présentation de l'établissement" +
