@@ -90,9 +90,12 @@ poste, du plus gros manque au moins gros :
   - Rappel déjà connu : la frise elle-même (`parcours.html`) ne pointe
     jamais directement vers une réalisation/compétence, il faut passer par
     la page détail via "En savoir plus →".
-- [ ] **Espace contact (2 pts)** — toujours Lorem Ipsum + fausses coordonnées
-  (`exemple@email.com`). Nécessite les vraies infos de l'utilisateur — ne
-  pas inventer.
+- [x] **Espace contact (2 pts)** — fait 2026-09-05 : vraies coordonnées de
+  l'utilisateur (email, téléphone, LinkedIn), plus un lien GitHub déduit du
+  dépôt du portfolio (`github.com/killeurfly`, à confirmer). Design aligné
+  sur le reste du site (cartes `.related-skill-link` réutilisées). Il reste
+  seulement le formulaire de contact en option, voir section Contenu plus
+  bas.
 - [ ] **Mon orthographe** (pénalité : -1% tous les 5 fautes) — vigilance
   continue, relectures déjà faites sur les 5 réalisations mais pas sur
   Présentation/Parcours/Accueil.
@@ -348,11 +351,13 @@ poste, du plus gros manque au moins gros :
 
 ### Contact
 
-- [ ] Ajouter adresse mail (vraie, pas inventée)
-- [ ] Ajouter GitHub
-- [ ] Ajouter LinkedIn
-- [ ] Ajouter formulaire de contact
-- [ ] Remplacer le Lorem Ipsum et les fausses coordonnées actuelles
+- [x] Ajouter adresse mail (vraie, pas inventée) — matteonathan.mc@gmail.com
+- [x] Ajouter GitHub — github.com/killeurfly, déduit du dépôt du portfolio,
+  à confirmer par l'utilisateur
+- [x] Ajouter LinkedIn — linkedin.com/in/mattéo-cellarius
+- [ ] Ajouter formulaire de contact — non fait, Netlify Forms serait la
+  solution la plus simple vu l'hébergement actuel (pas de backend à écrire)
+- [x] Remplacer le Lorem Ipsum et les fausses coordonnées actuelles
 
 ---
 
