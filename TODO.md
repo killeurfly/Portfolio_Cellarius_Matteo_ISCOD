@@ -22,27 +22,30 @@ poste, du plus gros manque au moins gros :
 - [ ] **Mes compétences — schéma comparatif (10 pts)** — la grille demande un
   schéma synthétique où on voit le niveau de chaque compétence *par rapport
   aux autres* (genre radar/barres), pas une grille de cartes. **Manquant.**
+  Discuté le 2026-09-05 : l'utilisateur a proposé de considérer la liste
+  actuelle comme suffisante ("une façon de parler"), mais comme la grille
+  liste ce point séparément des 30 pts "chacune de mes compétences" (qui
+  couvrent déjà la liste/description), Claude a déconseillé cette
+  interprétation (risque de 0/10 si le correcteur ne voit pas de différence
+  entre les deux points). Décision : mis de côté pour l'instant, à
+  retraiter plus tard.
 - [x] **Mes réalisations — page commune (5 pts)** — fait (`realisations.html`).
 - [x] **Chacune de mes réalisations (20 pts)** — les 7 notions demandées sont
-  là sur les 5 pages. ⚠️ Écart restant : la grille veut des noms "évocateurs
-  et indépendants du contexte de l'école ou de l'entreprise" —
-  "API GLS"/"API Géodis"/"Gedim"/"EDF" sont au contraire nommés d'après le
-  transporteur/client/entreprise (à rediscuter avant renommage). Le 2ᵉ écart
-  (liens de fin d'article) est réglé, voir point navigation circulaire
-  ci-dessous.
+  là sur les 5 pages, et le seul écart restant (noms évocateurs) est réglé
+  le 2026-09-05, voir item dédié plus bas.
 - [x] **Navigation circulaire compétences ↔ réalisations** — fait 2026-09-02 :
   les 10 pages compétence listent déjà leurs réalisations liées avec lien
   (fait de longue date) ; les 5 pages réalisation ont maintenant, en fin
   d'article, des liens vers les compétences spécifiques mobilisées (au lieu
   des 2 boutons génériques technique/humaine) — mapping construit à partir
   des "Réalisations liées" déjà déclarées côté compétences, sous-titres
-  réutilisés tels quels. Seul écart : `autonomie.html` liste dans son propre
-  bloc "Réalisations liées" les 5 réalisations alors que ses anecdotes
-  ("Mes éléments de preuve") ne couvrent que réalisation-1 et réalisation-2 —
-  du coup les liens ajoutés vers `autonomie.html` depuis les réalisations
-  3/4/5 n'ont pas été faits, seulement depuis 1 et 2. À trancher : soit
-  étoffer les anecdotes d'autonomie.html pour couvrir 3/4/5, soit réduire son
-  bloc "Réalisations liées" à 1/2 pour rester cohérent avec les autres pages.
+  réutilisés tels quels. Écart `autonomie.html` réglé le 2026-09-05 (voir
+  item checklist compétences plus bas) : lien Gedim retiré (aucune preuve
+  d'autonomie sur cette réalisation), todo ajouté pour rédiger les 2
+  anecdotes Garanties d'Origine/Prévisions de consommation à partir du fait
+  déjà présent dans leur section Acteurs — une fois ces anecdotes écrites,
+  penser à ajouter les liens inline vers `autonomie.html` depuis
+  `realisation-4.html`/`realisation-5.html`.
 - [ ] **Vérifier que tous les liens inline compétences ↔ réalisations sont
   bien circulaires (bidirectionnels)** — le mapping du 2026-09-02 a été
   construit à sens unique (réalisation → compétences, déduit des blocs
@@ -196,8 +199,25 @@ poste, du plus gros manque au moins gros :
 - [x] Réalisation 3 — Évolution de Gedim : contenu complet, structure ISCOD, illustration SVG, relecture orthographe faite (y compris les ajouts Contexte technique/Risques/Acteurs)
 - [x] Réalisation 4 — Garanties d'Origine (EDF), ex-API Swagger (remplacée, pas assez de matière) : contenu complet, structure ISCOD, illustration SVG, relecture orthographe faite. ⚠️ Le rapport d'activité EDF porte une clause de non-divulgation explicite — rester générique, aucune donnée client/chiffre réel/nom de collègue à reprendre sur la page publique
 - [x] Réalisation 5 — Prévisions de consommation (EDF), macro Spot Horaire : contenu complet, structure ISCOD, illustration SVG, plus aucun todo. ⚠️ Même clause de confidentialité EDF que Réalisation 4 — rester générique. Point à surveiller : "à destination de la facturation" (Présentation) mentionne un processus interne EDF, à généraliser si besoin
-- [ ] **Noms des réalisations à revoir** (grille ISCOD) : doivent être "évocateurs et indépendants du contexte de l'école ou de l'entreprise". "API GLS", "API Géodis", "Gedim", et les deux titres "(EDF)" ne le sont pas — à rediscuter avant de renommer quoi que ce soit (impact sur les fichiers, la navbar, les liens)
-- [ ] **Fin de chaque réalisation** : remplacer/compléter les 2 boutons génériques par des liens vers les compétences spécifiques mises en œuvre (dépend de la refonte des pages compétences ci-dessous)
+- [x] **Noms des réalisations à revoir** (grille ISCOD) — fait 2026-09-05,
+  affiné après un premier passage jugé trop long/trop anonymisé. Décision
+  finale de l'utilisateur : garder GLS/Géodis/Gedim (pas l'entreprise
+  d'accueil, juste un transporteur/outil externe — pas vraiment le souci
+  visé par la grille), anonymiser complètement les 2 réalisations EDF
+  (cohérent avec la clause de confidentialité EDF déjà connue) :
+  1. "Intégration de l'API GLS" (inchangé) — navbar "API GLS"
+  2. "Intégration de l'API Géodis" (ex-"Reprise API Géodis") — navbar "API Géodis"
+  3. "Évolution de Gedim" (inchangé) — navbar "Gedim"
+  4. "Automatisation de la confection des certificats énergétiques" (ex-"Garanties d'Origine (EDF)") — navbar "Certificats énergétiques"
+  5. "Confection automatisée des prévisions clients" (ex-"Prévisions de consommation (EDF)") — navbar "Prévisions clients"
+
+  Appliqué à title/h1/navbar/cartes `realisations.html` (titre+description+alt)
+  /liens `.related-skill-link` sur les 10 pages compétence et
+  `romus.html`/`edf.html`. La prose narrative de chaque page réalisation
+  garde les vrais noms techniques (GLS, Géodis, Gedim...) car elle raconte
+  des faits, pas le nom de la réalisation.
+- [x] **Fin de chaque réalisation** : fait de longue date (liens vers
+  compétences spécifiques ajoutés, voir navigation circulaire plus haut).
 - [ ] Ajouter le lien GitHub sur les réalisations qui s'y prêtent
 - [ ] Vérifier la confidentialité des réalisations liées à Romus avant publication (repo GitHub public)
 - [x] **Anonymiser les mentions de "Romus"** dans le corps des pages — fait
@@ -265,21 +285,26 @@ poste, du plus gros manque au moins gros :
   seulement dans le bloc générique de fin). L'item précédent qui affirmait
   qu'il manquait sur 5 pages était basé sur une note obsolète du 26/08, pas
   sur l'état réel du code.
-- [ ] **Checklist de conformité grille par page de compétence** — une fois
-  une page rédigée (ou avant de la considérer "terminée"), vérifier
-  explicitement les 5 exigences précises de la grille plutôt que seulement
-  comparer sa longueur/profondeur aux exemples : (1) définition
-  contextualisée **et** reliée à une actualité sourcée, (2) 1 à 3 anecdotes
-  complètes (contexte → action → résultat/valeur ajoutée → lien vers la
-  réalisation), (3) autocritique (niveau de maîtrise, priorité dans le
-  profil, vitesse d'acquisition, recul/conseil), (4) évolution avec
-  formation ou ressource nommée (pas une intention générique), (5) liens
-  vers les réalisations concernées en fin d'article. À appliquer aussi
-  rétroactivement sur les 5 pages déjà "terminées" (`api.html`, `web.html`,
-  `automatisation.html`, `resolution-problemes.html`, `fiabilisation.html`),
-  qui n'ont pour l'instant été vérifiées que par comparaison de longueur
-  avec les exemples (`Source/Exemple skills technique*.txt`), pas
-  ligne à ligne contre les 5 points de la grille ci-dessus.
+- [x] **Checklist de conformité grille par page de compétence** — faite le
+  2026-09-05, ligne à ligne contre les 5 critères exacts de la grille sur
+  les 10 pages. **5/10 pleinement conformes** : `web.html`,
+  `communication.html`, `adaptabilite.html`, `rigueur.html`,
+  `gestion-projet.html`. Écarts trouvés et todos ajoutés en conséquence :
+  - `api.html`, `automatisation.html`, `resolution-problemes.html` :
+    "Mon évolution" ne cite aucune ressource nommée (formation/
+    certification/bibliothèque précise), juste des projets perso vagues —
+    todo ajouté sur les 3 pages, l'utilisateur complète lui-même
+    (ressources à trouver, pas à inventer par Claude).
+  - `fiabilisation.html` : une des 2 anecdotes (reprise Géodis) n'a pas de
+    résultat chiffré car le projet est toujours en cours — acceptable, pas
+    un vrai manque.
+  - `autonomie.html` : le bloc "Réalisations liées" listait 5 réalisations
+    mais seules 2 (GLS, Géodis) avaient une anecdote. Vérifié par grep sur
+    les 5 pages réalisation : Gedim n'a aucune mention d'autonomie nulle
+    part (lien retiré), mais Garanties d'Origine et Prévisions de
+    consommation ont déjà le fait "en charge du développement de la macro
+    en autonomie" dans leur section Acteurs — todo ajouté pour rédiger ces
+    2 anecdotes à partir de ce fait déjà établi (pas d'invention).
 - [x] `communication.html` — **entièrement rédigée (2026-08-26), plus aucun
   todo.** Todos approfondis le 26/08 sur le modèle de `Source/Exemple skills
   Humain 3.txt`, puis contenu écrit en plusieurs allers-retours : "Ma
