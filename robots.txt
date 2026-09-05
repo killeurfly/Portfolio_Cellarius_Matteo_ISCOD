@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfolio-cellarius-matteo.netlify.app/sitemap.xml
+Sitemap: https://portfolio-cellarius-matteo.matteonathan-mc.workers.dev/sitemap.xml
