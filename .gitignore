@@ -10,3 +10,10 @@
 # Fichiers système
 .DS_Store
 Thumbs.db
+
+# Cache local Cloudflare Wrangler (si "wrangler dev"/"deploy" est lancé en local)
+.wrangler/
+
+# Secrets locaux (rien ne les utilise pour l'instant, défensif)
+.env
+.env.local
