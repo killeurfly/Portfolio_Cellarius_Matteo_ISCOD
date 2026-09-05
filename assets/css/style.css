@@ -581,8 +581,7 @@ main {
 .detail-card,
 .skill-card,
 .project-card,
-.timeline-item,
-.contact-card {
+.timeline-item {
   background: rgba(255, 255, 255, 0.05);
 
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -596,6 +595,152 @@ main {
   padding: 30px;
 
   min-width: 0;
+}
+
+.contact-hub {
+  display: flex;
+
+  align-items: stretch;
+
+  gap: 0;
+
+  width: 100%;
+
+  max-width: 900px;
+
+  margin: 40px auto 0;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 25px;
+
+  backdrop-filter: blur(15px);
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+
+  overflow: hidden;
+}
+
+.contact-hub-profile {
+  flex: 0 0 300px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  padding: 56px 32px;
+
+  text-align: center;
+
+  background: rgba(96, 165, 250, 0.06);
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-hub-profile img {
+  width: 140px;
+
+  height: 140px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 3px solid rgba(96, 165, 250, 0.5);
+}
+
+.contact-hub-profile h2 {
+  color: white;
+
+  font-size: 1.4rem;
+
+  margin: 0;
+}
+
+.contact-hub-profile p {
+  color: #94a3b8;
+
+  font-size: 1rem;
+
+  line-height: 1.6;
+
+  margin: 0;
+}
+
+.contact-hub-methods {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 32px;
+}
+
+.contact-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 22px;
+
+  padding: 22px 24px;
+
+  border-radius: 16px;
+
+  text-decoration: none;
+
+  color: white;
+
+  transition: 0.2s;
+}
+
+.contact-row:hover {
+  background: rgba(96, 165, 250, 0.08);
+}
+
+.contact-row-icon {
+  flex-shrink: 0;
+
+  width: 44px;
+
+  font-size: 2.1rem;
+
+  text-align: center;
+}
+
+.contact-row-text {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  text-align: left;
+}
+
+.contact-row-text strong {
+  color: #93c5fd;
+
+  font-size: 1.15rem;
+}
+
+.contact-row-text span {
+  color: #cbd5e1;
+
+  font-size: 1rem;
 }
 
 .detail-card {
@@ -1730,6 +1875,20 @@ main {
 
   .page-section p {
     font-size: 1rem;
+  }
+
+  /* ---------- CONTACT ---------- */
+
+  .contact-hub {
+    flex-direction: column;
+  }
+
+  .contact-hub-profile {
+    flex: none;
+
+    border-right: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   /* ---------- PROJETS ---------- */
