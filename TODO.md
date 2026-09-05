@@ -39,25 +39,36 @@ poste, du plus gros manque au moins gros :
   d'article, des liens vers les compétences spécifiques mobilisées (au lieu
   des 2 boutons génériques technique/humaine) — mapping construit à partir
   des "Réalisations liées" déjà déclarées côté compétences, sous-titres
-  réutilisés tels quels. Écart `autonomie.html` réglé le 2026-09-05 (voir
-  item checklist compétences plus bas) : lien Gedim retiré (aucune preuve
-  d'autonomie sur cette réalisation), todo ajouté pour rédiger les 2
-  anecdotes Garanties d'Origine/Prévisions de consommation à partir du fait
-  déjà présent dans leur section Acteurs — une fois ces anecdotes écrites,
-  penser à ajouter les liens inline vers `autonomie.html` depuis
-  `realisation-4.html`/`realisation-5.html`.
-- [ ] **Vérifier que tous les liens inline compétences ↔ réalisations sont
-  bien circulaires (bidirectionnels)** — le mapping du 2026-09-02 a été
-  construit à sens unique (réalisation → compétences, déduit des blocs
-  "Réalisations liées" déjà déclarés côté compétences), sans revérifier
-  chaque paire dans l'autre sens. Repasser sur les 10 pages compétence × 5
-  pages réalisation et confirmer, pour chaque lien : (1) si la compétence X
-  liste la réalisation Y dans "Réalisations liées", Y liste bien X dans ses
-  "Compétences associées" (et inversement), (2) le lien existe aussi de
-  façon inline dans "Mes éléments de preuve"/le corps de la réalisation, pas
-  seulement dans le bloc générique de fin. L'écart déjà connu sur
-  `autonomie.html` (voir point ci-dessus) est un exemple de ce genre
-  d'incohérence — il peut y en avoir d'autres non détectées.
+  réutilisés tels quels. Écart `autonomie.html` réglé le 2026-09-05 : lien
+  Gedim retiré (aucune preuve d'autonomie sur cette réalisation), et les
+  cartes "Autonomie" manquantes ajoutées sur `realisation-4.html`/
+  `realisation-5.html` (le fait "en charge du développement de la macro en
+  autonomie" existait déjà dans leur section Acteurs — todo restant : écrire
+  les 2 anecdotes correspondantes dans `autonomie.html` lui-même).
+- [x] **Vérifier que tous les liens inline compétences ↔ réalisations sont
+  bien circulaires** — audit complet fait le 2026-09-05 sur les 10 pages
+  compétence × 5 pages réalisation. Réalisations 1/2/3 : parfaitement
+  cohérentes dans les deux sens, rien à corriger. Seul vrai écart trouvé (au
+  delà d'autonomie déjà traité ci-dessus) : aucune réalisation n'avait de
+  lien inline vers une compétence dans son propre corps de texte (Étapes/
+  Acteurs/Regard critique), seulement dans le bloc générique "Compétences
+  associées" en fin de page — contrairement aux pages compétence qui ont
+  bien des liens inline dans "Mes éléments de preuve". Corrigé sans changer
+  le sens du texte (juste transformé des mentions déjà écrites en liens) :
+  - realisation-1 : 5/6 liées en inline (api, communication,
+    resolution-problemes, gestion-projet, rigueur) ; autonomie en todo (pas
+    de mention explicite trouvée dans le texte).
+  - realisation-2 : 4/6 (api, fiabilisation, communication, adaptabilite) ;
+    autonomie et gestion-projet en todo.
+  - realisation-3 : 3/4 (web, fiabilisation, resolution-problemes) ;
+    communication en todo.
+  - realisation-4 : 3/5 (automatisation, resolution-problemes, autonomie
+    nouvellement ajoutée) ; gestion-projet, rigueur, adaptabilite en todo.
+    Note ajoutée en todo : le regard critique mentionne "la partie
+    communication avec les utilisateurs", compétence qui n'est pourtant pas
+    associée à cette réalisation — à vérifier si elle devrait l'être.
+  - realisation-5 : 3/3, toutes liées en inline (automatisation,
+    adaptabilite, autonomie nouvellement ajoutée).
 - [x] **Article de présentation générale (15 pts)** — largement fait
   (`presentation.html` a déjà les 4 notions : valeurs, projet pro, qualités
   humaines, centres d'intérêt). ⚠️ Fautes à corriger, et la rubrique "Mes
