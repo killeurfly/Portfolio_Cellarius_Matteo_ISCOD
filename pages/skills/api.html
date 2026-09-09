@@ -17,8 +17,14 @@
       property="og:description"
       content="Intégration d'API REST : ma définition de cette compétence, mes preuves concrètes (API GLS, Géodis), autocritique et évolution."
     />
-    <meta property="og:image" content="https://portfolio-cellarius-matteo.matteonathan-mc.workers.dev/assets/images/profile.jpg" />
-    <meta property="og:url" content="https://portfolio-cellarius-matteo.matteonathan-mc.workers.dev/pages/skills/api.html" />
+    <meta
+      property="og:image"
+      content="https://portfolio-cellarius-matteo.matteonathan-mc.workers.dev/assets/images/profile.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://portfolio-cellarius-matteo.matteonathan-mc.workers.dev/pages/skills/api.html"
+    />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary" />
@@ -27,9 +33,16 @@
       name="twitter:description"
       content="Intégration d'API REST : ma définition de cette compétence, mes preuves concrètes (API GLS, Géodis), autocritique et évolution."
     />
-    <meta name="twitter:image" content="https://portfolio-cellarius-matteo.matteonathan-mc.workers.dev/assets/images/profile.jpg" />
+    <meta
+      name="twitter:image"
+      content="https://portfolio-cellarius-matteo.matteonathan-mc.workers.dev/assets/images/profile.jpg"
+    />
 
-    <link rel="icon" type="image/svg+xml" href="/assets/images/svg/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/images/svg/favicon.svg"
+    />
 
     <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
@@ -59,7 +72,7 @@
 
           <p>
             Une API (Application Programming Interface) est une passerelle qui
-            permet un échange entre deux programmes informatiques, un programme
+            permet un échange entre deux programmes informatiques : un programme
             envoie la requête, l'autre la reçoit, et cela est fait de manière
             plus ou moins sécurisée en fonction du protocole utilisé.
           </p>
@@ -112,7 +125,7 @@
             <li>
               <strong>Les API composites</strong> quant à elles combinent
               plusieurs API indépendantes pour pouvoir créer des groupes de
-              services; cette fonctionnalité est très utile dans les
+              services ; cette fonctionnalité est très utile dans les
               architectures de microservices.
             </li>
           </ul>
@@ -147,8 +160,8 @@
             comprendre leur fonctionnement dans les projets déjà mis en place,
             j'ai pu donc analyser les relations API entre l'API Schenker et
             l'ERP Navision qui servait à imprimer des étiquettes, cela m'a servi
-            pour la suite car j'ai dû développer également une API pour un autre
-            transporteur qui serait connecté à Navision.
+            pour la suite car j'ai dû développer l'intégration de l'API d'un
+            autre transporteur, connectée à Navision.
           </p>
 
           <p>
@@ -175,10 +188,22 @@
               <strong>Un dispatcher</strong> représente la logique que j'ai pu
               développer pour la redirection des requêtes transporteur vers la
               bonne API, grâce aux informations contenues dans la requête
-              (exemple : l'identifiant du transporteur) ; je l'ai mis en place
-              lors du développement de l'API GLS afin de différencier les
-              impressions GLS de Schenker, et il a également été réutilisé pour
-              Géodis.
+              (exemple : l'identifiant du transporteur) ; il a été nécessaire de
+              le mettre en place lors du développement de l'API GLS afin de
+              différencier les impressions GLS de Schenker, et il a également
+              été réutilisé pour Géodis.
+            </li>
+          </ul>
+
+          <p class="todo-label">À compléter</p>
+
+          <ul class="todo-list">
+            <li>
+              Schéma à ajouter ici : le principe du dispatcher (requête entrante
+              avec identifiant transporteur → lookup en base de données →
+              routage vers l'API GLS / Géodis / Schenker) est expliqué deux fois
+              en prose sur cette page ; un petit diagramme de flux clarifierait
+              le concept d'un coup d'œil.
             </li>
           </ul>
 
@@ -188,17 +213,17 @@
           </p>
 
           <p>
-            Dans l'ERP Navision pour l'annulation d'étiquette Schenker et GLS
-            cela se faisait via le même bouton, donc l'endpoint API devait être
-            le même, j'ai donc dû réaliser avant le développement de
-            <a href="/pages/realisations/realisation-1.html">l'API GLS</a>
-            une logique de "dispatch" afin d'annuler vers le bon transporteur,
-            mais sur cet envoi de requête API je n'avais que l'identifiant de la
-            commande, j'ai donc dû mettre en place dans mon "dispatcher" une
-            requête en base de données qui permettait la récupération du
-            transporteur associé à l'identifiant, tout cela était nécessaire car
-            on voulait modifier le moins possible les process de Navision pour
-            les utilisateurs. Ce "dispatch" a très bien fonctionné dès son
+            Dans l'ERP Navision, pour l'annulation d'étiquette, Schenker et GLS
+            passaient par le même bouton, donc l'endpoint API devait être le
+            même : j'ai donc dû réaliser, pour le développement de
+            <a href="/pages/realisations/realisation-1.html">l'API GLS</a>,
+            une logique de « dispatch » afin d'annuler vers le bon transporteur.
+            Mais sur cet envoi de requête API, je n'avais que l'identifiant de
+            la commande ; j'ai donc dû mettre en place dans mon « dispatcher »
+            une requête en base de données qui permettait la récupération du
+            transporteur associé à l'identifiant. Tout cela était nécessaire
+            car on voulait modifier le moins possible les process de Navision
+            pour les utilisateurs. Ce « dispatch » a très bien fonctionné dès son
             implémentation et a permis lors de
             <a href="/pages/realisations/realisation-2.html"
               >l'intégration de l'API Géodis</a
@@ -211,20 +236,19 @@
             <a href="/pages/realisations/realisation-2.html"
               >l'intégration de l'API Géodis</a
             >
-            certains champs nécessaires à
-            l'obtention de l'étiquette Géodis n'étaient pas mentionnés comme
-            obligatoires dans la documentation, j'ai donc dû tester lesquels
-            étaient nécessaires pour un envoi de requête API puis j'ai demandé
-            aux équipes techniques de Géodis lesquels étaient nécessaires
-            contractuellement. Un des champs obligatoires était le nom du
-            contact de la société destinataire du colis qui pouvait ne pas être
-            présent, j'ai donc pu communiquer avec nos équipes commerciales afin
-            de savoir si l'on pouvait transmettre le nom de la société à la
-            place, cela a été accepté et le problème a donc pu être réglé.
-            L'étude des champs obligatoires pour l'API de Géodis a permis une
-            plus grande maîtrise de celle-ci et ainsi de réagir plus rapidement
-            lors du développement des différents envois avec l'API (Envoi Europe
-            ou National).
+            certains champs nécessaires à l'obtention de l'étiquette Géodis
+            n'étaient pas mentionnés comme obligatoires dans la documentation,
+            j'ai donc dû tester lesquels étaient nécessaires pour un envoi de
+            requête API puis j'ai demandé aux équipes techniques de Géodis
+            lesquels étaient nécessaires contractuellement. Un des champs
+            obligatoires était le nom du contact de la société destinataire du
+            colis qui pouvait ne pas être présent, j'ai donc pu communiquer avec
+            nos équipes commerciales afin de savoir si l'on pouvait transmettre
+            le nom de la société à la place, cela a été accepté et le problème a
+            donc pu être réglé. L'étude des champs obligatoires pour l'API de
+            Géodis a permis une plus grande maîtrise de celle-ci et ainsi de
+            réagir plus rapidement lors du développement des différents envois
+            avec l'API (Envoi Europe ou National).
           </p>
 
           <h2 id="autocritique">Mon autocritique</h2>
@@ -254,19 +278,20 @@
           </p>
 
           <p>
-            Grâce aux projets sur lesquels j'ai travaillé j'ai découvert et
-            développé mes compétences sur les API de façon très rapide, les
-            multiples projets liés à cette compétence m'y ont beaucoup aidé,
-            cette progression dans la compétence m'a appris que la mise en place
-            d'API est cruciale pour le fonctionnement efficace d'un "Backend" de
-            projet (Script interagissant avec les interfaces) ; j'ai pu me
-            rendre compte de ce point lors de l'étude des documentations d'API
-            transporteurs qui comportaient beaucoup de paramètres, mettant en
-            lumière toutes les possibilités des API. Cette compétence me sera
-            très utile car un grand nombre de projets sur lesquels j'ai
-            travaillé et sur lesquels je travaillerai se basent sur les API pour
-            leur fonctionnement interne, mais cela m'est moins utile lors du
-            développement d'applications lourdes.
+            Grâce aux projets sur lesquels j'ai travaillé, j'ai découvert et
+            développé mes compétences sur les API de façon très rapide ; les
+            multiples projets qui en mobilisaient m'y ont beaucoup aidé,
+            et cette progression m'a appris que la mise en place
+            d'API est cruciale pour le fonctionnement efficace d'un « Backend » de
+            projet (partie d'une application, côté serveur, qui traite les
+            données et la logique métier) ;
+            j'ai pu me rendre compte de ce point lors de l'étude des
+            documentations d'API transporteurs qui comportaient beaucoup de
+            paramètres, mettant en lumière toutes les possibilités des API.
+            Cette compétence me sera très utile car un grand nombre de projets
+            sur lesquels j'ai travaillé et sur lesquels je travaillerai se
+            basent sur les API pour leur fonctionnement interne, mais cela m'est
+            moins utile lors du développement d'applications lourdes.
           </p>
 
           <p>
@@ -285,34 +310,23 @@
             réaliser moi-même dans mes futurs projets personnels de domotique.
             Les intégrations d'API GLS et Géodis m'ont donné l'expérience
             nécessaire dans les API, pour m'intéresser à la conception d'API
-            dédiée à mon propre système d'informations personnelles.
+            dédiée à mon propre système d'information personnel.
           </p>
 
           <p>
             Pour arriver à cet objectif, plusieurs étapes sont en cours. Tout
             d'abord la finalisation du parcours de tests et de la mise en
-            production de Géodis, qui reprendra à la fin de l'été. Ensuite le
+            production de Géodis, qui reprendra à la rentrée. Ensuite le
             développement de l'outil de suivi des commandes expédiées via l'API
-            GLS, qui est une évolution déjà anticipée. Pour finir, lors de
+            GLS, qui est une évolution déjà anticipée. Par la suite, lors de
             futures intégrations de transporteur, je ferai évoluer le
             dispatcher, devenu un point crucial du fonctionnement de l'API.
             Enfin, dans le cadre personnel, je compte développer ma propre API
             de domotique, dans le but de mettre en pratique la conception d'API
-            et pas seulement son intégration.
+            et pas seulement son intégration. Pour cela, je compte suivre la
+            spécification OpenAPI (Swagger), car c'est la norme de référence
+            pour la conception d'API.
           </p>
-
-          <p class="todo-label">À compléter</p>
-
-          <ul class="todo-list">
-            <li>
-              La grille ISCOD demande une ressource nommée pour progresser
-              (formation, certification, documentation précise) — actuellement
-              cette section ne cite que des projets, pas de ressource. Exemple
-              de piste : une formation/certification sur la conception d'API
-              (pas seulement l'intégration), ou une norme/spec précise
-              (OpenAPI/Swagger) à approfondir.
-            </li>
-          </ul>
 
           <h2 id="realisations">Réalisations liées</h2>
 
@@ -358,7 +372,7 @@
     <script
       type="module"
       src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon="{&quot;token&quot;: &quot;4eef5b55b7ee455a93a5109202328560&quot;}"
+      data-cf-beacon='{"token": "4eef5b55b7ee455a93a5109202328560"}'
     ></script>
     <!-- End Cloudflare Web Analytics -->
   </body>

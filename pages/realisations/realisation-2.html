@@ -136,17 +136,17 @@
             L'objectif principal de ce projet était de vérifier l'état de
             fonctionnement de l'API Géodis tout en reprenant contact avec le
             support technique du transporteur pour résoudre les problèmes
-            rencontrés. Il s'agissait également pour l'entreprise de gérer
-            l'envoi par le transporteur Géodis en aussi grande quantité que GLS,
-            Géodis n'étant utilisé que pour un petit nombre de commandes web
-            avant l'intégration de l'API.
+            rencontrés. Il s'agissait également pour l'entreprise de pouvoir gérer
+            les envois via Géodis en aussi grande quantité que via GLS, ce
+            transporteur n'étant utilisé jusque-là que pour un petit nombre de
+            commandes web avant l'intégration de l'API.
           </p>
 
           <p class="subsection-label">🔧 Contexte technique</p>
 
           <p>
-            À l'instar de l'intégration de l'API GLS qui avait été réalisée de
-            zéro, il a fallu comprendre le code existant et reprendre les
+            À la différence de l'intégration de l'API GLS qui avait été réalisée
+            de zéro, il a fallu comprendre le code existant et reprendre les
             fonctionnalités déjà développées pour soit les finaliser, soit les
             corriger.
           </p>
@@ -191,8 +191,8 @@
 
           <p>
             Le développement de l'intégration de l'API Géodis a été réalisé en
-            plusieurs étapes, ayant appris du développement de l'API GLS, mais
-            reprenant également un code existant, j'ai dû
+            plusieurs étapes. Grâce à ce que j'avais appris du développement de
+            l'API GLS, mais en reprenant également un code existant, j'ai dû
             <a href="/pages/skills/adaptabilite.html">m'adapter</a> à la
             situation et aux contraintes de ce projet. Voici les principales
             étapes de ce projet :
@@ -240,8 +240,8 @@
               identifiants douaniers de l'entreprise destinataire. Certaines des
               données nécessaires demandaient des modifications dans Navision,
               il a donc été décidé de mettre de côté les envois Export hors EU
-              pour le moment, car ces envois n'étaient pas encore prévus pour
-              Géodis. Une des spécificités du transporteur Géodis est la
+              pour le moment, de plus ces envois n'étaient pas encore prévus
+              pour Géodis. Une des spécificités du transporteur Géodis est la
               possibilité de la prise de rendez-vous pour les particuliers, mais
               pour notre projet, il a été décidé de ne pas l'utiliser, car
               Géodis est principalement utilisé pour le B to B.
@@ -249,25 +249,24 @@
 
             <li>
               <strong
-                >Développement de l'annulation et de rajout de colis</strong
+                >Développement de l'annulation et du rajout de colis</strong
               >
               — Durant la reprise du code, j'ai pu découvrir que l'API Géodis
               bloquait les modifications sur une commande qui leur avait déjà
               été envoyée, il a donc fallu réfléchir à des modifications pour
               les utilisateurs. Après des échanges avec les différents acteurs,
-              il a été décidé de rajouter une fonctionnalité d'annulation
-              globale des colis d'une expédition et d'un bouton d'envoi global
-              des colis pour l'expédition, et pour pallier l'envoi de colis en
-              différé pour une expédition, puis a été développé le rajout d'un
-              indicateur du type " - 1 ", à la fin d'un identifiant d'expédition
-              afin de permettre le rajout de colis associés à l'expédition sur
-              l'API Géodis.
+              il a été décidé de rajouter une fonctionnalité d'annulation et
+              d'envoi globaux des colis d'une expédition. Également pour
+              pallier l'envoi de colis en différé pour une expédition, le
+              rajout d'un indicateur du type " - 1 ", à la fin d'un identifiant
+              d'expédition a été pensé afin de permettre le rajout de colis
+              associés à l'expédition sur l'API Géodis.
             </li>
 
             <li>
               <strong>Mise en place de la feuille de fin de journée</strong>
               — Pour le document de fin de journée, comme j'avais déjà développé
-              un "dispatcher" pour Schenker et GLS, j'ai seulement eu à le
+              un flux de dispatch pour Schenker et GLS, j'ai seulement eu à le
               modifier et à y rajouter Géodis.
             </li>
 
@@ -333,8 +332,7 @@
 
           <p>
             Les derniers points de blocage ont été réglés, notamment un qui
-            résidait sur la création d'un compte API Géodis destiné au site de
-            Bondoufle.
+            résidait sur la création d'un compte API Géodis destiné à un autre site.
           </p>
 
           <h2 id="lendemains">Les lendemains du projet</h2>
@@ -353,9 +351,7 @@
             >
             m'a permis de comprendre que l'existant pouvait être autant une
             source de problème qu'un développement de zéro, surtout lorsque la
-            <a href="/pages/skills/gestion-projet.html"
-              >gestion de ce projet</a
-            >
+            <a href="/pages/skills/gestion-projet.html">gestion de ce projet</a>
             est faite en
             <a href="/pages/skills/autonomie.html">autonomie</a>, car il
             nécessite une analyse de l'existant complète. Si je devais faire

@@ -9,13 +9,13 @@
 
     <meta
       name="description"
-      content="Automatisation du suivi des Garanties d'Origine via une macro VBA Excel/Outlook : contexte, étapes et résultats."
+      content="Automatisation du suivi des Garanties d'Origine via une macro VBA Excel : contexte, étapes et résultats."
     />
 
     <meta property="og:title" content="Certificats énergétiques | Portfolio" />
     <meta
       property="og:description"
-      content="Automatisation du suivi des Garanties d'Origine via une macro VBA Excel/Outlook : contexte, étapes et résultats."
+      content="Automatisation du suivi des Garanties d'Origine via une macro VBA Excel : contexte, étapes et résultats."
     />
     <meta
       property="og:image"
@@ -31,7 +31,7 @@
     <meta name="twitter:title" content="Certificats énergétiques | Portfolio" />
     <meta
       name="twitter:description"
-      content="Automatisation du suivi des Garanties d'Origine via une macro VBA Excel/Outlook : contexte, étapes et résultats."
+      content="Automatisation du suivi des Garanties d'Origine via une macro VBA Excel : contexte, étapes et résultats."
     />
     <meta
       name="twitter:image"
@@ -132,7 +132,7 @@
           <p class="subsection-label">🔧 Contexte technique</p>
 
           <p>
-            Avant le développement de la macro de ce projet, mon collègue
+            Avant le développement de la macro de ce projet, le collaborateur
             constituait ce fichier à la main en copiant les données d'un fichier
             très volumineux (ce fichier Excel était constitué de plusieurs
             millions de lignes et d'une vingtaine de colonnes) et en les
@@ -171,7 +171,7 @@
             projet ont été importantes. La conformité de ma macro par rapport
             aux attentes du collaborateur a pu être vérifiée grâce à des tests
             basés sur des sources déjà utilisées par le collaborateur pour
-            réaliser un report, j'ai pu ensuite comparer ce report à celui
+            réaliser un report ; j'ai pu ensuite comparer ce report à celui
             produit par ma macro afin de vérifier la correspondance des données.
           </p>
 
@@ -193,7 +193,7 @@
             </li>
 
             <li>
-              <strong>Mise en place des paramètres de sélection</strong> — Le
+              <strong>Récupération de données nominales</strong> — Le
               collaborateur m'a fourni les fichiers source, ainsi qu'un exemple
               de fichier de sortie réalisé afin que je puisse savoir ce qui
               était attendu en sortie de la macro.
@@ -207,9 +207,9 @@
                 d'un problème de performance</strong
               >
               — Lors du développement, j'ai pu rencontrer un problème de
-              ralentissement, la macro ne fermant pas les fichiers source après
-              chaque ouverture. Ce problème a pu être facilement réglé une fois
-              sa cause identifiée.
+              ralentissement, la macro ouvrant les fichiers source les uns après
+              les autres. Ce problème a pu être facilement réglé une fois sa
+              cause identifiée.
             </li>
 
             <li>
@@ -255,6 +255,17 @@
             </li>
           </ol>
 
+          <p class="todo-label">À compléter</p>
+
+          <ul class="todo-list">
+            <li>
+              Schéma à ajouter ici : un visuel avant/après montrant 2-3 lignes
+              source partageant le même identifiant et le même mois, fusionnées
+              en une seule ligne avec les Go additionnés, illustrerait l'étape
+              "Fusion des lignes en doublon" plus clairement qu'en texte.
+            </li>
+          </ul>
+
           <h2 id="acteurs">Les acteurs</h2>
 
           <ul class="definition-list">
@@ -282,16 +293,19 @@
           <p>
             Le travail effectué par le collaborateur pour la constitution du
             fichier trimestriel, qui lui prenait à l'origine plusieurs jours, a
-            été réduit à quelques clics. La macro a été testée avec succès sur
-            un vrai cas de report trimestriel, et le tableau de vérification des
-            écarts a été très utile pour l'ajuster afin qu'elle soit la plus
-            fonctionnelle possible (sans celui-ci, les écarts auraient été
-            difficiles à repérer, car le report final peut contenir jusqu'à 30
-            000 lignes). Le temps de traitement a ainsi pu passer de quelques
-            jours à quelques heures. Le collaborateur a été très satisfait de
-            cette macro ; il a ensuite demandé s'il était possible d'automatiser
-            d'autres parties récurrentes de son travail sur les Garanties
-            d'Origine, ce qui a pu être réalisé dans la suite de mon alternance.
+            été réduit à quelques clics pour lancer la macro. La macro a été
+            testée avec succès sur un vrai cas de report trimestriel, et le
+            tableau de vérification des écarts a été très utile pour l'ajuster
+            afin qu'elle soit la plus fonctionnelle possible (sans celui-ci,
+            les écarts auraient été difficiles à repérer, car le report final
+            peut contenir jusqu'à 30 000 lignes). Le temps global — recherche
+            des fichiers source et des références utilisateur, lancement de la
+            macro, puis vérification sommaire des données obtenues — a ainsi
+            pu passer de quelques jours à quelques heures. Le collaborateur a été très
+            satisfait de cette macro ; il a ensuite demandé s'il était possible
+            d'automatiser d'autres parties récurrentes de son travail sur les
+            Garanties d'Origine, ce qui a pu être réalisé dans la suite de mon
+            alternance.
           </p>
 
           <h2 id="lendemains">Les lendemains du projet</h2>

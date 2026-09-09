@@ -17,8 +17,14 @@
       property="og:description"
       content="Automatisation des prévisions de consommation client via une macro VBA Outlook et Excel : contexte, étapes et résultats."
     />
-    <meta property="og:image" content="https://portfolio-cellarius-matteo.matteonathan-mc.workers.dev/assets/images/profile.jpg" />
-    <meta property="og:url" content="https://portfolio-cellarius-matteo.matteonathan-mc.workers.dev/pages/realisations/realisation-5.html" />
+    <meta
+      property="og:image"
+      content="https://portfolio-cellarius-matteo.matteonathan-mc.workers.dev/assets/images/profile.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://portfolio-cellarius-matteo.matteonathan-mc.workers.dev/pages/realisations/realisation-5.html"
+    />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary" />
@@ -27,9 +33,16 @@
       name="twitter:description"
       content="Automatisation des prévisions de consommation client via une macro VBA Outlook et Excel : contexte, étapes et résultats."
     />
-    <meta name="twitter:image" content="https://portfolio-cellarius-matteo.matteonathan-mc.workers.dev/assets/images/profile.jpg" />
+    <meta
+      name="twitter:image"
+      content="https://portfolio-cellarius-matteo.matteonathan-mc.workers.dev/assets/images/profile.jpg"
+    />
 
-    <link rel="icon" type="image/svg+xml" href="/assets/images/svg/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/images/svg/favicon.svg"
+    />
 
     <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
@@ -65,13 +78,12 @@
 
           <p>
             La réalisation de ce projet a été effectuée lors de ma précédente
-            alternance ; elle a été menée en parallèle de la macro de
-            suivi des Garanties d'Origine. L'objectif était d'automatiser la
-            récupération et la formation des documents de prévisions de
-            consommation clients à partir des documents envoyés quotidiennement
-            par ceux-ci. Ces informations permettaient de créer un fichier de
-            report mensuel des consommations clients prévues, à destination
-            de la facturation.
+            alternance ; elle a été menée en parallèle de la macro de suivi des
+            Garanties d'Origine. L'objectif était d'automatiser la récupération
+            et la formation des documents de prévisions de consommation clients
+            à partir des documents envoyés quotidiennement par ceux-ci. Ces
+            informations permettaient de créer un fichier de report mensuel des
+            consommations clients prévues, à destination de la facturation.
           </p>
 
           <p>
@@ -96,8 +108,8 @@
               <strong>Un dictionnaire</strong> est une structure de données
               associant une valeur à une clé unique, permettant de retrouver
               rapidement cette valeur à partir de sa clé. Dans ce projet, un
-              dictionnaire est utilisé pour associer chaque date de
-              consommation à sa prévision la plus récente.
+              dictionnaire est utilisé pour associer chaque date de consommation
+              à sa prévision la plus récente.
             </li>
           </ul>
 
@@ -122,11 +134,12 @@
             format de fichier différent, ce qui complexifiait l'automatisation
             de cette récupération de données. Après analyse du besoin auprès des
             utilisateurs, j'ai décidé de réaliser cette macro en deux parties :
-            une partie réalisée en macro Outlook, afin de récupérer vers un
-            dossier choisi par l'utilisateur les documents fournis en pièces
-            jointes par les clients, dans un dossier qui serait utilisé plus
-            tard ; une partie en macro Excel pour former le fichier mensuel à
-            partir des documents récupérés précédemment. La difficulté technique
+            une partie réalisée en macro Outlook, afin de récupérer, vers un
+            dossier choisi par l'utilisateur, les documents fournis en pièces
+            jointes par les clients — ce dossier étant ensuite exploité par la
+            seconde partie ; une partie en macro Excel pour former le fichier
+            mensuel à partir des documents récupérés précédemment. La difficulté
+            technique
             principale se situait dans la partie VBA Outlook, car ce VBA ne
             partageait pas les mêmes fonctions natives que celui d'Excel : il
             m'a donc fallu comprendre la différence entre ces deux versions de
@@ -149,7 +162,7 @@
             L'un des risques principaux résidait dans la gestion de
             l'obsolescence des prévisions : un document de prévisions clients
             pouvait contenir une prévision pour une date déjà passée, il fallait
-            donc éviter d'écraser la donnée plus ancienne dans ce cas précis.
+            donc éviter qu'elle n'écrase une donnée plus récente déjà en place.
             Une erreur à cette étape pouvait fausser le fichier entièrement.
           </p>
 
@@ -164,12 +177,10 @@
           <ol class="steps-list">
             <li>
               <strong>Compréhension du besoin</strong> — Après une étude des
-              différents formats de fichier envoyés par les clients, qui m'a
-              permis de comprendre
-              <a href="/pages/skills/adaptabilite.html"
-                >l'adaptabilité</a
-              >
-              dont devait faire preuve la macro.
+              différents formats de fichier envoyés par les clients, j'ai pu
+              comprendre le niveau
+              d'<a href="/pages/skills/adaptabilite.html">adaptabilité</a>
+              que devrait avoir la macro.
             </li>
 
             <li>
@@ -181,7 +192,7 @@
             </li>
 
             <li>
-              <strong>Développement de la partie Excel</strong> — Suite à ça,
+              <strong>Développement de la partie Excel</strong> — Suite à cela,
               ayant tous les fichiers de report quotidiens des clients dans des
               répertoires différents, j'ai mis en place un tri sur ces fichiers,
               puis un renommage par date de création de ceux-ci afin que la
@@ -198,8 +209,8 @@
 
             <li>
               <strong>Consolidation via dictionnaire</strong> — Par la suite,
-              dans un dictionnaire (liste de données associant une valeur à une
-              clé), j'ai associé chaque date de consommation à sa valeur ;
+              dans un dictionnaire (structure de données associant une valeur à
+              une clé), j'ai associé chaque date de consommation à sa valeur ;
               chaque nouvelle prévision de consommation remplaçait celle
               associée à la même date, afin de ne conserver que les prévisions
               les plus récentes.
@@ -213,6 +224,18 @@
               chaque ajout.
             </li>
           </ol>
+
+          <p class="todo-label">À compléter</p>
+
+          <ul class="todo-list">
+            <li>
+              Schéma à ajouter ici : un diagramme de flux en 2 parties (macro
+              Outlook : récupération des pièces jointes → répertoire local ;
+              macro Excel : tri des fichiers → dictionnaire clé/date →
+              fichier de report mensuel consolidé) clarifierait l'architecture
+              de la macro, décrite en plusieurs étapes de texte séparées.
+            </li>
+          </ul>
 
           <h2 id="acteurs">Les acteurs</h2>
 
@@ -239,7 +262,7 @@
           <p>
             Les résultats qui ont pu être observés après l'utilisation de cette
             macro sont exactement ceux qui étaient attendus : une automatisation
-            qui remplace un travail manuel et qui permettait la constitution du
+            qui remplaçait un travail manuel et qui permettait la constitution du
             fichier de report mensuel pour chaque client géré par la macro. Elle
             a donc été adoptée par mes collègues dans leur processus et a
             continué à évoluer au fur et à mesure que de nouveaux formats
@@ -266,14 +289,14 @@
 
           <p>
             Ce projet m'a appris la différence qu'il pouvait y avoir entre
-            différentes versions de VBA, mais également sur les habitudes de
+            différentes versions de VBA, mais également les habitudes de
             travail qu'il fallait avoir pour développer une macro qui devait
             évoluer au fur et à mesure des demandes utilisateurs. Si je devais
             changer quelque chose sur la gestion de ce projet, ce serait la
-            façon avec laquelle j'ai préparé les évolutions de l'application,
+            façon dont j'ai préparé les évolutions de l'application,
             car elles se sont retrouvées plus difficiles à faire que prévu, à
             cause de ma mauvaise préparation des évolutions possibles. Comme
-            exemple d'évolution qui s'est révélée plus difficile que prévu, il y
+            exemple d'évolution qui a posé le plus de difficultés, il y
             a celle du rajout de la gestion de fichiers d'un client qui avait un
             fichier Excel où les valeurs de consommation et de date étaient
             séparées entre plusieurs feuilles de données, ce qui a nécessité une
@@ -342,7 +365,7 @@
     <script
       type="module"
       src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon="{&quot;token&quot;: &quot;4eef5b55b7ee455a93a5109202328560&quot;}"
+      data-cf-beacon='{"token": "4eef5b55b7ee455a93a5109202328560"}'
     ></script>
     <!-- End Cloudflare Web Analytics -->
   </body>
