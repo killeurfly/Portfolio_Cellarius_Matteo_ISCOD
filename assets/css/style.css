@@ -1190,6 +1190,13 @@ main {
   color: #fbbf24;
 }
 
+/* Masque les repères todo internes sur le site publié (contenu de travail,
+   pas destiné aux visiteurs) sans supprimer les blocs du HTML. */
+.todo-label,
+.todo-list {
+  display: none;
+}
+
 .section-heading {
   display: flex;
 
