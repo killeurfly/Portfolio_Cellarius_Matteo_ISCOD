@@ -1903,7 +1903,8 @@ main {
     display: none;
   }
 
-  .dropdown:hover > .dropdown-menu {
+  .dropdown:hover > .dropdown-menu,
+  .dropdown.open > .dropdown-menu {
     display: flex;
   }
 
@@ -1911,7 +1912,8 @@ main {
     padding-left: 20px;
   }
 
-  .dropdown-menu .dropdown:hover > .dropdown-submenu {
+  .dropdown-menu .dropdown:hover > .dropdown-submenu,
+  .dropdown-menu .dropdown.open > .dropdown-submenu {
     display: flex;
   }
 
