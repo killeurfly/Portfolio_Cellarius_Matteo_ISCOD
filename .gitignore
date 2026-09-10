@@ -17,3 +17,6 @@ Thumbs.db
 # Secrets locaux (rien ne les utilise pour l'instant, défensif)
 .env
 .env.local
+
+# Livrable .docx généré localement (lien du portfolio), non versionné
+/Portfolio-Cellarius-Matteo.docx
