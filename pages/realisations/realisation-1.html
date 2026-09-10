@@ -86,7 +86,14 @@
               est une interface de programmation qui permet à différentes
               applications de communiquer entre elles en utilisant le protocole
               HTTP. Elle est souvent utilisée pour accéder à des services web et
-              échanger des données au format JSON ou XML. L'API REST de GLS est
+              échanger des données au format
+              <span class="term"
+                >JSON<span class="term-tooltip"
+                  >Format de texte simple et lisible utilisé pour structurer
+                  et échanger des données entre systèmes informatiques.</span
+                ></span
+              >
+              ou XML. L'API REST de GLS est
               utilisée pour générer et gérer les étiquettes de transport, car
               GLS est responsable de la livraison des colis et fournit les
               services d'expédition.
@@ -130,7 +137,14 @@
 
           <p>
             La principale contrainte technique associée à cette évolution des
-            processus était de mettre à jour le webservice sans compromettre le
+            processus était de mettre à jour le
+            <span class="term"
+              >webservice<span class="term-tooltip"
+                >Service accessible sur le réseau qui permet à deux systèmes
+                informatiques d'échanger des données automatiquement.</span
+              ></span
+            >
+            sans compromettre le
             fonctionnement associé à l'autre transporteur. Il m'a donc fallu
             maîtriser l'existant avant de m'atteler à son évolution.
           </p>
@@ -188,7 +202,14 @@
           </p>
 
           <p>
-            Afin de pallier ces risques, la réalisation d'un cahier de test a
+            Afin de pallier ces risques, la réalisation d'un
+            <span class="term"
+              >cahier de test<span class="term-tooltip"
+                >Document listant les scénarios à vérifier avant la mise en
+                production d'un projet.</span
+              ></span
+            >
+            a
             été effectuée ; le but recherché était de tester l'implémentation de
             l'API GLS dans l'ERP Navision, mais il fallait également s'assurer
             que les utilisateurs respectaient les nouvelles procédures. Ce
@@ -225,12 +246,30 @@
               comprendre les formats de données et les paramètres à utiliser
               pour la communication avec celle-ci. Elles
               nous ont également fourni un accès à un environnement de test
-              appelé « Sandbox » afin de tester l'implémentation de cette API dans
+              appelé «
+              <span class="term"
+                >Sandbox<span class="term-tooltip"
+                  >Environnement de test fourni par le transporteur, qui
+                  reproduit les conditions réelles de production sans toucher
+                  aux vraies données.</span
+                ></span
+              >
+              » afin de tester l'implémentation de cette API dans
               un environnement ressemblant fortement à celui de production.
             </li>
 
             <li>
-              <strong>Mise en place d'un dispatcher</strong> — Le webservice sur
+              <strong
+                >Mise en place d'un
+                <span class="term"
+                  >dispatcher<span class="term-tooltip"
+                    >Logique qui redirige chaque requête vers la bonne API
+                    selon le transporteur associé à l'expédition.</span
+                  ></span
+                ></strong
+              >
+              — Le
+              webservice sur
               lequel était disponible l'API REST était également utilisé pour
               l'impression d'étiquettes Schenker ; j'ai donc dû réaliser un
               « dispatcher » afin de rediriger les requêtes vers la bonne API en
@@ -292,7 +331,16 @@
             </li>
 
             <li>
-              <strong>Hypercare</strong> — Finalement, une période d'hypercare a
+              <strong
+                ><span class="term"
+                  >Hypercare<span class="term-tooltip"
+                    >Période de suivi renforcé juste après une mise en
+                    production, pour détecter et corriger rapidement les
+                    problèmes.</span
+                  ></span
+                ></strong
+              >
+              — Finalement, une période d'hypercare a
               été mise en place afin de réaliser un suivi post mise en
               production avec les utilisateurs, et ainsi corriger d'éventuels
               bugs qui seraient découverts durant celle-ci. Cette période a
@@ -361,7 +409,14 @@
 
           <p>
             Ce projet a servi de base pour l'intégration de l'API Géodis peu de
-            temps après, spécifiquement pour la mise en place du "dispatcher".
+            temps après, spécifiquement pour la mise en place du «
+            <span class="term"
+              >dispatcher<span class="term-tooltip"
+                >Logique qui redirige chaque requête vers la bonne API selon
+                le transporteur associé à l'expédition.</span
+              ></span
+            >
+            ».
             Le suivi du fonctionnement de l'API GLS est effectué par moi-même
             car j'ai été le principal développeur de ce projet. Les évolutions
             futures de ce projet incluent un suivi, grâce à l'API GLS, de
@@ -499,6 +554,7 @@
 
     <script src="/assets/js/navbar.js"></script>
     <script src="/assets/js/page-toc.js"></script>
+    <script src="/assets/js/term-tooltip.js"></script>
     <!-- Cloudflare Web Analytics -->
     <script
       type="module"

@@ -117,7 +117,14 @@
               <strong>Les API composites</strong> quant à elles combinent
               plusieurs API indépendantes pour pouvoir créer des groupes de
               services ; cette fonctionnalité est très utile dans les
-              architectures de microservices.
+              architectures de
+              <span class="term"
+                >microservices<span class="term-tooltip"
+                  >Architecture qui découpe une application en plusieurs
+                  petits services indépendants plutôt qu'un seul bloc
+                  monolithique.</span
+                ></span
+              >.
             </li>
           </ul>
 
@@ -205,7 +212,14 @@
 
           <p>
             Dans l'ERP Navision, pour l'annulation d'étiquette, Schenker et GLS
-            passaient par le même bouton, donc l'endpoint API devait être le
+            passaient par le même bouton, donc l'
+            <span class="term"
+              >endpoint<span class="term-tooltip"
+                >URL précise à laquelle une application envoie une requête
+                pour accéder à une fonctionnalité spécifique d'une API.</span
+              ></span
+            >
+            API devait être le
             même : j'ai donc dû réaliser, pour le développement de
             <a href="/pages/realisations/realisation-1.html">l'API GLS</a>,
             une logique de « dispatch » afin d'annuler vers le bon transporteur.
@@ -311,7 +325,12 @@
             développement de l'outil de suivi des commandes expédiées via l'API
             GLS, qui est une évolution déjà anticipée. Par la suite, lors de
             futures intégrations de transporteur, je ferai évoluer le
-            dispatcher, devenu un point crucial du fonctionnement de l'API.
+            <span class="term"
+              >dispatcher<span class="term-tooltip"
+                >Logique qui redirige chaque requête vers la bonne API selon
+                le transporteur associé à l'expédition.</span
+              ></span
+            >, devenu un point crucial du fonctionnement de l'API.
             Enfin, dans le cadre personnel, je compte développer ma propre API
             de domotique, dans le but de mettre en pratique la conception d'API
             et pas seulement son intégration. Pour cela, je compte suivre la
@@ -360,6 +379,7 @@
 
     <script src="/assets/js/navbar.js"></script>
     <script src="/assets/js/page-toc.js"></script>
+    <script src="/assets/js/term-tooltip.js"></script>
     <!-- Cloudflare Web Analytics -->
     <script
       type="module"
