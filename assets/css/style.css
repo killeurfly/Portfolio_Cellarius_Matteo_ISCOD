@@ -9,7 +9,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
 }
 
 html,
@@ -419,7 +418,7 @@ main {
 .hero-sections {
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
   gap: 40px;
 
@@ -861,6 +860,14 @@ main {
   background: rgba(96, 165, 250, 0.18);
 
   border-color: rgba(96, 165, 250, 0.5);
+}
+
+.page-toc a.active {
+  background: rgba(96, 165, 250, 0.28);
+
+  border-color: #60a5fa;
+
+  color: #ffffff;
 }
 
 /* Sur les écrans assez larges pour laisser la place, le sommaire devient un
