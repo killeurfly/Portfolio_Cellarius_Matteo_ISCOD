@@ -22,11 +22,11 @@
     />
     <meta
       property="og:image"
-      content="https://portfolio-cellarius-matteo.matteonathan-mc.workers.dev/assets/images/profile.jpg"
+      content="https://portfolio-cellarius-matteo.matteocellarius.workers.dev/assets/images/cellarius-matteo.jpeg"
     />
     <meta
       property="og:url"
-      content="https://portfolio-cellarius-matteo.matteonathan-mc.workers.dev/pages/realisations/realisation-2.html"
+      content="https://portfolio-cellarius-matteo.matteocellarius.workers.dev/pages/realisations/realisation-2.html"
     />
     <meta property="og:type" content="website" />
 
@@ -41,7 +41,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://portfolio-cellarius-matteo.matteonathan-mc.workers.dev/assets/images/profile.jpg"
+      content="https://portfolio-cellarius-matteo.matteocellarius.workers.dev/assets/images/cellarius-matteo.jpeg"
     />
 
     <link
@@ -238,7 +238,7 @@
               et les EDI envoyés vers l'API Géodis devaient contenir des
               informations supplémentaires pour ces envois, comme les
               identifiants douaniers de l'entreprise destinataire. Certaines des
-              données nécessaires demandaient des modifications dans Navision,
+              données nécessaires demandaient des modifications dans Navision ;
               il a donc été décidé de mettre de côté les envois Export hors EU
               pour le moment, de plus ces envois n'étaient pas encore prévus
               pour Géodis. Une des spécificités du transporteur Géodis est la
@@ -253,14 +253,14 @@
               >
               — Durant la reprise du code, j'ai pu découvrir que l'API Géodis
               bloquait les modifications sur une commande qui leur avait déjà
-              été envoyée, il a donc fallu réfléchir à des modifications pour
+              été envoyée ; il a donc fallu réfléchir à des modifications pour
               les utilisateurs. Après des échanges avec les différents acteurs,
               il a été décidé de rajouter une fonctionnalité d'annulation et
               d'envoi globaux des colis d'une expédition. Également pour
               pallier l'envoi de colis en différé pour une expédition, le
-              rajout d'un indicateur du type " - 1 ", à la fin d'un identifiant
-              d'expédition a été pensé afin de permettre le rajout de colis
-              associés à l'expédition sur l'API Géodis.
+              rajout d'un indicateur incrémental du type « -1 », « -2 »... à la
+              fin d'un identifiant d'expédition a été pensé afin de permettre
+              le rajout de colis associés à l'expédition sur l'API Géodis.
             </li>
 
             <li>
@@ -271,7 +271,7 @@
             </li>
 
             <li>
-              <strong>Kick-off Géodis</strong> — avant la mise en place du
+              <strong>Kick-off Géodis</strong> — Avant la mise en place du
               cahier de recette, un kick-off a été organisé afin que toutes les
               équipes impliquées dans le projet, ou qui travailleront avec les
               expéditions Géodis, soient mises au courant de l'état d'avancement
@@ -353,10 +353,10 @@
             source de problème qu'un développement de zéro, surtout lorsque la
             <a href="/pages/skills/gestion-projet.html">gestion de ce projet</a>
             est faite en
-            <a href="/pages/skills/autonomie.html">autonomie</a>, car il
-            nécessite une analyse de l'existant complète. Si je devais faire
-            quelque chose différemment dans ce projet, ce serait sûrement la
-            reprise du code existant, en testant plus en détail chacune des
+            <a href="/pages/skills/autonomie.html">autonomie</a>, car cela
+            nécessite une analyse complète de ce qui est déjà en place. Si je
+            devais faire quelque chose différemment dans ce projet, ce serait
+            sûrement la reprise du code, en testant plus en détail chacune des
             fonctionnalités de <a href="/pages/skills/api.html">l'API</a> afin
             d'éviter les mauvaises surprises qui ont ralenti le développement.
           </p>
@@ -464,6 +464,7 @@
     </main>
 
     <script src="/assets/js/navbar.js"></script>
+    <script src="/assets/js/page-toc.js"></script>
     <!-- Cloudflare Web Analytics -->
     <script
       type="module"
