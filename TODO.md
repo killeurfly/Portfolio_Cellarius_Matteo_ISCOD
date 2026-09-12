@@ -19,16 +19,15 @@ poste, du plus gros manque au moins gros :
   éléments de preuve" est en fait présent sur les **10 pages** (vérifié par
   grep) — l'item précédent affirmant qu'il manquait sur 5 pages était
   obsolète/faux, supprimé.
-- [ ] **Mes compétences — schéma comparatif (10 pts)** — la grille demande un
-  schéma synthétique où on voit le niveau de chaque compétence *par rapport
-  aux autres* (genre radar/barres), pas une grille de cartes. **Manquant.**
-  Discuté le 2026-09-05 : l'utilisateur a proposé de considérer la liste
-  actuelle comme suffisante ("une façon de parler"), mais comme la grille
-  liste ce point séparément des 30 pts "chacune de mes compétences" (qui
-  couvrent déjà la liste/description), Claude a déconseillé cette
-  interprétation (risque de 0/10 si le correcteur ne voit pas de différence
-  entre les deux points). Décision : mis de côté pour l'instant, à
-  retraiter plus tard.
+- [x] **Mes compétences — schéma comparatif (10 pts)** — fait le 2026-09-12 :
+  remplace la grille de cartes de `skills.html` par un schéma 3D original
+  (tours isométriques en CSS pur, `assets/js/skills-3d.js` pour la
+  parallaxe souris) comparant le nombre de réalisations liées à chaque
+  compétence (plutôt qu'un niveau de maîtrise subjectif, à la demande de
+  l'utilisateur — la donnée est objective et vérifiable depuis le site
+  lui-même). 2 domaines distingués par couleur (bleu technique / violet
+  humaine) avec légende, accessible depuis le menu principal, plus un
+  tableau de secours (`<details>`) pour l'accessibilité.
 - [x] **Mes réalisations — page commune (5 pts)** — fait (`realisations.html`).
 - [x] **Chacune de mes réalisations (20 pts)** — les 7 notions demandées sont
   là sur les 5 pages, et le seul écart restant (noms évocateurs) est réglé
@@ -89,18 +88,18 @@ poste, du plus gros manque au moins gros :
 - [x] **Mon parcours en frise (5 pts)** — fait, ordre anti-chronologique
   correct (2025 en haut → 2018 en bas).
 - [ ] **Chacune de mes expériences (5 pts)** — 1er niveau de lecture (période,
-  poste, lieu+logo) présent partout. 2e niveau incomplet, analysé en détail
-  le 2026-09-02 sur les 8 pages `pages/parcours/*.html` :
-  - Aucune des 8 pages ne lie vers une compétence (seul `romus.html`/
-    `edf.html` lient vers des réalisations, via leur bloc "Réalisations
-    liées" déjà pré-rempli). Todo ajouté sur ces deux pages pour demander
-    les compétences mobilisées.
-  - La question "statut/niveau de responsabilité" n'était posée que dans les
-    todos de `romus.html`/`edf.html`. Ajoutée aussi sur
-    `phygital-factory.html` (todo, à répondre) et `marie-lannelongue.html`
-    (répondue le 2026-09-02 : observation des interventions du collègue puis
-    prise en charge autonome des tickets les plus simples — todo supprimé,
-    page maintenant entièrement rédigée).
+  poste, lieu+logo) présent partout. 2e niveau très largement complété depuis
+  (vérifié 2026-09-12) : `romus.html`, `edf.html`, `phygital-factory.html`
+  ont maintenant un lien inline vers une compétence. Seul écart restant :
+  - `marie-lannelongue.html` a encore un todo ouvert ("prise en charge des
+    tickets les plus simples en autonomie" pourrait justifier un lien vers
+    `/pages/skills/autonomie.html` — à valider). Vérifié 2026-09-12 contre le
+    texte exact de la grille : "Les liens vers les réalisations et les
+    compétences rattachées" est bien listé comme critère du 2e niveau de
+    lecture pour une expérience en entreprise — donc pas inventé, mais c'est
+    une ligne parmi 4 sur un poste à 5 pts au total, pas un gros enjeu de
+    notation à lui seul. Décision de l'utilisateur (2026-09-12) : laissé tel
+    quel pour l'instant, pas prioritaire.
   - Rappel déjà connu : la frise elle-même (`parcours.html`) ne pointe
     jamais directement vers une réalisation/compétence, il faut passer par
     la page détail via "En savoir plus →".
@@ -115,6 +114,18 @@ poste, du plus gros manque au moins gros :
   Présentation/Parcours/Accueil.
 - [x] **Mon prénom/nom/ma photo sur toutes les pages** — fait via la navbar
   (`nav-profile`, injectée partout).
+- [x] **Check global 2026-09-12** (hors schémas, déjà traités séparément) :
+  `assets/documents/cv.pdf` existe bel et bien maintenant (vrai fichier,
+  ~300 Ko, le lien accueil n'est plus cassé) — l'item Finalisation
+  correspondant était périmé, corrigé plus bas. `presentation.html` n'a
+  plus aucun `.todo-list` : gras ajouté, accroche non auto-centrée, volet
+  personnel (projet domotique) présent. Reste seulement la photo pro dédiée
+  (item Finalisation) et l'angle exact "expert en ingénierie humain,
+  conscient, responsable" pas repris mot pour mot (stylistique, pas
+  bloquant). `realisation-5.html` : "à destination de la facturation"
+  généralisé en "à destination d'un autre service" (confirmé par
+  l'utilisateur, fait). GitHub `github.com/killeurfly` sur la page contact
+  confirmé par l'utilisateur (n'est plus "à valider").
 
 ---
 
@@ -316,6 +327,13 @@ poste, du plus gros manque au moins gros :
     consommation ont déjà le fait "en charge du développement de la macro
     en autonomie" dans leur section Acteurs — todo ajouté pour rédiger ces
     2 anecdotes à partir de ce fait déjà établi (pas d'invention).
+  - [ ] **Mise à jour 2026-09-12** : l'anecdote Certificats énergétiques (ex
+    Garanties d'Origine) a bien été rédigée depuis, mais **Prévisions
+    clients (réalisation-5) reste dans le bloc "Réalisations liées" sans
+    aucune anecdote correspondante** dans "Mes éléments de preuve" —
+    incohérence à corriger : soit rédiger l'anecdote manquante à partir du
+    même fait "en autonomie" déjà présent dans les Acteurs de
+    `realisation-5.html`, soit retirer ce lien du bloc.
 - [x] `communication.html` — **entièrement rédigée (2026-08-26), plus aucun
   todo.** Todos approfondis le 26/08 sur le modèle de `Source/Exemple skills
   Humain 3.txt`, puis contenu écrit en plusieurs allers-retours : "Ma
@@ -364,10 +382,8 @@ poste, du plus gros manque au moins gros :
   (GLS, Géodis, Garanties d'Origine), autocritique et évolution complètes
   (ressource nommée : Google Project Management Professional Certificate,
   Coursera).
-- [ ] **Schéma comparatif des 10 compétences** (10 pts) — remplacer ou
-  compléter la grille de cartes par une visualisation du niveau relatif de
-  chaque compétence (ex. barres ou radar), accessible depuis le menu
-  principal.
+- [x] **Schéma comparatif des 10 compétences** (10 pts) — fait le 2026-09-12,
+  voir détail en haut du fichier (section grille officielle ISCOD).
 - [x] **Chaque compétence accessible par un sous-menu navbar** — fait
   2026-09-02 : le dropdown "Compétences" de la navbar a maintenant un
   sous-menu imbriqué (flyout au survol) sous "Compétences techniques" et
@@ -391,8 +407,10 @@ poste, du plus gros manque au moins gros :
 - [x] Ajouter GitHub — github.com/killeurfly, déduit du dépôt du portfolio,
   à confirmer par l'utilisateur
 - [x] Ajouter LinkedIn — linkedin.com/in/mattéo-cellarius
-- [ ] Ajouter formulaire de contact — non fait, Netlify Forms serait la
-  solution la plus simple vu l'hébergement actuel (pas de backend à écrire)
+- [x] ~~Ajouter formulaire de contact~~ — **décision de l'utilisateur
+  (2026-09-12) : pas de formulaire de contact.** Les vraies coordonnées
+  (email/téléphone/LinkedIn/GitHub) suffisent pour ce point de la grille
+  (2 pts, "un espace contact **ou** un pavé de coordonnées").
 - [x] Remplacer le Lorem Ipsum et les fausses coordonnées actuelles
 
 ---
@@ -452,30 +470,46 @@ poste, du plus gros manque au moins gros :
   (pas de mention "EDF"), cohérent avec l'anonymisation déjà en place pour
   Romus.
 - [ ] Ajouter README
-- [ ] Faire une relecture complète (Présentation et Parcours pas encore repassées avec la même rigueur que les réalisations)
-- [ ] **Vérifier les répétitions de mots/connecteurs** dans les pages déjà
-  rédigées — repéré le 2026-08-26 sur `adaptabilite.html` : usage répété de
-  "car" comme connecteur de cause (7+ fois dans une page), qui donne un
-  style mécanique. Corrigé sur cette page (varié avec "puisque", "dans la
-  mesure où", "parce que", "étant donné que") ; à vérifier aussi sur les
-  autres pages de compétence et les réalisations, qui n'ont pas eu cette
-  passe.
-- [ ] **Vérifier la cohérence logique/factuelle des informations données**,
-  pas seulement l'orthographe — repéré le 2026-08-26 sur `rigueur.html` :
-  la phrase d'actualité disait "la rigueur est importante car un bug coûte
-  100 fois plus cher en production", puis la phrase suivante expliquait que
-  ce chiffre n'était justement pas vérifié — un "car" qui s'appuyait sur
-  l'affirmation même qu'on démentait juste après. Corrigé sur cette page,
-  mais à vérifier sur les autres pages de compétence et les réalisations,
-  qui n'ont pas eu cette relecture-là (les enchaînements "car"/"donc" entre
-  deux phrases doivent rester logiquement valides, pas juste grammaticalement
-  corrects).
+- [x] **Relecture orthographe Accueil + Parcours (2026-09-12)** —
+  `index.html` et `pages/parcours.html` (la frise elle-même, pas les 8 pages
+  détail déjà relues) lus intégralement : aucune faute trouvée, les deux
+  pages sont propres.
+- [x] **Vérifier les répétitions de mots/connecteurs + cohérence
+  logique/factuelle (2026-09-12)** — passe faite sur les 5 réalisations et
+  les 7 pages compétence restantes (`api`, `web`, `automatisation`,
+  `resolution-problemes`, `fiabilisation`, `communication`, `autonomie` —
+  `adaptabilite`/`rigueur`/`gestion-projet` déjà faites avant). Aucune
+  contradiction logique du type rigueur.html/gestion-projet.html trouvée.
+  2 répétitions "car... car" dans la même phrase corrigées par variation du
+  connecteur (sens inchangé) : `api.html` ("tout simplement car" →
+  "tout simplement parce que") et `resolution-problemes.html` ("mais surtout
+  car" → "mais surtout parce qu'").
   - [x] **Même défaut repéré le 2026-08-26 sur `gestion-projet.html`, "Ma
     définition"** — corrigé : la conclusion faisait reposer l'importance du
     chef de projet sur ses connaissances "techniques", contredisant la
     prémisse ("surtout relationnel plutôt que technique"). Reformulée en
     "connaissances d'organisation et de ses équipes", alignée avec la
     prémisse relationnelle.
+- [x] **Nettoyage fichiers inutilisés (2026-09-12)** — supprimés (vides,
+  0 octet, jamais référencés) : `components/footer.html`, `header.html`,
+  `project-card.html`, `skill-card.html`, `assets/css/components.css`,
+  `pages.css`, `responsive.css`, `assets/js/main.js`, `contact.js`,
+  `projects.js`, `skills.js`.
+- [ ] **Report d'optimisations possibles (2026-09-12, à traiter plus tard)** :
+  4 classes CSS mortes trouvées dans `style.css` (plus aucune page ne les
+  utilise) : `.attention-panel`, `.skill-card`/`.skill-card p` (l'ancien hub
+  2-cartes de `skills.html`, remplacé par la grille à 10 compétences),
+  `.skills-container`, `.skills-section-title` — retrait possible mais
+  `.skill-card` apparaît dans un sélecteur groupé (`,`) à vérifier avant de
+  couper. Duplication de logique JS entre `assets/js/skills-3d.js` et
+  `realisations-3d.js` (détection de survol par coordonnées + positionnement
+  d'un panneau partagé, ~40 lignes similaires dans les deux) — un helper
+  commun serait possible mais pas urgent vu que les deux fichiers sont
+  stables. Reste : images déjà de taille raisonnable (photo 100 Ko, logos
+  ~11 Ko/pièce, SVG ~4 Ko/pièce), aucune à optimiser. `style.css` fait
+  3222 lignes/48 Ko non minifié pour tout le site — pas anormal vu l'absence
+  de build tool, la minification serait un gain marginal (Cloudflare
+  compresse déjà en gzip/brotli à la volée).
 - [ ] Relecture par réalisation, 3 points à chaque fois : (1) orthographe/grammaire/syntaxe, (2) mots-clés importants mis en gras dans les paragraphes (pas seulement les titres d'étapes et de définitions — convention encore à appliquer partout), (3) vérifier qu'aucune définition utile ne manque pour les termes techniques utilisés sur la page
   - [x] Réalisation 1 (API GLS) — orthographe faite, gras/définitions à vérifier
   - [x] Réalisation 2 (API Géodis) — orthographe faite, gras/définitions à vérifier
