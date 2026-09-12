@@ -45,109 +45,521 @@
           en informatique, aussi bien techniques qu'humaines.
         </p>
 
-        <p class="todo-label">À compléter</p>
+        <p class="skills-3d-caption">
+          Comparaison du nombre de réalisations ayant mobilisé chaque
+          compétence — plus la barre (ou la tour) est longue, plus la
+          compétence a été sollicitée dans mes projets. Cliquez sur une
+          compétence pour ouvrir sa page.
+        </p>
 
-        <ul class="todo-list">
-          <li>
-            La grille ISCOD demande un schéma comparatif montrant le niveau de
-            chaque compétence par rapport aux autres (radar ou barres), en
-            plus de la liste de cartes ci-dessous. À construire (mis de côté
-            le 2026-09-05, à reprendre).
-          </li>
-        </ul>
+        <div class="skills-3d-legend">
+          <span class="skills-3d-legend-item">
+            <span class="skills-3d-legend-swatch skills-3d-legend-swatch--technique"></span>
+            Compétences techniques
+          </span>
+          <span class="skills-3d-legend-item">
+            <span class="skills-3d-legend-swatch skills-3d-legend-swatch--humaine"></span>
+            Compétences humaines
+          </span>
+        </div>
 
-        <h2 class="skills-section-title">Compétences techniques</h2>
+        <div class="skills-3d-scene" id="skills3dScene">
+          <div class="skills-3d-stage" id="skills3dStage">
+            <a
+              class="skill-tower skill-tower--technique"
+              href="/pages/skills/api.html"
+              data-desc="Je sais intégrer une API REST à un système d'information."
+              style="--th: 96px; --delay: 0s"
+            >
+              <span class="tower-value">2 réalisations</span>
+              <span class="tower-3d">
+                <span class="tower-face tower-top"></span>
+                <span class="tower-face tower-front"></span>
+                <span class="tower-face tower-side"></span>
+              </span>
+              <img
+                class="tower-icon"
+                src="/assets/images/svg/skill-api.svg"
+                alt=""
+              />
+              <span class="tower-label">Intégration d'API REST</span>
+            </a>
 
-        <div class="skills-grid">
-          <a class="skill-item" href="/pages/skills/api.html">
-            <img src="/assets/images/svg/skill-api.svg" alt="" />
-            <h2>Intégration d'API REST</h2>
-            <p>Je sais intégrer une API REST à un système d'information.</p>
-          </a>
+            <a
+              class="skill-tower skill-tower--technique"
+              href="/pages/skills/web.html"
+              data-desc="Je sais développer des applications web et les faire évoluer."
+              style="--th: 68px; --delay: 0.4s"
+            >
+              <span class="tower-value">1 réalisation</span>
+              <span class="tower-3d">
+                <span class="tower-face tower-top"></span>
+                <span class="tower-face tower-front"></span>
+                <span class="tower-face tower-side"></span>
+              </span>
+              <img
+                class="tower-icon"
+                src="/assets/images/svg/skill-web.svg"
+                alt=""
+              />
+              <span class="tower-label">Développement web</span>
+            </a>
 
-          <a class="skill-item" href="/pages/skills/web.html">
-            <img src="/assets/images/svg/skill-web.svg" alt="" />
-            <h2>Développement web (PHP, SQL, JavaScript)</h2>
-            <p>Je sais développer des applications web et les faire évoluer.</p>
-          </a>
+            <a
+              class="skill-tower skill-tower--technique"
+              href="/pages/skills/automatisation.html"
+              data-desc="Je sais concevoir des macros VBA pour automatiser des tâches."
+              style="--th: 96px; --delay: 0.8s"
+            >
+              <span class="tower-value">2 réalisations</span>
+              <span class="tower-3d">
+                <span class="tower-face tower-top"></span>
+                <span class="tower-face tower-front"></span>
+                <span class="tower-face tower-side"></span>
+              </span>
+              <img
+                class="tower-icon"
+                src="/assets/images/svg/skill-automatisation.svg"
+                alt=""
+              />
+              <span class="tower-label">Automatisation VBA</span>
+            </a>
 
-          <a class="skill-item" href="/pages/skills/automatisation.html">
-            <img src="/assets/images/svg/skill-automatisation.svg" alt="" />
-            <h2>Automatisation VBA (Excel &amp; Outlook)</h2>
-            <p>Je sais concevoir des macros VBA pour automatiser des tâches.</p>
-          </a>
+            <a
+              class="skill-tower skill-tower--technique"
+              href="/pages/skills/resolution-problemes.html"
+              data-desc="Je sais identifier, diagnostiquer et corriger des bugs techniques, du développement jusqu'à la mise en production."
+              style="--th: 124px; --delay: 1.2s"
+            >
+              <span class="tower-value">3 réalisations</span>
+              <span class="tower-3d">
+                <span class="tower-face tower-top"></span>
+                <span class="tower-face tower-front"></span>
+                <span class="tower-face tower-side"></span>
+              </span>
+              <img
+                class="tower-icon"
+                src="/assets/images/svg/skill-resolution-problemes.svg"
+                alt=""
+              />
+              <span class="tower-label">Résolution de problèmes</span>
+            </a>
 
-          <a class="skill-item" href="/pages/skills/resolution-problemes.html">
+            <a
+              class="skill-tower skill-tower--technique"
+              href="/pages/skills/fiabilisation.html"
+              data-desc="Je sais reprendre un code existant et le faire évoluer pour l'adapter aux nouvelles demandes."
+              style="--th: 96px; --delay: 1.6s"
+            >
+              <span class="tower-value">2 réalisations</span>
+              <span class="tower-3d">
+                <span class="tower-face tower-top"></span>
+                <span class="tower-face tower-front"></span>
+                <span class="tower-face tower-side"></span>
+              </span>
+              <img
+                class="tower-icon"
+                src="/assets/images/svg/skill-fiabilisation.svg"
+                alt=""
+              />
+              <span class="tower-label">Reprise &amp; fiabilisation</span>
+            </a>
+
+            <a
+              class="skill-tower skill-tower--humaine"
+              href="/pages/skills/communication.html"
+              data-desc="Je sais communiquer avec les équipes techniques afin de comprendre leurs besoins."
+              style="--th: 152px; --delay: 2s"
+            >
+              <span class="tower-value">4 réalisations</span>
+              <span class="tower-3d">
+                <span class="tower-face tower-top"></span>
+                <span class="tower-face tower-front"></span>
+                <span class="tower-face tower-side"></span>
+              </span>
+              <img
+                class="tower-icon"
+                src="/assets/images/svg/skill-communication.svg"
+                alt=""
+              />
+              <span class="tower-label">Communication technique</span>
+            </a>
+
+            <a
+              class="skill-tower skill-tower--humaine"
+              href="/pages/skills/autonomie.html"
+              data-desc="Je sais travailler en autonomie une fois que les besoins ont été cadrés."
+              style="--th: 152px; --delay: 2.4s"
+            >
+              <span class="tower-value">4 réalisations</span>
+              <span class="tower-3d">
+                <span class="tower-face tower-top"></span>
+                <span class="tower-face tower-front"></span>
+                <span class="tower-face tower-side"></span>
+              </span>
+              <img
+                class="tower-icon"
+                src="/assets/images/svg/skill-autonomie.svg"
+                alt=""
+              />
+              <span class="tower-label">Autonomie</span>
+            </a>
+
+            <a
+              class="skill-tower skill-tower--humaine"
+              href="/pages/skills/adaptabilite.html"
+              data-desc="Je sais m'adapter à des contextes différents, qu'il s'agisse du système d'information ou d'un projet."
+              style="--th: 96px; --delay: 2.8s"
+            >
+              <span class="tower-value">2 réalisations</span>
+              <span class="tower-3d">
+                <span class="tower-face tower-top"></span>
+                <span class="tower-face tower-front"></span>
+                <span class="tower-face tower-side"></span>
+              </span>
+              <img
+                class="tower-icon"
+                src="/assets/images/svg/skill-adaptabilite.svg"
+                alt=""
+              />
+              <span class="tower-label">Adaptabilité</span>
+            </a>
+
+            <a
+              class="skill-tower skill-tower--humaine"
+              href="/pages/skills/rigueur.html"
+              data-desc="J'ai appris la rigueur, pour maîtriser la gestion des données sensibles."
+              style="--th: 96px; --delay: 3.2s"
+            >
+              <span class="tower-value">2 réalisations</span>
+              <span class="tower-3d">
+                <span class="tower-face tower-top"></span>
+                <span class="tower-face tower-front"></span>
+                <span class="tower-face tower-side"></span>
+              </span>
+              <img
+                class="tower-icon"
+                src="/assets/images/svg/skill-rigueur.svg"
+                alt=""
+              />
+              <span class="tower-label">Rigueur</span>
+            </a>
+
+            <a
+              class="skill-tower skill-tower--humaine"
+              href="/pages/skills/gestion-projet.html"
+              data-desc="Je sais gérer le cycle de vie d'un projet."
+              style="--th: 124px; --delay: 3.6s"
+            >
+              <span class="tower-value">3 réalisations</span>
+              <span class="tower-3d">
+                <span class="tower-face tower-top"></span>
+                <span class="tower-face tower-front"></span>
+                <span class="tower-face tower-side"></span>
+              </span>
+              <img
+                class="tower-icon"
+                src="/assets/images/svg/skill-gestion-projet.svg"
+                alt=""
+              />
+              <span class="tower-label">Gestion de projet</span>
+            </a>
+          </div>
+
+          <div class="skills-3d-tooltip" id="skills3dTooltip"></div>
+        </div>
+
+        <div class="skills-simple-list">
+          <a
+            class="skill-bar-row skill-bar-row--technique"
+            href="/pages/skills/api.html"
+          >
             <img
+              class="skill-bar-icon"
+              src="/assets/images/svg/skill-api.svg"
+              alt=""
+            />
+            <span class="skill-bar-info">
+              <span class="skill-bar-label">Intégration d'API REST</span>
+              <span class="skill-bar-desc"
+                >Je sais intégrer une API REST à un système
+                d'information.</span
+              >
+              <span class="skill-bar-track"
+                ><span class="skill-bar-fill" style="--pct: 50%"></span
+              ></span>
+            </span>
+            <span class="skill-bar-value">2</span>
+          </a>
+
+          <a
+            class="skill-bar-row skill-bar-row--technique"
+            href="/pages/skills/web.html"
+          >
+            <img
+              class="skill-bar-icon"
+              src="/assets/images/svg/skill-web.svg"
+              alt=""
+            />
+            <span class="skill-bar-info">
+              <span class="skill-bar-label">Développement web</span>
+              <span class="skill-bar-desc"
+                >Je sais développer des applications web et les faire
+                évoluer.</span
+              >
+              <span class="skill-bar-track"
+                ><span class="skill-bar-fill" style="--pct: 25%"></span
+              ></span>
+            </span>
+            <span class="skill-bar-value">1</span>
+          </a>
+
+          <a
+            class="skill-bar-row skill-bar-row--technique"
+            href="/pages/skills/automatisation.html"
+          >
+            <img
+              class="skill-bar-icon"
+              src="/assets/images/svg/skill-automatisation.svg"
+              alt=""
+            />
+            <span class="skill-bar-info">
+              <span class="skill-bar-label">Automatisation VBA</span>
+              <span class="skill-bar-desc"
+                >Je sais concevoir des macros VBA pour automatiser des
+                tâches.</span
+              >
+              <span class="skill-bar-track"
+                ><span class="skill-bar-fill" style="--pct: 50%"></span
+              ></span>
+            </span>
+            <span class="skill-bar-value">2</span>
+          </a>
+
+          <a
+            class="skill-bar-row skill-bar-row--technique"
+            href="/pages/skills/resolution-problemes.html"
+          >
+            <img
+              class="skill-bar-icon"
               src="/assets/images/svg/skill-resolution-problemes.svg"
               alt=""
             />
-            <h2>Résolution de problèmes techniques</h2>
-            <p>
-              Je sais identifier, diagnostiquer et corriger des bugs techniques,
-              du développement jusqu'à la mise en production.
-            </p>
+            <span class="skill-bar-info">
+              <span class="skill-bar-label">Résolution de problèmes</span>
+              <span class="skill-bar-desc"
+                >Je sais identifier, diagnostiquer et corriger des bugs
+                techniques, du développement jusqu'à la mise en
+                production.</span
+              >
+              <span class="skill-bar-track"
+                ><span class="skill-bar-fill" style="--pct: 75%"></span
+              ></span>
+            </span>
+            <span class="skill-bar-value">3</span>
           </a>
 
-          <a class="skill-item" href="/pages/skills/fiabilisation.html">
-            <img src="/assets/images/svg/skill-fiabilisation.svg" alt="" />
-            <h2>Reprise et fiabilisation de code existant</h2>
-            <p>
-              Je sais reprendre un code existant et le faire évoluer pour
-              l'adapter aux nouvelles demandes.
-            </p>
+          <a
+            class="skill-bar-row skill-bar-row--technique"
+            href="/pages/skills/fiabilisation.html"
+          >
+            <img
+              class="skill-bar-icon"
+              src="/assets/images/svg/skill-fiabilisation.svg"
+              alt=""
+            />
+            <span class="skill-bar-info">
+              <span class="skill-bar-label">Reprise &amp; fiabilisation</span>
+              <span class="skill-bar-desc"
+                >Je sais reprendre un code existant et le faire évoluer pour
+                l'adapter aux nouvelles demandes.</span
+              >
+              <span class="skill-bar-track"
+                ><span class="skill-bar-fill" style="--pct: 50%"></span
+              ></span>
+            </span>
+            <span class="skill-bar-value">2</span>
+          </a>
+
+          <a
+            class="skill-bar-row skill-bar-row--humaine"
+            href="/pages/skills/communication.html"
+          >
+            <img
+              class="skill-bar-icon"
+              src="/assets/images/svg/skill-communication.svg"
+              alt=""
+            />
+            <span class="skill-bar-info">
+              <span class="skill-bar-label">Communication technique</span>
+              <span class="skill-bar-desc"
+                >Je sais communiquer avec les équipes techniques afin de
+                comprendre leurs besoins.</span
+              >
+              <span class="skill-bar-track"
+                ><span class="skill-bar-fill" style="--pct: 100%"></span
+              ></span>
+            </span>
+            <span class="skill-bar-value">4</span>
+          </a>
+
+          <a
+            class="skill-bar-row skill-bar-row--humaine"
+            href="/pages/skills/autonomie.html"
+          >
+            <img
+              class="skill-bar-icon"
+              src="/assets/images/svg/skill-autonomie.svg"
+              alt=""
+            />
+            <span class="skill-bar-info">
+              <span class="skill-bar-label">Autonomie</span>
+              <span class="skill-bar-desc"
+                >Je sais travailler en autonomie une fois que les besoins ont
+                été cadrés.</span
+              >
+              <span class="skill-bar-track"
+                ><span class="skill-bar-fill" style="--pct: 100%"></span
+              ></span>
+            </span>
+            <span class="skill-bar-value">4</span>
+          </a>
+
+          <a
+            class="skill-bar-row skill-bar-row--humaine"
+            href="/pages/skills/adaptabilite.html"
+          >
+            <img
+              class="skill-bar-icon"
+              src="/assets/images/svg/skill-adaptabilite.svg"
+              alt=""
+            />
+            <span class="skill-bar-info">
+              <span class="skill-bar-label">Adaptabilité</span>
+              <span class="skill-bar-desc"
+                >Je sais m'adapter à des contextes différents, qu'il s'agisse
+                du système d'information ou d'un projet.</span
+              >
+              <span class="skill-bar-track"
+                ><span class="skill-bar-fill" style="--pct: 50%"></span
+              ></span>
+            </span>
+            <span class="skill-bar-value">2</span>
+          </a>
+
+          <a
+            class="skill-bar-row skill-bar-row--humaine"
+            href="/pages/skills/rigueur.html"
+          >
+            <img
+              class="skill-bar-icon"
+              src="/assets/images/svg/skill-rigueur.svg"
+              alt=""
+            />
+            <span class="skill-bar-info">
+              <span class="skill-bar-label">Rigueur</span>
+              <span class="skill-bar-desc"
+                >J'ai appris la rigueur, pour maîtriser la gestion des données
+                sensibles.</span
+              >
+              <span class="skill-bar-track"
+                ><span class="skill-bar-fill" style="--pct: 50%"></span
+              ></span>
+            </span>
+            <span class="skill-bar-value">2</span>
+          </a>
+
+          <a
+            class="skill-bar-row skill-bar-row--humaine"
+            href="/pages/skills/gestion-projet.html"
+          >
+            <img
+              class="skill-bar-icon"
+              src="/assets/images/svg/skill-gestion-projet.svg"
+              alt=""
+            />
+            <span class="skill-bar-info">
+              <span class="skill-bar-label">Gestion de projet</span>
+              <span class="skill-bar-desc"
+                >Je sais gérer le cycle de vie d'un projet.</span
+              >
+              <span class="skill-bar-track"
+                ><span class="skill-bar-fill" style="--pct: 75%"></span
+              ></span>
+            </span>
+            <span class="skill-bar-value">3</span>
           </a>
         </div>
 
-        <h2 class="skills-section-title">Compétences humaines</h2>
-
-        <div class="skills-grid">
-          <a class="skill-item" href="/pages/skills/communication.html">
-            <img src="/assets/images/svg/skill-communication.svg" alt="" />
-            <h2>Communication technique</h2>
-            <p>
-              Je sais communiquer avec les équipes techniques afin de comprendre
-              leurs besoins.
-            </p>
-          </a>
-
-          <a class="skill-item" href="/pages/skills/autonomie.html">
-            <img src="/assets/images/svg/skill-autonomie.svg" alt="" />
-            <h2>Autonomie</h2>
-            <p>
-              Je sais travailler en autonomie une fois que les besoins ont été
-              cadrés.
-            </p>
-          </a>
-
-          <a class="skill-item" href="/pages/skills/adaptabilite.html">
-            <img src="/assets/images/svg/skill-adaptabilite.svg" alt="" />
-            <h2>Adaptabilité</h2>
-            <p>
-              Je sais m'adapter à des contextes différents, qu'il s'agisse du
-              système d'information ou d'un projet.
-            </p>
-          </a>
-
-          <a class="skill-item" href="/pages/skills/rigueur.html">
-            <img src="/assets/images/svg/skill-rigueur.svg" alt="" />
-            <h2>Rigueur</h2>
-            <p>
-              J'ai appris la rigueur, pour maîtriser la gestion des données
-              sensibles.
-            </p>
-          </a>
-
-          <a class="skill-item" href="/pages/skills/gestion-projet.html">
-            <img src="/assets/images/svg/skill-gestion-projet.svg" alt="" />
-            <h2>Gestion de projet</h2>
-            <p>Je sais gérer le cycle de vie d'un projet.</p>
-          </a>
-        </div>
+        <details class="skills-3d-table-toggle">
+          <summary>Voir les données en tableau</summary>
+          <table class="skills-3d-table">
+            <thead>
+              <tr>
+                <th scope="col">Compétence</th>
+                <th scope="col">Domaine</th>
+                <th scope="col">Réalisations liées</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Intégration d'API REST</td>
+                <td>Technique</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Développement web</td>
+                <td>Technique</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Automatisation VBA</td>
+                <td>Technique</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Résolution de problèmes</td>
+                <td>Technique</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>Reprise &amp; fiabilisation</td>
+                <td>Technique</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Communication technique</td>
+                <td>Humaine</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Autonomie</td>
+                <td>Humaine</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Adaptabilité</td>
+                <td>Humaine</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Rigueur</td>
+                <td>Humaine</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>Gestion de projet</td>
+                <td>Humaine</td>
+                <td>3</td>
+              </tr>
+            </tbody>
+          </table>
+        </details>
       </section>
     </main>
 
     <script src="/assets/js/navbar.js"></script>
+    <script src="/assets/js/skills-3d.js"></script>
     <!-- Cloudflare Web Analytics -->
     <!-- prettier-ignore -->
     <script
