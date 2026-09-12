@@ -13,6 +13,7 @@
     "esbenp.prettier-vscode",
     "formulahendry.auto-rename-tag",
     "github.vscode-github-actions",
+    "growthjack.claude-code-usage",
     "htmlhint.vscode-htmlhint",
     "ms-python.debugpy",
     "ms-python.python",
@@ -23,6 +24,7 @@
     "pkief.material-icon-theme",
     "pranaygp.vscode-css-peek",
     "ritwickdey.liveserver",
+    "shahilkumar.docxreader",
     "shinotatwu-ds.file-tree-generator",
     "tomoki1207.pdf",
     "usernamehw.errorlens"
