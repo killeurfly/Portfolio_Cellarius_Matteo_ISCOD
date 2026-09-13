@@ -91,15 +91,12 @@ poste, du plus gros manque au moins gros :
   poste, lieu+logo) présent partout. 2e niveau très largement complété depuis
   (vérifié 2026-09-12) : `romus.html`, `edf.html`, `phygital-factory.html`
   ont maintenant un lien inline vers une compétence. Seul écart restant :
-  - `marie-lannelongue.html` a encore un todo ouvert ("prise en charge des
-    tickets les plus simples en autonomie" pourrait justifier un lien vers
-    `/pages/skills/autonomie.html` — à valider). Vérifié 2026-09-12 contre le
+  - [x] `marie-lannelongue.html` — fait 2026-09-13 : lien inline ajouté vers
+    `/pages/skills/autonomie.html` sur "j'ai pu prendre en charge, en
+    autonomie, les tickets les plus simples". Vérifié 2026-09-12 contre le
     texte exact de la grille : "Les liens vers les réalisations et les
     compétences rattachées" est bien listé comme critère du 2e niveau de
-    lecture pour une expérience en entreprise — donc pas inventé, mais c'est
-    une ligne parmi 4 sur un poste à 5 pts au total, pas un gros enjeu de
-    notation à lui seul. Décision de l'utilisateur (2026-09-12) : laissé tel
-    quel pour l'instant, pas prioritaire.
+    lecture pour une expérience en entreprise.
   - Rappel déjà connu : la frise elle-même (`parcours.html`) ne pointe
     jamais directement vers une réalisation/compétence, il faut passer par
     la page détail via "En savoir plus →".
@@ -126,6 +123,84 @@ poste, du plus gros manque au moins gros :
   généralisé en "à destination d'un autre service" (confirmé par
   l'utilisateur, fait). GitHub `github.com/killeurfly` sur la page contact
   confirmé par l'utilisateur (n'est plus "à valider").
+- [x] **Tous les schémas "à ajouter" sont faits (2026-09-13)** — les 6 todos
+  de schéma répartis sur le site sont tous construits, en 3D CSS pur, chacun
+  avec une forme différente (aucune répétition visuelle) : dispatcher
+  GLS/Schenker (`realisation-1.html`), fusion de lignes en doublon
+  (`realisation-4.html`), pipeline Outlook→Excel (`realisation-5.html`),
+  dispatcher généralisé GLS/Géodis/Schenker (`skills/api.html`), frise de
+  déroulé de projet en 5 étapes (`skills/gestion-projet.html`), avant/après
+  d'un bug de performance (`skills/resolution-problemes.html`). Le todo
+  schéma de `edf.html` (parcours) a été retiré sans schéma après discussion
+  — un seul bloc de la frise avec un schéma aurait détonné, le reste de la
+  frise étant uniquement textuel. **Plus aucun `.todo-list` nulle part sur
+  le site** (vérifié par grep sur tout le repo le 2026-09-13) : tous les
+  todos de contenu, pas seulement les schémas, sont désormais résolus.
+- [ ] **Nouveaux écarts trouvés lors de l'analyse finale du 2026-09-13**,
+  contre le texte exact de la grille :
+  1. **`pages/realisations.html`, item "Mes réalisations" (5 pts)** : la
+     grille demande que "chaque item de la liste ou chaque pavé **annonce**
+     cette réalisation par un court descriptif" — actuellement, la
+     description (`data-desc`) n'est visible qu'au survol souris ou au tap
+     tactile (panneau caché par défaut), rien n'est visible à l'affichage
+     statique de la page hormis le titre et le nombre d'étapes.
+     `skills.html` a un `<details>` de secours pour son schéma 3D
+     (accessibilité) ; `realisations.html` n'a pas d'équivalent. Risque réel
+     sur ce point précis de la grille, à corriger : ajouter un court texte
+     toujours visible sous chaque titre (même une phrase), ou un repli
+     `<details>` similaire à celui de `skills.html`.
+  2. **Correction 2026-09-13 : faux positif, pas un écart.** J'avais noté
+     `romus.html`/`edf.html` comme ne répétant pas leur statut d'alternant —
+     erreur de recherche (j'avais cherché "alternant" au lieu
+     d'"alternance"). Vérifié : les deux pages disent bien explicitement
+     "mon alternance" dès leur premier paragraphe ("Présentation de
+     l'entreprise"). Rien à corriger sur ce point.
+  3. **`autonomie.html`, écart non corrigé depuis le 2026-09-12** (voir
+     item dédié plus bas dans la section Compétences) : Prévisions clients
+     (réalisation-5) toujours listée dans "Réalisations liées" sans anecdote
+     correspondante dans "Mes éléments de preuve".
+  4. **CV et photo pro ne sont PAS des critères de la grille** — vérifié en
+     relisant le texte exact : le seul critère photo est "mon prénom, mon
+     nom, ma photo apparaissent sur toutes les pages", déjà satisfait par la
+     navbar sur les 31 pages. Le CV et une photo dédiée à `presentation.html`
+     restent une bonne idée de finition, mais ne sont pas notés par la
+     grille — à dépriming par rapport aux 3 points ci-dessus si le temps
+     manque.
+- [x] **Points 1 et 3 ci-dessus mis en `.todo-list` caché dans les pages
+  concernées (2026-09-13)** : `realisations.html` (descriptif toujours
+  visible à ajouter) et `skills/autonomie.html` (anecdote Prévisions clients
+  manquante) ont maintenant leur propre todo caché (`display:none`, comme
+  partout ailleurs sur le site) directement dans le HTML, en plus de cette
+  note ici.
+- [x] **Relecture orthographe/cohérence des 4 pages entreprise du parcours
+  (2026-09-13)** : `romus.html`, `edf.html`, `phygital-factory.html`,
+  `marie-lannelongue.html` lues intégralement. Aucune faute d'orthographe.
+  `contact.html` également relu, propre. Un seul point de style repéré sur
+  `phygital-factory.html`, voir todo caché dédié ci-dessous.
+- [x] **Check ultime répétitions/cohérence/syntaxe + grille (2026-09-13)** —
+  dernières pages du site pas encore passées en revue pour ce type de
+  répétition de phrase : les 4 pages "formation" du parcours
+  (`iscod.html`, `paris-saclay.html`, `vilgenis.html`, `prevert.html`) et les
+  3 pages hub compétences (`skills.html`, `technical.html`, `human.html`,
+  ces 3 dernières propres, rien à signaler). Répétitions trouvées, mises en
+  `.todo-list` caché directement dans chaque page concernée (pas corrigées,
+  ce sont des reformulations de phrase à confirmer avant de toucher au
+  texte) :
+  - `paris-saclay.html` : "car... mais aussi car" dans la même phrase (même
+    défaut que celui déjà corrigé sur api.html/resolution-problemes.html),
+    plus "grâce à" répété 3 fois sur la page.
+  - `iscod.html` : "mais aussi" répété 3 fois sur une page courte.
+  - `vilgenis.html` : deux phrases-clés consécutives suivent la même
+    structure "j'ai choisi X car Y".
+  - `phygital-factory.html` : trois tournures quasi identiques pour "j'ai
+    commencé" en 2 phrases.
+  Aucune faute de syntaxe (HTML) ni nouvelle incohérence logique trouvée par
+  ailleurs. Sanity check complet : les 31 pages répondent normalement, tous
+  les nouveaux todos cachés sont bien en `display:none`. Grille
+  d'évaluation : aucun nouvel écart trouvé depuis l'analyse du même jour
+  (voir plus haut) — les 2 écarts réels restent `realisations.html`
+  (descriptif visible) et `autonomie.html` (anecdote manquante), tous deux
+  déjà en todo caché.
 
 ---
 
