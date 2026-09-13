@@ -21,7 +21,7 @@
   if (window.matchMedia("(hover: none)").matches) return;
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-  const MAX_X = -28;
+  const MAX_X = -14;
   const MAX_Y = -32;
   const FLAT = "rotateX(0deg) rotateY(0deg)";
 
@@ -82,6 +82,11 @@
   }
 
   scene.addEventListener("mousemove", (event) => {
+    // Retire la transition plus longue posée par mouseleave (voir plus bas) :
+    // pendant un survol actif, on veut un suivi réactif de la souris, pas un
+    // ralenti de 0,6s à chaque petit mouvement.
+    stage.classList.remove("is-settling");
+
     const hovered = findTowerAt(event.clientX, event.clientY);
 
     if (hovered) {
@@ -94,8 +99,11 @@
     // La zone de référence est volontairement plus grande que la scène
     // visible : le curseur doit s'en approcher franchement du bord pour
     // atteindre l'inclinaison maximale, ce qui adoucit la transition au lieu
-    // de basculer brutalement dès qu'on s'approche du bord réel.
-    const REFERENCE_SCALE = 1.8;
+    // de basculer brutalement dès qu'on s'approche du bord réel. Agrandie
+    // encore (1.8 -> 2.6) pour que l'inclinaison reste modeste même pile au
+    // bord de la scène - la sortie de souris (mouseleave) est ainsi un plus
+    // petit saut d'angle, donc moins abrupte.
+    const REFERENCE_SCALE = 2.6;
     const rect = scene.getBoundingClientRect();
     const cx = rect.left + rect.width / 2;
     const cy = rect.top + rect.height / 2;
@@ -110,6 +118,11 @@
 
   scene.addEventListener("mouseleave", () => {
     setActiveTower(null);
+    // Transition plus longue et plus douce (voir CSS .is-settling) pour ce
+    // seul retour à plat en sortant la souris - la transition par défaut
+    // (0,35s) reste utilisée pendant le suivi actif, sinon l'inclinaison
+    // semblerait molle en la suivant du regard.
+    stage.classList.add("is-settling");
     stage.style.transform = FLAT;
   });
 
