@@ -246,16 +246,47 @@
             </li>
           </ol>
 
-          <p class="todo-label">À compléter</p>
+          <div class="merge-diagram">
+            <p class="diagram-title">Schéma — Fusion des lignes en doublon</p>
+            <div class="merge-scene">
+              <div class="merge-layout">
+                <div class="merge-stack">
+                  <div class="merge-row" style="--i: 2">
+                    <span class="merge-row-id">ID 1042 · Mars</span>
+                    <span class="merge-row-go">120 Go</span>
+                  </div>
+                  <div class="merge-row" style="--i: 1">
+                    <span class="merge-row-id">ID 1042 · Mars</span>
+                    <span class="merge-row-go">85 Go</span>
+                  </div>
+                  <div class="merge-row" style="--i: 0">
+                    <span class="merge-row-id">ID 1042 · Mars</span>
+                    <span class="merge-row-go">40 Go</span>
+                  </div>
+                </div>
 
-          <ul class="todo-list">
-            <li>
-              Schéma à ajouter ici : un visuel avant/après montrant 2-3 lignes
-              source partageant le même identifiant et le même mois, fusionnées
-              en une seule ligne avec les Go additionnés, illustrerait l'étape
-              "Fusion des lignes en doublon" plus clairement qu'en texte.
-            </li>
-          </ul>
+                <div class="merge-arrow-group">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M4 12h13M12 5l7 7-7 7"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span class="merge-arrow-label"
+                    >Même identifiant, même mois</span
+                  >
+                </div>
+
+                <div class="merge-result">
+                  <span class="merge-row-id">ID 1042 · Mars</span>
+                  <span class="merge-row-go">245 Go</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <h2 id="acteurs">Les acteurs</h2>
 

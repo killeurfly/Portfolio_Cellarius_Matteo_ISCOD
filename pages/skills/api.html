@@ -187,17 +187,77 @@
             </li>
           </ul>
 
-          <p class="todo-label">À compléter</p>
+          <div class="dispatcher-diagram">
+            <p class="diagram-title">Schéma — Principe du dispatcher</p>
+            <div class="dispatcher-scene">
+              <div class="dispatcher-flow dispatcher-flow--flat">
+                <div class="flow-node" data-term="requete-commande">
+                  <div class="flow-box">
+                    <span class="flow-face flow-top"></span>
+                    <span class="flow-face flow-front">📨</span>
+                    <span class="flow-face flow-side"></span>
+                  </div>
+                  <span class="flow-label"
+                    >Requête entrante<span class="flow-sub"
+                      >Identifiant transporteur dans le fichier</span
+                    ></span
+                  >
+                </div>
 
-          <ul class="todo-list">
-            <li>
-              Schéma à ajouter ici : le principe du dispatcher (requête entrante
-              avec identifiant transporteur → lookup en base de données →
-              routage vers l'API GLS / Géodis / Schenker) est expliqué deux fois
-              en prose sur cette page ; un petit diagramme de flux clarifierait
-              le concept d'un coup d'œil.
-            </li>
-          </ul>
+                <span class="flow-arrow" aria-hidden="true">→</span>
+
+                <div
+                  class="flow-node flow-node--dispatcher"
+                  data-term="dispatcher"
+                >
+                  <div class="flow-box">
+                    <span class="flow-face flow-top"></span>
+                    <span class="flow-face flow-front">🧭</span>
+                    <span class="flow-face flow-side"></span>
+                  </div>
+                  <span class="flow-label"
+                    >Dispatcher<span class="flow-sub"
+                      >Lecture de l'identifiant dans le fichier reçu</span
+                    ></span
+                  >
+                </div>
+
+                <span class="flow-arrow" aria-hidden="true">→</span>
+
+                <div class="flow-fork">
+                  <div class="flow-node" data-term="api-gls">
+                    <div class="flow-box flow-box--small">
+                      <span class="flow-face flow-top"></span>
+                      <span class="flow-face flow-front">🏷️</span>
+                      <span class="flow-face flow-side"></span>
+                    </div>
+                    <span class="flow-label">API GLS</span>
+                  </div>
+
+                  <div class="flow-node" data-term="api-geodis">
+                    <div class="flow-box flow-box--small">
+                      <span class="flow-face flow-top"></span>
+                      <span class="flow-face flow-front">🏷️</span>
+                      <span class="flow-face flow-side"></span>
+                    </div>
+                    <span class="flow-label">API Géodis</span>
+                  </div>
+
+                  <div
+                    class="flow-node flow-node--schenker"
+                    data-term="api-schenker"
+                  >
+                    <div class="flow-box flow-box--small">
+                      <span class="flow-face flow-top"></span>
+                      <span class="flow-face flow-front">🏷️</span>
+                      <span class="flow-face flow-side"></span>
+                    </div>
+                    <span class="flow-label">API Schenker</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <p>
             Je vais maintenant parler de quelques anecdotes en lien avec les API
@@ -208,16 +268,16 @@
             Dans l'ERP Navision, pour l'annulation d'étiquette, Schenker et GLS
             passaient par le même bouton, donc l'
             <span class="term" data-term="endpoint">endpoint</span>
-            API devait être le
-            même : j'ai donc dû réaliser, pour le développement de
-            <a href="/pages/realisations/realisation-1.html">l'API GLS</a>,
-            une logique de « dispatch » afin d'annuler vers le bon transporteur.
+            API devait être le même : j'ai donc dû réaliser, pour le
+            développement de
+            <a href="/pages/realisations/realisation-1.html">l'API GLS</a>, une
+            logique de « dispatch » afin d'annuler vers le bon transporteur.
             Mais sur cet envoi de requête API, je n'avais que l'identifiant de
             la commande ; j'ai donc dû mettre en place dans mon « dispatcher »
             une requête en base de données qui permettait la récupération du
-            transporteur associé à l'identifiant. Tout cela était nécessaire
-            car on voulait modifier le moins possible les processus de Navision
-            pour les utilisateurs. Ce « dispatch » a très bien fonctionné dès son
+            transporteur associé à l'identifiant. Tout cela était nécessaire car
+            on voulait modifier le moins possible les processus de Navision pour
+            les utilisateurs. Ce « dispatch » a très bien fonctionné dès son
             implémentation et a permis lors de
             <a href="/pages/realisations/realisation-2.html"
               >l'intégration de l'API Géodis</a
@@ -236,13 +296,13 @@
             requête API puis j'ai demandé aux équipes techniques de Géodis
             lesquels étaient nécessaires contractuellement. Un des champs
             obligatoires était le nom du contact de la société destinataire du
-            colis qui pouvait ne pas être présent ; j'ai donc pu communiquer avec
-            nos équipes commerciales afin de savoir si l'on pouvait transmettre
-            le nom de la société à la place. Cela a été accepté et le problème a
-            donc pu être réglé. L'étude des champs obligatoires pour l'API de
-            Géodis a permis une plus grande maîtrise de celle-ci et ainsi de
-            réagir plus rapidement lors du développement des différents envois
-            avec l'API (Envoi Europe ou National).
+            colis qui pouvait ne pas être présent ; j'ai donc pu communiquer
+            avec nos équipes commerciales afin de savoir si l'on pouvait
+            transmettre le nom de la société à la place. Cela a été accepté et
+            le problème a donc pu être réglé. L'étude des champs obligatoires
+            pour l'API de Géodis a permis une plus grande maîtrise de celle-ci
+            et ainsi de réagir plus rapidement lors du développement des
+            différents envois avec l'API (Envoi Europe ou National).
           </p>
 
           <h2 id="autocritique">Mon autocritique</h2>
@@ -258,8 +318,8 @@
           <p>
             J'ai encore des choses à apprendre pour ce qui est de l'utilisation
             plus avancée des API car je n'ai pas encore utilisé d'API SOAP ou
-            RPC, tout simplement parce que ces API ne convenaient pas au projet que
-            j'ai pu mettre en place. Je pense cependant que dans l'avenir il
+            RPC, tout simplement parce que ces API ne convenaient pas au projet
+            que j'ai pu mettre en place. Je pense cependant que dans l'avenir il
             serait intéressant de développer ce type d'API dans certains projets
             afin de pouvoir faire évoluer mes compétences sur les API en
             général.
@@ -274,18 +334,17 @@
           <p>
             Grâce aux projets sur lesquels j'ai travaillé, j'ai découvert et
             développé mes compétences sur les API de façon très rapide ; les
-            multiples projets qui en mobilisaient m'y ont beaucoup aidé,
-            et cette progression m'a appris que la mise en place
-            d'API est cruciale pour le fonctionnement efficace d'un « Backend » de
-            projet (partie d'une application, côté serveur, qui traite les
-            données et la logique métier) ;
-            j'ai pu me rendre compte de ce point lors de l'étude des
-            documentations d'API transporteurs qui comportaient beaucoup de
-            paramètres, mettant en lumière toutes les possibilités des API.
-            Cette compétence me sera très utile car un grand nombre de projets
-            sur lesquels j'ai travaillé et sur lesquels je travaillerai se
-            basent sur les API pour leur fonctionnement interne, mais cela m'est
-            moins utile lors du développement d'applications lourdes.
+            multiples projets qui en mobilisaient m'y ont beaucoup aidé, et
+            cette progression m'a appris que la mise en place d'API est cruciale
+            pour le fonctionnement efficace d'un « Backend » de projet (partie
+            d'une application, côté serveur, qui traite les données et la
+            logique métier) ; j'ai pu me rendre compte de ce point lors de
+            l'étude des documentations d'API transporteurs qui comportaient
+            beaucoup de paramètres, mettant en lumière toutes les possibilités
+            des API. Cette compétence me sera très utile car un grand nombre de
+            projets sur lesquels j'ai travaillé et sur lesquels je travaillerai
+            se basent sur les API pour leur fonctionnement interne, mais cela
+            m'est moins utile lors du développement d'applications lourdes.
           </p>
 
           <p>
@@ -314,12 +373,12 @@
             développement de l'outil de suivi des commandes expédiées via l'API
             GLS, qui est une évolution déjà anticipée. Par la suite, lors de
             futures intégrations de transporteur, je ferai évoluer le
-            <span class="term" data-term="dispatcher">dispatcher</span>, devenu un point crucial du fonctionnement de l'API.
-            Enfin, dans le cadre personnel, je compte développer ma propre API
-            de domotique, dans le but de mettre en pratique la conception d'API
-            et pas seulement son intégration. Pour cela, je compte suivre la
-            spécification OpenAPI (Swagger), car c'est la norme de référence
-            pour la conception d'API.
+            <span class="term" data-term="dispatcher">dispatcher</span>, devenu
+            un point crucial du fonctionnement de l'API. Enfin, dans le cadre
+            personnel, je compte développer ma propre API de domotique, dans le
+            but de mettre en pratique la conception d'API et pas seulement son
+            intégration. Pour cela, je compte suivre la spécification OpenAPI
+            (Swagger), car c'est la norme de référence pour la conception d'API.
           </p>
 
           <h2 id="realisations">Réalisations liées</h2>

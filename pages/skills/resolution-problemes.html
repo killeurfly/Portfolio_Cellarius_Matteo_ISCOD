@@ -167,16 +167,50 @@
             traitées (300 à 400 commandes journalières).
           </p>
 
-          <p class="todo-label">À compléter</p>
+          <div class="beforeafter-diagram">
+            <p class="diagram-title">
+              Schéma — Avant / après le problème de performance
+            </p>
+            <div class="ba-split">
+              <div
+                class="ba-panel ba-panel--before"
+                data-term="chargement-memoire"
+              >
+                <span class="ba-panel-title">❌ Avant</span>
+                <div class="ba-stack-3d">
+                  <div class="ba-chip" style="--i: 0"></div>
+                  <div class="ba-chip" style="--i: 1"></div>
+                  <div class="ba-chip" style="--i: 2"></div>
+                  <div class="ba-chip" style="--i: 3"></div>
+                  <div class="ba-chip" style="--i: 4"></div>
+                  <span class="ba-burst" aria-hidden="true">⚡</span>
+                </div>
+                <span class="ba-caption"
+                  >300 à 400 commandes chargées d'un seul coup</span
+                >
+                <span class="ba-result ba-result--bad">Timeout</span>
+              </div>
 
-          <ul class="todo-list">
-            <li>
-              Schéma à ajouter ici : un avant/après (chargement complet en un
-              bloc → timeout, vs chargement petit à petit) illustrerait le
-              problème de performance et sa résolution plus clairement qu'en
-              prose seule.
-            </li>
-          </ul>
+              <span class="ba-divider" aria-hidden="true">VS</span>
+
+              <div class="ba-panel ba-panel--after" data-term="fetch-sql">
+                <span class="ba-panel-title">✅ Après</span>
+                <div class="ba-row-3d">
+                  <div class="ba-mini"></div>
+                  <span class="ba-mini-arrow">→</span>
+                  <div class="ba-mini"></div>
+                  <span class="ba-mini-arrow">→</span>
+                  <div class="ba-mini"></div>
+                  <span class="ba-mini-arrow">→</span>
+                  <div class="ba-mini"></div>
+                </div>
+                <span class="ba-caption"
+                  >Les commandes sont chargées petit à petit</span
+                >
+                <span class="ba-result ba-result--good">Ça fonctionne</span>
+              </div>
+            </div>
+          </div>
 
           <p>
             Également lors du développement de la
@@ -314,6 +348,8 @@
 
     <script src="/assets/js/navbar.js"></script>
     <script src="/assets/js/page-toc.js"></script>
+    <script src="/assets/js/term-definitions.js"></script>
+    <script src="/assets/js/term-tooltip.js"></script>
     <!-- Cloudflare Web Analytics -->
     <!-- prettier-ignore -->
     <script

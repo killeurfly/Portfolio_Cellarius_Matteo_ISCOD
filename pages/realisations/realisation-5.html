@@ -217,17 +217,93 @@
             </li>
           </ol>
 
-          <p class="todo-label">À compléter</p>
+          <div class="pipeline-diagram">
+            <p class="diagram-title">Schéma — Les deux macros, Outlook puis Excel</p>
+            <div class="pipeline-scene">
+              <div class="pipeline-stage">
+                <span class="pipeline-stage-name">Macro Outlook</span>
+                <div class="pipeline-row">
+                  <div class="pnode">
+                    <div class="pnode-box">
+                      <span class="pnode-face pnode-top"></span>
+                      <span class="pnode-face pnode-front">📎</span>
+                      <span class="pnode-face pnode-side"></span>
+                    </div>
+                    <span class="pnode-label"
+                      >Pièces jointes des mails clients</span
+                    >
+                  </div>
 
-          <ul class="todo-list">
-            <li>
-              Schéma à ajouter ici : un diagramme de flux en 2 parties (macro
-              Outlook : récupération des pièces jointes → répertoire local ;
-              macro Excel : tri des fichiers → dictionnaire clé/date →
-              fichier de report mensuel consolidé) clarifierait l'architecture
-              de la macro, décrite en plusieurs étapes de texte séparées.
-            </li>
-          </ul>
+                  <span class="pnode-arrow" aria-hidden="true">→</span>
+
+                  <div class="pnode">
+                    <div class="pnode-box">
+                      <span class="pnode-face pnode-top"></span>
+                      <span class="pnode-face pnode-front">📁</span>
+                      <span class="pnode-face pnode-side"></span>
+                    </div>
+                    <span class="pnode-label">Répertoire local</span>
+                  </div>
+                </div>
+              </div>
+
+              <svg
+                class="pipeline-chute"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 4v13M5 12l7 7 7-7"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <div class="pipeline-stage pipeline-stage--excel">
+                <span class="pipeline-stage-name">Macro Excel</span>
+                <div class="pipeline-row">
+                  <div class="pnode">
+                    <div class="pnode-box">
+                      <span class="pnode-face pnode-top"></span>
+                      <span class="pnode-face pnode-front">📂</span>
+                      <span class="pnode-face pnode-side"></span>
+                    </div>
+                    <span class="pnode-label"
+                      >Dates et consommations extraites des fichiers</span
+                    >
+                  </div>
+
+                  <span class="pnode-arrow" aria-hidden="true">→</span>
+
+                  <div class="pnode pnode--wide">
+                    <div class="pnode-box">
+                      <span class="pnode-face pnode-top"></span>
+                      <span class="pnode-face pnode-front">🔁</span>
+                      <span class="pnode-face pnode-side"></span>
+                    </div>
+                    <span class="pnode-label"
+                      >Dictionnaire clé/date : la nouvelle valeur remplace
+                      l'ancienne si la date existe déjà</span
+                    >
+                  </div>
+
+                  <span class="pnode-arrow" aria-hidden="true">→</span>
+
+                  <div class="pnode">
+                    <div class="pnode-box">
+                      <span class="pnode-face pnode-top"></span>
+                      <span class="pnode-face pnode-front">📊</span>
+                      <span class="pnode-face pnode-side"></span>
+                    </div>
+                    <span class="pnode-label">Report mensuel consolidé</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <h2 id="acteurs">Les acteurs</h2>
 

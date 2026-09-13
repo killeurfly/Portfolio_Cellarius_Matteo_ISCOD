@@ -318,16 +318,68 @@
             </li>
           </ol>
 
-          <p class="todo-label">À compléter</p>
+          <div class="dispatcher-diagram">
+            <p class="diagram-title">Schéma — Mise en place du dispatcher</p>
+            <div class="dispatcher-scene">
+              <div class="dispatcher-flow dispatcher-flow--flat">
+                <div class="flow-node" data-term="requete-impression">
+                  <div class="flow-box">
+                    <span class="flow-face flow-top"></span>
+                    <span class="flow-face flow-front">📨</span>
+                    <span class="flow-face flow-side"></span>
+                  </div>
+                  <span class="flow-label"
+                    >Requête d'impression<span class="flow-sub"
+                      >GLS ou Schenker</span
+                    ></span
+                  >
+                </div>
 
-          <ul class="todo-list">
-            <li>
-              Schéma à ajouter ici : un diagramme de flux illustrant l'étape
-              "Mise en place d'un dispatcher" (requête → identification du
-              transporteur dans Navision → redirection vers la bonne API)
-              rendrait ce mécanisme central plus lisible qu'en prose seule.
-            </li>
-          </ul>
+                <span class="flow-arrow" aria-hidden="true">→</span>
+
+                <div
+                  class="flow-node flow-node--dispatcher"
+                  data-term="dispatcher"
+                >
+                  <div class="flow-box">
+                    <span class="flow-face flow-top"></span>
+                    <span class="flow-face flow-front">🧭</span>
+                    <span class="flow-face flow-side"></span>
+                  </div>
+                  <span class="flow-label"
+                    >Dispatcher<span class="flow-sub"
+                      >Navision : identification du transporteur</span
+                    ></span
+                  >
+                </div>
+
+                <span class="flow-arrow" aria-hidden="true">→</span>
+
+                <div class="flow-fork">
+                  <div class="flow-node" data-term="api-gls">
+                    <div class="flow-box flow-box--small">
+                      <span class="flow-face flow-top"></span>
+                      <span class="flow-face flow-front">🏷️</span>
+                      <span class="flow-face flow-side"></span>
+                    </div>
+                    <span class="flow-label">API GLS</span>
+                  </div>
+
+                  <div
+                    class="flow-node flow-node--schenker"
+                    data-term="api-schenker"
+                  >
+                    <div class="flow-box flow-box--small">
+                      <span class="flow-face flow-top"></span>
+                      <span class="flow-face flow-front">🏷️</span>
+                      <span class="flow-face flow-side"></span>
+                    </div>
+                    <span class="flow-label">API Schenker</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <h2 id="acteurs">Les acteurs</h2>
 

@@ -1090,7 +1090,13 @@ main {
 
 .term:hover .term-tooltip,
 .term:focus .term-tooltip,
-.term.open .term-tooltip {
+.term.open .term-tooltip,
+.flow-node:hover .term-tooltip,
+.flow-node:focus-visible .term-tooltip,
+.flow-node.open .term-tooltip,
+.ba-panel:hover .term-tooltip,
+.ba-panel:focus-visible .term-tooltip,
+.ba-panel.open .term-tooltip {
   opacity: 1;
 
   visibility: visible;
@@ -1415,6 +1421,1446 @@ main {
 
 .detail-card .todo-label {
   margin-top: 10px;
+}
+
+/* ============= SCHEMA DISPATCHER (realisation-1) ============= */
+/* Petit diagramme de flux en 3D légère (inclinaison fixe, pas d'interaction
+   souris) illustrant l'étape "Mise en place d'un dispatcher" : contrairement
+   aux schémas comparatifs de skills.html/realisations.html, il n'y a rien à
+   comparer ici, juste une mécanique à rendre lisible d'un coup d'œil - une
+   inclinaison statique suffit. Au survol d'un modèle, on grossit et
+   éclaircit la boîte (jamais sa rotation/position) : un agrandissement
+   centré ne fait que dilater sa zone de survol vers l'extérieur, le curseur
+   reste dedans du début à la fin - contrairement à une rotation, qui change
+   la silhouette en cours de route et peut faire sortir le curseur de la
+   zone, d'où le clignotement déjà rencontré ailleurs sur ce site avec ce
+   genre d'effet. */
+
+.diagram-title {
+  margin: 0 0 22px;
+
+  color: #93c5fd;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.03em;
+
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+.dispatcher-diagram {
+  width: 100%;
+
+  max-width: 620px;
+
+  margin: 30px auto 40px;
+
+  padding: 30px 20px 20px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 20px;
+}
+
+.dispatcher-scene {
+  margin-top: 18px;
+
+  perspective: 900px;
+}
+
+.dispatcher-flow {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+
+  transform-style: preserve-3d;
+
+  transform: rotateX(16deg);
+}
+
+/* Variante à plat pour api.html : contrairement à realisation-1, ce schéma
+   reste posé bien droit, sans inclinaison de la scène (les modèles gardent
+   leur propre relief via leurs faces, voir .flow-box). */
+.dispatcher-flow--flat {
+  transform: none;
+}
+
+.flow-fork {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 22px;
+}
+
+.flow-node {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 10px;
+
+  width: 118px;
+
+  cursor: help;
+
+  --flow-front: #60a5fa;
+
+  --flow-top: #bfdbfe;
+
+  --flow-side: #2563eb;
+}
+
+.flow-node--dispatcher {
+  --flow-front: #22d3ee;
+
+  --flow-top: #a5f3fc;
+
+  --flow-side: #0e7490;
+}
+
+.flow-node--schenker {
+  --flow-front: #a855f7;
+
+  --flow-top: #e9d5ff;
+
+  --flow-side: #6b21a8;
+}
+
+.flow-box {
+  --fw: 56px;
+
+  --fd: 14px;
+
+  --fh: 56px;
+
+  position: relative;
+
+  width: var(--fw);
+
+  height: var(--fh);
+
+  transform-style: preserve-3d;
+
+  transform-origin: center bottom;
+
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+.flow-node:hover .flow-box,
+.flow-node:focus-visible .flow-box,
+.flow-node.open .flow-box {
+  transform: scale(1.22);
+
+  filter: brightness(1.25) drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
+}
+
+.flow-box--small {
+  --fw: 44px;
+
+  --fh: 44px;
+}
+
+.flow-face {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+}
+
+.flow-front {
+  width: var(--fw);
+
+  height: 100%;
+
+  background: var(--flow-front);
+
+  transform: translateZ(calc(var(--fd) / 2));
+
+  border-radius: 8px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 1.3rem;
+}
+
+.flow-top {
+  width: var(--fw);
+
+  height: var(--fd);
+
+  background: var(--flow-top);
+
+  transform-origin: top center;
+
+  transform: translateZ(calc(var(--fd) / 2)) rotateX(90deg);
+
+  border-radius: 8px;
+}
+
+.flow-side {
+  width: var(--fd);
+
+  height: 100%;
+
+  left: 100%;
+
+  background: var(--flow-side);
+
+  transform-origin: left center;
+
+  transform: translateZ(calc(var(--fd) / 2)) rotateY(90deg);
+}
+
+.flow-label {
+  color: #e2e8f0;
+
+  font-size: 0.82rem;
+
+  font-weight: 600;
+
+  text-align: center;
+
+  line-height: 1.35;
+}
+
+.flow-sub {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #94a3b8;
+
+  font-size: 0.72rem;
+
+  font-weight: 400;
+}
+
+.flow-arrow {
+  align-self: center;
+
+  margin-bottom: 30px;
+
+  color: #64748b;
+
+  font-size: 1.4rem;
+
+  transform: translateZ(20px);
+}
+
+@media (max-width: 640px) {
+  .dispatcher-flow {
+    flex-direction: column;
+
+    transform: none;
+  }
+
+  .flow-fork {
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .flow-arrow {
+    margin-bottom: 0;
+
+    transform: rotate(90deg);
+  }
+
+  .flow-box,
+  .flow-face {
+    transform: none !important;
+  }
+
+  .flow-top,
+  .flow-side {
+    display: none;
+  }
+
+  .flow-front {
+    position: static;
+
+    width: 56px;
+
+    height: 56px;
+
+    margin: 0 auto;
+  }
+}
+
+/* ============= SCHEMA FUSION (realisation-4) ============= */
+/* Deuxième schéma 3D du site, volontairement différent du dispatcher
+   (realisation-1) : pas de boîtes-cubes reliées par des flèches, mais une
+   pile de lignes de tableur légèrement éventée en profondeur (translateZ +
+   décalage vertical), qui se rejoignent en une seule ligne surlignée -
+   rendu plus proche d'un "avant/après" de fusion de données que d'un flux. */
+
+.merge-diagram {
+  width: 100%;
+
+  max-width: 620px;
+
+  margin: 30px auto 40px;
+
+  padding: 30px 20px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 20px;
+}
+
+.merge-scene {
+  /* Marge propre à ce schéma (contrairement au dispatcher) : l'inclinaison
+     3D de la pile fait remonter visuellement sa carte du dessus, qui
+     talonnait le titre sans cet espace. */
+  margin-top: 20px;
+
+  perspective: 800px;
+}
+
+.merge-layout {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 24px;
+}
+
+.merge-stack {
+  position: relative;
+
+  width: 150px;
+
+  height: 128px;
+
+  transform-style: preserve-3d;
+
+  transform: rotateX(24deg) rotateY(18deg);
+}
+
+.merge-row {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 150px;
+
+  height: 44px;
+
+  padding: 6px 12px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 2px;
+
+  background: linear-gradient(135deg, #60a5fa, #2563eb);
+
+  border-radius: 8px;
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+
+  transform: translateY(calc(var(--i) * 26px)) translateZ(calc(var(--i) * -22px));
+}
+
+.merge-row-id {
+  color: #dbeafe;
+
+  font-size: 0.72rem;
+
+  font-weight: 600;
+}
+
+.merge-row-go {
+  color: white;
+
+  font-size: 0.95rem;
+
+  font-weight: 700;
+}
+
+.merge-arrow-group {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 4px;
+
+  color: #64748b;
+}
+
+.merge-arrow-group svg {
+  width: 30px;
+
+  height: 30px;
+}
+
+.merge-arrow-label {
+  font-size: 0.7rem;
+
+  text-align: center;
+
+  max-width: 90px;
+}
+
+.merge-result {
+  width: 150px;
+
+  padding: 12px 14px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  background: linear-gradient(135deg, #22d3ee, #0e7490);
+
+  border-radius: 10px;
+
+  box-shadow: 0 10px 24px rgba(34, 211, 238, 0.3);
+}
+
+.merge-result .merge-row-id {
+  color: #cffafe;
+}
+
+.merge-result .merge-row-go {
+  font-size: 1.15rem;
+}
+
+@media (max-width: 640px) {
+  .merge-layout {
+    flex-direction: column;
+
+    gap: 30px;
+  }
+
+  .merge-arrow-group svg {
+    transform: rotate(90deg);
+  }
+
+  .merge-stack {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    transform: none;
+
+    height: auto;
+  }
+
+  .merge-row {
+    position: static;
+
+    transform: none !important;
+  }
+}
+
+/* ============= SCHEMA PIPELINE (realisation-5) ============= */
+/* Troisième schéma 3D du site, forme différente des deux précédentes : deux
+   étages empilés verticalement (un par macro) reliés par une chute, chacun
+   composé de petits modèles 3D individuels portant CHACUN sa propre légende
+   - après un premier essai où 2-3 icônes cohabitaient dans une seule barre
+   de couleur avec une légende commune en dessous (jugé confus, impossible
+   de savoir quelle icône correspondait à quel mot), chaque étape a
+   maintenant son propre modèle et son propre texte, sur le même principe
+   que le schéma dispatcher (mais la disposition en deux étages verticaux
+   reste la différence de forme avec celui-ci). */
+
+.pipeline-diagram {
+  width: 100%;
+
+  max-width: 620px;
+
+  margin: 30px auto 40px;
+
+  padding: 30px 20px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 20px;
+}
+
+.pipeline-scene {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 10px;
+
+  perspective: 900px;
+}
+
+.pipeline-stage {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+.pipeline-stage-name {
+  color: #93c5fd;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.03em;
+}
+
+.pipeline-stage--excel .pipeline-stage-name {
+  color: #d8b4fe;
+}
+
+.pipeline-row {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  transform-style: preserve-3d;
+
+  transform: rotateX(14deg);
+}
+
+.pnode {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 10px;
+
+  width: 96px;
+}
+
+.pnode--wide {
+  width: 130px;
+}
+
+.pnode-box {
+  --pw: 50px;
+
+  --pd: 12px;
+
+  --ph: 50px;
+
+  position: relative;
+
+  width: var(--pw);
+
+  height: var(--ph);
+
+  transform-style: preserve-3d;
+}
+
+.pnode-face {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+}
+
+.pnode-front {
+  width: var(--pw);
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: linear-gradient(180deg, var(--pnode-front), var(--pnode-front-dark));
+
+  transform: translateZ(calc(var(--pd) / 2));
+
+  border-radius: 10px;
+
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+
+  font-size: 1.4rem;
+}
+
+.pnode-top {
+  width: var(--pw);
+
+  height: var(--pd);
+
+  background: var(--pnode-top);
+
+  transform-origin: top center;
+
+  transform: translateZ(calc(var(--pd) / 2)) rotateX(90deg);
+
+  border-radius: 10px;
+}
+
+.pnode-side {
+  width: var(--pd);
+
+  height: 100%;
+
+  left: 100%;
+
+  background: var(--pnode-side);
+
+  transform-origin: left center;
+
+  transform: translateZ(calc(var(--pd) / 2)) rotateY(90deg);
+}
+
+.pipeline-stage:first-child .pnode-box {
+  --pnode-front: #60a5fa;
+
+  --pnode-front-dark: #2563eb;
+
+  --pnode-top: #93c5fd;
+
+  --pnode-side: #1d4ed8;
+}
+
+.pipeline-stage--excel .pnode-box {
+  --pnode-front: #a855f7;
+
+  --pnode-front-dark: #7e22ce;
+
+  --pnode-top: #c084fc;
+
+  --pnode-side: #6b21a8;
+}
+
+.pnode-label {
+  color: #e2e8f0;
+
+  font-size: 0.74rem;
+
+  font-weight: 600;
+
+  text-align: center;
+
+  line-height: 1.3;
+}
+
+.pnode-arrow {
+  align-self: center;
+
+  margin-top: 20px;
+
+  color: #64748b;
+
+  font-size: 1.2rem;
+}
+
+.pipeline-chute {
+  width: 26px;
+
+  height: 26px;
+
+  color: #64748b;
+}
+
+@media (max-width: 640px) {
+  .pipeline-row {
+    flex-direction: column;
+
+    transform: none;
+  }
+
+  .pnode-arrow {
+    margin-top: 0;
+
+    transform: rotate(90deg);
+  }
+
+  .pnode-box,
+  .pnode-face {
+    transform: none !important;
+  }
+
+  .pnode-top,
+  .pnode-side {
+    display: none;
+  }
+
+  .pnode-front {
+    position: static;
+
+    border-radius: 8px;
+  }
+}
+
+/* ============= SCHEMA COMPARATIF (automatisation.html) ============= */
+/* Quatrième schéma 3D du site, encore une forme différente : ici, la donnée
+   à représenter est un vrai tableau qualitatif (3 outils x 4 critères), pas
+   un flux ni une fusion - un tableau comparatif classique (une ligne par
+   critère, pas une carte par outil qui aurait répété les 4 critères trois
+   fois) est donc la structure la plus lisible. Le "un peu de 3D" reste
+   présent mais localisé aux 3 badges d'en-tête, pas étalé sur tout le
+   tableau : forcer de la 3D sur des données tabulaires aurait nui à la
+   lisibilité, la vraie leçon de ce fil de schémas. */
+
+.compare-diagram {
+  width: 100%;
+
+  max-width: 620px;
+
+  margin: 30px auto 40px;
+
+  padding: 30px 20px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 20px;
+}
+
+.compare-scroll {
+  margin-top: 18px;
+
+  overflow-x: auto;
+}
+
+.compare-table {
+  display: grid;
+
+  grid-template-columns: 108px repeat(3, 1fr);
+
+  gap: 4px;
+
+  min-width: 480px;
+}
+
+.compare-cell {
+  display: flex;
+
+  align-items: center;
+
+  padding: 10px 8px;
+
+  font-size: 0.78rem;
+
+  color: #cbd5e1;
+}
+
+.compare-cell--crit {
+  position: sticky;
+
+  left: 0;
+
+  /* Repère de lecture : sans ce fond opaque et cette position figée, faire
+     défiler le tableau horizontalement (mobile) fait disparaître le nom du
+     critère de la ligne regardée - on perdrait le repère de ce qu'on
+     compare exactement. */
+  background: #141b2e;
+
+  color: #94a3b8;
+
+  font-weight: 600;
+}
+
+.compare-head {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 4px 8px 12px;
+}
+
+.chead-box {
+  --pw: 40px;
+
+  --pd: 10px;
+
+  --ph: 40px;
+
+  position: relative;
+
+  width: var(--pw);
+
+  height: var(--ph);
+
+  transform-style: preserve-3d;
+
+  transform: rotateX(18deg);
+}
+
+.chead-face {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+}
+
+.chead-front {
+  width: var(--pw);
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: linear-gradient(180deg, var(--chead-front), var(--chead-front-dark));
+
+  transform: translateZ(calc(var(--pd) / 2));
+
+  border-radius: 9px;
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+
+  font-size: 1.1rem;
+
+  font-weight: 700;
+
+  color: white;
+}
+
+.chead-top {
+  width: var(--pw);
+
+  height: var(--pd);
+
+  background: var(--chead-top);
+
+  transform-origin: top center;
+
+  transform: translateZ(calc(var(--pd) / 2)) rotateX(90deg);
+
+  border-radius: 9px;
+}
+
+.chead-side {
+  width: var(--pd);
+
+  height: 100%;
+
+  left: 100%;
+
+  background: var(--chead-side);
+
+  transform-origin: left center;
+
+  transform: translateZ(calc(var(--pd) / 2)) rotateY(90deg);
+}
+
+.compare-head--vba .chead-box {
+  --chead-front: #60a5fa;
+
+  --chead-front-dark: #2563eb;
+
+  --chead-top: #93c5fd;
+
+  --chead-side: #1d4ed8;
+}
+
+.compare-head--power .chead-box {
+  --chead-front: #a855f7;
+
+  --chead-front-dark: #7e22ce;
+
+  --chead-top: #d8b4fe;
+
+  --chead-side: #6b21a8;
+}
+
+.compare-head--python .chead-box {
+  --chead-front: #22d3ee;
+
+  --chead-front-dark: #0e7490;
+
+  --chead-top: #a5f3fc;
+
+  --chead-side: #0e7490;
+}
+
+.chead-label {
+  color: #e2e8f0;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  text-align: center;
+}
+
+.compare-dots {
+  display: flex;
+
+  gap: 4px;
+}
+
+.compare-dot {
+  width: 9px;
+
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.compare-dot.is-filled {
+  background: #60a5fa;
+}
+
+.compare-row-line {
+  grid-column: 1 / -1;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 640px) {
+  .chead-box {
+    transform: none;
+  }
+
+  .chead-face:not(.chead-front) {
+    display: none;
+  }
+
+  .chead-front {
+    position: static;
+  }
+}
+
+/* ============= SCHEMA ROADMAP (gestion-projet.html) ============= */
+/* Cinquième schéma 3D du site, encore une forme différente : une ligne
+   continue qui traverse 4 étapes numérotées (cadrage → cahier de test →
+   mise en production → hypercare), comme une frise/feuille de route -
+   contrairement au dispatcher (boîtes reliées par des flèches discrètes),
+   la continuité d'une seule ligne convient mieux à un déroulé chronologique
+   qu'à un routage. */
+
+.roadmap-diagram {
+  width: 100%;
+
+  max-width: 640px;
+
+  margin: 30px auto 40px;
+
+  padding: 30px 20px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 20px;
+}
+
+.roadmap-track {
+  position: relative;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 6px;
+
+  margin-top: 18px;
+}
+
+.roadmap-track::before {
+  content: "";
+
+  position: absolute;
+
+  top: 24px;
+
+  left: 24px;
+
+  right: 24px;
+
+  height: 3px;
+
+  background: linear-gradient(90deg, #60a5fa, #a855f7);
+
+  z-index: 0;
+}
+
+.roadmap-stop {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 10px;
+
+  flex: 1;
+}
+
+.stop-marker {
+  --pw: 48px;
+
+  --pd: 12px;
+
+  --ph: 48px;
+
+  position: relative;
+
+  width: var(--pw);
+
+  height: var(--ph);
+
+  transform-style: preserve-3d;
+}
+
+.stop-face {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+}
+
+.stop-front {
+  width: var(--pw);
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, #60a5fa var(--mix, 100%), #a855f7),
+    color-mix(in srgb, #2563eb var(--mix, 100%), #7e22ce)
+  );
+
+  transform: translateZ(calc(var(--pd) / 2));
+
+  border-radius: 50%;
+
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+
+  font-size: 1.1rem;
+
+  font-weight: 700;
+
+  color: white;
+}
+
+.stop-top {
+  width: var(--pw);
+
+  height: var(--pd);
+
+  background: rgba(255, 255, 255, 0.35);
+
+  transform-origin: top center;
+
+  transform: translateZ(calc(var(--pd) / 2)) rotateX(90deg);
+
+  border-radius: 50%;
+}
+
+.stop-side {
+  width: var(--pd);
+
+  height: 100%;
+
+  left: 100%;
+
+  background: rgba(0, 0, 0, 0.25);
+
+  transform-origin: left center;
+
+  transform: translateZ(calc(var(--pd) / 2)) rotateY(90deg);
+}
+
+.roadmap-stop:nth-child(2) .stop-front {
+  --mix: 75%;
+}
+
+.roadmap-stop:nth-child(3) .stop-front {
+  --mix: 50%;
+}
+
+.roadmap-stop:nth-child(4) .stop-front {
+  --mix: 25%;
+}
+
+.roadmap-stop:nth-child(5) .stop-front {
+  --mix: 0%;
+}
+
+.stop-label {
+  color: #e2e8f0;
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+
+  text-align: center;
+}
+
+.stop-sub {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #94a3b8;
+
+  font-size: 0.7rem;
+
+  font-weight: 400;
+
+  line-height: 1.3;
+}
+
+@media (max-width: 640px) {
+  .roadmap-track {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 26px;
+  }
+
+  .roadmap-track::before {
+    top: 0;
+
+    bottom: 0;
+
+    left: 23px;
+
+    right: auto;
+
+    width: 3px;
+
+    height: auto;
+
+    background: linear-gradient(180deg, #60a5fa, #a855f7);
+  }
+
+  .roadmap-stop {
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    width: 100%;
+
+    text-align: left;
+  }
+
+  .stop-label {
+    text-align: left;
+  }
+
+  .stop-marker,
+  .stop-face {
+    transform: none !important;
+  }
+
+  .stop-top,
+  .stop-side {
+    display: none;
+  }
+
+  .stop-front {
+    position: static;
+  }
+}
+
+/* ============= SCHEMA AVANT/APRES (resolution-problemes.html) ============= */
+/* Sixième schéma 3D du site, forme la plus contrastée de toutes : un vrai
+   split avant/après (pas un flux, pas un tableau) - à gauche une pile
+   surchargée qui casse (rouge, chaotique, en 3D empilée façon fusion mais
+   volontairement tassée et penchée), à droite une séquence calme de petits
+   blocs qui passent un par un (vert, ordonnée). Rouge/vert sortent
+   volontairement de la palette bleu/violet/cyan du site : ils codent ici un
+   état d'échec/réussite, un signal universel plus fort qu'une couleur de
+   marque sur ce cas précis. */
+
+.beforeafter-diagram {
+  width: 100%;
+
+  max-width: 640px;
+
+  margin: 30px auto 40px;
+
+  padding: 30px 20px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: 20px;
+}
+
+.ba-split {
+  display: flex;
+
+  align-items: stretch;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-top: 20px;
+}
+
+.ba-panel {
+  position: relative;
+
+  flex: 1;
+
+  max-width: 240px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 18px 14px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.02);
+
+  cursor: help;
+}
+
+.ba-panel--before {
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.ba-panel--after {
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.ba-panel-title {
+  font-size: 0.9rem;
+
+  font-weight: 700;
+}
+
+.ba-panel--before .ba-panel-title {
+  color: #f87171;
+}
+
+.ba-panel--after .ba-panel-title {
+  color: #4ade80;
+}
+
+.ba-divider {
+  align-self: center;
+
+  color: #64748b;
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+}
+
+.ba-stack-3d {
+  position: relative;
+
+  width: 90px;
+
+  height: 90px;
+
+  perspective: 500px;
+}
+
+.ba-chip {
+  position: absolute;
+
+  bottom: 0;
+
+  left: 50%;
+
+  width: 76px;
+
+  height: 15px;
+
+  border-radius: 5px;
+
+  background: linear-gradient(135deg, #f87171, #b91c1c);
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+
+  /* Chaque tranche s'empile en tassant à peine et en penchant de plus en
+     plus - contrairement à la pile bien nette du schéma de fusion, celle-ci
+     doit se lire comme instable, sur le point de basculer. */
+  transform: translateX(-50%)
+    translateY(calc(var(--i) * -12px))
+    rotate(calc(var(--i) * 4deg - 6deg));
+}
+
+.ba-burst {
+  position: absolute;
+
+  top: -6px;
+
+  right: 4px;
+
+  font-size: 1.4rem;
+
+  filter: drop-shadow(0 0 6px rgba(248, 113, 113, 0.8));
+}
+
+.ba-row-3d {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  height: 90px;
+}
+
+.ba-mini {
+  width: 26px;
+
+  height: 26px;
+
+  border-radius: 7px;
+
+  background: linear-gradient(135deg, #4ade80, #15803d);
+
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ba-mini-arrow {
+  color: #4ade80;
+
+  font-size: 0.8rem;
+}
+
+.ba-caption {
+  color: #cbd5e1;
+
+  font-size: 0.78rem;
+
+  text-align: center;
+
+  line-height: 1.4;
+}
+
+.ba-result {
+  padding: 4px 14px;
+
+  border-radius: 999px;
+
+  font-size: 0.75rem;
+
+  font-weight: 700;
+}
+
+.ba-result--bad {
+  background: rgba(239, 68, 68, 0.15);
+
+  color: #f87171;
+
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.ba-result--good {
+  background: rgba(34, 197, 94, 0.15);
+
+  color: #4ade80;
+
+  border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+@media (max-width: 640px) {
+  .ba-split {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .ba-divider {
+    transform: rotate(90deg);
+  }
+
+  .ba-panel {
+    max-width: 280px;
+
+    width: 100%;
+  }
 }
 
 /* ================= PROJECTS ================= */
@@ -2187,6 +3633,13 @@ main {
   will-change: transform;
 }
 
+/* Retour à plat en sortant la souris de la scène (voir skills-3d.js) : une
+   transition plus longue et une courbe qui ralentit en fin de course, pour
+   un arrêt en douceur plutôt qu'un saut sec vers 0deg. */
+.skills-3d-stage.is-settling {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 .skill-tower {
   --tw: 52px;
 
@@ -2300,17 +3753,7 @@ main {
 }
 
 .tower-top {
-  width: var(--tw);
-
-  height: var(--td);
-
-  background: var(--face-top);
-
-  transform-origin: top center;
-
-  transform: translateZ(calc(var(--td) / 2)) rotateX(90deg);
-
-  border-radius: 3px;
+  display: none;
 }
 
 .tower-side {

@@ -1,10 +1,13 @@
 // Injecte le texte de définition (assets/js/term-definitions.js) dans chaque
-// .term[data-term], puis gère l'affichage : survol sur desktop (pur CSS,
-// géré par .term:hover .term-tooltip dans style.css), tap pour ouvrir/fermer
-// sur un appareil sans souris (le survol n'existe pas au toucher) ; un tap en
-// dehors referme la bulle ouverte.
+// .term[data-term], .flow-node[data-term] (schéma dispatcher) ou
+// .ba-panel[data-term] (schéma avant/après), puis gère l'affichage : survol
+// sur desktop (pur CSS, géré par :hover .term-tooltip dans style.css), tap
+// pour ouvrir/fermer sur un appareil sans souris (le survol n'existe pas au
+// toucher) ; un tap en dehors referme la bulle ouverte.
 (function () {
-  const terms = document.querySelectorAll(".term[data-term]");
+  const terms = document.querySelectorAll(
+    ".term[data-term], .flow-node[data-term], .ba-panel[data-term]",
+  );
   if (!terms.length) return;
 
   const definitions = window.TERM_DEFINITIONS || {};
