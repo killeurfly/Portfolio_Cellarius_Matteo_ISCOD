@@ -47,12 +47,20 @@
 
     tooltip.textContent = desc;
 
-    const sceneRect = scene.getBoundingClientRect();
+    // position: fixed sur la bulle -> coordonnées directement en repère
+    // écran (viewport), plus besoin de composer avec le scroll interne de
+    // la scène ni son overflow qui la rognait auparavant.
     const towerRect = tower.getBoundingClientRect();
+    const centered = towerRect.left + towerRect.width / 2;
 
-    const left =
-      towerRect.left - sceneRect.left + scene.scrollLeft + towerRect.width / 2;
-    const top = towerRect.top - sceneRect.top - 10;
+    const half = tooltip.offsetWidth / 2;
+    const margin = 12;
+    const left = Math.min(
+      Math.max(centered, half + margin),
+      window.innerWidth - half - margin,
+    );
+
+    const top = towerRect.top - 10;
 
     tooltip.style.left = `${left}px`;
     tooltip.style.top = `${top}px`;

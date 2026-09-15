@@ -2919,7 +2919,13 @@ main {
 
   transform-style: preserve-3d;
 
-  transform: rotateX(10deg) rotateY(-16deg);
+  /* À plat : même une inclinaison légère (4°/-7°) restait perceptiblement
+     floue sur les petits détails (code-barres, lignes de texte), à cause de
+     l'anticrénelage sur des bords qui ne tombent plus sur la grille de
+     pixels dès qu'ils ne sont plus alignés aux axes. Chaque artefact garde
+     son propre relief 3D (faces avant/dessus/côté, voir .artifact-box) même
+     sans inclinaison d'ensemble du rail. */
+  transform: none;
 }
 
 .real-cluster {
@@ -2973,6 +2979,23 @@ main {
   font-weight: 600;
 
   font-size: 1.05rem;
+
+  text-align: center;
+
+  max-width: 152px;
+}
+
+/* Grille ISCOD, "Mes réalisations" (5 pts) : chaque pavé doit annoncer la
+   réalisation par un court descriptif visible par défaut - jusqu'ici, le
+   descriptif complet (data-desc) n'apparaissait qu'au survol/tap. Cette
+   légende courte reste affichée en permanence sous le titre, le panneau au
+   survol garde lui la description complète + tags + lien. */
+.real-cluster-caption {
+  color: #cbd5e1;
+
+  font-size: 0.76rem;
+
+  line-height: 1.35;
 
   text-align: center;
 
@@ -3039,6 +3062,10 @@ main {
   top: 0;
 
   left: 0;
+
+  /* Aide le GPU à rasteriser la face plus nettement plutôt qu'en la
+     traitant comme un calque semi-transparent recto-verso. */
+  backface-visibility: hidden;
 }
 
 .art-front {
@@ -3802,11 +3829,22 @@ main {
 }
 
 .skills-3d-tooltip {
-  position: absolute;
+  /* fixed, pas absolute : la scène a overflow-x:auto/overflow-y:hidden
+     (nécessaire pour les tours elles-mêmes) qui rognait la bulle dès
+     qu'elle dépassait la zone visible de la scène, quel que soit le calcul
+     de clamp en JS. En sortant du contexte de la scène (élément déplacé en
+     dehors dans le HTML, positionné ici en coordonnées d'écran), elle ne
+     peut plus être rognée par ce parent - même principe déjà utilisé pour
+     le panneau de detail des réalisations. */
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
 
   z-index: 20;
 
-  max-width: 220px;
+  max-width: 260px;
 
   padding: 10px 14px;
 
