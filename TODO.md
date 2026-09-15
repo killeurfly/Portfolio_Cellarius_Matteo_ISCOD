@@ -166,12 +166,39 @@ poste, du plus gros manque au moins gros :
      restent une bonne idée de finition, mais ne sont pas notés par la
      grille — à dépriming par rapport aux 3 points ci-dessus si le temps
      manque.
-- [x] **Points 1 et 3 ci-dessus mis en `.todo-list` caché dans les pages
-  concernées (2026-09-13)** : `realisations.html` (descriptif toujours
-  visible à ajouter) et `skills/autonomie.html` (anecdote Prévisions clients
-  manquante) ont maintenant leur propre todo caché (`display:none`, comme
-  partout ailleurs sur le site) directement dans le HTML, en plus de cette
-  note ici.
+- [x] **Points 1 et 3 ci-dessus résolus (2026-09-13 → 15)** :
+  `realisations.html` a maintenant une légende courte toujours visible sous
+  chaque titre (`.real-cluster-caption`), en plus du panneau détaillé au
+  survol/tap — répond au critère grille. Pour `autonomie.html`, aller-retour
+  sur Prévisions clients : retiré le 2026-09-13 (pas d'anecdote dédiée dans
+  "Mes éléments de preuve"), puis **remis le 2026-09-15** — décision de
+  l'utilisateur, qui a rappelé que le fait "en charge du développement de la
+  macro en autonomie" existe bien dans les Acteurs de `realisation-5.html`,
+  jugé suffisant pour justifier le lien même sans anecdote dédiée dans
+  autonomie.html. Lien de nouveau réciproque dans les deux sens.
+- [x] **Gros check final 2026-09-15** : relecture cohérence/orthographe/
+  grammaire/conjugaison sur les pages parcours (iscod, paris-saclay,
+  vilgenis, phygital-factory — répétitions "mais aussi"/"car"/"grâce à"
+  toutes résolues via allers-retours avec l'utilisateur, 2 vraies fautes
+  trouvées et corrigées au passage : "puis puis" sur phygital-factory.html,
+  virgule manquante rendant une phrase ambiguë sur vilgenis.html) et sur 5
+  pages compétence pas relues depuis longtemps (`web.html`,
+  `fiabilisation.html`, `communication.html`, `gestion-projet.html` — aucune
+  faute, aucune incohérence logique, conjugaisons correctes). Plus aucun
+  `.todo-list` sur les pages parcours.
+- [x] **Audit croisé complet de la navigation circulaire (2026-09-15)** —
+  matrice des 10 pages compétence × 5 pages réalisation construite par grep
+  (liens sortants de chaque côté comparés). **Un vrai écart à sens unique
+  trouvé et corrigé** : `adaptabilite.html` pointait vers `realisation-4.html`
+  (anecdote sur l'ampleur du projet : fichier de plusieurs millions de
+  lignes, multiples réunions), mais `realisation-4.html` ne renvoyait pas
+  vers `adaptabilite.html`. Corrigé en transformant une mention déjà écrite
+  ("plusieurs réunions avec le collaborateur", section Contexte technique)
+  en lien, et en ajoutant la carte correspondante dans "Compétences
+  associées". **Après correction, les 5×10 = 50 paires sont toutes
+  parfaitement réciproques** — vérifié par re-grep, plus aucun écart.
+  `realisation-2.html` relu intégralement au passage : propre, aucune
+  faute.
 - [x] **Relecture orthographe/cohérence des 4 pages entreprise du parcours
   (2026-09-13)** : `romus.html`, `edf.html`, `phygital-factory.html`,
   `marie-lannelongue.html` lues intégralement. Aucune faute d'orthographe.
