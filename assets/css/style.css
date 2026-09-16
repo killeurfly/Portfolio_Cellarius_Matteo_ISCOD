@@ -788,6 +788,12 @@ main {
   margin: 0 auto;
 }
 
+/* Espace deux .detail-card consécutifs (ex: pages/parcours/romus.html,
+   edf.html) qui seraient sinon collés, .page-section n'ayant pas de gap. */
+.detail-card + .detail-card {
+  margin-top: 40px;
+}
+
 .detail-card h2 {
   color: #60a5fa;
 
