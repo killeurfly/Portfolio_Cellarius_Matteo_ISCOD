@@ -45,6 +45,8 @@ window.TERM_DEFINITIONS = {
   json: "Format de texte simple et lisible utilisé pour structurer et échanger des données entre systèmes informatiques.",
   "low-code-no-code":
     "Outil qui permet de créer des automatisations en écrivant peu (low-code) ou pas du tout (no-code) de code, via une interface visuelle.",
+  macro:
+    "Série d'instructions écrites en VBA qui permet d'automatiser une tâche répétitive, souvent dans Excel ou Outlook.",
   microservices:
     "Architecture qui découpe une application en plusieurs petits services indépendants plutôt qu'un seul bloc monolithique.",
   ocr: "Reconnaissance optique de caractères : technologie qui extrait le texte contenu dans une image ou un document scanné.",
