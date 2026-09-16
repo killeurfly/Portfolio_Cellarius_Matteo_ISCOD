@@ -96,14 +96,13 @@
               est une interface de programmation qui permet à différentes
               applications de communiquer entre elles en utilisant le protocole
               <span class="term" data-term="http">HTTP</span>. Elle est souvent
-              utilisée pour accéder à des services web et
-              échanger des données au format
+              utilisée pour accéder à des services web et échanger des données
+              au format
               <span class="term" data-term="json">JSON</span>
               ou <span class="term" data-term="xml">XML</span>. L'API REST de
-              Géodis
-              est utilisée pour générer et gérer les étiquettes de transport,
-              car Géodis est responsable de la livraison des colis et fournit
-              les services d'expédition.
+              Géodis est utilisée pour générer et gérer les étiquettes de
+              transport, car Géodis est responsable de la livraison des colis et
+              fournit les services d'expédition.
             </li>
 
             <li>
@@ -131,8 +130,8 @@
             L'objectif principal de ce projet était de vérifier l'état de
             fonctionnement de l'API Géodis tout en reprenant contact avec le
             support technique du transporteur pour résoudre les problèmes
-            rencontrés. Il s'agissait également pour l'entreprise de pouvoir gérer
-            les envois via Géodis en aussi grande quantité que via GLS, ce
+            rencontrés. Il s'agissait également pour l'entreprise de pouvoir
+            gérer les envois via Géodis en aussi grande quantité que via GLS, ce
             transporteur n'étant utilisé jusque-là que pour un petit nombre de
             commandes web avant l'intégration de l'API.
           </p>
@@ -151,9 +150,8 @@
           <p>
             L'enjeu pour l'entreprise ici était de pouvoir utiliser un autre
             transporteur que Schenker pour l'envoi dans certaines zones
-            géographiques moins bien desservies par Schenker, mais également de
-            terminer un développement qui avait été laissé en suspens depuis une
-            année.
+            géographiques, mais également de terminer un développement qui avait
+            été laissé en suspens depuis une année.
           </p>
 
           <p class="subsection-label">⚠️ Risques</p>
@@ -186,11 +184,12 @@
 
           <p>
             Le développement de l'intégration de l'API Géodis a été réalisé en
-            plusieurs étapes. Grâce à ce que j'avais appris du développement de
-            l'API GLS, mais en reprenant également un code existant, j'ai dû
+            plusieurs étapes. Tout d'abord la compréhension du projet, qui a été
+            simplifiée par les développements précédents sur l'API GLS, même si
+            pour reprendre le code existant, j'ai dû
             <a href="/pages/skills/adaptabilite.html">m'adapter</a> à la
-            situation et aux contraintes de ce projet. Voici les principales
-            étapes de ce projet :
+            situation et aux contraintes du projet. Voici les principales étapes
+            de ce projet :
           </p>
 
           <ol class="steps-list">
@@ -202,13 +201,13 @@
               également dû relire la documentation de l'API Géodis pour
               comprendre les spécificités des
               <span class="term" data-term="edi">EDI</span>
-              envoyés vers l'API et les
-              éléments requis pour l'impression des étiquettes, ainsi que les
-              spécificités nécessaires au fonctionnement des envois National et
-              Export. Aussi, ayant déjà développé le «
+              envoyés vers l'API et les éléments requis pour l'impression des
+              étiquettes, ainsi que les spécificités nécessaires au
+              fonctionnement des envois National et Export. Aussi, ayant déjà
+              développé le «
               <span class="term" data-term="dispatcher">dispatcher</span>
-              » pour GLS et
-              Schenker dans l'API, je n'ai eu qu'à y rajouter Géodis.
+              » pour GLS et Schenker dans l'API, je n'ai eu qu'à y rajouter
+              Géodis.
             </li>
 
             <li>
@@ -256,11 +255,11 @@
               été envoyée ; il a donc fallu réfléchir à des modifications pour
               les utilisateurs. Après des échanges avec les différents acteurs,
               il a été décidé de rajouter une fonctionnalité d'annulation et
-              d'envoi globaux des colis d'une expédition. Également pour
-              pallier l'envoi de colis en différé pour une expédition, le
-              rajout d'un indicateur incrémental du type « -1 », « -2 »... à la
-              fin d'un identifiant d'expédition a été pensé afin de permettre
-              le rajout de colis associés à l'expédition sur l'API Géodis.
+              d'envoi globaux des colis d'une expédition. Également pour pallier
+              l'envoi de colis en différé pour une expédition, le rajout d'un
+              indicateur incrémental du type « -1 », « -2 »... à la fin d'un
+              identifiant d'expédition a été pensé afin de permettre le rajout
+              de colis associés à l'expédition sur l'API Géodis.
             </li>
 
             <li>
@@ -271,8 +270,11 @@
             </li>
 
             <li>
-              <strong>Réunion de lancement Géodis</strong> — Avant la mise en place du
-              <span class="term" data-term="cahier-de-test">cahier de recette</span>, une réunion de lancement a été organisée afin que toutes les
+              <strong>Réunion de lancement Géodis</strong> — Avant la mise en
+              place du
+              <span class="term" data-term="cahier-de-test"
+                >cahier de recette</span
+              >, une réunion de lancement a été organisée afin que toutes les
               équipes impliquées dans le projet, ou qui travailleront avec les
               expéditions Géodis, soient mises au courant de l'état d'avancement
               et de la date de lancement des tests.
@@ -332,7 +334,8 @@
 
           <p>
             Les derniers points de blocage ont été réglés, notamment un qui
-            résidait sur la création d'un compte API Géodis destiné à un autre site.
+            résidait sur la création d'un compte API Géodis destiné à un autre
+            site.
           </p>
 
           <h2 id="lendemains">Les lendemains du projet</h2>
