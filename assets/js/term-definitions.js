@@ -12,8 +12,12 @@ window.TERM_DEFINITIONS = {
     "Interface du transporteur GLS qui génère l'étiquette d'expédition une fois la requête redirigée vers elle par le dispatcher.",
   "api-schenker":
     "Interface du transporteur Schenker, qui partageait le même webservice que GLS avant la mise en place du dispatcher.",
+  "banc-de-test":
+    "Environnement dédié qui permet de faire tourner et comparer automatiquement les résultats de plusieurs algorithmes, pour vérifier lequel est le plus performant.",
   "b-to-b":
     "Business to Business : activité commerciale entre entreprises, par opposition à la vente directe aux particuliers.",
+  "bts-sio":
+    "Brevet de Technicien Supérieur, Services Informatiques aux Organisations : diplôme de niveau Bac+2.",
   bibliotheque:
     "Regroupement de fonctions déjà écrites que le code peut réutiliser sans avoir à les réécrire.",
   but: "Bachelor Universitaire de Technologie, diplôme de niveau Bac+3 préparé en 3 ans.",
@@ -22,6 +26,8 @@ window.TERM_DEFINITIONS = {
   css: "Langage qui définit l'apparence visuelle d'une page web (couleurs, mise en page, polices...), en complément du HTML qui en structure le contenu.",
   concatenation:
     "Opération qui assemble bout à bout plusieurs données (ici, plusieurs fichiers) pour n'en former qu'une seule.",
+  cloisonne:
+    "Qui ne peut fonctionner que depuis l'intérieur de son application hôte (ici, la suite Office), sans pouvoir s'exécuter de façon autonome.",
   "chargement-memoire":
     "Toutes les données étaient chargées en mémoire en une seule fois, ce qui devenait trop lourd avec autant de commandes à traiter d'un coup.",
   dispatcher:
@@ -34,6 +40,8 @@ window.TERM_DEFINITIONS = {
   endpoint:
     "URL précise à laquelle une application envoie une requête pour accéder à une fonctionnalité spécifique d'une API.",
   erp: "Enterprise Resource Planning : logiciel de gestion intégré qui centralise les différentes fonctions d'une entreprise (stocks, comptabilité, production...).",
+  "european-accessibility-act":
+    "Directive européenne qui impose des règles d'accessibilité numérique aux produits et services (dont les sites web), pour les rendre utilisables par les personnes en situation de handicap.",
   "fetch-sql":
     "Le correctif interroge la base de données par petites requêtes SQL successives, au lieu de tout charger en mémoire en une seule fois.",
   go: "Garantie d'Origine : certificat qui prouve que l'électricité fournie à un client est issue d'énergies renouvelables.",
@@ -43,6 +51,8 @@ window.TERM_DEFINITIONS = {
   http: "Protocole standard utilisé pour échanger des données sur le web entre un client (navigateur, application) et un serveur.",
   hypercare:
     "Période de suivi renforcé juste après une mise en production, pour détecter et corriger rapidement les problèmes.",
+  incremental:
+    "Qui augmente progressivement d'une unité à chaque nouvel élément (ici, un suffixe -1, -2, -3... ajouté à l'identifiant pour distinguer chaque colis supplémentaire).",
   iut: "Institut Universitaire de Technologie : établissement d'enseignement supérieur qui prépare notamment aux BUT.",
   javascript:
     "Langage de programmation qui rend les pages web interactives, exécuté directement dans le navigateur de l'utilisateur.",
