@@ -69,12 +69,13 @@
 
           <p>
             La réalisation de ce projet a été effectuée lors de ma précédente
-            alternance ; elle a été menée en parallèle de la macro de suivi des
+            alternance ; elle a été menée en parallèle de la
+            <span class="term" data-term="macro">macro</span> de suivi des
             Garanties d'Origine. L'objectif était d'automatiser la récupération
-            et la constitution des documents de prévisions de consommation clients
-            à partir des documents envoyés quotidiennement par ceux-ci. Ces
-            informations permettaient de créer un fichier de report mensuel des
-            consommations clients prévues, à destination d'un autre service.
+            et la constitution des documents de prévisions de consommation
+            clients à partir des documents envoyés quotidiennement par ceux-ci.
+            Ces informations permettaient de créer un fichier de rapport mensuel
+            des consommations clients prévues, à destination d'un autre service.
           </p>
 
           <p>
@@ -130,11 +131,10 @@
             jointes par les clients — ce dossier étant ensuite exploité par la
             seconde partie ; une partie en macro Excel pour former le fichier
             mensuel à partir des documents récupérés précédemment. La difficulté
-            technique
-            principale se situait dans la partie VBA Outlook, car ce VBA ne
-            partageait pas les mêmes fonctions natives que celui d'Excel : il
-            m'a donc fallu comprendre la différence entre ces deux versions de
-            VBA.
+            technique principale se situait dans la partie VBA Outlook, car ce
+            VBA ne partageait pas les mêmes fonctions natives que celui d'Excel
+            : il m'a donc fallu comprendre la différence entre ces deux versions
+            de VBA.
           </p>
 
           <p class="subsection-label">🎯 Enjeu</p>
@@ -169,8 +169,9 @@
             <li>
               <strong>Compréhension du besoin</strong> — Après une étude des
               différents formats de fichier envoyés par les clients, j'ai pu
-              comprendre le niveau
-              d'<a href="/pages/skills/adaptabilite.html">adaptabilité</a>
+              comprendre le niveau d'<a href="/pages/skills/adaptabilite.html"
+                >adaptabilité</a
+              >
               que devrait avoir la macro.
             </li>
 
@@ -184,7 +185,7 @@
 
             <li>
               <strong>Développement de la partie Excel</strong> — Suite à cela,
-              ayant tous les fichiers de report quotidiens des clients dans des
+              ayant tous les fichiers de rapport quotidiens des clients dans des
               répertoires différents, j'ai mis en place un tri sur ces fichiers,
               puis un renommage par date de création de ceux-ci afin que la
               <span class="term" data-term="concatenation">concaténation</span>
@@ -193,7 +194,7 @@
 
             <li>
               <strong>Gestion des dates de début et de fin</strong> — Afin de
-              générer la trame du fichier de report mensuel, j'ai d'abord
+              générer la trame du fichier de rapport mensuel, j'ai d'abord
               récupéré la première et la dernière date contenues dans les
               fichiers, ce qui m'a permis également de déterminer si chaque
               ligne correspondait à une heure ou une demi-heure.
@@ -218,7 +219,9 @@
           </ol>
 
           <div class="pipeline-diagram">
-            <p class="diagram-title">Schéma — Les deux macros, Outlook puis Excel</p>
+            <p class="diagram-title">
+              Schéma — Les deux macros, Outlook puis Excel
+            </p>
             <div class="pipeline-scene">
               <div class="pipeline-stage">
                 <span class="pipeline-stage-name">Macro Outlook</span>
@@ -298,7 +301,7 @@
                       <span class="pnode-face pnode-front">📊</span>
                       <span class="pnode-face pnode-side"></span>
                     </div>
-                    <span class="pnode-label">Report mensuel consolidé</span>
+                    <span class="pnode-label">Rapport mensuel consolidé</span>
                   </div>
                 </div>
               </div>
@@ -330,14 +333,14 @@
           <p>
             Les résultats qui ont pu être observés après l'utilisation de cette
             macro sont exactement ceux qui étaient attendus : une automatisation
-            qui remplaçait un travail manuel et qui permettait la constitution du
-            fichier de report mensuel pour chaque client géré par la macro. Elle
-            a donc été adoptée par mes collègues dans leur processus et a
+            qui remplaçait un travail manuel et qui permettait la constitution
+            du fichier de rapport mensuel pour chaque client géré par la macro.
+            Elle a donc été adoptée par mes collègues dans leur processus et a
             continué à évoluer au fur et à mesure que de nouveaux formats
             clients étaient demandés. Le temps gagné par mois par rapport au
-            traitement manuel représente quelques heures, pour les 4
-            clients gérés par la macro, à raison d'un fichier reçu par jour et
-            par client.
+            traitement manuel représente quelques heures, pour les 4 clients
+            gérés par la macro, à raison d'un fichier reçu par jour et par
+            client.
           </p>
 
           <h2 id="lendemains">Les lendemains du projet</h2>
@@ -357,18 +360,17 @@
 
           <p>
             Ce projet m'a appris la différence qu'il pouvait y avoir entre
-            différentes versions de VBA, mais également les habitudes de
-            travail qu'il fallait avoir pour développer une macro qui devait
-            évoluer au fur et à mesure des demandes utilisateurs. Si je devais
-            changer quelque chose sur la gestion de ce projet, ce serait la
-            façon dont j'ai préparé les évolutions de la macro,
-            car elles se sont retrouvées plus difficiles à faire que prévu, à
-            cause de ma mauvaise préparation des évolutions possibles. Comme
-            exemple d'évolution qui a posé le plus de difficultés, il y
-            a celle du rajout de la gestion de fichiers d'un client qui avait un
-            fichier Excel où les valeurs de consommation et de date étaient
-            séparées entre plusieurs feuilles de données, ce qui a nécessité une
-            gestion spécifique des données.
+            différentes versions de VBA, mais également les habitudes de travail
+            qu'il fallait avoir pour développer une macro qui devait évoluer au
+            fur et à mesure des demandes utilisateurs. Si je devais changer
+            quelque chose sur la gestion de ce projet, ce serait la façon dont
+            j'ai préparé les évolutions de la macro, car elles se sont
+            retrouvées plus difficiles à faire que prévu, à cause de ma mauvaise
+            préparation des évolutions possibles. Comme exemple d'évolution qui
+            a posé le plus de difficultés, il y a celle du rajout de la gestion
+            de fichiers d'un client qui avait un fichier Excel où les valeurs de
+            consommation et de date étaient séparées entre plusieurs feuilles de
+            données, ce qui a nécessité une gestion spécifique des données.
           </p>
 
           <h2 id="competences">Compétences associées</h2>

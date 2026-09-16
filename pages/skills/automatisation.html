@@ -9,13 +9,13 @@
 
     <meta
       name="description"
-      content="Automatisation VBA (Excel & Outlook) : définition, preuves concrètes sur mes macros de reporting en entreprise, autocritique et évolution."
+      content="Automatisation VBA (Excel & Outlook) : définition, preuves concrètes sur mes macros de rapports en entreprise, autocritique et évolution."
     />
 
     <meta property="og:title" content="Automatisation VBA | Portfolio" />
     <meta
       property="og:description"
-      content="Automatisation VBA (Excel & Outlook) : définition, preuves concrètes sur mes macros de reporting en entreprise, autocritique et évolution."
+      content="Automatisation VBA (Excel & Outlook) : définition, preuves concrètes sur mes macros de rapports en entreprise, autocritique et évolution."
     />
     <meta
       property="og:url"
@@ -27,7 +27,7 @@
     <meta name="twitter:title" content="Automatisation VBA | Portfolio" />
     <meta
       name="twitter:description"
-      content="Automatisation VBA (Excel & Outlook) : définition, preuves concrètes sur mes macros de reporting en entreprise, autocritique et évolution."
+      content="Automatisation VBA (Excel & Outlook) : définition, preuves concrètes sur mes macros de rapports en entreprise, autocritique et évolution."
     />
     <link
       rel="icon"
@@ -70,12 +70,13 @@
 
           <p>
             L'automatisation de
-            <span class="term" data-term="processus-metier">processus métiers</span>
-            via macro VBA (Visual Basic
-            for Applications) consiste à développer celle-ci afin de fluidifier
-            des tâches répétitives dans les applications
-            Microsoft ; ici je ne parlerai que d'Outlook et Excel, car j'ai
-            développé des macros seulement pour ces deux applications.
+            <span class="term" data-term="processus-metier"
+              >processus métiers</span
+            >
+            via macro VBA (Visual Basic for Applications) consiste à développer
+            celle-ci afin de fluidifier des tâches répétitives dans les
+            applications Microsoft ; ici je ne parlerai que d'Outlook et Excel,
+            car j'ai développé des macros seulement pour ces deux applications.
           </p>
 
           <p>
@@ -83,8 +84,8 @@
             de ma précédente alternance : j'ai pu faciliter le travail manuel de
             mes collaborateurs lors de leur traitement de documents reçus par
             mail, grâce à des scripts récupérant des données et remplissant
-            automatiquement les fichiers d'entrée de la macro, sans
-            intervention humaine répétitive.
+            automatiquement les fichiers d'entrée de la macro, sans intervention
+            humaine répétitive.
           </p>
 
           <p>
@@ -96,15 +97,16 @@
             <li>
               <strong>VBA</strong> est intégrable à toutes les applications de
               la suite Office. C'est un langage ancien (1990), cloisonné à la
-              suite Office, qui nécessite l'ouverture, même cachée, des
-              fichiers traités. Il est gratuit, mais le code est stocké dans
-              le fichier lui-même (mise à jour en remplaçant le fichier).
+              suite Office, qui nécessite l'ouverture, même cachée, des fichiers
+              traités. Il est gratuit, mais le code est stocké dans le fichier
+              lui-même (mise à jour en remplaçant le fichier).
             </li>
             <li>
               <strong>Power Automate</strong> est un outil
-              <span class="term" data-term="low-code-no-code">low-code/no-code</span>
-              de
-              Microsoft, avec une intégration totale à la suite Office,
+              <span class="term" data-term="low-code-no-code"
+                >low-code/no-code</span
+              >
+              de Microsoft, avec une intégration totale à la suite Office,
               entièrement cloud. Il permet une exécution automatique dans le
               cloud sans besoin d'utilisateur, mais reste moins flexible pour de
               la logique personnalisée ou complexe. Sa base est gratuite, ses
@@ -115,9 +117,9 @@
               avec des
               <span class="term" data-term="bibliotheque">bibliothèques</span>
               riches. Il est plus puissant pour des traitements volumineux, et
-              <span class="term" data-term="scalable">scalable</span>, mais nécessite un
-              environnement d'installation, moins immédiat que VBA et Power
-              Automate. Il est gratuit et
+              <span class="term" data-term="scalable">scalable</span>, mais
+              nécessite un environnement d'installation, moins immédiat que VBA
+              et Power Automate. Il est gratuit et
               <span class="term" data-term="open-source">open source</span>.
             </li>
           </ul>
@@ -132,9 +134,7 @@
           </p>
 
           <div class="compare-diagram">
-            <p class="diagram-title">
-              Schéma — VBA, Power Automate et Python
-            </p>
+            <p class="diagram-title">Schéma — VBA, Power Automate et Python</p>
             <div class="compare-scroll">
               <div class="compare-table">
                 <div class="compare-cell compare-cell--crit"></div>
@@ -166,9 +166,7 @@
                   <span class="chead-label">Python</span>
                 </div>
 
-                <div class="compare-cell compare-cell--crit">
-                  Accessibilité
-                </div>
+                <div class="compare-cell compare-cell--crit">Accessibilité</div>
                 <div class="compare-cell">
                   <span class="compare-dots">
                     <span class="compare-dot is-filled"></span>
@@ -225,9 +223,7 @@
 
                 <div class="compare-row-line"></div>
 
-                <div class="compare-cell compare-cell--crit">
-                  Environnement
-                </div>
+                <div class="compare-cell compare-cell--crit">Environnement</div>
                 <div class="compare-cell">Suite Office</div>
                 <div class="compare-cell">Aucun (cloud)</div>
                 <div class="compare-cell">Python à installer</div>
@@ -300,7 +296,7 @@
           <p>
             Lors du développement de la
             <a href="/pages/realisations/realisation-4.html"
-              >macro de constitution du report des Garanties d'Origine</a
+              >macro de constitution du rapport des Garanties d'Origine</a
             >
             (depuis un fichier source public contenant plusieurs millions de
             lignes), j'ai dû développer un algorithme permettant de fusionner
@@ -327,10 +323,10 @@
             prévisions étaient associées à la même date. Cette macro a été très
             utile pour les utilisateurs car elle a permis de simplifier un
             travail quotidien de récupération de données dans des fichiers
-            Excel, plus répétitif que long à réaliser manuellement, pour un
-            gain de quelques heures par mois sur les 4 clients gérés par la
-            macro. À noter que, chaque client ayant son propre format de
-            fichier, il a fallu adapter la macro à chacun.
+            Excel, plus répétitif que long à réaliser manuellement, pour un gain
+            de quelques heures par mois sur les 4 clients gérés par la macro. À
+            noter que, chaque client ayant son propre format de fichier, il a
+            fallu adapter la macro à chacun.
           </p>
 
           <h2 id="autocritique">Mon autocritique</h2>
@@ -343,17 +339,16 @@
             développement des premières macros Excel, qui m'ont permis de gagner
             en compétence et en confiance dans ce domaine. À la fin de mon
             alternance je me considérais comme un expert en VBA Excel, ayant
-            passé un an entier dans ce domaine. Le VBA dans
-            d'autres applications de la suite Office étant différent, je ne
-            peux pas me considérer comme expert en VBA en général.
+            passé un an entier dans ce domaine. Le VBA dans d'autres
+            applications de la suite Office étant différent, je ne peux pas me
+            considérer comme expert en VBA en général.
           </p>
 
           <p>
-            Malgré le temps que j'ai passé sur des macros VBA, je n'ai
-            pu en développer que dans Outlook et Excel (une seule
-            dans Outlook), donc mon point d'évolution serait
-            d'apprendre les différences de VBA entre chaque application de la
-            suite Office.
+            Malgré le temps que j'ai passé sur des macros VBA, je n'ai pu en
+            développer que dans Outlook et Excel (une seule dans Outlook), donc
+            mon point d'évolution serait d'apprendre les différences de VBA
+            entre chaque application de la suite Office.
           </p>
 
           <p>
@@ -396,9 +391,8 @@
             de mes projets personnels de
             <span class="term" data-term="domotique">domotique</span>, car la
             domotique c'est avant tout automatiser des processus du domicile
-            faits par les êtres
-            humains. Pour cela, j'utiliserai la bibliothèque Python
-            «
+            faits par les êtres humains. Pour cela, j'utiliserai la bibliothèque
+            Python «
             <span class="term" data-term="paho-mqtt">paho-mqtt</span>
             », très utilisée dans ce type de projets.
           </p>
