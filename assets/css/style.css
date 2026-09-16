@@ -1082,6 +1082,10 @@ main {
 
   text-align: left;
 
+  /* Empêche d'hériter un text-transform (ex: uppercase de .diagram-title)
+     d'un ancêtre quand un .term est placé dans un titre stylé. */
+  text-transform: none;
+
   opacity: 0;
 
   visibility: hidden;

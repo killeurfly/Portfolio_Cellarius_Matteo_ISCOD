@@ -36,6 +36,7 @@ window.TERM_DEFINITIONS = {
   erp: "Enterprise Resource Planning : logiciel de gestion intégré qui centralise les différentes fonctions d'une entreprise (stocks, comptabilité, production...).",
   "fetch-sql":
     "Le correctif interroge la base de données par petites requêtes SQL successives, au lieu de tout charger en mémoire en une seule fois.",
+  go: "Garantie d'Origine : certificat qui prouve que l'électricité fournie à un client est issue d'énergies renouvelables.",
   html: "Langage qui structure le contenu des pages web (titres, paragraphes, images, liens...).",
   "html5":
     "Dernière version du langage HTML, qui inclut nativement des lecteurs pour certains formats (vidéo, PDF...) sans outil supplémentaire.",
