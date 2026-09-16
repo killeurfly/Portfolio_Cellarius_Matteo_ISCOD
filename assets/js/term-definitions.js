@@ -27,6 +27,8 @@ window.TERM_DEFINITIONS = {
     "Logique qui redirige chaque requête vers la bonne API selon le transporteur associé à l'expédition.",
   documentation:
     "Ensemble des informations techniques (fonctionnement, fonctionnalités, formats de données...) fournies par les créateurs d'un outil ou d'un service pour en permettre l'utilisation.",
+  domotique:
+    "Ensemble des technologies (capteurs, automatismes, objets connectés...) qui permettent de contrôler et d'automatiser les équipements d'un logement (chauffage, éclairage, volets...).",
   edi: "Échange de Données Informatisé : procédé d'échange de données entre deux systèmes informatiques, selon un format standardisé.",
   endpoint:
     "URL précise à laquelle une application envoie une requête pour accéder à une fonctionnalité spécifique d'une API.",
