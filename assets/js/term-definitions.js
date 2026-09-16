@@ -19,6 +19,7 @@ window.TERM_DEFINITIONS = {
   but: "Bachelor Universitaire de Technologie, diplôme de niveau Bac+3 préparé en 3 ans.",
   "cahier-de-test":
     "Document listant les scénarios à vérifier avant la mise en production d'un projet.",
+  css: "Langage qui définit l'apparence visuelle d'une page web (couleurs, mise en page, polices...), en complément du HTML qui en structure le contenu.",
   concatenation:
     "Opération qui assemble bout à bout plusieurs données (ici, plusieurs fichiers) pour n'en former qu'une seule.",
   "chargement-memoire":
@@ -42,6 +43,8 @@ window.TERM_DEFINITIONS = {
   hypercare:
     "Période de suivi renforcé juste après une mise en production, pour détecter et corriger rapidement les problèmes.",
   iut: "Institut Universitaire de Technologie : établissement d'enseignement supérieur qui prépare notamment aux BUT.",
+  javascript:
+    "Langage de programmation qui rend les pages web interactives, exécuté directement dans le navigateur de l'utilisateur.",
   json: "Format de texte simple et lisible utilisé pour structurer et échanger des données entre systèmes informatiques.",
   "low-code-no-code":
     "Outil qui permet de créer des automatisations en écrivant peu (low-code) ou pas du tout (no-code) de code, via une interface visuelle.",
@@ -57,6 +60,8 @@ window.TERM_DEFINITIONS = {
   "paho-mqtt":
     "Bibliothèque qui utilise le protocole MQTT, un standard léger de communication entre objets connectés (capteurs, domotique...).",
   php: "Langage de programmation exécuté côté serveur, très utilisé pour générer des pages web dynamiques.",
+  python:
+    "Langage de programmation généraliste, réputé pour sa simplicité de lecture, utilisé aussi bien pour l'automatisation que pour le développement d'applications.",
   "processus-metier":
     "Suite d'activités et de tâches réalisées par les équipes d'une entreprise pour accomplir un objectif métier (traiter une commande, gérer un stock...), indépendamment de l'outil informatique utilisé.",
   "requete-commande":

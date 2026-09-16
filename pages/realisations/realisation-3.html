@@ -84,11 +84,10 @@
           <ul class="definition-list">
             <li>
               <strong>Abbyy</strong> est un logiciel de capture et de traitement
-              de documents
-              (<span class="term" data-term="ocr">OCR</span>). Dans le cadre de mon entreprise, il est
-              utilisé pour extraire automatiquement des données de documents
-              afin de les intégrer dans les diverses applications de
-              l'entreprise.
+              de documents (<span class="term" data-term="ocr">OCR</span>). Dans
+              le cadre de mon entreprise, il est utilisé pour extraire
+              automatiquement des données de documents afin de les intégrer dans
+              les diverses applications de l'entreprise.
             </li>
 
             <li>
@@ -96,7 +95,9 @@
               comme intermédiaire entre différentes applications ou systèmes. Il
               facilite la communication et l'échange de données entre ces
               systèmes. Dans le contexte de ce projet, Dex est utilisé pour
-              échanger des données entre les autres systèmes de l'entreprise.
+              échanger des données entre les autres systèmes de l'entreprise. À
+              noter qu'il possède également des flux d'automatisation répondant
+              à des déclencheurs fichier ou horaires.
             </li>
 
             <li>
@@ -124,11 +125,11 @@
 
           <p>
             L'objectif principal de Gedim est de permettre un suivi simple sur
-            les expéditions des différents transporteurs, de savoir si elles
-            ont bien été enregistrées et d'avoir la liste des colis
-            pour chacune. Il permet également de régler les éventuels
-            problèmes d'adresse erronée et d'obtenir des
-            rapports Excel de suivi ainsi que des erreurs d'adresse.
+            les expéditions des différents transporteurs, de savoir si elles ont
+            bien été enregistrées et d'avoir la liste des colis pour chacune. Il
+            permet également de régler les éventuels problèmes d'adresse erronée
+            et d'obtenir des rapports Excel de suivi ainsi que des erreurs
+            d'adresse.
           </p>
 
           <p class="subsection-label">🔧 Contexte technique</p>
@@ -136,15 +137,21 @@
           <p>
             Pour Gedim, il a fallu faire évoluer une application web existante
             en intégrant des fonctionnalités développées au fil des demandes
-            utilisateurs et de nouvelles intégrations d'<span class="term" data-term="api">API</span>. Également, Gedim a
-            été ma première interaction avec le contexte du système
-            d'information de mon entreprise : j'ai donc dû, avant tout
-            développement, comprendre le fonctionnement de l'entreprise ainsi
-            que celui de l'application. La partie technique qui me paraissait la
-            plus complexe était la génération des tableaux de suivi des
-            transporteurs, car elle reposait sur une organisation imbriquée de
+            utilisateurs et de nouvelles intégrations d'<span
+              class="term"
+              data-term="api"
+              >API</span
+            >. Également, Gedim a été ma première interaction avec le contexte
+            du système d'information de mon entreprise : j'ai donc dû, avant
+            tout développement, comprendre le fonctionnement de l'entreprise
+            ainsi que celui de l'application. La partie technique qui me
+            paraissait la plus complexe était la génération des tableaux de
+            suivi des transporteurs, car elle reposait sur une organisation
+            imbriquée de
             <span class="term" data-term="routes">routes</span>
-            et de scripts JavaScript et PHP.
+            et de scripts
+            <span class="term" data-term="javascript">JavaScript</span> et
+            <span class="term" data-term="php">PHP</span>.
           </p>
 
           <p class="subsection-label">🎯 Enjeu</p>
@@ -164,11 +171,11 @@
           <p>
             Les principaux risques résidaient dans la fiabilisation des
             fonctionnalités déjà présentes : il y avait un risque de régression,
-            mais aussi un risque de conformité aux attentes
-            utilisateurs, car il fallait s'assurer que ce qui
-            allait évoluer correspondait à leurs besoins. Une des
-            fonctionnalités qui a régressé lors d'une mise à jour a été le
-            téléchargement du report d'erreurs d'adresse ; cette erreur a pu
+            mais aussi un risque de conformité aux attentes utilisateurs, car il
+            fallait s'assurer que ce qui allait évoluer correspondait à leurs
+            besoins. Une des fonctionnalités qui a régressé lors d'une mise à
+            jour a été le téléchargement du report d'erreurs d'adresse ; cette
+            erreur a pu
             <a href="/pages/skills/resolution-problemes.html"
               >rapidement être résolue</a
             >, car elle reposait sur une requête
@@ -204,11 +211,11 @@
               structure des tableaux présents sur la page de suivi transporteur
               de Schenker. J'ai dû adapter cette structure afin de pouvoir
               récupérer depuis la base de données l'état des commandes sous leur
-              forme
-              <span class="term" data-term="edi">EDI</span>. Pour cela, j'ai dû comprendre le fonctionnement des
-              scripts internes de l'application, ainsi que la structure de la
-              base de données, afin que les données récupérées soient les plus
-              adaptées au tableau demandé.
+              forme <span class="term" data-term="edi">EDI</span>. Pour cela,
+              j'ai dû comprendre le fonctionnement des scripts internes de
+              l'application, ainsi que la structure de la base de données, afin
+              que les données récupérées soient les plus adaptées au tableau
+              demandé.
             </li>
 
             <li>
@@ -270,8 +277,11 @@
             <li>
               Les utilisateurs de Gedim pour le suivi des mises à jour et les
               retours dans le
-              <span class="term" data-term="cahier-de-test">cahier de test</span>, ainsi que les échanges sur les
-              <span class="term" data-term="processus-metier">processus métiers</span>.
+              <span class="term" data-term="cahier-de-test">cahier de test</span
+              >, ainsi que les échanges sur les
+              <span class="term" data-term="processus-metier"
+                >processus métiers</span
+              >.
             </li>
 
             <li>
@@ -297,9 +307,9 @@
             projets qui ont suivi, grâce à la place centrale en termes de suivi
             que possède Gedim dans l'organisation des processus. Gedim a
             continué à recevoir des évolutions par la suite, comme l'affichage
-            des erreurs Géodis ou la correction d'un bug sur la
-            page de visualisation des fichiers, où le défilement ne descendait
-            pas correctement jusqu'à l'affichage du fichier.
+            des erreurs Géodis ou la correction d'un bug sur la page de
+            visualisation des fichiers, où le défilement ne descendait pas
+            correctement jusqu'à l'affichage du fichier.
           </p>
 
           <h2 id="regard-critique">Mon regard critique</h2>
@@ -320,8 +330,7 @@
             transporteurs, car la
             <span class="term" data-term="bibliotheque">bibliothèque</span>
             utilisée pour générer ces tableaux, nommée DataTable, a été plus
-            difficile à utiliser que je
-            ne l'aurais pensé à l'origine.
+            difficile à utiliser que je ne l'aurais pensé à l'origine.
           </p>
 
           <h2 id="competences">Compétences associées</h2>
