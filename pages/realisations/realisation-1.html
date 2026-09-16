@@ -85,13 +85,14 @@
               <strong>Une API REST</strong> (Representational State Transfer)
               est une interface de programmation qui permet à différentes
               applications de communiquer entre elles en utilisant le protocole
-              HTTP. Elle est souvent utilisée pour accéder à des services web et
+              <span class="term" data-term="http">HTTP</span>. Elle est souvent
+              utilisée pour accéder à des services web et
               échanger des données au format
               <span class="term" data-term="json">JSON</span>
-              ou XML. L'API REST de GLS est
-              utilisée pour générer et gérer les étiquettes de transport, car
-              GLS est responsable de la livraison des colis et fournit les
-              services d'expédition.
+              ou <span class="term" data-term="xml">XML</span>. L'API REST de
+              GLS est utilisée pour générer et gérer les
+              étiquettes de transport, car GLS est responsable de la livraison
+              des colis et fournit les services d'expédition.
             </li>
 
             <li>
@@ -134,9 +135,9 @@
             La principale contrainte technique associée à cette évolution des
             processus était de mettre à jour le
             <span class="term" data-term="webservice">webservice</span>
-            sans compromettre le
-            fonctionnement associé à l'autre transporteur. Il m'a donc fallu
-            maîtriser l'existant avant de m'atteler à son évolution.
+            sans compromettre le fonctionnement associé à l'autre transporteur.
+            Il m'a donc fallu maîtriser l'existant avant de m'atteler à son
+            évolution.
           </p>
 
           <p>
@@ -163,8 +164,9 @@
 
           <p>
             L'enjeu technique, quant à lui, consistait à mettre en place les
-            processus métiers d'impression d'étiquettes GLS sans mettre en péril
-            le fonctionnement de la partie Schenker déjà en place.
+            <span class="term" data-term="processus-metier">processus métiers</span>
+            d'impression d'étiquettes GLS sans mettre en péril le
+            fonctionnement de la partie Schenker déjà en place.
           </p>
 
           <p class="subsection-label">⚠️ Risques</p>
@@ -194,17 +196,16 @@
           <p>
             Afin de pallier ces risques, la réalisation d'un
             <span class="term" data-term="cahier-de-test">cahier de test</span>
-            a
-            été effectuée ; le but recherché était de tester l'implémentation de
-            l'API GLS dans l'ERP Navision, mais il fallait également s'assurer
-            que les utilisateurs respectaient les nouvelles procédures. Ce
-            cahier de test contenait les étapes de fonctionnement nominales à
-            suivre pour l'impression d'étiquettes GLS. De plus, un tableau de
-            report des erreurs a été mis en place pour suivre les erreurs
-            rencontrées lors des tests et pour les corriger rapidement. Enfin,
-            un suivi des utilisateurs a été mis en place pour s'assurer que les
-            utilisateurs respectaient les nouvelles procédures et pour les aider
-            en cas de problème.
+            a été effectuée ; le but recherché était de tester l'implémentation
+            de l'API GLS dans l'ERP Navision, mais il fallait également
+            s'assurer que les utilisateurs respectaient les nouvelles
+            procédures. Ce cahier de test contenait les étapes de fonctionnement
+            nominales à suivre pour l'impression d'étiquettes GLS. De plus, un
+            tableau de remontée des erreurs a été mis en place pour suivre les
+            erreurs rencontrées lors des tests et pour les corriger rapidement.
+            Enfin, un suivi des utilisateurs a été mis en place pour s'assurer
+            que les utilisateurs respectaient les nouvelles procédures et pour
+            les aider en cas de problème.
           </p>
 
           <div class="section-heading">
@@ -224,32 +225,33 @@
           <ol class="steps-list">
             <li>
               <strong>Étude de la documentation et accès à la Sandbox</strong>
-              — j'ai analysé la documentation de l'API GLS fournie par les
-              équipes techniques de GLS. Cette lecture m'a
-              donné les informations nécessaires à la compréhension des diverses
-              fonctionnalités offertes par l'API, et j'ai pu également
-              comprendre les formats de données et les paramètres à utiliser
-              pour la communication avec celle-ci. Elles
-              nous ont également fourni un accès à un environnement de test
-              appelé «
+              — j'ai analysé la
+              <span class="term" data-term="documentation">documentation</span>
+              de l'API GLS fournie par les équipes techniques de GLS. Cette
+              lecture m'a donné les informations nécessaires à la compréhension
+              des diverses fonctionnalités offertes par l'API, et j'ai pu
+              également comprendre les formats de données et les paramètres à
+              utiliser pour la communication avec celle-ci. Elles nous ont
+              également fourni un accès à un environnement de test appelé «
               <span class="term" data-term="sandbox">Sandbox</span>
-              » afin de tester l'implémentation de cette API dans
-              un environnement ressemblant fortement à celui de production.
+              » afin de tester l'implémentation de cette API dans un
+              environnement ressemblant fortement à celui de production.
             </li>
 
             <li>
               <strong
                 >Mise en place d'un
-                <span class="term" data-term="dispatcher">dispatcher</span></strong
+                <span class="term" data-term="dispatcher"
+                  >dispatcher</span
+                ></strong
               >
-              — Le
-              webservice sur
-              lequel était disponible l'API REST était également utilisé pour
-              l'impression d'étiquettes Schenker ; j'ai donc dû réaliser un
-              « dispatcher » afin de rediriger les requêtes vers la bonne API en
-              fonction du transporteur associé à l'expédition. Grâce à
-              l'identification des transporteurs déjà présente dans l'ERP
-              Navision, cette tâche a été une des plus faciles.
+              — Le webservice sur lequel était disponible l'API REST était
+              également utilisé pour l'impression d'étiquettes Schenker ; j'ai
+              donc dû réaliser un « dispatcher » afin de rediriger les requêtes
+              vers la bonne API en fonction du transporteur associé à
+              l'expédition. Grâce à l'identification des transporteurs déjà
+              présente dans l'ERP Navision, cette tâche a été une des plus
+              faciles.
             </li>
 
             <li>
@@ -266,15 +268,15 @@
               était envoyée vers une application interne appelée Gedim, qui
               permet un suivi des transporteurs et des erreurs d'adresse. Les
               utilisateurs pouvaient ainsi corriger les erreurs d'adresse dans
-              l'application Gedim et relancer l'impression d'étiquettes GLS sans
-              toucher à l'ERP Navision.
+              Gedim et relancer l'impression d'étiquettes sans toucher à l'ERP
+              Navision.
             </li>
 
             <li>
               <strong>Mise en place des flux Dex</strong> — Parallèlement, des
               flux Dex ont été mis en place pour la sauvegarde des données
-              envoyées à GLS et l'annulation d'étiquettes GLS, ainsi qu'un flux
-              de dispatch pour les « fin de journée » qui permet la sortie d'un
+              envoyées à GLS et l'annulation d'étiquettes, ainsi qu'un flux de
+              dispatch pour les « fin de journée » qui permet la sortie d'un
               document récapitulatif des commandes expédiées dans un camion au
               moment où la « fin de journée » est générée par l'utilisateur.
             </li>
@@ -306,15 +308,17 @@
 
             <li>
               <strong
-                ><span class="term" data-term="hypercare">Hypercare</span></strong
+                ><span class="term" data-term="hypercare"
+                  >Hypercare</span
+                ></strong
               >
-              — Finalement, une période d'hypercare a
-              été mise en place afin de réaliser un suivi post mise en
-              production avec les utilisateurs, et ainsi corriger d'éventuels
-              bugs qui seraient découverts durant celle-ci. Cette période a
-              permis la pérennité d'utilisation et de fonctionnement de l'API,
-              mais aussi de vérifier si les utilisateurs rencontraient des
-              problèmes avec les nouvelles procédures d'impression d'étiquettes.
+              — Finalement, une période d'hypercare a été mise en place afin de
+              réaliser un suivi post mise en production avec les utilisateurs,
+              et ainsi corriger d'éventuels bugs qui seraient découverts durant
+              celle-ci. Cette période a permis la pérennité d'utilisation et de
+              fonctionnement de l'API, mais aussi de vérifier si les
+              utilisateurs rencontraient des problèmes avec les nouvelles
+              procédures d'impression d'étiquettes.
             </li>
           </ol>
 
@@ -401,7 +405,8 @@
             </li>
 
             <li>
-              Le prestataire Navision, qui a permis des ajustements sur Navision.
+              Le prestataire Navision, qui a permis des ajustements sur
+              Navision.
             </li>
 
             <li>
@@ -431,8 +436,7 @@
             Ce projet a servi de base pour l'intégration de l'API Géodis peu de
             temps après, spécifiquement pour la mise en place du «
             <span class="term" data-term="dispatcher">dispatcher</span>
-            ».
-            Le suivi du fonctionnement de l'API GLS est effectué par moi-même
+            ». Le suivi du fonctionnement de l'API GLS est effectué par moi-même
             car j'ai été le principal développeur de ce projet. Les évolutions
             futures de ce projet incluent un suivi, grâce à l'API GLS, de
             l'avancement des commandes expédiées.
