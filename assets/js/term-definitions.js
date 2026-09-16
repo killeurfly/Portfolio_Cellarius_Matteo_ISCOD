@@ -83,6 +83,8 @@ window.TERM_DEFINITIONS = {
   stmg: "Sciences et Technologies du Management et de la Gestion : baccalauréat technologique orienté vers l'économie, la gestion et le management.",
   tekom:
     "Association allemande de communication technique, qui délivre des certifications professionnelles reconnues en Europe dans ce domaine.",
+  trame:
+    "Structure de base du fichier de rapport : la période couverte (dates de début et de fin) et le rythme des prévisions (par heure ou par demi-heure).",
   vba: "Visual Basic for Applications : langage de programmation intégré à Excel, utilisé pour créer des macros qui automatisent des tâches bureautiques.",
   webservice:
     "Service accessible sur le réseau qui permet à deux systèmes informatiques d'échanger des données facilement.",
