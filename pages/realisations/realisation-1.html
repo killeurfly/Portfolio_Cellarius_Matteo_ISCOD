@@ -289,28 +289,28 @@
             <li>
               <strong>Mise en place des flux Dex</strong> — Parallèlement, des
               flux Dex ont été créés pour la sauvegarde des données envoyées au
-              transporteur et l'annulation d'étiquettes, ainsi qu'un flux de
-              dispatch pour les « fin de journée » qui permet la sortie d'un
-              document récapitulatif des commandes expédiées dans un camion au
-              moment où la « fin de journée » est générée par l'utilisateur.
+              transporteur et pour l'annulation d'étiquettes. Un flux de
+              dispatch a également été ajouté pour la « fin de journée »
+              (document listant les commandes chargées dans un même camion) : il
+              sort ce document au moment où l'utilisateur génère la « fin de
+              journée ».
             </li>
 
             <li>
-              <strong>Cahier de test et corrections</strong> — Afin de réaliser
-              les tests, j'ai mis en place un cahier de test afin de pouvoir
-              faire tester l'implémentation de l'API par les utilisateurs, tout
-              en vérifiant que les nouvelles procédures étaient respectées. Le
-              contenu du cahier était constitué d'étapes nominales à suivre pour
-              l'impression d'étiquettes, mais aussi de tests complémentaires sur
-              les autres impressions afin de vérifier que les nouveautés ne
-              créent pas de bug ni de
-              <span class="term" data-term="regression">régression</span>. J'ai
-              pu aussi mettre en place un tableau de remontée des erreurs afin
-              de les suivre et ainsi facilement résoudre d'éventuels bugs
-              découverts. Les tests ont été réalisés par les utilisateurs sur
-              différents sites de l'entreprise, car les sites possèdent chacun
-              un compte chez le transporteur. Il s'en est suivi une correction
-              des bugs remontés par les utilisateurs lors de la phase de tests.
+              <strong>Cahier de test et corrections</strong> — J'ai mis en place
+              un cahier de test permettant aux utilisateurs de tester
+              l'implémentation de l'API tout en vérifiant que les nouvelles
+              procédures étaient respectées. Il contenait des étapes
+              <span class="term" data-term="nominal">nominales</span> à suivre
+              pour l'impression d'étiquettes, ainsi que des tests
+              complémentaires sur les autres impressions pour s'assurer que les
+              nouveautés ne créent ni bug ni
+              <span class="term" data-term="regression">régression</span>. Un
+              tableau de remontée des erreurs permettait de suivre et de
+              résoudre facilement les bugs découverts. Les tests ont été
+              réalisés par les utilisateurs sur différents sites de
+              l'entreprise, chacun possédant son propre compte chez le
+              transporteur, puis les bugs remontés ont été corrigés.
             </li>
 
             <li>
@@ -338,25 +338,6 @@
               procédures d'impression d'étiquettes.
             </li>
           </ol>
-
-          <p class="todo-label">À compléter</p>
-          <ul class="todo-list">
-            <li>
-              « fin de journée » (l.284) n'est expliqué que sur la réalisation
-              2. Proposition : « pour la « fin de journée » (document listant
-              les commandes chargées dans un même camion) ».
-            </li>
-            <li>
-              Étape « Mise en place des flux Dex » : phrase d'environ 65 mots.
-              Proposition : couper après « annulation d'étiquettes ».
-            </li>
-            <li>
-              Étape « Cahier de test et corrections » : environ 110 mots avec «
-              afin de » 4 fois, et elle répète le cahier de test déjà décrit
-              plus haut dans la page. Proposition : garder une seule des deux
-              descriptions, ou raccourcir celle-ci.
-            </li>
-          </ul>
 
           <div class="dispatcher-diagram">
             <p class="diagram-title">Schéma — Mise en place du dispatcher</p>
