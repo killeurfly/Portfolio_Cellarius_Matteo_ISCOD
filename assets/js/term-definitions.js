@@ -121,4 +121,12 @@ window.TERM_DEFINITIONS = {
     "Ensemble des outils, logiciels et données qu'une entreprise utilise pour fonctionner (ERP, bases de données, applications...).",
   "ordre-transporteurs":
     "Les transporteurs sont désignés selon l'ordre où ils ont été intégrés à l'ERP : le transporteur principal utilisait déjà le webservice avant mes travaux ; le premier transporteur est le premier ajout ; le second transporteur est le deuxième ajout.",
+  ia: "Intelligence artificielle : programmes capables de réaliser des tâches qui demandent normalement de l'intelligence humaine (comprendre le langage, générer du texte ou du code...).",
+  "cause-racine":
+    "Démarche qui cherche l'origine réelle d'un problème plutôt que de traiter seulement ses symptômes.",
+  kivy: "Framework Python (ensemble d'outils) qui permet de créer des applications avec interface graphique, notamment pour Android.",
+  symfony:
+    "Framework PHP qui fournit une structure et des outils prêts à l'emploi pour développer des applications web.",
+  openclassrooms:
+    "Plateforme française de formation en ligne, qui propose notamment des parcours en développement informatique.",
 };
