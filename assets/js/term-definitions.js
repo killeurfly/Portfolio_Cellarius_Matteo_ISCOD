@@ -47,7 +47,7 @@ window.TERM_DEFINITIONS = {
   go: "Garantie d'Origine : certificat qui prouve que l'électricité fournie à un client est issue d'énergies renouvelables.",
   html: "Langage qui structure le contenu des pages web (titres, paragraphes, images, liens...).",
   html5:
-    "Dernière version du langage HTML, qui inclut nativement des lecteurs pour certains formats (vidéo, PDF...) sans outil supplémentaire.",
+    "Dernière version majeure du langage HTML, qui ajoute notamment des balises pour intégrer de la vidéo et de l'audio sans outil supplémentaire.",
   http: "Protocole standard utilisé pour échanger des données sur le web entre un client (navigateur, application) et un serveur.",
   hypercare:
     "Période de suivi renforcé juste après une mise en production, pour détecter et corriger rapidement les problèmes.",
@@ -120,7 +120,7 @@ window.TERM_DEFINITIONS = {
   "systeme-information":
     "Ensemble des outils, logiciels et données qu'une entreprise utilise pour fonctionner (ERP, bases de données, applications...).",
   "ordre-transporteurs":
-    "Les transporteurs sont désignés selon l'ordre où ils ont été intégrés à l'ERP : le transporteur principal utilisait déjà le webservice avant mes travaux ; le premier transporteur est le premier ajout ; le second transporteur est le deuxième ajout.",
+    "Les transporteurs sont désignés selon l'ordre où ils ont été intégrés à l'ERP : le transporteur principal utilisait déjà le webservice avant ces intégrations ; le premier transporteur est le premier ajout ; le second transporteur est le deuxième ajout.",
   ia: "Intelligence artificielle : programmes capables de réaliser des tâches qui demandent normalement de l'intelligence humaine (comprendre le langage, générer du texte ou du code...).",
   "cause-racine":
     "Démarche qui cherche l'origine réelle d'un problème plutôt que de traiter seulement ses symptômes.",
