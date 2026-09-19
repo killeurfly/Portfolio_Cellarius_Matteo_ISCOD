@@ -126,9 +126,9 @@ poste, du plus gros manque au moins gros :
 - [x] **Tous les schémas "à ajouter" sont faits (2026-09-13)** — les 6 todos
   de schéma répartis sur le site sont tous construits, en 3D CSS pur, chacun
   avec une forme différente (aucune répétition visuelle) : dispatcher
-  GLS/Schenker (`realisation-1.html`), fusion de lignes en doublon
+  transporteur 1/transporteur principal (`realisation-1.html`), fusion de lignes en doublon
   (`realisation-4.html`), pipeline Outlook→Excel (`realisation-5.html`),
-  dispatcher généralisé GLS/Géodis/Schenker (`skills/api.html`), frise de
+  dispatcher généralisé transporteurs 1/2/principal (`skills/api.html`), frise de
   déroulé de projet en 5 étapes (`skills/gestion-projet.html`), avant/après
   d'un bug de performance (`skills/resolution-problemes.html`). Le todo
   schéma de `edf.html` (parcours) a été retiré sans schéma après discussion
@@ -318,28 +318,22 @@ poste, du plus gros manque au moins gros :
 
 ### Réalisations (5/5 requises par la structure ISCOD, voir Source/Guide Réalisations.png)
 
-- [x] Réalisation 1 — Intégration API GLS : contenu complet, structure ISCOD (présentation, objectifs/contexte/enjeu/risques, étapes, acteurs, résultats, lendemains, regard critique, compétences associées), illustration SVG, relecture orthographe faite
-- [x] Réalisation 2 — Reprise API Géodis : contenu complet, structure ISCOD, illustration SVG, relecture orthographe faite (projet toujours en pause côté Romus pour l'été — section Résultats/Lendemains à réviser si le statut change à la rentrée)
+- [x] Réalisation 1 — Intégration d'une API de transporteur : contenu complet, structure ISCOD (présentation, objectifs/contexte/enjeu/risques, étapes, acteurs, résultats, lendemains, regard critique, compétences associées), illustration SVG, relecture orthographe faite
+- [x] Réalisation 2 — Reprise d'une seconde API de transporteur : contenu complet, structure ISCOD, illustration SVG, relecture orthographe faite (projet toujours en pause côté Romus pour l'été — section Résultats/Lendemains à réviser si le statut change à la rentrée)
 - [x] Réalisation 3 — Évolution de Gedim : contenu complet, structure ISCOD, illustration SVG, relecture orthographe faite (y compris les ajouts Contexte technique/Risques/Acteurs)
 - [x] Réalisation 4 — Garanties d'Origine (EDF), ex-API Swagger (remplacée, pas assez de matière) : contenu complet, structure ISCOD, illustration SVG, relecture orthographe faite. ⚠️ Le rapport d'activité EDF porte une clause de non-divulgation explicite — rester générique, aucune donnée client/chiffre réel/nom de collègue à reprendre sur la page publique
 - [x] Réalisation 5 — Prévisions de consommation (EDF), macro Spot Horaire : contenu complet, structure ISCOD, illustration SVG, plus aucun todo. ⚠️ Même clause de confidentialité EDF que Réalisation 4 — rester générique. Point à surveiller : "à destination de la facturation" (Présentation) mentionne un processus interne EDF, à généraliser si besoin
 - [x] **Noms des réalisations à revoir** (grille ISCOD) — fait 2026-09-05,
-  affiné après un premier passage jugé trop long/trop anonymisé. Décision
-  finale de l'utilisateur : garder GLS/Géodis/Gedim (pas l'entreprise
-  d'accueil, juste un transporteur/outil externe — pas vraiment le souci
-  visé par la grille), anonymiser complètement les 2 réalisations EDF
-  (cohérent avec la clause de confidentialité EDF déjà connue) :
-  1. "Intégration de l'API GLS" (inchangé) — navbar "API GLS"
-  2. "Intégration de l'API Géodis" (ex-"Reprise API Géodis") — navbar "API Géodis"
+  affiné après un premier passage jugé trop long/trop anonymisé. Décision de l'utilisateur du 2026-09-05, révisée le 2026-09-18 à la demande de l'entreprise (noms de transporteurs confidentiels) : plus aucun nom de transporteur sur le site (sauf une phrase autorisée dans `presentation.html`), anonymisation complète des 2 réalisations EDF (clause de confidentialité EDF) :
+  1. "Intégration d'une API de transporteur" — navbar "API transporteur 1"
+  2. "Reprise et finalisation d'une seconde API de transporteur" — navbar "API transporteur 2"
   3. "Évolution de Gedim" (inchangé) — navbar "Gedim"
   4. "Automatisation de la confection des certificats énergétiques" (ex-"Garanties d'Origine (EDF)") — navbar "Certificats énergétiques"
   5. "Confection automatisée des prévisions clients" (ex-"Prévisions de consommation (EDF)") — navbar "Prévisions clients"
 
   Appliqué à title/h1/navbar/cartes `realisations.html` (titre+description+alt)
   /liens `.related-skill-link` sur les 10 pages compétence et
-  `romus.html`/`edf.html`. La prose narrative de chaque page réalisation
-  garde les vrais noms techniques (GLS, Géodis, Gedim...) car elle raconte
-  des faits, pas le nom de la réalisation.
+  `romus.html`/`edf.html`. La prose des pages réalisation et compétences désigne désormais les transporteurs par « le transporteur principal », « le premier transporteur » et « le second transporteur » (2026-09-18).
 - [x] **Fin de chaque réalisation** : fait de longue date (liens vers
   compétences spécifiques ajoutés, voir navigation circulaire plus haut).
 - [ ] Ajouter le lien GitHub sur les réalisations qui s'y prêtent
@@ -419,11 +413,11 @@ poste, du plus gros manque au moins gros :
     certification/bibliothèque précise), juste des projets perso vagues —
     todo ajouté sur les 3 pages, l'utilisateur complète lui-même
     (ressources à trouver, pas à inventer par Claude).
-  - `fiabilisation.html` : une des 2 anecdotes (reprise Géodis) n'a pas de
+  - `fiabilisation.html` : une des 2 anecdotes (reprise transporteur 2) n'a pas de
     résultat chiffré car le projet est toujours en cours — acceptable, pas
     un vrai manque.
   - `autonomie.html` : le bloc "Réalisations liées" listait 5 réalisations
-    mais seules 2 (GLS, Géodis) avaient une anecdote. Vérifié par grep sur
+    mais seules 2 (transporteur 1, transporteur 2) avaient une anecdote. Vérifié par grep sur
     les 5 pages réalisation : Gedim n'a aucune mention d'autonomie nulle
     part (lien retiré), mais Garanties d'Origine et Prévisions de
     consommation ont déjà le fait "en charge du développement de la macro
@@ -440,7 +434,7 @@ poste, du plus gros manque au moins gros :
   todo.** Todos approfondis le 26/08 sur le modèle de `Source/Exemple skills
   Humain 3.txt`, puis contenu écrit en plusieurs allers-retours : "Ma
   définition" (l'utilisateur, actualité Silkhom + déduction perso), "Mes
-  éléments de preuve" (l'utilisateur, 3 anecdotes GLS/Géodis/Gedim sourcées
+  éléments de preuve" (l'utilisateur, 3 anecdotes transporteur 1/transporteur 2/Gedim sourcées
   dans les journaux d'alternance), "Mon autocritique" (l'utilisateur), "Mon
   évolution" (rédigée par Claude à la demande explicite de l'utilisateur,
   même dérogation que sur api.html : fil rouge projet domotique + 2
@@ -451,8 +445,8 @@ poste, du plus gros manque au moins gros :
   resolution-problemes, fiabilisation, communication).
 - [x] `autonomie.html` — **entièrement rédigée (vérifié 2026-09-02), plus
   aucun todo.** Actualité Solal Digital (l'autonomie comme marqueur du
-  développeur senior), 2 anecdotes (hypercare GLS après MEP, reprise seule du
-  code Géodis), autocritique et évolution complètes (ressource nommée :
+  développeur senior), 2 anecdotes (hypercare transporteur 1 après MEP, reprise seule du
+  code transporteur 2), autocritique et évolution complètes (ressource nommée :
   parcours OpenClassrooms "Architecte Logiciel"). ⚠️ Point de cohérence
   repéré le 2026-09-02, pas corrigé : le bloc "Réalisations liées" en bas de
   page liste les 5 réalisations alors que seules réalisation-1 et
@@ -466,14 +460,14 @@ poste, du plus gros manque au moins gros :
   développé juste avant — à relire.
 - [x] `adaptabilite.html` — **entièrement rédigée (2026-08-26), plus aucun
   todo.** Actualité Futura-Sciences ("l'adaptabilité, compétence n°1 des
-  recruteurs en 2026"), 3 anecdotes journal (Géodis, macro Prévisions de
+  recruteurs en 2026"), 3 anecdotes journal (transporteur 2, macro Prévisions de
   consommation, macro Garanties d'Origine), autocritique et évolution
   complètes (ressource nommée : OpenClassrooms "Apprenez à apprendre").
   Répétition du connecteur "car" repérée et corrigée (voir Finalisation).
 - [x] `rigueur.html` — **entièrement rédigée (2026-08-26), plus aucun todo.**
   Actualité Developpez.com (l'étude "bugs 100x plus chers en prod" n'existe
   pas — écho direct à "vérifier plutôt que supposer"), 2 anecdotes (Garanties
-  d'Origine, GLS), autocritique et évolution complètes (ressource nommée :
+  d'Origine, transporteur 1), autocritique et évolution complètes (ressource nommée :
   certification ISTQB Certified Tester Foundation Level). 3ᵉ piste
   d'anecdote (Gedim) proposée mais non utilisée, restée optionnelle.
 - [x] `gestion-projet.html` — **entièrement rédigée (vérifié 2026-09-02),
@@ -481,7 +475,7 @@ poste, du plus gros manque au moins gros :
   10/10 sont maintenant faites.** Actualité EFE Management (la gestion de
   projet comme travail surtout relationnel plutôt que technique, contrastée
   avec son propre contexte en autonomie sans équipe à manager), 3 anecdotes
-  (GLS, Géodis, Garanties d'Origine), autocritique et évolution complètes
+  (transporteur 1, transporteur 2, Garanties d'Origine), autocritique et évolution complètes
   (ressource nommée : Google Project Management Professional Certificate,
   Coursera).
 - [x] **Schéma comparatif des 10 compétences** (10 pts) — fait le 2026-09-12,
@@ -613,8 +607,8 @@ poste, du plus gros manque au moins gros :
   de build tool, la minification serait un gain marginal (Cloudflare
   compresse déjà en gzip/brotli à la volée).
 - [ ] Relecture par réalisation, 3 points à chaque fois : (1) orthographe/grammaire/syntaxe, (2) mots-clés importants mis en gras dans les paragraphes (pas seulement les titres d'étapes et de définitions — convention encore à appliquer partout), (3) vérifier qu'aucune définition utile ne manque pour les termes techniques utilisés sur la page
-  - [x] Réalisation 1 (API GLS) — orthographe faite, gras/définitions à vérifier
-  - [x] Réalisation 2 (API Géodis) — orthographe faite, gras/définitions à vérifier
+  - [x] Réalisation 1 (API transporteur 1) — orthographe faite, gras/définitions à vérifier
+  - [x] Réalisation 2 (API transporteur 2) — orthographe faite, gras/définitions à vérifier
   - [x] Réalisation 3 (Gedim) — orthographe faite, gras/définitions à vérifier
   - [x] Réalisation 4 (Garanties d'Origine EDF) — orthographe faite, gras/définitions à vérifier
   - [x] Réalisation 5 (Prévisions de consommation EDF) — orthographe faite

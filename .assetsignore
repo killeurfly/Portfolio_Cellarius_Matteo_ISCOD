@@ -1,0 +1,9 @@
+# Fichiers de travail internes : ne pas publier avec le site (wrangler.toml publie tout le dossier racine)
+TODO.md
+CLAUDE.md
+CLAUDE_NOTES.md
+Source/
+wrangler.toml
+.gitignore
+.claude/
+*.docx
