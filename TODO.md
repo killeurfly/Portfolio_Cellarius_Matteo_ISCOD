@@ -231,6 +231,32 @@ poste, du plus gros manque au moins gros :
 
 ---
 
+## À traiter plus tard (check ultime du 2026-09-19)
+
+À la fin, en discuter ensemble : contradictions de contenu restantes.
+
+- [ ] Sous-titre « Macro de suivi automatisé de justificatifs » (realisation-4.html, carte liée ; automatisation.html) : ne correspond pas au projet certificats. Proposition : « Macro de constitution du fichier de certification ».
+- [ ] CV (`assets/documents/cv.pdf`) : poste EDF « Développeur applicatif » vs « Chargé de mission informatique » sur le site, et ancien nom « Garanties d'Origine (EDF) / Report trimestriel » pour R4.
+
+Répétitions et syntaxe lourde (mises de côté) :
+
+- [ ] presentation.html (~136-155) : « processus métiers / processus métier » dans deux phrases voisines ; « j'ai eu l'occasion » 3 fois.
+- [ ] resolution-problemes.html (~263-274) : « résolution de problèmes » ×3, « développement/développer » ×5 ; le passage « ce serait qu'il faut de l'introspection… » est lourd.
+- [ ] web.html (~154) : « fusion » ×3.
+- [ ] api.html (~274-292) : « donc » / « j'ai donc dû » ×3 ; première phrase d'environ 60 mots.
+- [ ] realisation-2.html (~282-287 et ~253-265) : « Également pour pallier l'envoi de colis en différé… » bancal ; « envois » ×5 ; « également les EDI » maladroit.
+- [ ] realisation-3.html (~162-164) : « faire évoluer les fonctionnalités… avec un moindre impact sur les autres ».
+
+Phrases de plus de 45 mots (mises de côté) :
+
+- [ ] web.html (~107-123, directive européenne, ~60 mots).
+- [ ] automatisation.html (~298-311, ~65 mots ; ~324-329, ~60 mots).
+- [ ] realisation-3.html (~254-260, LDAP, ~50 mots).
+- [ ] fiabilisation.html (~186-194, ~55 mots).
+- [ ] communication.html (~180-187, ~50 mots).
+
+Jargon non balisé, non traité car les pages ont déjà beaucoup de définitions (R1 16, R3 15, api 14, presentation 12) : Navision (presentation), middleware / flux Dex / requête (R1, api), DataTable (R3), sigle DGC (titre de edf.html).
+
 ## Structure générale
 
 - [x] Créer la page d'accueil
