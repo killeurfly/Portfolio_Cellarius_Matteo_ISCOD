@@ -6,12 +6,12 @@ window.TERM_DEFINITIONS = {
     "Méthodes de gestion de projet qui découpent le travail en courtes itérations pour livrer et ajuster le projet plus régulièrement, plutôt que tout planifier à l'avance.",
   ants: "Agence Nationale des Titres Sécurisés : organisme public français qui délivre les documents d'identité sécurisés (carte d'identité, passeport, permis de conduire...).",
   api: "Application Programming Interface : passerelle qui permet à deux programmes informatiques d'échanger des données ou des fonctionnalités.",
-  "api-geodis":
-    "Interface du transporteur Géodis, ajoutée au même dispatcher après sa mise en place initiale pour GLS et Schenker.",
-  "api-gls":
-    "Interface du transporteur GLS qui génère l'étiquette d'expédition une fois la requête redirigée vers elle par le dispatcher.",
-  "api-schenker":
-    "Interface du transporteur Schenker, qui partageait le même webservice que GLS avant la mise en place du dispatcher.",
+  "api-transporteur-2":
+    "Interface du second transporteur, ajoutée au même dispatcher après sa mise en place initiale pour le premier transporteur et le transporteur principal.",
+  "api-transporteur-1":
+    "Interface du premier transporteur qui génère l'étiquette d'expédition une fois la requête redirigée vers elle par le dispatcher.",
+  "api-transporteur-principal":
+    "Interface du transporteur principal, qui partageait le même webservice que le premier transporteur avant la mise en place du dispatcher.",
   "banc-de-test":
     "Environnement dédié qui permet de faire tourner et comparer automatiquement les résultats de plusieurs algorithmes, pour vérifier lequel est le plus performant.",
   "b-to-b":
@@ -46,7 +46,7 @@ window.TERM_DEFINITIONS = {
     "Le correctif interroge la base de données par petites requêtes SQL successives, au lieu de tout charger en mémoire en une seule fois.",
   go: "Garantie d'Origine : certificat qui prouve que l'électricité fournie à un client est issue d'énergies renouvelables.",
   html: "Langage qui structure le contenu des pages web (titres, paragraphes, images, liens...).",
-  "html5":
+  html5:
     "Dernière version du langage HTML, qui inclut nativement des lecteurs pour certains formats (vidéo, PDF...) sans outil supplémentaire.",
   http: "Protocole standard utilisé pour échanger des données sur le web entre un client (navigateur, application) et un serveur.",
   hypercare:
@@ -63,6 +63,8 @@ window.TERM_DEFINITIONS = {
     "Série d'instructions écrites en VBA qui permet d'automatiser une tâche répétitive, souvent dans Excel ou Outlook.",
   microservices:
     "Architecture qui découpe une application en plusieurs petits services indépendants plutôt qu'un seul bloc monolithique.",
+  nominal:
+    "Qui correspond au fonctionnement normal attendu, sans cas particulier ni erreur.",
   ocr: "Reconnaissance optique de caractères : technologie qui extrait le texte contenu dans une image ou un document scanné.",
   "open-source":
     "Se dit d'un logiciel dont le code source est public et librement réutilisable, généralement développé et maintenu par une communauté.",
@@ -75,10 +77,12 @@ window.TERM_DEFINITIONS = {
     "Langage de programmation généraliste, réputé pour sa simplicité de lecture, utilisé aussi bien pour l'automatisation que pour le développement d'applications.",
   "processus-metier":
     "Suite d'activités et de tâches réalisées par les équipes d'une entreprise pour accomplir un objectif métier (traiter une commande, gérer un stock...), indépendamment de l'outil informatique utilisé.",
+  regression:
+    "Bug qui apparaît dans une fonctionnalité qui marchait correctement avant une modification du code.",
   "requete-commande":
-    "Requête envoyée par l'ERP Navision, dont le fichier contient l'identifiant du transporteur - le dispatcher le lit directement, sans avoir besoin d'interroger une base de données.",
+    "Requête envoyée par l'ERP Navision. Pour l'impression, le fichier contient l'identifiant du transporteur : le dispatcher le lit directement, sans interroger de base de données.",
   "requete-impression":
-    "Le clic sur le bouton d'impression dans l'ERP Navision, qui déclenche l'appel vers le webservice partagé par GLS et Schenker.",
+    "Le clic sur le bouton d'impression dans l'ERP Navision, qui déclenche l'appel vers le webservice partagé par le premier transporteur et le transporteur principal.",
   routes:
     "Chemins d'URL qui définissent, dans une application web, quelle page ou quelle fonctionnalité s'affiche pour chaque adresse demandée.",
   sandbox:
@@ -99,4 +103,22 @@ window.TERM_DEFINITIONS = {
   webservice:
     "Service accessible sur le réseau qui permet à deux systèmes informatiques d'échanger des données facilement.",
   xml: "Format de texte utilisé pour structurer et échanger des données entre systèmes informatiques, plus verbeux que le JSON.",
+  backend:
+    "Partie d'une application qui fonctionne côté serveur (traitement des données, base de données, API), invisible pour l'utilisateur.",
+  cadrage:
+    "Phase de départ d'un projet où l'on définit précisément le besoin, le périmètre et les objectifs avant de commencer à développer.",
+  cloud:
+    "Hébergement de services ou de fichiers sur des serveurs distants accessibles par Internet, plutôt que sur son propre ordinateur.",
+  "dette-technique":
+    "Coût futur (temps de correction ou de refonte) créé lorsqu'une solution rapide est choisie plutôt qu'une solution propre pendant le développement.",
+  "learning-coach":
+    "Référent de l'école qui suit l'avancement des cours et la préparation aux examens d'un étudiant.",
+  "mise-en-production":
+    "Moment où une nouvelle version d'un logiciel est déployée pour être réellement utilisée par les utilisateurs, après les tests.",
+  "parties-prenantes":
+    "Personnes ou services concernés par un projet ou qui en subissent les effets (utilisateurs, commanditaires, équipe technique...).",
+  "systeme-information":
+    "Ensemble des outils, logiciels et données qu'une entreprise utilise pour fonctionner (ERP, bases de données, applications...).",
+  "ordre-transporteurs":
+    "Les transporteurs sont désignés selon l'ordre où ils ont été intégrés à l'ERP : le transporteur principal utilisait déjà le webservice avant mes travaux ; le premier transporteur est le premier ajout ; le second transporteur est le deuxième ajout.",
 };

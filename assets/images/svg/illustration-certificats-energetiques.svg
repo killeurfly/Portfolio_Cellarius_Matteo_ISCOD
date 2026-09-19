@@ -1,4 +1,4 @@
-<svg viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schéma du flux : Fichiers clients vers macro VBA vers suivi des Garanties d'Origine">
+<svg viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schéma du flux : Fichiers clients vers macro VBA vers certification des Garanties d'Origine">
   <defs>
     <linearGradient id="flowGradientEdf" gradientUnits="userSpaceOnUse" x1="120" y1="100" x2="520" y2="100">
       <stop offset="0%" stop-color="#60a5fa" />
@@ -38,6 +38,6 @@
     <line x1="68" y1="15" x2="68" y2="75" stroke="#67e8f9" stroke-width="1.2" />
     <line x1="15" y1="35" x2="95" y2="35" stroke="#67e8f9" stroke-width="1.2" />
     <line x1="15" y1="55" x2="95" y2="55" stroke="#67e8f9" stroke-width="1.2" />
-    <text x="55" y="118" text-anchor="middle" fill="#cbd5e1" font-size="13" font-family="Segoe UI, sans-serif">Suivi Go</text>
+    <text x="55" y="118" text-anchor="middle" fill="#cbd5e1" font-size="13" font-family="Segoe UI, sans-serif">Certification GO</text>
   </g>
 </svg>

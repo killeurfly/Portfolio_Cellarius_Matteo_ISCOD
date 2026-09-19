@@ -1543,7 +1543,7 @@ main {
   --flow-side: #0e7490;
 }
 
-.flow-node--schenker {
+.flow-node--principal {
   --flow-front: #a855f7;
 
   --flow-top: #e9d5ff;
@@ -2896,7 +2896,11 @@ main {
 
   margin: 20px auto 0;
 
-  perspective: 1600px;
+  /* Pas de perspective : le rail est à plat, et avec une perspective la face
+     latérale (art-side) des modèles situés à gauche du centre restait
+     visible en fine bande sombre sur leur bord droit. Sans perspective, les
+     faces de côté/dessus sont vues exactement de chant, donc invisibles. */
+  perspective: none;
 
   /* Les 5 réalisations tiennent déjà dans la largeur visible (vérifié) ; le
      seul dépassement mesurable vient du débordement de peinture propre aux
@@ -3128,7 +3132,7 @@ main {
   transform: translateZ(calc(var(--ad) / 2)) rotateY(90deg);
 }
 
-/* Étiquette d'expédition (GLS / Géodis) */
+/* Étiquette d'expédition (transporteurs) */
 
 .artifact-label .artifact-box {
   --aw: 68px;
