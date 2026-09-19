@@ -5,17 +5,22 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Certificats énergétiques | Portfolio</title>
+    <title>
+      Automatisation de la confection des certificats énergétiques | Portfolio
+    </title>
 
     <meta
       name="description"
-      content="Automatisation du suivi des Garanties d'Origine via une macro VBA Excel : contexte, étapes et résultats."
+      content="Automatisation du fichier de certification des Garanties d'Origine via une macro VBA Excel : contexte, étapes et résultats."
     />
 
-    <meta property="og:title" content="Certificats énergétiques | Portfolio" />
+    <meta
+      property="og:title"
+      content="Automatisation de la confection des certificats énergétiques | Portfolio"
+    />
     <meta
       property="og:description"
-      content="Automatisation du suivi des Garanties d'Origine via une macro VBA Excel : contexte, étapes et résultats."
+      content="Automatisation du fichier de certification des Garanties d'Origine via une macro VBA Excel : contexte, étapes et résultats."
     />
     <meta
       property="og:url"
@@ -24,10 +29,13 @@
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Certificats énergétiques | Portfolio" />
+    <meta
+      name="twitter:title"
+      content="Automatisation de la confection des certificats énergétiques | Portfolio"
+    />
     <meta
       name="twitter:description"
-      content="Automatisation du suivi des Garanties d'Origine via une macro VBA Excel : contexte, étapes et résultats."
+      content="Automatisation du fichier de certification des Garanties d'Origine via une macro VBA Excel : contexte, étapes et résultats."
     />
     <link
       rel="icon"
@@ -44,7 +52,7 @@
     <main>
       <section class="page-section project-detail">
         <div class="blob-center"></div>
-        <h1>Certificats énergétiques</h1>
+        <h1>Automatisation de la confection des certificats énergétiques</h1>
 
         <nav class="page-toc" aria-label="Sommaire de la page">
           <a href="#presentation">Présentation</a>
@@ -60,7 +68,7 @@
         <div class="illustration-panel">
           <img
             src="/assets/images/svg/illustration-certificats-energetiques.svg"
-            alt="Schéma du flux : fichiers clients vers macro VBA vers suivi des Garanties d'Origine"
+            alt="Schéma du flux : fichiers clients vers macro VBA vers certification des Garanties d'Origine"
           />
         </div>
 
@@ -72,25 +80,25 @@
             j'étais en <span class="term" data-term="but">BUT</span>
             informatique. Ce projet consistait à développer une
             <span class="term" data-term="macro">macro</span> VBA (Visual Basic
-            for Applications) dans Excel qui permettait d'
-            <a href="/pages/skills/automatisation.html"
+            for Applications) dans Excel qui permettait d'<a
+              href="/pages/skills/automatisation.html"
               >automatiser un traitement de données</a
             >
             réalisé manuellement par un collaborateur jusque-là.
           </p>
 
           <p>
-            Tout d'abord quelques définitions des termes qui vont être utilisés
+            Tout d'abord, quelques définitions des termes qui vont être utilisés
             dans ce projet :
           </p>
 
           <ul class="definition-list">
             <li>
-              <strong>Une Garantie d'Origine</strong> (Go) est un certificat qui
+              <strong>Une Garantie d'Origine</strong> (GO) est un certificat qui
               prouve que l'électricité fournie à un client est issue d'énergies
               renouvelables. Ici, ces garanties sont dites « spécifiques » et
               traitées par trimestre pour chaque client. À noter que ce registre
-              de Go est public et disponible sur le
+              de GO est public et disponible sur le
               <a
                 href="https://www.eex.com/fr/markets/energy-certificates/registre-des-garanties-dorigine-delectricite"
                 target="_blank"
@@ -116,9 +124,9 @@
 
           <p>
             L'objectif de ce projet était d'automatiser la constitution d'un
-            fichier de suivi trimestriel des Garanties d'Origine pour chaque
-            client, afin de remplacer un processus manuel long et propice aux
-            erreurs.
+            fichier de certification trimestriel des Garanties d'Origine pour
+            chaque client, afin de remplacer un processus manuel long et propice
+            aux erreurs.
           </p>
 
           <p class="subsection-label">🔧 Contexte technique</p>
@@ -159,14 +167,24 @@
             pouvait fausser le certificat apporté aux clients. Une des erreurs
             qui pouvait avoir un impact important était une répartition qui
             donnait à deux clients différents la même Garantie d'Origine. C'est
-            pour cela que les réunions avec ce collaborateur tout au long du
-            développement du projet ont été importantes. La conformité de ma
-            macro par rapport aux attentes du collaborateur a pu être vérifiée
-            grâce à des tests basés sur des sources déjà utilisées par le
-            collaborateur pour réaliser ce rapport ; j'ai pu ensuite le comparer
-            à celui produit par ma macro afin de vérifier la correspondance des
-            données.
+            pour cela que les réunions tout au long du développement du projet
+            ont été importantes. La conformité de ma macro par rapport aux
+            attentes du collaborateur a pu être vérifiée grâce à des tests basés
+            sur des sources déjà utilisées pour réaliser ce rapport à l'origine
+            ; j'ai pu ensuite le comparer à celui produit par ma macro afin de
+            vérifier la correspondance des données.
           </p>
+
+          <p class="todo-label">À compléter</p>
+          <ul class="todo-list">
+            <li>
+              « ce rapport… le comparer » n'a pas d'antécédent, et le texte
+              alterne « fichier trimestriel », « rapport » et « rapport final ».
+              Proposition : « j'ai comparé le fichier obtenu par la macro à
+              celui que le collaborateur produisait à la main », et garder «
+              fichier de certification » partout.
+            </li>
+          </ul>
 
           <div class="section-heading">
             <img
@@ -186,10 +204,13 @@
             </li>
 
             <li>
-              <strong>Récupération de données nominales</strong> — Le
-              collaborateur m'a fourni les fichiers source, ainsi qu'un exemple
-              de fichier de sortie réalisé afin que je puisse savoir ce qui
-              était attendu en sortie de la macro.
+              <strong
+                >Récupération de données
+                <span class="term" data-term="nominal">nominales</span></strong
+              >
+              — Le collaborateur m'a fourni les fichiers source, ainsi qu'un
+              exemple de fichier de sortie réalisé afin que je puisse savoir ce
+              qui était attendu en sortie de la macro.
             </li>
 
             <li>
@@ -218,11 +239,11 @@
               source des Garanties d'Origine, il arrivait parfois que des lignes
               partagent le même identifiant et le même mois, j'ai donc dû
               développer une fonction permettant une fusion des lignes qui
-              additionnait les Go associés.
+              additionnait les GO associés.
             </li>
 
             <li>
-              <strong>Attribution automatique des Go</strong> — Une fois les
+              <strong>Attribution automatique des GO</strong> — Une fois les
               données des Garanties d'Origine destinées aux clients récupérées
               dans le futur fichier de sortie de la macro, il a fallu mettre en
               place des règles de gestion permettant l'attribution de ces
@@ -258,15 +279,15 @@
                 <div class="merge-stack">
                   <div class="merge-row" style="--i: 2">
                     <span class="merge-row-id">ID 1042 · Mars</span>
-                    <span class="merge-row-go">120 Go</span>
+                    <span class="merge-row-go">120 GO</span>
                   </div>
                   <div class="merge-row" style="--i: 1">
                     <span class="merge-row-id">ID 1042 · Mars</span>
-                    <span class="merge-row-go">85 Go</span>
+                    <span class="merge-row-go">85 GO</span>
                   </div>
                   <div class="merge-row" style="--i: 0">
                     <span class="merge-row-id">ID 1042 · Mars</span>
-                    <span class="merge-row-go">40 Go</span>
+                    <span class="merge-row-go">40 GO</span>
                   </div>
                 </div>
 
@@ -287,7 +308,7 @@
 
                 <div class="merge-result">
                   <span class="merge-row-id">ID 1042 · Mars</span>
-                  <span class="merge-row-go">245 Go</span>
+                  <span class="merge-row-go">245 GO</span>
                 </div>
               </div>
             </div>
@@ -297,10 +318,11 @@
 
           <ul class="definition-list">
             <li>
-              Le collaborateur qui a énoncé la demande de macro a participé aux
-              réunions de cadrage et aux tests de celle-ci. Étant la seule
-              personne à gérer les Garanties d'Origine, personne d'autre ne peut
-              être mentionné ici.
+              Le collaborateur qui a énoncé la demande de macro, seul
+              responsable des Garanties d'Origine côté métier, a participé aux
+              réunions de
+              <span class="term" data-term="cadrage">cadrage</span> et aux
+              tests.
             </li>
 
             <li>
@@ -333,6 +355,15 @@
             d'autres parties récurrentes de son travail sur les Garanties
             d'Origine, ce qui a pu être réalisé dans la suite de mon alternance.
           </p>
+
+          <p class="todo-label">À compléter</p>
+          <ul class="todo-list">
+            <li>
+              Phrase de plus de 55 mots dans « Résultats » : couper après «
+              (sans celui-ci, les écarts auraient été difficiles à repérer…) »
+              et commencer une nouvelle phrase à « Le temps global… ».
+            </li>
+          </ul>
 
           <h2 id="lendemains">Les lendemains du projet</h2>
 

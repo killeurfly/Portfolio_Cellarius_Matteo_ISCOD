@@ -9,13 +9,13 @@
 
     <meta
       name="description"
-      content="Intégration d'API REST : ma définition de cette compétence, mes preuves concrètes (API GLS, Géodis), autocritique et évolution."
+      content="Intégration d'API REST : ma définition de cette compétence, mes preuves concrètes (deux API de transporteurs), autocritique et évolution."
     />
 
     <meta property="og:title" content="Intégration d'API REST | Portfolio" />
     <meta
       property="og:description"
-      content="Intégration d'API REST : ma définition de cette compétence, mes preuves concrètes (API GLS, Géodis), autocritique et évolution."
+      content="Intégration d'API REST : ma définition de cette compétence, mes preuves concrètes (deux API de transporteurs), autocritique et évolution."
     />
     <meta
       property="og:url"
@@ -27,7 +27,7 @@
     <meta name="twitter:title" content="Intégration d'API REST | Portfolio" />
     <meta
       name="twitter:description"
-      content="Intégration d'API REST : ma définition de cette compétence, mes preuves concrètes (API GLS, Géodis), autocritique et évolution."
+      content="Intégration d'API REST : ma définition de cette compétence, mes preuves concrètes (deux API de transporteurs), autocritique et évolution."
     />
     <link
       rel="icon"
@@ -104,12 +104,12 @@
             </li>
             <li>
               <strong>Les API partenaires</strong> possèdent un accès qui n'est
-              disponible qu'aux partenaires d'une organisation, elle doit alors
+              disponible qu'aux partenaires d'une organisation ; elle doit alors
               leur fournir une autorisation ainsi que des accès.
             </li>
             <li>
               <strong>Les API internes</strong> sont destinées à une utilisation
-              dans une même entreprise. L'utilité de cette API va être la
+              dans une même entreprise. L'utilité de ces API va être la
               réutilisation en interne par d'autres équipes ou pour d'autres
               projets.
             </li>
@@ -146,7 +146,7 @@
 
           <p>
             Mon apprentissage des API REST s'est fait durant mon alternance.
-            J'ai vu cette notion durant mes cours à l'ISCOD mais j'ai dû
+            J'ai vu cette notion durant mes cours à l'ISCOD, mais j'ai dû
             l'acquérir en amont car les projets sur lesquels elle a été utilisée
             ont été les premiers sur lesquels j'ai travaillé.
           </p>
@@ -154,10 +154,10 @@
           <p>
             Afin de travailler sur les API REST dans l'entreprise, j'ai dû
             comprendre leur fonctionnement dans les projets déjà mis en place ;
-            j'ai donc pu analyser les relations API entre l'API Schenker et
-            l'ERP Navision qui servait à imprimer des étiquettes. Cela m'a servi
-            pour la suite car j'ai dû développer l'intégration de l'API d'un
-            autre transporteur, connectée à Navision.
+            j'ai donc pu analyser les relations entre l'API et le transporteur
+            principal ainsi que l'ERP Navision qui servait à imprimer des étiquettes.
+            Cela m'a servi pour la suite car j'ai dû développer l'intégration de
+            l'API d'un autre transporteur, connectée à Navision.
           </p>
 
           <p>
@@ -185,9 +185,11 @@
               développer pour la redirection des requêtes transporteur vers la
               bonne API, grâce aux informations contenues dans la requête
               (exemple : l'identifiant du transporteur) ; il a été nécessaire de
-              le mettre en place lors du développement de l'API GLS afin de
-              différencier les impressions GLS de Schenker, et il a également
-              été réutilisé pour Géodis.
+              le mettre en place lors du développement de la première
+              intégration d'API afin de différencier les impressions des
+              différents transporteurs. Il a été utilisé pour l'intégration des
+              2 API dans le
+              <span class="term" data-term="webservice">webservice</span>.
             </li>
           </ul>
 
@@ -229,34 +231,34 @@
                 <span class="flow-arrow" aria-hidden="true">→</span>
 
                 <div class="flow-fork">
-                  <div class="flow-node" data-term="api-gls">
+                  <div class="flow-node" data-term="api-transporteur-1">
                     <div class="flow-box flow-box--small">
                       <span class="flow-face flow-top"></span>
                       <span class="flow-face flow-front">🏷️</span>
                       <span class="flow-face flow-side"></span>
                     </div>
-                    <span class="flow-label">API GLS</span>
+                    <span class="flow-label">API transporteur 1</span>
                   </div>
 
-                  <div class="flow-node" data-term="api-geodis">
+                  <div class="flow-node" data-term="api-transporteur-2">
                     <div class="flow-box flow-box--small">
                       <span class="flow-face flow-top"></span>
                       <span class="flow-face flow-front">🏷️</span>
                       <span class="flow-face flow-side"></span>
                     </div>
-                    <span class="flow-label">API Géodis</span>
+                    <span class="flow-label">API transporteur 2</span>
                   </div>
 
                   <div
-                    class="flow-node flow-node--schenker"
-                    data-term="api-schenker"
+                    class="flow-node flow-node--principal"
+                    data-term="api-transporteur-principal"
                   >
                     <div class="flow-box flow-box--small">
                       <span class="flow-face flow-top"></span>
                       <span class="flow-face flow-front">🏷️</span>
                       <span class="flow-face flow-side"></span>
                     </div>
-                    <span class="flow-label">API Schenker</span>
+                    <span class="flow-label">API transporteur principal</span>
                   </div>
                 </div>
               </div>
@@ -269,53 +271,63 @@
           </p>
 
           <p>
-            Dans l'ERP Navision, pour l'annulation d'étiquette, Schenker et GLS
-            passaient par le même bouton, donc l'
-            <span class="term" data-term="endpoint">endpoint</span>
+            Dans l'ERP Navision, pour l'annulation d'étiquette, le transporteur
+            principal et le premier transporteur passaient par le même bouton,
+            donc l'<span class="term" data-term="endpoint">endpoint</span>
             API devait être le même : j'ai donc dû réaliser, pour le
             développement de
-            <a href="/pages/realisations/realisation-1.html">l'API GLS</a>, une
-            logique de « dispatch » afin d'annuler vers le bon transporteur.
-            Mais sur cet envoi de requête API, je n'avais que l'identifiant de
-            la commande ; j'ai donc dû mettre en place dans mon « dispatcher »
-            une requête en base de données qui permettait la récupération du
-            transporteur associé à l'identifiant. Tout cela était nécessaire car
-            on voulait modifier le moins possible les processus de Navision pour
-            les utilisateurs. Ce « dispatch » a très bien fonctionné dès son
-            implémentation et a permis lors de
+            <a href="/pages/realisations/realisation-1.html"
+              >l'API du premier transporteur</a
+            >, une logique de redirection afin d'annuler vers le bon
+            transporteur. Mais sur cet envoi de requête API, je n'avais que
+            l'identifiant de la commande ; j'ai donc dû mettre en place dans mon
+            « dispatcher » une requête en base de données qui permettait la
+            récupération du transporteur associé à l'identifiant. Tout cela
+            était nécessaire car on voulait modifier le moins possible les
+            processus de Navision pour les utilisateurs. Ce dispatcher a très
+            bien fonctionné dès son implémentation et a permis lors de
             <a href="/pages/realisations/realisation-2.html"
-              >l'intégration de l'API Géodis</a
+              >l'intégration d'une seconde API de transporteur</a
             >
             une mise en place rapide car la logique était déjà présente.
           </p>
 
+          <p class="todo-label">À compléter</p>
+          <ul class="todo-list">
+            <li>
+              Loupe facultative « ordre-transporteurs » à poser sur «
+              transporteur principal » (première mention de la page), comme sur
+              les réalisations 1 à 3.
+            </li>
+          </ul>
+
           <p>
             Pour
             <a href="/pages/realisations/realisation-2.html"
-              >l'intégration de l'API Géodis</a
-            >
-            certains champs nécessaires à l'obtention de l'étiquette Géodis
-            n'étaient pas mentionnés comme obligatoires dans la documentation,
-            j'ai donc dû tester lesquels étaient requis pour un envoi de requête
-            API puis j'ai demandé aux équipes techniques de Géodis lesquels
-            devaient être envoyés contractuellement. Un des champs
-            obligatoires était le nom du contact de la société destinataire du
-            colis qui pouvait ne pas être présent ; j'ai donc pu communiquer
-            avec nos équipes commerciales afin de savoir si l'on pouvait
-            transmettre le nom de la société à la place. Cela a été accepté et
-            le problème a donc pu être réglé. L'étude des champs obligatoires
-            pour l'API de Géodis a permis une plus grande maîtrise de celle-ci
-            et ainsi de réagir plus rapidement lors du développement des
-            différents envois avec l'API (Envoi Europe ou National).
+              >l'intégration d'une seconde API de transporteur</a
+            >, certains champs nécessaires à l'obtention de l'étiquette du
+            second transporteur n'étaient pas mentionnés comme obligatoires dans
+            la documentation, j'ai donc dû tester lesquels étaient requis pour
+            un envoi de requête API puis j'ai demandé aux équipes techniques du
+            transporteur lesquels devaient être envoyés
+            contractuellement. Un des champs obligatoires était le nom du
+            contact de la société destinataire du colis qui pouvait ne pas être
+            présent ; j'ai donc pu communiquer avec nos équipes commerciales
+            afin de savoir si l'on pouvait transmettre le nom de la société à la
+            place. Cela a été accepté et le problème a donc pu être réglé.
+            L'étude des champs obligatoires pour l'API du second transporteur a
+            permis une plus grande maîtrise de celle-ci et ainsi de réagir plus
+            rapidement lors du développement des différents envois avec l'API
+            (Envoi Europe ou National).
           </p>
 
           <h2 id="autocritique">Mon autocritique</h2>
 
           <p>
-            Ayant réalisé plusieurs projets se reposant sur l'utilisation d'API
+            Ayant réalisé plusieurs projets reposant sur l'utilisation d'API
             REST, je me considère apte à les développer et à les mettre en
-            place, mais n'ayant pas vu toutes les utilisations possibles des API
-            je ne peux pas me considérer comme un expert dans ce domaine.
+            place, mais n'ayant pas vu toutes les utilisations possibles des
+            API, je ne peux pas me considérer comme un expert dans ce domaine.
           </p>
 
           <p>
@@ -329,9 +341,9 @@
           </p>
 
           <p>
-            Dans le domaine du développement applicatif les API sont très
+            Dans le domaine du développement applicatif, les API sont très
             importantes et posséder des connaissances sur ce sujet en tant que
-            futur expert ingénieur l'est tout autant.
+            futur expert en ingénierie du logiciel l'est tout autant.
           </p>
 
           <p>
@@ -339,15 +351,17 @@
             développé mes compétences sur les API de façon très rapide, aidé par
             les multiples projets qui en mobilisaient. Cette progression m'a
             appris que la mise en place d'API est cruciale pour le
-            fonctionnement efficace d'un « Backend » de projet (partie d'une
-            application, côté serveur, qui traite les données et la logique
-            métier). Je m'en suis rendu compte lors de l'étude des
+            fonctionnement efficace d'un «
+            <span class="term" data-term="backend">Backend</span> » de projet
+            (partie d'une application, côté serveur, qui traite les données et
+            la logique métier). Je m'en suis rendu compte lors de l'étude des
             documentations d'API transporteurs, qui comportaient beaucoup de
             paramètres et mettaient en lumière toutes les possibilités des API.
             Cette compétence me sera très utile, car un grand nombre de projets
             passés et futurs se basent sur les API pour leur fonctionnement
             interne, mais elle m'est moins utile lors du développement
-            d'applications lourdes.
+            d'applications lourdes (logiciels installés sur le poste, sans
+            échange avec des services externes).
           </p>
 
           <p>
@@ -365,23 +379,31 @@
             projet nécessite des API efficaces, c'est pourquoi je compte en
             réaliser moi-même dans mes futurs projets personnels de
             <span class="term" data-term="domotique">domotique</span>. Les
-            intégrations d'API GLS et Géodis m'ont donné l'expérience nécessaire
-            dans les API, pour m'intéresser à la conception d'API dédiée à mon
-            propre système d'information personnel.
+            intégrations de deux API de transporteurs m'ont donné l'expérience
+            nécessaire dans les API, pour m'intéresser à la conception d'une API
+            dédiée à mon propre
+            <span class="term" data-term="systeme-information"
+              >système d'information</span
+            >
+            personnel.
           </p>
 
           <p>
             Pour arriver à cet objectif, plusieurs étapes sont en cours. Tout
-            d'abord la finalisation du parcours de tests et de la mise en
-            production de Géodis, qui reprendra à la rentrée. Ensuite le
-            développement de l'outil de suivi des commandes expédiées via l'API
-            GLS, qui est une évolution déjà anticipée. Par la suite, lors de
-            futures intégrations de transporteur, je ferai évoluer le
-            <span class="term" data-term="dispatcher">dispatcher</span>, devenu
-            un point crucial du fonctionnement de l'API. Enfin, dans le cadre
-            personnel, je compte développer ma propre API de domotique, dans le
-            but de mettre en pratique la conception d'API et pas seulement son
-            intégration. Pour cela, je compte suivre la spécification
+            d'abord la finalisation du parcours de tests et de la
+            <span class="term" data-term="mise-en-production"
+              >mise en production</span
+            >
+            de l'API du second transporteur, qui reprendra à la rentrée. Ensuite
+            le développement de l'outil de suivi des commandes expédiées via
+            l'API du premier transporteur, qui est une évolution déjà anticipée.
+            Par la suite, lors de futures intégrations d'API, je ferai évoluer
+            le <span class="term" data-term="dispatcher">dispatcher</span>,
+            devenu un point crucial du fonctionnement de l'API. Enfin, dans le
+            cadre personnel, je compte développer ma propre API de domotique,
+            dans le but de mettre en pratique la conception d'API et pas
+            seulement son intégration. Pour cela, je compte suivre la
+            spécification
             <span class="term" data-term="openapi-swagger"
               >OpenAPI (Swagger)</span
             >, car c'est la norme de référence pour la conception d'API.
@@ -397,9 +419,9 @@
               <span class="related-skill-icon">🏷️</span>
 
               <span class="related-skill-text">
-                <strong>Intégration de l'API GLS</strong>
+                <strong>Intégration d'une API de transporteur</strong>
                 <span class="related-skill-sub"
-                  >Connexion Navision ↔ webservice GLS</span
+                  >Connexion Navision ↔ webservice du transporteur</span
                 >
               </span>
 
@@ -413,9 +435,12 @@
               <span class="related-skill-icon">🚚</span>
 
               <span class="related-skill-text">
-                <strong>Intégration de l'API Géodis</strong>
+                <strong
+                  >Reprise et finalisation d'une seconde API de
+                  transporteur</strong
+                >
                 <span class="related-skill-sub"
-                  >Reprise et finalisation d'une intégration existante</span
+                  >Intégration existante à finaliser</span
                 >
               </span>
 

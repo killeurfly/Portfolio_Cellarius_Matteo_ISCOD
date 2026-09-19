@@ -5,17 +5,20 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Intégration de l'API GLS | Portfolio</title>
+    <title>Intégration d'une API de transporteur | Portfolio</title>
 
     <meta
       name="description"
-      content="Intégration de l'API REST GLS dans l'ERP Navision : contexte, étapes de développement, résultats et regard critique sur ce projet en alternance."
+      content="Intégration d'une API REST de transporteur dans l'ERP Navision : contexte, étapes de développement, résultats et regard critique sur ce projet en alternance."
     />
 
-    <meta property="og:title" content="Intégration de l'API GLS | Portfolio" />
+    <meta
+      property="og:title"
+      content="Intégration d'une API de transporteur | Portfolio"
+    />
     <meta
       property="og:description"
-      content="Intégration de l'API REST GLS dans l'ERP Navision : contexte, étapes de développement, résultats et regard critique sur ce projet en alternance."
+      content="Intégration d'une API REST de transporteur dans l'ERP Navision : contexte, étapes de développement, résultats et regard critique sur ce projet en alternance."
     />
     <meta
       property="og:url"
@@ -24,10 +27,13 @@
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Intégration de l'API GLS | Portfolio" />
+    <meta
+      name="twitter:title"
+      content="Intégration d'une API de transporteur | Portfolio"
+    />
     <meta
       name="twitter:description"
-      content="Intégration de l'API REST GLS dans l'ERP Navision : contexte, étapes de développement, résultats et regard critique sur ce projet en alternance."
+      content="Intégration d'une API REST de transporteur dans l'ERP Navision : contexte, étapes de développement, résultats et regard critique sur ce projet en alternance."
     />
     <link
       rel="icon"
@@ -44,7 +50,7 @@
     <main>
       <section class="page-section project-detail">
         <div class="blob-center"></div>
-        <h1>Intégration de l'API GLS</h1>
+        <h1>Intégration d'une API de transporteur</h1>
 
         <nav class="page-toc" aria-label="Sommaire de la page">
           <a href="#presentation">Présentation</a>
@@ -59,8 +65,8 @@
 
         <div class="illustration-panel">
           <img
-            src="/assets/images/svg/illustration-gls.svg"
-            alt="Schéma du flux : Navision vers API GLS vers étiquette imprimée"
+            src="/assets/images/svg/illustration-transporteur-1.svg"
+            alt="Schéma du flux : Navision vers API du transporteur vers étiquette imprimée"
           />
         </div>
 
@@ -70,9 +76,13 @@
           <p>
             Ce projet est l'un des premiers sur lesquels j'ai pu travailler
             durant mon alternance. Il a été mis en place afin de remplacer le
-            logiciel d'impression d'étiquettes GLS par une intégration en API
-            REST dans l'ERP Navision, le tout ayant pour but de simplifier le
-            processus d'expédition pour les utilisateurs.
+            logiciel d'impression d'étiquettes d'un
+            <span class="term" data-term="ordre-transporteurs"
+              >premier transporteur</span
+            >
+            par une intégration en API REST dans l'ERP Navision, le tout ayant
+            pour but de simplifier le processus d'expédition pour les
+            utilisateurs.
           </p>
 
           <p>
@@ -89,9 +99,9 @@
               utilisée pour accéder à des services web et échanger des données
               au format
               <span class="term" data-term="json">JSON</span>
-              ou <span class="term" data-term="xml">XML</span>. L'API REST de
-              GLS est utilisée pour générer et gérer les étiquettes de
-              transport, car GLS est responsable de la livraison des colis et
+              ou <span class="term" data-term="xml">XML</span>. L'API REST du
+              transporteur est utilisée pour générer et gérer les étiquettes de
+              transport, car il est responsable de la livraison des colis et
               fournit les services d'expédition.
             </li>
 
@@ -120,13 +130,13 @@
           <h2 id="objectifs">Objectifs, contexte, enjeu et risques</h2>
 
           <p>
-            L'objectif principal était d'intégrer l'API REST de GLS à Navision
-            pour permettre la génération, l'impression, la réimpression et
-            l'annulation des étiquettes de transport directement depuis l'ERP.
-            Afin de simplifier le processus pour les utilisateurs, la gestion de
-            ces procédures devait être similaire à celle déjà en place pour
-            Schenker, avec un minimum de modifications dans l'interface
-            utilisateur.
+            L'objectif principal était d'intégrer l'API REST du transporteur à
+            Navision pour permettre la génération, l'impression, la réimpression
+            et l'annulation des étiquettes de transport directement depuis
+            l'ERP. Afin de simplifier le processus pour les utilisateurs, la
+            gestion de ces procédures devait être similaire à celle déjà en
+            place pour le transporteur principal, avec un minimum de
+            modifications dans l'interface utilisateur.
           </p>
 
           <p class="subsection-label">🔧 Contexte technique</p>
@@ -135,18 +145,18 @@
             La principale contrainte technique associée à cette évolution des
             processus était de mettre à jour le
             <span class="term" data-term="webservice">webservice</span>
-            sans compromettre le fonctionnement associé à l'autre transporteur.
-            Il m'a donc fallu maîtriser l'existant avant de m'atteler à son
-            évolution.
+            sans compromettre le fonctionnement associé au transporteur
+            principal. Il m'a donc fallu maîtriser l'existant avant de m'atteler
+            à son évolution.
           </p>
 
           <p>
             Il était également important de prendre en compte les utilisateurs
             finaux et de s'assurer que les changements pour l'impression des
-            étiquettes GLS ne perturberaient pas leur flux de travail quotidien.
+            étiquettes ne perturberaient pas leur flux de travail quotidien.
             Cela impliquait de maintenir l'interface utilisateur tout en faisant
             évoluer le webservice pour intégrer les nouvelles fonctionnalités de
-            l'API GLS.
+            l'API.
           </p>
 
           <p class="subsection-label">🎯 Enjeu</p>
@@ -158,8 +168,9 @@
 
           <p>
             L'enjeu humain consistait à rendre le processus d'impression
-            d'étiquettes GLS aussi simple que celui de Schenker, pour que les
-            utilisateurs soient le moins perturbés par cette intégration.
+            d'étiquettes aussi simple que celui du transporteur principal, pour
+            que les utilisateurs soient le moins perturbés par cette
+            intégration.
           </p>
 
           <p>
@@ -167,8 +178,8 @@
             <span class="term" data-term="processus-metier"
               >processus métiers</span
             >
-            d'impression d'étiquettes GLS sans mettre en péril le fonctionnement
-            de la partie Schenker déjà en place.
+            d'impression d'étiquettes sans mettre en péril le fonctionnement de
+            la partie déjà en place pour le transporteur principal.
           </p>
 
           <p class="subsection-label">⚠️ Risques</p>
@@ -180,34 +191,33 @@
 
           <p>
             Les risques humains étaient liés à la bonne utilisation des nouveaux
-            tags de transporteur GLS utilisés dans l'ERP Navision. Pour prendre
-            l'exemple d'un non-respect des nouvelles procédures dans l'ERP
-            Navision, le risque pouvait être des erreurs dans l'impression des
-            étiquettes GLS, mais aussi dans la communication des informations
+            identifiants de transporteur saisis dans l'ERP Navision. Pour
+            prendre l'exemple d'un non-respect des nouvelles procédures dans
+            l'ERP Navision, le risque pouvait être des erreurs dans l'impression
+            des étiquettes, mais aussi dans la communication des informations
             vers l'API.
           </p>
 
           <p>
             Les risques techniques étaient liés à la bonne implémentation de
-            l'API GLS dans l'ERP Navision et à nos bases de données
-            transporteur. Une mauvaise intégration pouvait créer des erreurs
-            d'impression ou une mauvaise sauvegarde de données dans les bases de
-            données.
+            l'API dans l'ERP Navision et à nos bases de données transporteur.
+            Une mauvaise intégration pouvait créer des erreurs d'impression ou
+            une mauvaise sauvegarde de données dans les bases de données.
           </p>
 
           <p>
             Afin de pallier ces risques, la réalisation d'un
             <span class="term" data-term="cahier-de-test">cahier de test</span>
             a été effectuée ; le but recherché était de tester l'implémentation
-            de l'API GLS dans l'ERP Navision, mais il fallait également
-            s'assurer que les utilisateurs respectaient les nouvelles
-            procédures. Ce cahier de test contenait les étapes de fonctionnement
-            nominales à suivre pour l'impression d'étiquettes GLS. De plus, un
-            tableau a été mis en place pour suivre les erreurs rencontrées lors
-            des tests et pour les corriger rapidement. Enfin, un suivi des
-            utilisateurs a été mis en place pour s'assurer que les utilisateurs
-            respectaient les nouvelles procédures et pour les aider en cas de
-            problème.
+            de l'API dans l'ERP Navision, mais il fallait également s'assurer
+            que les utilisateurs respectaient les nouvelles procédures. Ce
+            cahier de test contenait les étapes de fonctionnement
+            <span class="term" data-term="nominal">nominales</span> à suivre
+            pour l'impression d'étiquettes. De plus, un tableau a été intégré
+            pour suivre les erreurs rencontrées lors des tests et pour les
+            corriger rapidement. Enfin, un suivi a été mis en place pour
+            s'assurer que les nouvelles procédures étaient respectées et pour
+            assister les équipes en cas de problème.
           </p>
 
           <div class="section-heading">
@@ -219,9 +229,11 @@
           </div>
 
           <p>
-            Le développement de l'intégration de l'API GLS a été réalisé en
-            plusieurs étapes, allant de la compréhension de l'existant à la mise
-            en production. Voici un aperçu des principales étapes du projet :
+            Le développement de l'intégration de l'API a été réalisé en
+            plusieurs étapes, allant de la compréhension de l'existant à la
+            <span class="term" data-term="mise-en-production"
+              >mise en production</span
+            >. Voici un aperçu des principales étapes du projet :
           </p>
 
           <ol class="steps-list">
@@ -229,11 +241,11 @@
               <strong>Étude de la documentation et accès à la Sandbox</strong>
               — j'ai analysé la
               <span class="term" data-term="documentation">documentation</span>
-              de l'API GLS fournie par les équipes techniques de GLS. Cette
+              de l'API fournie par les équipes techniques du transporteur. Cette
               lecture m'a donné les informations nécessaires à la compréhension
               des diverses fonctionnalités offertes par l'API, et j'ai pu
               également comprendre les formats de données et les paramètres à
-              utiliser pour la communication avec celle-ci. Elles nous ont
+              utiliser pour la communication avec celle-ci. Ces équipes nous ont
               également fourni un accès à un environnement de test appelé «
               <span class="term" data-term="sandbox">Sandbox</span>
               » afin de tester l'implémentation de cette API dans un
@@ -248,12 +260,12 @@
                 ></strong
               >
               — Le webservice sur lequel était disponible l'API REST était
-              également utilisé pour l'impression d'étiquettes Schenker ; j'ai
-              donc dû réaliser un « dispatcher » afin de rediriger les requêtes
-              vers la bonne API en fonction du transporteur associé à
-              l'expédition. Grâce à l'identification des transporteurs déjà
-              présente dans l'ERP Navision, cette tâche a été une des plus
-              faciles.
+              également utilisé pour l'impression d'étiquettes du transporteur
+              principal ; j'ai donc dû réaliser un « dispatcher » afin de
+              rediriger les requêtes vers la bonne API en fonction du
+              transporteur associé à l'expédition. Grâce à l'identification des
+              transporteurs déjà présente dans l'ERP Navision, cette tâche a été
+              une des plus faciles.
             </li>
 
             <li>
@@ -262,22 +274,21 @@
                 annulation
               </strong>
               — s'en est suivi le développement de l'impression, de la
-              réimpression et de l'annulation d'étiquettes GLS, reliées aux
-              boutons dans l'ERP Navision. Il a également fallu préparer les
-              retours d'erreurs vers l'ERP afin que les utilisateurs puissent
-              comprendre les erreurs rencontrées lors de l'impression
-              d'étiquettes GLS. Pour ce qui est de l'erreur d'adresse, celle-ci
-              était envoyée vers une application interne appelée Gedim, qui
-              permet un suivi des transporteurs et des erreurs d'adresse. Les
-              utilisateurs pouvaient ainsi corriger les erreurs d'adresse dans
-              Gedim et relancer l'impression d'étiquettes sans toucher à l'ERP
-              Navision.
+              réimpression et de l'annulation d'étiquettes, reliées aux boutons
+              dans l'ERP Navision. Il a également fallu préparer les retours
+              d'erreurs vers l'ERP afin que les erreurs rencontrées lors de
+              l'impression d'étiquettes soient compréhensibles. Pour ce qui est
+              de l'erreur d'adresse, celle-ci était envoyée vers une application
+              interne appelée Gedim, qui permet un suivi des transporteurs et
+              des erreurs d'adresse. Les utilisateurs pouvaient ainsi corriger
+              les erreurs d'adresse dans Gedim et relancer l'impression
+              d'étiquettes sans toucher à l'ERP Navision.
             </li>
 
             <li>
               <strong>Mise en place des flux Dex</strong> — Parallèlement, des
-              flux Dex ont été mis en place pour la sauvegarde des données
-              envoyées à GLS et l'annulation d'étiquettes, ainsi qu'un flux de
+              flux Dex ont été créés pour la sauvegarde des données envoyées au
+              transporteur et l'annulation d'étiquettes, ainsi qu'un flux de
               dispatch pour les « fin de journée » qui permet la sortie d'un
               document récapitulatif des commandes expédiées dans un camion au
               moment où la « fin de journée » est générée par l'utilisateur.
@@ -286,26 +297,29 @@
             <li>
               <strong>Cahier de test et corrections</strong> — Afin de réaliser
               les tests, j'ai mis en place un cahier de test afin de pouvoir
-              faire tester l'implémentation de l'API GLS par les utilisateurs,
-              tout en vérifiant que les nouvelles procédures étaient respectées.
-              Le contenu du cahier était constitué d'étapes nominales à suivre
-              pour l'impression d'étiquettes GLS, mais aussi de tests
-              complémentaires sur les autres impressions afin de vérifier que
-              les nouveautés ne créent pas de bug ni de régression. J'ai pu
-              aussi mettre en place un tableau de remontée des erreurs afin de
-              les suivre et ainsi facilement résoudre d'éventuels bugs
+              faire tester l'implémentation de l'API par les utilisateurs, tout
+              en vérifiant que les nouvelles procédures étaient respectées. Le
+              contenu du cahier était constitué d'étapes nominales à suivre pour
+              l'impression d'étiquettes, mais aussi de tests complémentaires sur
+              les autres impressions afin de vérifier que les nouveautés ne
+              créent pas de bug ni de
+              <span class="term" data-term="regression">régression</span>. J'ai
+              pu aussi mettre en place un tableau de remontée des erreurs afin
+              de les suivre et ainsi facilement résoudre d'éventuels bugs
               découverts. Les tests ont été réalisés par les utilisateurs sur
               différents sites de l'entreprise, car les sites possèdent chacun
-              un compte chez GLS. Il s'en est suivi une correction des bugs
-              remontés par les utilisateurs lors de la phase de tests.
+              un compte chez le transporteur. Il s'en est suivi une correction
+              des bugs remontés par les utilisateurs lors de la phase de tests.
             </li>
 
             <li>
-              <strong>Validation GLS et mise en production</strong> — Suite à
-              cela, étant prêts pour la mise en production, nous avons envoyé à
-              GLS un mail pour demander la validation des étiquettes de
-              production. Une fois la validation reçue, nous avons mis en
-              production l'implémentation de l'API GLS dans l'ERP Navision.
+              <strong
+                >Validation par le transporteur et mise en production</strong
+              >
+              — Suite à cela, étant prêts pour la mise en production, nous avons
+              envoyé au transporteur un mail pour demander la validation des
+              étiquettes de production. Une fois la validation reçue, nous avons
+              mis en production l'implémentation de l'API dans l'ERP Navision.
             </li>
 
             <li>
@@ -324,6 +338,25 @@
             </li>
           </ol>
 
+          <p class="todo-label">À compléter</p>
+          <ul class="todo-list">
+            <li>
+              « fin de journée » (l.284) n'est expliqué que sur la réalisation
+              2. Proposition : « pour la « fin de journée » (document listant
+              les commandes chargées dans un même camion) ».
+            </li>
+            <li>
+              Étape « Mise en place des flux Dex » : phrase d'environ 65 mots.
+              Proposition : couper après « annulation d'étiquettes ».
+            </li>
+            <li>
+              Étape « Cahier de test et corrections » : environ 110 mots avec «
+              afin de » 4 fois, et elle répète le cahier de test déjà décrit
+              plus haut dans la page. Proposition : garder une seule des deux
+              descriptions, ou raccourcir celle-ci.
+            </li>
+          </ul>
+
           <div class="dispatcher-diagram">
             <p class="diagram-title">Schéma — Mise en place du dispatcher</p>
             <div class="dispatcher-scene">
@@ -336,7 +369,7 @@
                   </div>
                   <span class="flow-label"
                     >Requête d'impression<span class="flow-sub"
-                      >GLS ou Schenker</span
+                      >Transporteur 1 et transporteur principal</span
                     ></span
                   >
                 </div>
@@ -362,25 +395,25 @@
                 <span class="flow-arrow" aria-hidden="true">→</span>
 
                 <div class="flow-fork">
-                  <div class="flow-node" data-term="api-gls">
+                  <div class="flow-node" data-term="api-transporteur-1">
                     <div class="flow-box flow-box--small">
                       <span class="flow-face flow-top"></span>
                       <span class="flow-face flow-front">🏷️</span>
                       <span class="flow-face flow-side"></span>
                     </div>
-                    <span class="flow-label">API GLS</span>
+                    <span class="flow-label">API transporteur 1</span>
                   </div>
 
                   <div
-                    class="flow-node flow-node--schenker"
-                    data-term="api-schenker"
+                    class="flow-node flow-node--principal"
+                    data-term="api-transporteur-principal"
                   >
                     <div class="flow-box flow-box--small">
                       <span class="flow-face flow-top"></span>
                       <span class="flow-face flow-front">🏷️</span>
                       <span class="flow-face flow-side"></span>
                     </div>
-                    <span class="flow-label">API Schenker</span>
+                    <span class="flow-label">API transporteur principal</span>
                   </div>
                 </div>
               </div>
@@ -391,9 +424,9 @@
 
           <ul class="definition-list">
             <li>
-              Les équipes techniques de GLS, qui ont fourni les documentations
-              et les accès à la Sandbox, ainsi que les comptes de test et de
-              production.
+              Les équipes techniques du transporteur, qui ont fourni les
+              documentations et les accès à la Sandbox, ainsi que les comptes de
+              test et de production.
             </li>
 
             <li>
@@ -416,31 +449,30 @@
               développement du projet.
             </li>
 
-            <li>Moi-même, qui ai développé l'implémentation de l'API GLS.</li>
+            <li>Moi-même, qui ai développé l'implémentation de l'API.</li>
           </ul>
 
           <h2 id="resultats">Les résultats</h2>
 
           <p>
-            Après mise en production et suivi des utilisateurs pour des
-            éventuelles corrections, le projet a été un succès. L'intégration de
-            l'API GLS a permis d'améliorer l'efficacité du processus
-            d'expédition et de réduire les erreurs liées à la génération des
-            étiquettes. GLS représente entre 150 et 200 commandes par jour.
-            Malgré des bugs réglés lors de l'hypercare, la stabilité du
-            processus a été atteinte et les utilisateurs ont pu s'adapter aux
-            nouvelles procédures d'impression d'étiquettes GLS.
+            Après mise en production et suivi des utilisateurs pour
+            d'éventuelles corrections, le projet a été un succès. L'intégration
+            de l'API a permis d'améliorer l'efficacité du processus d'expédition
+            et de réduire les erreurs liées à la génération des étiquettes. Ce
+            transporteur représente entre 150 et 200 commandes par jour. Malgré
+            des bugs réglés lors de l'hypercare, la stabilité du processus a été
+            atteinte et les utilisateurs ont pu s'adapter aux nouvelles
+            procédures d'impression d'étiquettes.
           </p>
 
           <h2 id="lendemains">Les lendemains du projet</h2>
 
           <p>
-            Ce projet a servi de base pour l'intégration de l'API Géodis peu de
-            temps après, spécifiquement pour la mise en place du «
-            <span class="term" data-term="dispatcher">dispatcher</span>
-            ». Le suivi du fonctionnement de l'API GLS est effectué par moi-même
-            car j'ai été le principal développeur de ce projet. Les évolutions
-            futures de ce projet incluent un suivi, grâce à l'API GLS, de
+            Ce projet a servi de base pour l'intégration de l'API d'un second
+            transporteur peu de temps après, aidée par la mise en place du «
+            dispatcher ». Le suivi du fonctionnement de l'API est effectué par
+            moi-même car j'ai été le principal développeur de ce projet. Les
+            évolutions futures de ce projet incluent un suivi, grâce à l'API, de
             l'avancement des commandes expédiées.
           </p>
 
@@ -488,7 +520,7 @@
               <span class="related-skill-text">
                 <strong>Intégration d'API REST</strong>
                 <span class="related-skill-sub">
-                  Connexion Navision ↔ webservice GLS
+                  Connexion Navision ↔ webservice du transporteur
                 </span>
               </span>
 
@@ -504,7 +536,7 @@
               <span class="related-skill-text">
                 <strong>Communication technique</strong>
                 <span class="related-skill-sub">
-                  Échanges avec les équipes techniques GLS
+                  Échanges avec les équipes techniques du transporteur
                 </span>
               </span>
 

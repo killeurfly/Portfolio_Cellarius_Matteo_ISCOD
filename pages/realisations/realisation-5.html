@@ -5,14 +5,17 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Prévisions clients | Portfolio</title>
+    <title>Confection automatisée des prévisions clients | Portfolio</title>
 
     <meta
       name="description"
       content="Automatisation des prévisions de consommation client via une macro VBA Outlook et Excel : contexte, étapes et résultats."
     />
 
-    <meta property="og:title" content="Prévisions clients | Portfolio" />
+    <meta
+      property="og:title"
+      content="Confection automatisée des prévisions clients | Portfolio"
+    />
     <meta
       property="og:description"
       content="Automatisation des prévisions de consommation client via une macro VBA Outlook et Excel : contexte, étapes et résultats."
@@ -24,7 +27,10 @@
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Prévisions clients | Portfolio" />
+    <meta
+      name="twitter:title"
+      content="Confection automatisée des prévisions clients | Portfolio"
+    />
     <meta
       name="twitter:description"
       content="Automatisation des prévisions de consommation client via une macro VBA Outlook et Excel : contexte, étapes et résultats."
@@ -44,7 +50,7 @@
     <main>
       <section class="page-section project-detail">
         <div class="blob-center"></div>
-        <h1>Prévisions clients</h1>
+        <h1>Confection automatisée des prévisions clients</h1>
 
         <nav class="page-toc" aria-label="Sommaire de la page">
           <a href="#presentation">Présentation</a>
@@ -71,15 +77,16 @@
             La réalisation de ce projet a été effectuée lors de ma précédente
             alternance ; elle a été menée en parallèle de la
             <span class="term" data-term="macro">macro</span> de suivi des
-            Garanties d'Origine. L'objectif était d'automatiser la récupération
-            et la constitution des documents de prévisions de consommation
-            clients à partir des documents envoyés quotidiennement par ceux-ci.
-            Ces informations permettaient de créer un fichier de rapport mensuel
-            des consommations clients prévues, à destination d'un autre service.
+            <span class="term" data-term="go">Garanties d'Origine</span>.
+            L'objectif était d'automatiser la récupération et la constitution
+            des documents de prévisions de consommation clients à partir des
+            documents envoyés quotidiennement par ceux-ci. Ces informations
+            permettaient de créer un fichier de rapport mensuel des
+            consommations clients prévues, à destination d'un autre service.
           </p>
 
           <p>
-            Tout d'abord quelques définitions des termes qui vont être utilisés
+            Tout d'abord, quelques définitions des termes qui vont être utilisés
             dans ce projet :
           </p>
 
@@ -108,8 +115,8 @@
           <h2 id="objectifs">Objectifs, contexte, enjeu et risques</h2>
 
           <p>
-            L'objectif pour ce projet était l'
-            <a href="/pages/skills/automatisation.html"
+            L'objectif pour ce projet était l'<a
+              href="/pages/skills/automatisation.html"
               >automatisation de la récupération</a
             >
             de ces données de consommations quotidiennes et la formation des
@@ -128,14 +135,25 @@
             utilisateurs, j'ai décidé de réaliser cette macro en deux parties :
             une partie réalisée en macro Outlook, afin de récupérer, vers un
             dossier choisi par l'utilisateur, les documents fournis en pièces
-            jointes par les clients — ce dossier étant ensuite exploité par la
-            seconde partie ; une partie en macro Excel pour former le fichier
+            jointes par les clients (dossier qui était ensuite exploité par la
+            seconde partie) et une partie en macro Excel pour former le fichier
             mensuel à partir des documents récupérés précédemment. La difficulté
             technique principale se situait dans la partie VBA Outlook, car ce
             VBA ne partageait pas les mêmes fonctions natives que celui d'Excel
             : il m'a donc fallu comprendre la différence entre ces deux versions
             de VBA.
           </p>
+
+          <p class="todo-label">À compléter</p>
+          <ul class="todo-list">
+            <li>
+              Paragraphe d'environ 95 mots. Proposition : « J'ai réalisé la
+              macro en deux parties. La première, sous Outlook, copie les pièces
+              jointes des clients dans un dossier choisi par l'utilisateur. La
+              seconde, sous Excel, forme le fichier mensuel à partir de ce
+              dossier. »
+            </li>
+          </ul>
 
           <p class="subsection-label">🎯 Enjeu</p>
 
@@ -368,11 +386,10 @@
             j'ai anticipé les transformations de la macro, car elles se sont
             retrouvées plus difficiles à implémenter que prévu, à cause d'une
             mauvaise anticipation des évolutions possibles. L'exemple qui a posé
-            le plus de difficultés est celui du rajout de la gestion de fichiers
-            d'un client qui avait un fichier
-            Excel où les valeurs de consommation et de date étaient séparées
-            entre plusieurs feuilles de données, ce qui a nécessité une gestion
-            spécifique de ces données.
+            le plus de difficultés est celui de l'ajout de la gestion de
+            fichiers d'un client qui avait un fichier Excel où les valeurs de
+            consommation et de date étaient séparées entre plusieurs feuilles de
+            données, ce qui a nécessité une gestion spécifique de ces données.
           </p>
 
           <h2 id="competences">Compétences associées</h2>
