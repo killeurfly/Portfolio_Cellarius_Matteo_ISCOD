@@ -129,4 +129,7 @@ window.TERM_DEFINITIONS = {
     "Framework PHP qui fournit une structure et des outils prêts à l'emploi pour développer des applications web.",
   openclassrooms:
     "Plateforme française de formation en ligne, qui propose notamment des parcours en développement informatique.",
+  mqtt: "Protocole de communication léger entre objets connectés (capteurs, domotique...), très utilisé pour échanger de petits messages.",
+  "home-assistant":
+    "Logiciel open source de domotique qui centralise le contrôle et le paramétrage des appareils d'un logement.",
 };
